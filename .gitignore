@@ -27,4 +27,3 @@
 *.env
 
 # DB export is a submission attachment, not repo content (user emails + password / application-password hashes).
-/docs/db-export/
