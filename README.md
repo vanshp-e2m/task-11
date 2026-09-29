@@ -116,7 +116,3 @@ The automated checks passed while the screenshots showed overlaps — fixed, and
 ## Safe working
 Local site only (never a client site); a DB snapshot before every destructive step (`backups/00`–`13`, kept locally); credentials only in the
 local Claude config; DevCommand's maint-qa run with PASS verdicts and its QA ledger closed.
-
-## Not included
-WordPress core, plugins (ACF Pro and Elementor Pro are licensed), uploads, DB snapshots, and the database export (attached separately).
-No application passwords or tokens are committed.
