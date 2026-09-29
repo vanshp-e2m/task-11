@@ -87,7 +87,7 @@ The automated checks passed while the screenshots showed overlaps — fixed, and
 | Editing content live in wp-admin | in the Looms |
 | A global value updating in two places | in the Looms (+ [written proof](docs/evidence/flow-b/global-proof/README.md)) |
 | The maintenance change | **no maintenance ticket was issued** for this capstone ([note](docs/evidence/maintenance/README.md)) |
-| An honest account of what went wrong | in the Looms (+ [issues log](docs/issues-log.md), 69 issues) |
+| An honest account of what went wrong | in the Looms (+ [issues log](docs/issues-log.md): the 7 main problems, how each was found, caused and fixed) |
 
 ---
 

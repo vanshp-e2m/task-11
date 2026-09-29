@@ -33,7 +33,7 @@ Local test logins (only valid on a local import of the DB): `qa-editor` / `QaEdi
 | Editability (wp-admin) | [Home edit screen](https://github.com/vanshp-e2m/task-11/blob/main/docs/evidence/flow-a/wp-vs-replica/admin-home.png) · [product](https://github.com/vanshp-e2m/task-11/blob/main/docs/evidence/flow-a/wp-vs-replica/admin-product.png) · [resource](https://github.com/vanshp-e2m/task-11/blob/main/docs/evidence/flow-a/wp-vs-replica/admin-resource.png) |
 | Maintenance ticket | no ticket was issued for this capstone — see [maintenance/README.md](https://github.com/vanshp-e2m/task-11/blob/main/docs/evidence/maintenance/README.md) |
 | Walkthrough (repeatable) | [WALKTHROUGH.md](https://github.com/vanshp-e2m/task-11/blob/main/docs/WALKTHROUGH.md) · [00-setup-walkthrough.md](https://github.com/vanshp-e2m/task-11/blob/main/docs/00-setup-walkthrough.md) · step log [BUILD-NOTES.md](https://github.com/vanshp-e2m/task-11/blob/main/docs/BUILD-NOTES.md) |
-| What went wrong, and how it was caught | [issues-log.md](https://github.com/vanshp-e2m/task-11/blob/main/docs/issues-log.md) — 69 issues, each: symptom → how noticed → cause → fix → verified |
+| What went wrong, and how it was caught | [issues-log.md](https://github.com/vanshp-e2m/task-11/blob/main/docs/issues-log.md) — the 7 main problems with DevConnect / DevCommand: how each was found, what caused it and how it was fixed |
 
 ## Done-when checklist
 - **Flow A produces an editable page from the Figma file** — Home, Resources, Products (+ 3 product variants) and the Sales Hub pages are
@@ -80,7 +80,7 @@ agreed as Figma → generated HTML → ACF so the conversion step itself could b
 - **Editor experience:** Flexible Content pages open in the classic screen with numbered, labelled sections (#60); editors can
   preview Sales Hub pages (#64); a layout keeps its design on any page it is added to (#63).
 
-### 3. Where the AI tooling was wrong, and how I caught it (full list: `issues-log.md` #1–#69)
+### 3. Where the AI tooling was wrong, and how I caught it (details: `issues-log.md`; the numbered #1–#69 log is in the repo history)
 
 - **The conversion merged and dropped sections** — DevCommand's slicer turned 9 Resources sections into 5 (#54). Caught by counting
   sections against the spec; patched the slicer's implied-close rule; evidence kept.
