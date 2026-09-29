@@ -1,6 +1,7 @@
 # Whitelist repo: WordPress core, uploads and third-party plugins are NOT tracked.
 /*
 !/.gitignore
+!/README.md
 !/CLAUDE.md
 !/project-config.json
 !/tools/
