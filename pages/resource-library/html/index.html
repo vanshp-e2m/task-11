@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Library | Sales Hub | Mizuho America</title>
+    <meta name="description" content="Sales Hub resource library: downloadable brochures, spec sheets and videos for Mizuho America sales representatives.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman:wght@400&family=Open+Sans:wght@300;400;600;700&family=Mukta:wght@700&family=Montserrat:wght@300;500;700&family=Fraunces:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-head portal-head rs" id="site-header">
+        <div class="fx"><a class="hd-logo" href="../../sales-hub-dashboard/html/"><img src="figma/images/logo-mizuho-header-srgb.png" alt="Mizuho America" width="200" height="61"></a><span class="ph-rule d-only" aria-hidden="true"></span><a class="ph-portal d-only" href="../../sales-hub-dashboard/html/">Sales Portal</a>
+            <nav class="hd-lang m-only" aria-label="Language">
+                <ul>
+                    <li><a class="is-current" href="#en" hreflang="en">EN</a></li>
+                    <li><a href="#esp" hreflang="es">ESP</a></li>
+                </ul>
+            </nav><a class="hd-account m-only" href="http://task-11.local/contact-us/">Find an Account Manager</a><button class="site-head__toggle" type="button" aria-expanded="false" aria-controls="site-primary-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+            <nav class="site-head__nav" id="site-primary-nav" aria-label="Sales Hub">
+                <ul>
+                    <li><a href="../../sales-hub-dashboard/html/">Dashboard</a></li>
+                    <li><a class="is-current" aria-current="page" href="../../resource-library/html/">Resources</a></li>
+                    <li><a href="http://task-11.local/sales-hub/cross-reference/">Cross-Reference</a></li>
+                    <li><a href="http://task-11.local/sales-hub/training/">Training</a></li>
+                </ul>
+            </nav><span class="ph-user d-only">John Q. Public</span><a class="ph-account selectish d-only" href="../../sales-hub-dashboard/html/#account">Account</a>
+        </div>
+    </header>
+    <main>
+        <section class="rs rl-band" id="resource-library-intro">
+            <div class="fx">
+                <div class="rlb-box">
+                    <h1 class="rlb-h1">RESOURCE LIBRARY</h1>
+                    <p class="rlb-body">From downloadable brochures to testimonial and training videos: materials to help you gain and retain customers</p>
+                </div>
+            </div>
+        </section>
+        <section class="rs rl-main" id="resource-results">
+            <div class="fx">
+                <div class="rl-layout">
+                    <aside class="rl-filters" aria-label="Filter resources">
+                        <form class="fl-form" action="#resource-results">
+                            <fieldset class="fl-group">
+                                <legend class="fl-h">RESOURCE TYPE</legend>
+                                <ul class="fl-list">
+                                    <li class="fl-row"><input class="fl-box" type="checkbox" id="f-brochures-spec-sheets" name="resource_type" value="brochures-spec-sheets" checked><label class="fl-label" for="f-brochures-spec-sheets">Brochures &amp; spec sheets</label><span class="fl-count">8</span></li>
+                                    <li class="fl-row"><input class="fl-box" type="checkbox" id="f-videos" name="resource_type" value="videos"><label class="fl-label" for="f-videos">Videos</label><span class="fl-count">7</span></li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class="fl-group">
+                                <legend class="fl-h">PRODUCT CATEGORY</legend>
+                                <ul class="fl-list">
+                                    <li class="fl-row"><input class="fl-box" type="checkbox" id="f-head-holding-systems" name="product_category" value="head-holding-systems" checked><label class="fl-label" for="f-head-holding-systems">Head Holding Systems</label><span class="fl-count">4</span></li>
+                                    <li class="fl-row"><input class="fl-box" type="checkbox" id="f-instruments" name="product_category" value="instruments"><label class="fl-label" for="f-instruments">Instruments</label><span class="fl-count">3</span></li>
+                                    <li class="fl-row"><input class="fl-box" type="checkbox" id="f-surgical-tables" name="product_category" value="surgical-tables"><label class="fl-label" for="f-surgical-tables">Surgical Tables</label><span class="fl-count">2</span></li>
+                                    <li class="fl-row"><input class="fl-box" type="checkbox" id="f-vascular-management" name="product_category" value="vascular-management"><label class="fl-label" for="f-vascular-management">Vascular Management</label><span class="fl-count">2</span></li>
+                                </ul>
+                            </fieldset><button class="fl-clear" type="reset">Clear all filters</button>
+                        </form>
+                    </aside>
+                    <div class="rl-results">
+                        <div class="rl-tools">
+                            <form class="rl-search" role="search" action="#resource-results"><label class="visually-hidden" for="rl-q">Search resources</label><input class="rl-q" id="rl-q" type="search" name="q" placeholder="Search brochures, spec sheets, videos..."><button class="rl-go" type="submit">Search</button></form>
+                            <hr class="rl-line">
+                            <div class="rl-meta">
+                                <p class="rl-count" aria-live="polite"><strong class="s20">4 </strong><span class="s20">resources</span></p>
+                                <div class="rl-active"><button class="chip" type="button" aria-label="Remove filter: Brochures &amp; spec sheets">Brochures &amp; spec sheets<span class="chip-x" aria-hidden="true"></span></button><button class="chip" type="button" aria-label="Remove filter: Head Holding Systems">Head Holding Systems<span class="chip-x" aria-hidden="true"></span></button><a class="rl-clear-all" href="#resource-results">Clear all</a></div><label class="visually-hidden" for="rl-sort">Sort</label><select class="rl-sort selectish" id="rl-sort" name="sort">
+                                    <option>Sort: A-Z</option>
+                                    <option>Sort: Z-A</option>
+                                    <option>Sort: Newest</option>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="tiles">
+                            <li class="tile">
+                                <div class="tile-media"><img src="figma/images/tile-sugita-ii-head-frame-product-brochure.jpg" alt="Sugita II Head Frame – Product Brochure" width="307" height="195" loading="lazy"><span class="tile-tag">Head Holding Systems</span><span class="tile-pdf"><img src="figma/images/icon-pdf.png" alt="PDF" width="36" height="50"></span></div>
+                                <div class="tile-text">
+                                    <h2 class="tile-title">Sugita II Head Frame – Product Brochure</h2>
+                                    <p class="tile-sub">Head Holding Systems</p>
+                                </div><a class="tile-dl" href="#download-sugita-ii-head-frame-product-brochure" aria-label="Download: Sugita II Head Frame – Product Brochure"><img src="figma/images/icon-download-circle.svg" alt="" width="30" height="30">Download</a>
+                            </li>
+                            <li class="tile">
+                                <div class="tile-media"><img src="figma/images/tile-radiolucent-head-frame-spec-sheet.jpg" alt="Radiolucent Head Frame – Spec Sheet" width="307" height="195" loading="lazy"><span class="tile-tag">Head Holding Systems</span><span class="tile-pdf"><img src="figma/images/icon-pdf.png" alt="PDF" width="36" height="50"></span></div>
+                                <div class="tile-text">
+                                    <h2 class="tile-title">Radiolucent Head Frame – Spec Sheet</h2>
+                                    <p class="tile-sub">Head Holding Systems</p>
+                                </div><a class="tile-dl" href="#download-radiolucent-head-frame-spec-sheet" aria-label="Download: Radiolucent Head Frame – Spec Sheet"><img src="figma/images/icon-download-circle.svg" alt="" width="30" height="30">Download</a>
+                            </li>
+                            <li class="tile">
+                                <div class="tile-media"><img src="figma/images/tile-smart-fix-head-holder-spec-sheet.jpg" alt="Smart Fix Head Holder – Spec Sheet" width="307" height="195" loading="lazy"><span class="tile-tag">Head Holding Systems</span><span class="tile-pdf"><img src="figma/images/icon-pdf.png" alt="PDF" width="36" height="50"></span></div>
+                                <div class="tile-text">
+                                    <h2 class="tile-title">Smart Fix Head Holder – Spec Sheet</h2>
+                                    <p class="tile-sub">Head Holding Systems</p>
+                                </div><a class="tile-dl" href="#download-smart-fix-head-holder-spec-sheet" aria-label="Download: Smart Fix Head Holder – Spec Sheet"><img src="figma/images/icon-download-circle.svg" alt="" width="30" height="30">Download</a>
+                            </li>
+                            <li class="tile">
+                                <div class="tile-media"><img src="figma/images/tile-head-frame-accessories.jpg" alt="Head Frame Accessories" width="307" height="195" loading="lazy"><span class="tile-tag">Head Holding Systems</span><span class="tile-pdf"><img src="figma/images/icon-pdf.png" alt="PDF" width="36" height="50"></span></div>
+                                <div class="tile-text">
+                                    <h2 class="tile-title">Head Frame Accessories</h2>
+                                    <p class="tile-sub">Pins, adapters &amp; holders</p>
+                                </div><a class="tile-dl" href="#download-head-frame-accessories" aria-label="Download: Head Frame Accessories"><img src="figma/images/icon-download-circle.svg" alt="" width="30" height="30">Download</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="rule rl-end m-only">
+            </div>
+        </section>
+    </main>
+    <footer class="site-foot portal-foot rs" id="site-footer">
+        <div class="fx"><img class="pf-logo" src="figma/images/logo-mizuho-footer-reversed.png" alt="Mizuho America" width="200" height="58" loading="lazy">
+            <p class="pf-copy"><a href="http://task-11.local/sales-hub/">Sales Hub</a><span class="pf-dot" aria-hidden="true">•</span>© 2026 Mizuho America, Inc. All rights reserved.</p>
+            <nav class="pf-legal" aria-label="Legal">
+                <ul>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#terms-of-use">Terms of Use</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

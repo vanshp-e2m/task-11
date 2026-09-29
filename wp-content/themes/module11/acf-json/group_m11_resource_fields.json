@@ -1,0 +1,95 @@
+{
+    "key": "group_m11_resource_fields",
+    "title": "Resource Fields",
+    "fields": [
+        {
+            "key": "field_m11_rf_cover_image",
+            "label": "Cover image",
+            "name": "cover_image",
+            "type": "image",
+            "instructions": "Brochure/spec-sheet cover or video thumbnail.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_m11_rf_resource_file",
+            "label": "Resource file",
+            "name": "resource_file",
+            "type": "file",
+            "instructions": "PDF for brochures/spec sheets. Fixes the site-wide broken #download-<slug> placeholder anchors once populated.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all"
+        },
+        {
+            "key": "field_m11_rf_video",
+            "label": "Video",
+            "name": "video",
+            "type": "clone",
+            "instructions": "Only used when this resource's Resource Type taxonomy term is Video — leave empty otherwise (enforced in the template; taxonomy term selection isn't a native ACF conditional-logic source).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_m11_media_block"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_m11_rf_excerpt",
+            "label": "Excerpt",
+            "name": "excerpt",
+            "type": "textarea",
+            "instructions": "Used as the 'Read description' blurb / brochure card excerpt / video topic blurb depending on context.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "m11_resource"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Plain field group for the m11_resource CPT — no common_settings/two-tab FC convention, per decision_record q9.",
+    "show_in_rest": 1,
+    "modified": 1790400000
+}

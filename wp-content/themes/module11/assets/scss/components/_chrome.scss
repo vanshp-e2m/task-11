@@ -1,0 +1,93 @@
+// Header + footer details that Elementor's native controls can't express.
+// (Native-first fallback hierarchy: Kit globals → widget controls → this theme stylesheet → never per-widget custom CSS.)
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+// Menu items tagged "m11-mobile-only" (e.g. Sales Portal) exist for the burger menu; on desktop the header has a button for them.
+// Elementor styles nav items with `.elementor-nav-menu > li`, so match that specificity.
+.m11-nav .elementor-nav-menu > li.m11-mobile-only {
+	display: none;
+}
+
+// Current language (EN) is always underlined, as in the design.
+.m11-lang .m11-lang-current > a {
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
+}
+
+// Search field: 161×29 pill tinted with Sky Blue at 20% (Figma: #00B3F033).
+.m11-search {
+	.elementor-search-form__container {
+		min-height: 29px;
+		width: 161px;
+		border-radius: var(--radius-btn);
+		overflow: hidden;
+	}
+
+	.elementor-search-form__input {
+		padding-inline: 12px;
+	}
+}
+
+// Footer intro: the "Contact Us." link keeps the white text colour.
+// Hello's `strong { font-weight: bolder }` only reaches 400 on Montserrat Light; Figma's "Contact Us." is 700.
+.m11-footer-intro strong {
+	font-weight: 700;
+}
+
+.m11-footer-intro a {
+	color: inherit;
+	text-decoration: none;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration: underline;
+	}
+}
+
+// Long menu labels and emails must wrap rather than overflow on narrow screens.
+.m11-site-footer .elementor-heading-title,
+.m11-footer-menu .elementor-item {
+	overflow-wrap: anywhere;
+}
+
+// Search: Figma has no icon and a 29px field; Elementor's minimal skin adds an icon and a 50px input.
+.m11-search {
+	.elementor-search-form__icon {
+		display: none;
+	}
+
+	// Height is the widget's native "size" control (29px); this only removes the input's own vertical padding.
+	.elementor-search-form__input {
+		padding-block: 0;
+
+		// Figma: "Search..." is Open Sans 700 in the text colour, not the browser's grey placeholder.
+		&::placeholder {
+			color: var(--clr-text);
+			opacity: 1;
+			font-weight: 700;
+		}
+	}
+}
+
+// ---------------------------------------------------------------- Sales Hub header (Theme Builder template 255, tools/elementor/build_chrome.py)
+.m11-portal-header {
+	.elementor-widget { flex-shrink: 0; }
+	.elementor-nav-menu { flex-wrap: nowrap; white-space: nowrap; }
+	.elementor-heading-title { white-space: nowrap; }
+	// Vertical rule between the logo and "Sales Portal": a divider widget can't draw vertically, so the widget box is the line.
+	.m11-ph-rule { width: 1px; height: 36px; background: rgba(0, 0, 0, 0.2); }
+	.m11-ph-rule .elementor-divider { display: none; }
+	// "Account" drawn as a select (161×30, divider + caret) — it links to the Dashboard's account actions.
+	.m11-ph-account .elementor-heading-title {
+		display: flex; align-items: center; box-sizing: border-box; width: 161px; height: 30px; padding-left: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.15); border-radius: 5px;
+		background: #fff url("../images/icons/icon-select-caret.svg") no-repeat right center / 38px 30px;
+	}
+	.m11-ph-account a { color: inherit; }
+}
+// Right group: nav 154px after "Sales Portal", rep name pushed to the right edge, Account 44px after it (Figma 1:2988).
+.m11-portal-header .m11-ph-left { --width: auto; width: auto; flex: 0 0 auto; }
+.m11-portal-header .m11-ph-right { --width: auto; width: auto; flex: 1 1 auto; min-width: 0; } // Elementor containers default to width:100%
+.m11-portal-header .m11-ph-user { margin-left: auto; }

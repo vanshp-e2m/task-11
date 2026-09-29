@@ -1,0 +1,32 @@
+@use "sass:math";
+
+// Mobile-first breakpoint.
+@mixin minmedia($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+// Desktop-down breakpoint.
+@mixin maxmedia($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+// Fluid font size between a mobile and desktop value (px in, rem out).
+@mixin fluid-font($min-px, $max-px, $min-vw: 375, $max-vw: 1440) {
+	$slope: math.div($max-px - $min-px, $max-vw - $min-vw);
+	$intercept: $min-px - $slope * $min-vw;
+	font-size: clamp(#{math.div($min-px, 16)}rem, #{math.div($intercept, 16)}rem + #{$slope * 100}vw, #{math.div($max-px, 16)}rem);
+}
+
+// Figma-frame units for replica layouts: n design px at the 1440 frame, scaled down with the page.
+// The page wrapper sets --u (and --tu for components that scale on their own, e.g. the About timeline).
+@function u($n) {
+	@return calc(#{$n} * var(--u, 1px));
+}
+
+@function tu($n) {
+	@return calc(#{$n} * var(--tu, 1px));
+}

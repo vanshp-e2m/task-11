@@ -1,0 +1,73 @@
+{
+ "source_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+ "stored_sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+ "source_bytes": 0,
+ "stored_bytes": 0,
+ "byte_identical": true,
+ "findings": [],
+ "corruption_signatures": [],
+ "structural": {
+  "block_open": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "block_close": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "anchors": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "images": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "headings": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "paragraphs": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "list_items": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "table_cells": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "buttons": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  },
+  "aria_controls": {
+   "source": 0,
+   "stored": 0,
+   "match": true
+  }
+ },
+ "canonical_equivalent": null,
+ "block_sequence": {
+  "source_delimiters": 0,
+  "stored_delimiters": 0,
+  "match": true
+ },
+ "counts": {
+  "high": 0,
+  "medium": 0,
+  "low": 0
+ },
+ "clean": true
+}

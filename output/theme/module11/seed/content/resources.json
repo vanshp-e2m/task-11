@@ -1,0 +1,258 @@
+[
+  {
+    "acf_fc_layout": "resources_intro",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "resources-intro"
+    },
+    "page_title": "RESOURCES",
+    "heading": "Watch. Read. Discover.",
+    "body": "Welcome to the Mizuho America library for neurosurgeons. From testimonials by renowned leaders in the field to product brochures, we’ve curated a collection of resources that will introduce you to our wide selection of neurosurgical devices—designed to help you overcome obstacles, fill instrumentation gaps, and refine and elevate surgical techniques.",
+    "featured_video_thumbnail": "seed/images/resources/video-intro-lawton.jpg",
+    "featured_video_url": "#video-intro-lawton",
+    "featured_quote": "“When you have the right instruments in your hand, then you can just focus on the task and you can focus on, you know, battling that disease and getting the job done.”",
+    "featured_quote_attribution": "Michael T. Lawton, MD",
+    "intro_ctas": [
+      {
+        "label": "Explore our video selection now",
+        "url": {
+          "url": "#testimonials",
+          "title": "Explore our video selection now",
+          "target": ""
+        }
+      },
+      {
+        "label": "Peruse our downloadable<br>product brochures",
+        "url": {
+          "url": "#brochures",
+          "title": "Peruse our downloadable product brochures",
+          "target": ""
+        }
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "resources_testimonials",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "testimonials"
+    },
+    "heading": "TESTIMONIALS: Hear from neurosurgical experts",
+    "expert_entries": [
+      {
+        "bio": "Michael T. Lawton, MD\nPresident and CEO, Barrow Neurological Institute\nProfessor and Chair, Neurosurgery Chief, Neurovascular Surgery",
+        "videos": [
+          "video-lawtonelite-series",
+          "video-lawtonelite-microscissors"
+        ],
+        "shared_caption": ""
+      },
+      {
+        "bio": "James J. Evans, MD\nProfessor of Neurological Surgery and Otolaryngology\nChief, Brain Tumor and Stereotactic Radiosurgery Division Jefferson Health\nDirector, Cranial Base and Pituitary Surgery\nDirector, Cranial Base and Endoscopic Surgery Fellowship",
+        "videos": [
+          "video-e3-evans-elite-endoscopic-instrument-set"
+        ],
+        "shared_caption": ""
+      },
+      {
+        "bio": "A. Samy Youssef, MD, PhD, MSc, FAANS\nProfessor & Vice Chairman for Education\nDepartments of Neurosurgery & Otolaryngology\nDirector of Skull Base Surgery\nUniversity of Colorado School of Medicine",
+        "videos": [
+          "video-dr-youssefs-cranial-nerve-dissection-set"
+        ],
+        "shared_caption": ""
+      },
+      {
+        "bio": "Fady Charbel, MD\nProfessor and Head, Department of Neurosurgery University of Illinois Chicago",
+        "videos": [
+          "video-sugita-ii-multi-purpose-headframe"
+        ],
+        "shared_caption": ""
+      },
+      {
+        "bio": "Eric Sauvageau, MD, Surgical Director of Neuro-Oncology\nRicardo Hanel, MD, PhD, Cerebrovascular Neurosurgeon\nCo-Medical Directors, Baptist Stroke & Cerebrovascular Center, Jacksonville, Florida",
+        "videos": [
+          "video-mst-7300b-bx-table-for-microsurgery-1",
+          "video-mst-7300b-bx-table-for-microsurgery-2"
+        ],
+        "shared_caption": "Topic: MST-7300B&BX Table for Microsurgery\nVersatile low height that empowers surgeons to optimally position themselves and their patients"
+      },
+      {
+        "bio": "Ricardo Hanel, MD, PhD\nCerebrovascular Neurosurgeon\nCo-Medical Director, Baptist Stroke & Cerebrovascular Center, Jacksonville, Florida",
+        "videos": [
+          "video-mst-7300bx-table-for-microsurgery"
+        ],
+        "shared_caption": ""
+      },
+      {
+        "bio": "Walavan Sivakumar, MD\nDirector of the Stroke & Neurovascular Center\nPacific Neuroscience Institute",
+        "videos": [
+          "video-keyhole-approach-brain-surgery",
+          "video-keyhole-approach-brain-surgery-extended"
+        ],
+        "shared_caption": ""
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "fast_facts",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "fast-facts"
+    },
+    "heading": "FAST FACTS: MORE TO EXPLORE",
+    "fact_items": [
+      {
+        "title": "Sugita II Multi-Purpose Headframe",
+        "video_thumbnail": "seed/images/resources/video-fact-sugita-ii-multi-purpose-headframe.jpg",
+        "video_url": "#video-fact-sugita-ii-multi-purpose-headframe",
+        "caption": "See what makes this flexible, customizable device a valuable addition to your OR"
+      },
+      {
+        "title": "Feather Instruments With<br>Interchangeable Blades",
+        "video_thumbnail": "seed/images/resources/video-fact-feather-instruments-with.jpg",
+        "video_url": "#video-fact-feather-instruments-with",
+        "caption": "Learn about this first-of-its-kind product line"
+      },
+      {
+        "title": "Discover the MST 7300 BX Table With the 5S Innovation Concept",
+        "video_thumbnail": "seed/images/resources/video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.jpg",
+        "video_url": "#video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep",
+        "caption": "Take a tour of this highly versatile state-of-the-art table"
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "resources_brochures",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "brochures"
+    },
+    "heading": "SEE HOW OUR COLLABORATIONS HAVE HELPED ADVANCE INSTRUMENTATION",
+    "collaboration_groups": [
+      {
+        "collaborator_text": "Lawton Elite Series\nDesigned in collaboration with Michael T. Lawton, MD, President and CEO, Barrow Neurological Institute; Professor and Chair, Neurosurgery; Chief, Neurovascular Surgery",
+        "brochure_cards": [
+          "brochure-lawton-elite-series",
+          "brochure-lawtonelite-neurovascular-bypass-instruments",
+          "brochure-lawtonelite-micro-dissection-instruments",
+          "brochure-lawtonelite-microscissors",
+          "brochure-lawton-elite-reposable-microscissors"
+        ]
+      },
+      {
+        "collaborator_text": "Evans Endoscopic Endonasal Instruments\nDesigned in collaboration with James J. Evans, MD, Professor of Neurological Surgery and Otolaryngology; Chief, Brain Tumor and Stereotactic Radiosurgery Division, Jefferson Health; Director, Cranial Base and Pituitary Surgery; Director, Cranial Base and Endoscopic Surgery Fellowship",
+        "brochure_cards": [
+          "brochure-evans-elite-endoscopic-instruments",
+          "brochure-evans-360-rotatables",
+          "brochure-e3-mithras-bipolar"
+        ]
+      },
+      {
+        "collaborator_text": "Kelly Endoscopic Endonasal and Keyhole Instruments\nDesigned in collaboration with Daniel F. Kelly, MD, Co-Founder and Director, Pacific Neuroscience Institute; Director, Pacific Brain Tumor Center and Pacific Pituitary Disorders Center; Professor of Neurosurgery, Saint John’s Cancer Institute at Providence Saint John’s Health Center",
+        "brochure_cards": [
+          "brochure-kelly-endoscopic-endonasal-instrument-set",
+          "brochure-kelly-endonasal-instrument-set",
+          "brochure-kelly-keyhole-instrument-set"
+        ]
+      },
+      {
+        "collaborator_text": "Day-Bailes Tapered Locking Suction Tubes\nDesigned in collaboration with Dr. J. D. Day, MD, Medical Director, Nexus Neuroscience; and Dr. Julian Bailes, MD, Chair, Department of Neurosurgery, Endeavor Health",
+        "brochure_cards": [
+          "brochure-day-bailes-tapered-locking-suction-tubes"
+        ]
+      },
+      {
+        "collaborator_text": "Dr. Youssef’s Cranial Nerve Dissection Set\nDesigned in collaboration with Dr. A. Samy Youssef, MD, PhD, Professor and Vice Chairman for Education, Departments of Neurosurgery & Otolaryngology, Director of Skull Base Surgery, University of Colorado School of Medicine",
+        "brochure_cards": [
+          "brochure-dr-youssefs-cranial-nerve-dissection-set"
+        ]
+      },
+      {
+        "collaborator_text": "Feather® K-6420 Micro Blade Angled for Precision Incisions\nDesigned in collaboration with Dr. Daniel Prevedello, MD, MBA, The Ohio State University - Wexner Medical Center; Brain and Spine Tumor Center; Vice Chair for Academic Affairs; Professor; Director, Minimally Invasive Cranial Surgery Program; College of Medicine; Department of Neurological Surgery",
+        "brochure_cards": [
+          "brochure-feather-k-6420-micro-blade-angled-for-precision-incisions"
+        ]
+      },
+      {
+        "collaborator_text": "T Endo-Clips\nDesigned in collaboration with Dr. Erol Veznedaroglu, MD, FACS, FAANS, FAHA, President and CEO, Global Neuroscience Institute; Professor, Robert A. Groff Chair, Department of Neurosurgery, Drexel University College of Medicine",
+        "brochure_cards": [
+          "brochure-t-endo-clips"
+        ]
+      },
+      {
+        "collaborator_text": "Cerebellar Pontine Tumor Instruments and Skull Base Instrumentation\nDesigned in collaboration with Dr. Takanori Fukushima, MD, internationally acclaimed neurosurgeon ",
+        "brochure_cards": [
+          "brochure-cerebellar-pontine-tumor-instruments",
+          "brochure-skull-base-instrumentation"
+        ]
+      },
+      {
+        "collaborator_text": "Check out these brochures for more products that can benefit your neurosurgical practice ",
+        "brochure_cards": [
+          "brochure-mst-7300-series-mizuho-mobile-microsurgery-table",
+          "brochure-sugita-ii-multi-purpose",
+          "brochure-radiolucent-head-frame",
+          "brochure-smart-fix-head-frame-and-holder"
+        ]
+      },
+      {
+        "collaborator_text": "T2 Clips: Sugita Titanium Aneurysm Clips and Appliers\nAvailable with the optional Spetzler T2 Clip Applier Rack for enhanced intraoperative efficiency, designed in collaboration with renowned neurosurgeon Robert F. Spetzler, MD, FACS, Emeritus Chair, Neurosurgery, Barrow Neurological Institute",
+        "brochure_cards": [
+          "brochure-t2-clips-sugita-titanium-aneurysm-clips-and-appliers"
+        ]
+      },
+      {
+        "collaborator_text": "Feather® Micro Surgical Blade for Fine Incision\nFeaturing bayonetted shape designed by Dr. Daniel Prevedello, MD, Director, Minimally Invasive Cranial Surgery Program; Co-Director of the Skull Base and Pituitary Surgery Center at The James",
+        "brochure_cards": [
+          "brochure-feather-micro-surgical-blade-for-fine-incision"
+        ]
+      },
+      {
+        "collaborator_text": "",
+        "brochure_cards": [
+          "brochure-vascular-management-solutions-from-mizuho",
+          "brochure-feather-micro-surgery",
+          "brochure-microscissors",
+          "brochure-malleable-instrument-set-for-neuroendoscopy",
+          "brochure-endoscopic-workflow",
+          "brochure-skull-base-workflow",
+          "brochure-neurovascular-doppler-systems"
+        ]
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "bottom_links_band",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "continue-your-visit"
+    },
+    "heading": "Continue your visit with us...",
+    "links": [
+      {
+        "label": "Discover our wide range of products",
+        "url": {
+          "url": "#bottom-link-1",
+          "title": "Discover our wide range of products",
+          "target": ""
+        }
+      },
+      {
+        "label": "See all the procedures we support",
+        "url": {
+          "url": "#bottom-link-2",
+          "title": "See all the procedures we support",
+          "target": ""
+        }
+      },
+      {
+        "label": "Learn why we’re a global leader in neurosurgical tools",
+        "url": {
+          "url": "#bottom-link-3",
+          "title": "Learn why we’re a global leader in neurosurgical tools",
+          "target": ""
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,264 @@
+{
+  "page": "mizuho-home",
+  "meta": {
+    "title": "Mizuho America | Neurosurgical Instruments, Tables & Head-Holding Systems",
+    "description": "Mizuho America delivers a robust portfolio of neurosurgical instruments, tables, head-holding systems and vascular management devices, built with surgeons in mind."
+  },
+  "css_workflow": "scss",
+  "slider_library": "swiper",
+  "font_source": "google",
+  "notes_for_developer": [
+    "Re-plan against DevCommand's REAL recipe library/compiler (docs/issues-log.md #21). Header/footer are real Elementor Theme Builder templates (kit_id 6, templates 61/62) and are intentionally OMITTED from this blueprint - only the 6 body sections are compiled here.",
+    "Two of the four pre-approved recipe mappings did not survive contact with the REAL recipes.json and were changed (flagged prominently in the handback report): value_columns (card-grid-3col's card template only has {{item.title}}/{{item.body}} - no icon or lead-paragraph slot, so it can't carry this design's icon+italic-lead+body cards) and testimonials (testimonial-grid's card template only has {{item.quote}}/{{item.author}} - no thumbnail/bio/watch-button slots, so it can't carry video-testimonial cards or the separate pull quote). Both are escape-hatch sections instead, per the 'never force a bad match' rule.",
+    "Content strings are carried over from docs/evidence/flow-a/00-improvised-build/blueprint-improvised-after-fixes.json, which was already re-verified verbatim against figma/data.json's raw TEXT node characters (issue #17, 0 mismatches) - not re-typed from screenshots.",
+    "All content_source values are literal (no content.json refs) because tools/figma_html/run_devcommand_compiler.py does not pass --content to compile_html_blueprint.py; content.json was not created since nothing here needs it.",
+    "tools/figma_html/run_devcommand_compiler.py gained a 3rd shim (issue #22): figma/tokens.json's colors/spacing/radii/typography are shaped for the SCSS/ACF pipeline, not this compiler's schema, and would have silently resolved to none of the project's real colors. See that script's own docstring."
+  ],
+  "sections": [
+    {
+      "id": "hero-carousel",
+      "escape_hatch": true,
+      "heading_level": 1,
+      "content_source": {
+        "id": "hero-carousel",
+        "heading_main": "Neurological success is your mindset.",
+        "heading_accent": "ours, too.",
+        "slides": [
+          {
+            "image_url": "figma/images/hero-product-sugita-ii-head-frame-card-crop.png",
+            "alt": "Sugita II Multi-Purpose Head Frame mounted on a surgical table",
+            "label": "Sugita ll Multi-Purpose Head Frame",
+            "link_url": "#product-sugita-ii-head-frame",
+            "loading": "eager"
+          },
+          {
+            "image_url": "figma/images/hero-product-mst-7300-table-card-crop.png",
+            "alt": "MST 7300 Series Microneurosurgery Tables",
+            "label": "MST 7300 Series Microneurosurgery Tables",
+            "link_url": "#product-mst-7300-tables",
+            "loading": "lazy"
+          }
+        ],
+        "cta_primary_label": "Explore All Products",
+        "cta_primary_url": "#explore-all-products",
+        "cta_secondary_label": "Request a Demo",
+        "cta_secondary_url": "#request-a-demo",
+        "browse_label": "Browse by Procedure",
+        "browse_url": "#procedure-band"
+      },
+      "notes": [
+        "No recipe fits: fuses a page-H1 (Freeman 70/70, colour-span 2nd sentence) + a real 2-slide Swiper carousel with dots generated from the actual slide count (hidden when both slides show at once on desktop - accepted decision) + a CTA button pair + a same-row browse link. media-slider (bare carousel, no heading/CTA slots) and hero-two-column/hero-centered (single static media, no repeater) each cover only part of this.",
+        "Card border (3px sky, r48) is visible on the RIGHT card only per Figma (1:95 hidden on the left) - reproduced as-is.",
+        "Stray 1px black stroke on node 1:113 (designer leftover) intentionally NOT reproduced.",
+        "Mobile order: heading, then stacked cards, then browse-link+dots row (dots right, via margin-left:auto), THEN the two CTA buttons full width stacked - reproduced via flex `order` in the 430px media query so DOM order (CTAs adjacent to heading) stays accessible/SEO-friendly while only the visual order flips.",
+        "1024px tablet step has no Figma frame - linear interpolation (documented), not measured."
+      ],
+      "html": "<section class=\"hero-carousel\" id=\"{{slot.id}}\" style=\"{{style_overrides}}\">\n  <div class=\"hero-carousel__inner\">\n    <h1 class=\"hero-carousel__heading\">{{slot.heading_main}} <span class=\"hero-carousel__heading-accent\">{{slot.heading_accent}}</span></h1>\n    <div class=\"hero-carousel__swiper swiper\">\n      <div class=\"swiper-wrapper\">{{#each slot.slides}}<div class=\"swiper-slide hero-carousel__slide\"><a class=\"hero-carousel__card\" href=\"{{item.link_url}}\"><img class=\"hero-carousel__card-image\" src=\"{{item.image_url}}\" alt=\"{{item.alt}}\" width=\"572\" height=\"592\" loading=\"{{item.loading}}\"><span class=\"hero-carousel__label\">{{item.label}}</span><span class=\"hero-carousel__arrow\" aria-hidden=\"true\"><img src=\"figma/images/icon-arrow-circle-right.svg\" alt=\"\" width=\"55\" height=\"55\"></span></a></div>{{/each}}</div>\n    </div>\n    <div class=\"hero-carousel__actions-row\">\n      <a class=\"hero-carousel__cta hero-carousel__cta--primary\" href=\"{{slot.cta_primary_url}}\">{{slot.cta_primary_label}}</a>\n      <a class=\"hero-carousel__cta hero-carousel__cta--secondary\" href=\"{{slot.cta_secondary_url}}\">{{slot.cta_secondary_label}}</a>\n      <a class=\"hero-carousel__browse-link\" href=\"{{slot.browse_url}}\"><img src=\"figma/images/icon-arrow-down.svg\" alt=\"\" width=\"14\" height=\"14\">{{slot.browse_label}}</a>\n      <div class=\"hero-carousel__pagination swiper-pagination\"></div>\n    </div>\n  </div>\n</section>",
+      "css": ".hero-carousel { background: var(--color-white, #FFFFFF); padding: 33px 112px 0 104px; } .hero-carousel__inner { display: flex; flex-direction: column; } .hero-carousel__heading { font-family: 'Freeman', sans-serif; font-weight: 400; font-size: 4.375rem; line-height: 1; text-transform: uppercase; color: var(--color-primary, #0065B3); max-width: 1247px; margin: 0 0 38px -8px; } .hero-carousel__heading-accent { color: var(--color-sky, #00B3F0); } .hero-carousel__swiper { overflow: hidden; width: 100%; } .hero-carousel__swiper .swiper-wrapper { display: flex; } .hero-carousel__slide { width: 572px; } .hero-carousel__card { position: relative; display: block; width: 572px; height: 592px; border-radius: 51px; overflow: hidden; } .hero-carousel__card-image { width: 100%; height: 100%; object-fit: cover; } .hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__card { border-radius: 50px; border: 3px solid var(--color-sky, #00B3F0); box-sizing: border-box; } .hero-carousel__label { position: absolute; top: 31px; left: 50%; transform: translateX(-50%); min-width: 308px; height: 45px; background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; font-size: 1.1875rem; line-height: 40px; text-align: center; white-space: nowrap; border-radius: 13px; padding: 0 16px; box-sizing: border-box; } .hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__label { top: 28px; min-width: 372px; line-height: 45px; } .hero-carousel__arrow { position: absolute; right: 36px; bottom: 39px; width: 55px; height: 55px; } .hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__arrow { right: 34px; } .hero-carousel__actions-row { display: flex; flex-wrap: nowrap; align-items: center; margin-top: 43px; } .hero-carousel__actions-row .hero-carousel__cta--secondary { margin-left: 34px; } .hero-carousel__actions-row .hero-carousel__pagination { margin-left: auto; } .hero-carousel__browse-link { display: flex; align-items: center; gap: 32px; margin-left: 46px; font-family: 'Freeman', sans-serif; font-size: 1.125rem; color: var(--color-primary, #0065B3); text-decoration: none; } .hero-carousel__pagination.swiper-pagination { position: static !important; width: auto !important; display: flex; gap: 8px; } .hero-carousel__pagination.swiper-pagination.swiper-pagination-lock { display: none; } .hero-carousel__pagination .swiper-pagination-bullet { width: 24px; height: 24px; border-radius: 50%; background: var(--color-dot, #D9D9D9); opacity: 1; margin: 0 !important; } .hero-carousel__pagination .swiper-pagination-bullet-active { background: var(--color-primary, #0065B3); } .hero-carousel__cta { display: inline-flex; align-items: center; justify-content: center; height: 50px; border-radius: 5px; font-family: 'Freeman', sans-serif; font-size: 1.125rem; text-decoration: none; white-space: nowrap; box-sizing: border-box; } .hero-carousel__cta--primary { background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); width: 216px; padding: 0 20px; } .hero-carousel__cta--secondary { background: transparent; color: var(--color-sky, #00B3F0); border: 2px solid var(--color-sky, #00B3F0); width: 288px; padding: 0 20px; } @media (max-width: 1024px) { .hero-carousel { padding: 40px 40px 0; } .hero-carousel__heading { font-size: 3.5rem; } .hero-carousel__slide, .hero-carousel__card { width: 460px; height: 475px; } } @media (max-width: 768px) { .hero-carousel__swiper .swiper-wrapper { flex-direction: column; } .hero-carousel__slide, .hero-carousel__card { width: 100%; height: auto; aspect-ratio: 572 / 592; } } @media (max-width: 430px) { .hero-carousel { background: #FCFEFF; padding: 44px 20px; } .hero-carousel__heading { font-size: 3rem; line-height: 1.15; } .hero-carousel__swiper .swiper-wrapper { flex-direction: column; gap: 18px; } .hero-carousel__slide, .hero-carousel__card { width: 100%; height: auto; aspect-ratio: 390 / 403.6; border-radius: 34.77px; } .hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__card { border: none; } .hero-carousel__label { font-size: 0.75rem; line-height: 27.27px; height: 30.7px; border-radius: 8.86px; } .hero-carousel__arrow { width: 38px; height: 38px; right: 22px; bottom: 19.6px; } .hero-carousel__actions-row { flex-wrap: wrap; margin-top: 36px; } .hero-carousel__actions-row .hero-carousel__browse-link { order: 1; margin-left: 0; } .hero-carousel__actions-row .hero-carousel__pagination { order: 2; margin-left: auto; } .hero-carousel__actions-row .hero-carousel__cta--primary { order: 3; flex: 0 0 100%; width: 100%; margin-top: 18px; } .hero-carousel__actions-row .hero-carousel__cta--secondary { order: 4; flex: 0 0 100%; width: 100%; margin-top: 18px; margin-left: 0; } }",
+      "js": "document.addEventListener('DOMContentLoaded', function () { var el = document.querySelector('#hero-carousel .hero-carousel__swiper'); if (!el || !window.Swiper) return; new Swiper(el, { slidesPerView: 2, spaceBetween: 80, watchOverflow: true, pagination: { el: '#hero-carousel .hero-carousel__pagination', clickable: true }, breakpoints: { 0: { slidesPerView: 1, spaceBetween: 18 }, 1024: { slidesPerView: 2, spaceBetween: 80 } } }); });"
+    },
+    {
+      "id": "intro-statement",
+      "recipe": "hero-centered",
+      "heading_level": 2,
+      "content_source": {
+        "id": "intro-statement",
+        "title": "We are Mizuho AMERICA: delivering world-class collective expertise with a personalized approach",
+        "description": "Singularly focused on neurosurgery, Mizuho America is dedicated to delivering an exceptional experience to help you achieve your surgical goals across a broad range of procedures and patients.",
+        "cta_text": "Watch what clinical experts say about us",
+        "cta_url": "#testimonials"
+      },
+      "style_overrides": {
+        "--hero-title-size": "2.8125rem",
+        "--hero-title-line-height": "1.222",
+        "--hero-desc-size": "1.5625rem",
+        "--hero-content-width": "1216px"
+      },
+      "responsive_style_overrides": {
+        "430": {
+          "--hero-title-size": "2.25rem !important",
+          "--hero-title-line-height": "1.15 !important",
+          "--hero-desc-size": "1.125rem !important"
+        }
+      },
+      "extra_css": "#intro-statement.hero-centered.container { max-width: none; margin: 0; text-align: left; padding: 68px 117px 0 107px; background: var(--color-white, #FFFFFF); } #intro-statement .hero-centered__title, #intro-statement .hero-centered__desc { text-align: left; } #intro-statement .hero-centered__title { color: var(--color-primary, #0065B3); text-transform: uppercase; } #intro-statement .hero-centered__desc { font-family: 'Open Sans', sans-serif; font-weight: 300; color: var(--color-text, #090909); text-transform: none; line-height: 1.8; } #intro-statement .btn { background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; min-width: 303px; height: 50px; white-space: nowrap; border-radius: 5px; padding: 0 20px; } #intro-statement::after { content: ''; display: block; width: 1262px; max-width: 100%; height: 1px; background: var(--color-sky, #00B3F0); margin: 70px auto 0 -23px; } @media (max-width: 430px) { #intro-statement.hero-centered.container, .value-columns, .testimonials, .about-stats { padding: 44px 20px; background: #FCFEFF; } #intro-statement .hero-centered__desc { line-height: 1.362; } #intro-statement .btn { width: 100%; justify-content: center; text-align: center; } #intro-statement::after { width: 390px; margin: 44px auto 0; } }",
+      "notes": [
+        "hero-centered fits cleanly: single title + single body paragraph + single CTA, no repeater. Overridden to left-aligned via extra_css (Figma shows this block left-aligned, full width) - the recipe itself is normally centred.",
+        "The CTA renders through the recipe's own shared '.btn.btn--primary' (not a recipe-specific class) - scoped override targets '#intro-statement .btn', not an invented '.hero-centered__cta' class the recipe doesn't have.",
+        "Trailing 1262px divider belongs to the bottom of this Figma group (separates intro from value_columns) - kept as this section's own trailing rule via ::after.",
+        "heading_level: 2 - hero-carousel (first section) owns the page's one <h1>; this is the only OTHER heading-slot recipe on the page, so it must not default to <h1> too."
+      ]
+    },
+    {
+      "id": "value-columns",
+      "escape_hatch": true,
+      "content_source": {
+        "id": "value-columns",
+        "cards": [
+          {
+            "title": "Surgeon-centric",
+            "icon_url": "figma/images/value-icon-surgeon-centric.png",
+            "lead": "Products designed exclusively for neurosurgeons",
+            "body": "With an expansive portfolio of instruments available individually and in convenient, timesaving sets and kits, we are committed to helping you optimize precision, efficiency, and workflow in the OR"
+          },
+          {
+            "title": "Consistent quality",
+            "icon_url": "figma/images/value-icon-consistent-quality.png",
+            "lead": "Handcrafted tools for exceptional quality, performance and longevity",
+            "body": "Our tools are produced with the utmost care and integrity, adhering to stringent manufacturing protocols, so you can confidently rely on them for your delicate, high-stakes procedures"
+          },
+          {
+            "title": "Notable names",
+            "icon_url": "figma/images/value-icon-notable-names.png",
+            "lead": "Longstanding collaborations with renowned neurosurgeons",
+            "body": "We’ve become a global leader in the field of neurosurgical tools through our ongoing work with clinical experts to help identify and fill unmet needs in the OR"
+          },
+          {
+            "title": "Personal partnership",
+            "icon_url": "figma/images/value-icon-personal-partnership.png",
+            "lead": "Supporting you before, during, and after the sale",
+            "body": "We not only stand behind our high-quality products; we stand with you to ensure your questions are answered, your needs are met, and your input and insights are heard"
+          }
+        ],
+        "button_label": "Check out our downloadable brochures",
+        "button_url": "#downloadable-brochures"
+      },
+      "notes": [
+        "DEVIATION from the pre-approved mapping: card-grid-3col's card template is only {{item.title}} + {{item.body}} (h3 + p) - no icon slot, no separate italic-lead-paragraph slot, and content_source values are always HTML-escaped so an <img> or extra markup can't be smuggled into the body field either. This design's cards are title -> icon -> italic lead -> body (4 distinct fields, one a real image) - forcing card-grid-3col would silently drop the icon and collapse lead+body into one field. Escape-hatched instead so all 4 fields (and their real order, G2) survive.",
+        "Icon box fixed at 98px height (Figma varies 98/90/84/72 with compensating gaps so every lead line lands at the same +173px offset) - normalized to one fixed icon box + fixed gap rather than 4 different per-column gaps.",
+        "Column 3 body keeps its curly apostrophe ('We’ve') to match the raw Figma character."
+      ],
+      "html": "<section class=\"value-columns m11-container\" id=\"{{slot.id}}\" style=\"{{style_overrides}}\">\n  <div class=\"value-columns__grid\">\n    {{#each slot.cards}}\n    <article class=\"value-columns__card\">\n      <h3 class=\"value-columns__title\">{{item.title}}</h3>\n      <img class=\"value-columns__icon\" src=\"{{item.icon_url}}\" alt=\"\" width=\"100\" height=\"98\" loading=\"lazy\">\n      <p class=\"value-columns__lead\">{{item.lead}}</p>\n      <p class=\"value-columns__body\">{{item.body}}</p>\n    </article>\n    {{/each}}\n  </div>\n  <a class=\"value-columns__button\" href=\"{{slot.button_url}}\">{{slot.button_label}}</a>\n</section>",
+      "css": ".value-columns { padding: 103px 94px 93px 107px; background: var(--color-white, #FFFFFF); } .value-columns__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; } .value-columns__card { display: flex; flex-direction: column; position: relative; } .value-columns__card:not(:first-child) { border-left: 1px solid var(--color-sky, #00B3F0); padding-left: 30px; } .value-columns__title { font-family: 'Freeman', sans-serif; font-weight: 400; font-size: 1.5rem; line-height: 1.33; text-transform: uppercase; color: var(--color-sky, #00B3F0); margin: 0 0 18px; } .value-columns__icon { width: 100px; height: 98px; object-fit: contain; margin-bottom: 25px; } .value-columns__lead { margin: 0; font-family: 'Open Sans', sans-serif; font-weight: 600; font-style: italic; font-size: 1rem; line-height: 1.875; color: var(--color-text, #090909); } .value-columns__body { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 1rem; line-height: 1.875; color: var(--color-text, #090909); margin: 30px 0 0; } .value-columns__button { display: inline-flex; align-items: center; background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; font-size: 1rem; width: 293px; height: 50px; border-radius: 5px; padding-left: 20px; margin-top: 61px; box-sizing: border-box; text-decoration: none; } @media (max-width: 768px) { .value-columns__grid { grid-template-columns: repeat(2, 1fr); } } @media (max-width: 430px) { .value-columns__grid { grid-template-columns: 1fr; gap: 28px; } .value-columns__card:not(:first-child) { border-left: none; border-top: 1px solid var(--color-sky, #00B3F0); padding-left: 0; padding-top: 28px; } .value-columns__title { font-size: 1.25rem; line-height: 1.33; margin-bottom: 12px; } .value-columns__icon { width: 79px; height: 77px; } .value-columns__lead, .value-columns__body { font-size: 0.875rem; line-height: 2; margin-top: 28px; } .value-columns__button { width: 100%; justify-content: center; margin-top: 0; } }",
+      "extra_css": ".m11-container.m11-container { max-width: 1240px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; box-sizing: border-box; }"
+    },
+    {
+      "id": "procedure-band",
+      "escape_hatch": true,
+      "content_source": {
+        "id": "procedure-band",
+        "heading": "A robust portfolio of instruments, tables, head-holding systems, and vascular management devices for your diverse neurosurgical procedures",
+        "procedures": [
+          {
+            "icon_url": "figma/images/procedure-icon-tumor-removal.png",
+            "title": "Tumor Removal",
+            "link_primary_label": "View product",
+            "link_primary_url": "#product-tumor-removal",
+            "link_secondary_label": "See Malleable Instruments and more",
+            "link_secondary_url": "#malleable-instruments"
+          },
+          {
+            "icon_url": "figma/images/procedure-icon-aneurysm.png",
+            "title": "Aneurysm",
+            "link_primary_label": "View product",
+            "link_primary_url": "#product-aneurysm",
+            "link_secondary_label": "See Sugita TII Aneurysm Clips and more",
+            "link_secondary_url": "#sugita-tii-aneurysm-clips"
+          },
+          {
+            "icon_url": "figma/images/procedure-icon-endoscopic-endonasal.png",
+            "title": "Endoscopic Endonasal Approach",
+            "link_primary_label": "View product",
+            "link_primary_url": "#product-endoscopic-endonasal",
+            "link_secondary_label": "See E3 Evans Elite Endoscopic Instrument Set and more",
+            "link_secondary_url": "#e3-evans-elite-endoscopic-set"
+          }
+        ],
+        "closing_text": "And beyond—review the full list of supported procedures here",
+        "button_label": "Supported Procedures",
+        "button_url": "#supported-procedures"
+      },
+      "notes": [
+        "No recipe fits: full-bleed coloured band, 3 icon+title+TWO-link items (not a single title+lead+body card) plus a closing headline and a bordered space-between CTA button after the grid.",
+        "Item pitch is uneven in Figma (x=85/566/944) - normalized to an even 3-col CSS grid with a 97px gap (approved deviation, docs/02-extraction-review.md).",
+        "Icon sits LEFT of its text block (G3) via a row flex item, not stacked above; the '→' arrow is a literal character, not the (wrong) down-arrow icon asset."
+      ],
+      "html": "<section class=\"procedure-band\" id=\"{{slot.id}}\" style=\"{{style_overrides}}\">\n  <div class=\"procedure-band__inner\">\n    <h2 class=\"procedure-band__heading\">{{slot.heading}}</h2>\n    <div class=\"procedure-band__grid\">\n      {{#each slot.procedures}}\n      <div class=\"procedure-band__item\">\n        <img class=\"procedure-band__icon\" src=\"{{item.icon_url}}\" alt=\"\" width=\"146\" height=\"146\" loading=\"lazy\">\n        <div class=\"procedure-band__text\">\n          <h3 class=\"procedure-band__title\">{{item.title}}</h3>\n          <a class=\"procedure-band__link procedure-band__link--primary\" href=\"{{item.link_primary_url}}\">{{item.link_primary_label}} →</a>\n          <a class=\"procedure-band__link procedure-band__link--secondary\" href=\"{{item.link_secondary_url}}\">{{item.link_secondary_label}} →</a>\n        </div>\n      </div>\n      {{/each}}\n    </div>\n    <div class=\"procedure-band__closing\">\n      <p class=\"procedure-band__closing-text\">{{slot.closing_text}}</p>\n      <a class=\"procedure-band__button\" href=\"{{slot.button_url}}\"><span>{{slot.button_label}}</span><img src=\"figma/images/icon-arrow-down.svg\" alt=\"\" width=\"14\" height=\"14\"></a>\n    </div>\n  </div>\n</section>",
+      "css": ".procedure-band { background: var(--color-primary, #0065B3); padding: 51px 62px 58px 76px; } .procedure-band__heading { font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 2.125rem; line-height: 3.125rem; color: var(--color-white, #FFFFFF); max-width: 1137px; margin: 0 0 58px; } .procedure-band__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 97px; } .procedure-band__item { display: flex; flex-direction: row; align-items: flex-start; } .procedure-band__icon { width: 146px; height: 146px; object-fit: contain; margin-right: 10px; flex-shrink: 0; } .procedure-band__text { flex: 1 1 auto; min-width: 0; } .procedure-band__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 2.5rem; color: var(--color-white, #FFFFFF); margin: 0; } .procedure-band__link { display: block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; line-height: 2.5rem; text-decoration: none; } .procedure-band__link--primary { color: var(--color-white, #FFFFFF); } .procedure-band__link--secondary { color: var(--color-light-sky, #77DCFF); margin-top: 26px; line-height: 1.625rem; } .procedure-band__closing { display: flex; align-items: center; justify-content: space-between; margin-top: 56px; } .procedure-band__closing-text { font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 2rem; line-height: 3.125rem; color: var(--color-white, #FFFFFF); margin: 0; } .procedure-band__button { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 391px; height: 50px; padding: 0 24px 0 19px; background: var(--color-white, #FFFFFF); color: var(--color-primary, #0065B3); border: 2px solid var(--color-sky, #00B3F0); border-radius: 5px; font-family: 'Freeman', sans-serif; font-size: 1.125rem; text-decoration: none; box-sizing: border-box; } @media (max-width: 1024px) { .procedure-band__grid { gap: 48px; } .procedure-band__closing { flex-direction: column; align-items: flex-start; gap: 24px; } } @media (max-width: 768px) { .procedure-band__grid { grid-template-columns: 1fr; gap: 36px; } } @media (max-width: 430px) { .procedure-band { padding: 44px 20px; } .procedure-band__heading { font-size: 1.75rem; line-height: 2.909rem; margin-bottom: 36px; } .procedure-band__icon { width: 119px; height: 119px; margin-right: 20px; } .procedure-band__title { font-size: 1.125rem; line-height: 1.5rem; } .procedure-band__link--primary { font-size: 0.875rem; } .procedure-band__link--secondary { font-size: 0.875rem; line-height: 1.375rem; margin-top: 22px; } .procedure-band__closing-text { font-size: 1.75rem; line-height: 2.909rem; } .procedure-band__button { width: 100%; border: none; font-size: 1rem; } }",
+      "extra_css": "@media (min-width: 1025px) { #procedure-band .procedure-band__grid { gap: 81px; } #procedure-band .procedure-band__icon { width: 90px; height: 90px; } }"
+    },
+    {
+      "id": "testimonials",
+      "escape_hatch": true,
+      "content_source": {
+        "id": "testimonials",
+        "eyebrow": "TESTIMONIALS",
+        "intro": "Leaders in the field of neurosurgery discuss Mizuho America’s pivotal role in expanding the neurosurgical armamentarium.",
+        "videos": [
+          {
+            "thumbnail_url": "figma/images/testimonial-thumb-lawton.jpg",
+            "alt": "Michael T. Lawton, MD video testimonial",
+            "video_url": "#watch-lawton",
+            "name": "Michael T. Lawton, MD",
+            "role_line1": "President and CEO,",
+            "role_line2": "Barrow Neurological Institute",
+            "role_line3": "Professor and Chair, Neurosurgery",
+            "role_line4": "Chief, Neurovascular Surgery",
+            "cta_label": "Watch now"
+          },
+          {
+            "thumbnail_url": "figma/images/testimonial-thumb-evans.jpg",
+            "alt": "James J. Evans, MD video testimonial",
+            "video_url": "#watch-evans",
+            "name": "James J. Evans, MD",
+            "role_line1": "Professor, Neurological Surgery & Otolaryngology",
+            "role_line2": "Division Chief, Brain Tumor and Stereotactic Radiosurgery Division",
+            "role_line3": "Director, Cranial Base and Pituitary Surgery",
+            "role_line4": "Director, Cranial Base and Endoscopic Surgery Fellowship",
+            "cta_label": "Watch now"
+          },
+          {
+            "thumbnail_url": "figma/images/testimonial-thumb-youssef.jpg",
+            "alt": "A. Samy Youssef, MD, PhD video testimonial",
+            "video_url": "#watch-youssef",
+            "name": "A. Samy Youssef, MD, PhD",
+            "role_line1": "Professor & Vice Chairman of Education",
+            "role_line2": "Departments of Neurosurgery & Otolaryngology",
+            "role_line3": "Director of Skull Base Surgery",
+            "role_line4": "University of Colorado School of Medicine",
+            "cta_label": "Watch now"
+          }
+        ],
+        "quote": "“I Have found the mizuho america team to be... forward-thinking, and have a genuine interest in the advancement of surgical instrumentation.”",
+        "quote_attribution": "– James Evans, MD",
+        "more_label": "See more testimonials",
+        "more_url": "#more-testimonials",
+        "mobile_cta_label": "Watch what clinical experts say about us",
+        "mobile_cta_url": "#testimonials"
+      },
+      "notes": [
+        "DEVIATION from the pre-approved mapping: testimonial-grid's card template is only {{item.quote}} + {{item.author}} (blockquote/footer) - no thumbnail, no play icon, no bio/role lines, no per-card CTA, and no separate 'featured quote' block at all. This section's real content is 3 VIDEO testimonial cards (photo + play icon + name + 4-line role + Watch-now link) plus one distinct, larger, centred pull quote below - none of that fits the recipe's 2-field text-quote model. Escape-hatched to keep the video/bio content and the pull quote both intact (G4).",
+        "Pull quote corrections kept verbatim from figma/data.json (issue #17): 'I have' -> 'I Have' (design's own mid-sentence capitalisation), 'Mizuho America' stored lower-case ('mizuho america', textCase:UPPER does the visual capitalising - already reproduced via text-transform:uppercase), literal three periods '...' not an ellipsis glyph.",
+        "'Watch now' is a real <a>, not a styled text run (accepted decision #7).",
+        "H5 fix (round 2 QA): added the mobile-only 'Watch what clinical experts say about us' button after the video grid, per section-specs.json responsive.430.elements.extra_cta and spec.md line 195/220 (node 1:487) - same text/target as intro-statement's own CTA, which is desktop's only instance; hidden by default and shown only at <=430px so it doesn't duplicate on desktop."
+      ],
+      "html": "<section class=\"testimonials m11-container\" id=\"{{slot.id}}\" style=\"{{style_overrides}}\">\n  <div class=\"testimonials__inner\">\n    <h2 class=\"testimonials__eyebrow\">{{slot.eyebrow}}</h2>\n    <p class=\"testimonials__intro\">{{slot.intro}}</p>\n    <div class=\"testimonials__grid\">\n      {{#each slot.videos}}\n      <article class=\"testimonials__card\">\n        <div class=\"testimonials__thumb-wrap\">\n          <img class=\"testimonials__thumb\" src=\"{{item.thumbnail_url}}\" alt=\"{{item.alt}}\" width=\"409\" height=\"272\" loading=\"lazy\">\n          <img class=\"testimonials__play-icon\" src=\"figma/images/icon-play-circle.svg\" alt=\"\" width=\"53\" height=\"53\" aria-hidden=\"true\">\n        </div>\n        <div class=\"testimonials__bio\">\n          <p class=\"testimonials__name\">{{item.name}}</p>\n          <p class=\"testimonials__role\"><span class=\"testimonials__role-first\">{{item.role_line1}}</span><br>{{item.role_line2}}<br>{{item.role_line3}}<br>{{item.role_line4}}</p>\n          <a class=\"testimonials__cta\" href=\"{{item.video_url}}\">{{item.cta_label}}</a>\n        </div>\n      </article>\n      {{/each}}\n    </div>\n    <a class=\"testimonials__mobile-cta\" href=\"{{slot.mobile_cta_url}}\">{{slot.mobile_cta_label}}</a>\n    <blockquote class=\"testimonials__quote\">\n      <p>{{slot.quote}}</p>\n      <footer>{{slot.quote_attribution}}</footer>\n    </blockquote>\n    <div class=\"testimonials__more-row\">\n      <a class=\"testimonials__more-cta\" href=\"{{slot.more_url}}\">{{slot.more_label}}</a>\n    </div>\n  </div>\n</section>",
+      "css": ".testimonials { padding: 91px 82px 0 76px; background: var(--color-white, #FFFFFF); } .testimonials__eyebrow { font-family: 'Freeman', sans-serif; font-weight: 400; text-transform: uppercase; color: var(--color-primary, #0065B3); font-size: 2.125rem; line-height: 3.125rem; margin: 0; } .testimonials__intro { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 1.25rem; line-height: 2.5rem; color: var(--color-text, #090909); margin: 0 0 6px; max-width: 1177px; } .testimonials__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; } .testimonials__thumb-wrap { position: relative; } .testimonials__thumb { width: 100%; aspect-ratio: 409 / 272; object-fit: cover; display: block; } .testimonials__play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 53px; height: 53px; } .testimonials__bio { margin-top: 17px; padding-left: 19px; } .testimonials__name { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1.125rem; line-height: 1.875rem; color: var(--color-primary, #0065B3); margin: 0; } .testimonials__role { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 0.875rem; line-height: 1.375rem; color: var(--color-text, #090909); margin: 0; } .testimonials__role-first { line-height: 1.875rem; } .testimonials__cta { display: inline-flex; align-items: center; justify-content: center; margin-top: 17px; background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; font-size: 0.875rem; line-height: 1; width: 93px; height: 40px; border-radius: 5px; text-decoration: none; box-sizing: border-box; } .testimonials__quote { border-top: 1px solid var(--color-sky, #00B3F0); margin: 82px 0 0; padding-top: 57px; text-align: center; } .testimonials__quote p { font-family: 'Freeman', sans-serif; text-transform: uppercase; color: var(--color-primary, #0065B3); max-width: 998px; margin: 0 auto; font-size: 2.125rem; line-height: 3.125rem; } .testimonials__quote footer { font-style: normal; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 1.5rem; line-height: 2.8125rem; color: var(--color-text, #090909); margin: 8px 0 44px; } .testimonials__more-row { display: flex; align-items: center; gap: 32px; } .testimonials__more-row::before, .testimonials__more-row::after { content: ''; flex: 1; height: 1px; background: var(--color-sky, #00B3F0); max-width: 513px; } .testimonials__more-cta { display: inline-flex; align-items: center; box-sizing: border-box; flex-shrink: 0; background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; font-size: 1rem; width: 179px; height: 50px; padding-left: 17px; border-radius: 5px; text-decoration: none; } .testimonials__mobile-cta { display: none; box-sizing: border-box; } @media (max-width: 768px) { .testimonials__grid { grid-template-columns: 1fr; } } @media (max-width: 430px) { .testimonials__eyebrow { font-size: 1.75rem; } .testimonials__intro { font-weight: 300; font-size: 1.125rem; line-height: 1.531rem; } .testimonials__grid { gap: 36px; margin-top: 36px; } .testimonials__name { font-size: 1rem; line-height: 1.788rem; } .testimonials__role { font-size: 0.8125rem; line-height: 1.3125rem; } .testimonials__role-first { line-height: 1.788rem; } .testimonials__cta { width: 140px; height: 50px; font-size: 1rem; } .testimonials__mobile-cta { display: flex; align-items: center; justify-content: center; width: 100%; height: 50px; margin-top: 36px; background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; font-size: 1rem; border-radius: 5px; text-decoration: none; box-sizing: border-box; } .testimonials__quote { margin-top: 44px; border-top: 1px solid var(--color-sky, #00B3F0); border-bottom: 1px solid var(--color-sky, #00B3F0); padding-bottom: 36px; } .testimonials__quote p { font-size: 1.5rem; line-height: 1.995rem; } .testimonials__quote footer { font-size: 1.25rem; line-height: 1.7025rem; } .testimonials__more-row::before, .testimonials__more-row::after { display: none; } .testimonials__more-cta { width: 100%; justify-content: center; padding-left: 0; } }"
+    },
+    {
+      "id": "about-stats",
+      "escape_hatch": true,
+      "content_source": {
+        "id": "about-stats",
+        "heading": "ABOUT MIZUHO AMERICA",
+        "body": "Established in Boston, Massachusetts in 1993, Mizuho America is part of Mizuho Corporation, a global medical products company with more than a century of commitment to providing surgeons with meticulously crafted equipment for their OR needs. With deep expertise in neurosurgical products, Mizuho America has built a legacy of quality, reliability, and trusted partnership with healthcare professionals. From problem-solving instrument sets developed with clinical experts, to ongoing support of neurosurgeons every day, Mizuho America remains committed to solutions that can help facilitate greater control, precision, and efficiency during the procedure with the goal of better outcomes after.",
+        "stats": [
+          {"number": "30+", "label": "years serving the neurosurgery community", "variant": "primary"},
+          {"number": "1,800+", "label": "neurosurgical products", "variant": "sky"},
+          {"number": "1000+", "label": "hospitals served", "variant": "primary"}
+        ],
+        "button_label": "Explore our story",
+        "button_url": "#our-story"
+      },
+      "notes": [
+        "No recipe fits: a unique 'stat counter' shape (not hero/nav/card-grid/testimonial/faq/gallery/cta/footer) - each stat is a white shadow-offset panel drawn under a colour-alternating card, not a plain title+icon+body card.",
+        "Stat row centred (accepted decision, Figma has it off-centre 76px left / 204px right). Stat-number line-height corrected from Figma's literal 36px (ratio 0.5625 of the 64px font-size) to ~1.1 (accepted decision).",
+        "Stat labels left-aligned inside their cards (G6), with right padding on the card so long labels ('years serving the neurosurgery community') wrap inside the card instead of spilling past its edge.",
+        "Third stat reads '1000+' (no thousands separator) vs the second stat's '1,800+' - the inconsistency is reproduced verbatim per accepted decision (typos/inconsistencies entered as designed)."
+      ],
+      "html": "<section class=\"about-stats m11-container\" id=\"{{slot.id}}\" style=\"{{style_overrides}}\">\n  <div class=\"about-stats__inner\">\n    <h2 class=\"about-stats__heading\">{{slot.heading}}</h2>\n    <p class=\"about-stats__body\">{{slot.body}}</p>\n    <div class=\"about-stats__row\">\n      {{#each slot.stats}}\n      <div class=\"about-stats__stat about-stats__stat--{{item.variant}}\">\n        <div class=\"about-stats__panel\"></div>\n        <div class=\"about-stats__card\">\n          <span class=\"about-stats__number\">{{item.number}}</span>\n          <span class=\"about-stats__label\">{{item.label}}</span>\n        </div>\n      </div>\n      {{/each}}\n    </div>\n    <a class=\"about-stats__button\" href=\"{{slot.button_url}}\">{{slot.button_label}}</a>\n  </div>\n</section>",
+      "css": ".about-stats { background: var(--color-white, #FFFFFF); padding: 95px 76px 99px; text-align: center; } .about-stats__heading { font-family: 'Freeman', sans-serif; font-weight: 400; font-size: 2.125rem; line-height: 3.125rem; color: var(--color-primary, #0065B3); text-transform: uppercase; margin: 0 0 21px; } .about-stats__body { font-family: 'Open Sans', sans-serif; font-size: 1rem; line-height: 2.25rem; color: var(--color-text, #090909); max-width: 1090px; margin: 0 auto 26px; } .about-stats__row { display: flex; justify-content: center; flex-wrap: wrap; gap: 79px; margin-top: 44px; } .about-stats__stat { position: relative; width: 421px; height: 250px; } .about-stats__panel { position: absolute; left: 0; top: 0; width: 146px; height: 250px; background: var(--color-white, #FFFFFF); border-radius: 10px; box-shadow: 21px 0 21px -23px #000000; } .about-stats__card { position: absolute; left: 131px; top: 44px; width: 290px; height: 162px; border-radius: 20px; background: var(--color-primary, #0065B3); padding: 37px 20px 0 50px; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; } .about-stats__stat--sky .about-stats__card { background: var(--color-sky, #00B3F0); } .about-stats__number { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 4rem; line-height: 1.1; color: var(--color-white, #FFFFFF); } .about-stats__label { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; line-height: 1.125rem; color: var(--color-white, #FFFFFF); margin-top: 21px; text-align: left; max-width: 100%; } .about-stats__button { display: inline-block; margin-top: 20px; background: var(--color-primary, #0065B3); color: var(--color-white, #FFFFFF); font-family: 'Freeman', sans-serif; width: 150px; height: 50px; line-height: 50px; border-radius: 5px; text-decoration: none; } @media (max-width: 1024px) { .about-stats__row { gap: 32px; } .about-stats__stat { width: 340px; } } @media (max-width: 768px) { .about-stats__row { flex-direction: column; align-items: center; gap: 32px; } } @media (max-width: 430px) { .about-stats__heading { font-size: 1.5rem; line-height: 1.995rem; margin-bottom: 22px; } .about-stats__body { font-size: 0.875rem; line-height: 1.75rem; } .about-stats__row { margin-top: 36px; } .about-stats__stat { width: 350px; height: 250px; } .about-stats__panel { width: 75px; } .about-stats__card { left: 60px; top: 43.2px; } .about-stats__button { width: 100%; } }",
+      "extra_css": "#about-stats .about-stats__card { height: 172px; } @media (min-width: 1025px) { #about-stats .about-stats__row { gap: 50px; } #about-stats .about-stats__stat { width: 360px; } #about-stats .about-stats__card { left: 70px; } #about-stats .about-stats__panel { width: 85px; } }"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "high": 2,
+    "med": 0,
+    "low": 0,
+    "checked_fields": 221,
+    "editable_pct": 100.0,
+    "stage": "fields"
+  },
+  "findings": [
+    {
+      "id": "cov-b6316808",
+      "kind": "plan_layout_missing",
+      "severity": "high",
+      "page": "",
+      "section": "m11_resource_fields",
+      "field": "",
+      "detail": "approved plan layout 'm11_resource_fields' missing from the sections FC layouts map",
+      "route_to": "html-acf-builder",
+      "fix_hint": ""
+    },
+    {
+      "id": "cov-4c597361",
+      "kind": "plan_layout_missing",
+      "severity": "high",
+      "page": "",
+      "section": "m11_product_fields",
+      "field": "",
+      "detail": "approved plan layout 'm11_product_fields' missing from the sections FC layouts map",
+      "route_to": "html-acf-builder",
+      "fix_hint": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "acf_fc_layout": "sh_login",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "sales-hub-login"
+    },
+    "heading": "Sales HUb - REP Portal",
+    "forgot_password_label": "Forgot your password?",
+    "note": "Sales Hub access is for registered Mizuho America sales representatives only.\nTo request access, contact your account manager."
+  }
+]

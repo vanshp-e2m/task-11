@@ -1,0 +1,56 @@
+{
+ "verdict": "PASS",
+ "reason": "all measured properties within tolerance; no undeclared changes",
+ "findings": [
+  {
+   "severity": "low",
+   "kind": "pixel_text_antialias",
+   "source_id": ".pd-ctas/.tq-ctas",
+   "property": "glyph pixels",
+   "expected": "<=500 px",
+   "actual": "max 894 px; 45 of 78 crops over 500; 3 crops differ by 1px in height (sub-pixel box height)",
+   "delta": null,
+   "rule": "pixel_secondary",
+   "note": "Inspected diff-product-sugita-ii-head-frame-tq-ctas-768.png: only glyph pixels differ. Backgrounds, borders, radii, the arrow icon and the button boxes match exactly. The text sits a fraction of a pixel differently because of the inherited line-height (see measured.inherited_from_site). Crops were re-captured sub-pixel-aligned (body offset to integer page coordinates) to remove box-position noise. Kept as low: not a defect of this data write."
+  },
+  {
+   "severity": "low",
+   "kind": "dead_in_page_anchor",
+   "source_id": "buttons_1_cta",
+   "property": "href",
+   "expected": "an element with id=download-brochure",
+   "actual": "#download-brochure has no target on WP or on the replica",
+   "delta": null,
+   "rule": "link",
+   "note": "The URL was declared and matches the replica exactly, so this write is not at fault. It is a placeholder that does nothing when clicked and needs a real brochure URL or section later."
+  }
+ ],
+ "counts": {
+  "high": 0,
+  "medium": 0,
+  "low": 2
+ },
+ "notes": [
+  "typography mode: inherit (site owns type); 234 line_height differences suppressed into measured.inherited_from_site, not counted",
+  "viewports: project-config qa_breakpoints.core [1440,768,430] + 390 (CLAUDE.md) + CSSOM-discovered boundaries 1200,1025,1024,1023,992,767,600,599,479",
+  "reference: HTML replicas at http://127.0.0.1:8767/{product-main,product-variation-a,product-variation-b}/html/ mapped to 230/231/232 by page title",
+  "baseline: DevConnect pre-write scoped backups + backups/10-before-portal-chrome.sql (maint-runner baseline directory absent)",
+  "_elementor_page_assets was removed from 230/231/232 AFTER this task's window (by the later Elementor writes). Not attributed to this task"
+ ],
+ "pass_number": 1,
+ "cap": 3,
+ "cap_reached": false,
+ "unverifiable": [],
+ "report_offer": {
+  "available": true,
+  "slug": "product-buttons",
+  "cmd": "python3 scripts/build_qa_report.py --slug product-buttons --pass 1",
+  "reference_kind": "html",
+  "evidence": {
+   "screenshots": 234,
+   "pixel": true,
+   "measured": true,
+   "peer": false
+  }
+ }
+}

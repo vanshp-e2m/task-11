@@ -1,0 +1,238 @@
+{
+  "slug": "product-lawtonelite-skull-base-set",
+  "title": "LawtonElite Skull Base Instrumentation Set",
+  "product_category": "instruments",
+  "procedure": [
+    "skull-base",
+    "craniotomy",
+    "keyhole"
+  ],
+  "product_configuration": "instrumentation-sets",
+  "gallery_image": "seed/images/product-variation-a/a-gallery.jpg",
+  "gallery_thumbnails": [
+    {
+      "type": "image",
+      "image": "seed/images/product-variation-a/a-thumb-1.jpg"
+    },
+    {
+      "type": "image",
+      "image": "seed/images/product-variation-a/a-thumb-2.jpg"
+    },
+    {
+      "type": "image",
+      "image": "seed/images/product-variation-a/a-thumb-3.jpg"
+    },
+    {
+      "type": "video",
+      "video_url": ""
+    }
+  ],
+  "quick_facts": "Instrumentation Set Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+  "family_pill": "Instrumentation Set",
+  "model_line": "Ref: LE-SKB-SET • 15 instruments • Stainless steel tray",
+  "description": "A curated set of precision instruments for skull base surgery, developed in collaboration with Dr. Michael Lawton. Supplied in a sterilizable stainless steel tray with individual instrument holders.",
+  "spec_caption": "",
+  "spec_rows": [
+    {
+      "label": "Total instruments",
+      "value": "15 (21 pieces including multiples)"
+    },
+    {
+      "label": "Tray material",
+      "value": "316L stainless steel"
+    },
+    {
+      "label": "Tray dimensions",
+      "value": "340 x 240 x 40 mm"
+    },
+    {
+      "label": "Sterilization",
+      "value": "Steam autoclave or ETO"
+    },
+    {
+      "label": "Custom configurations",
+      "value": "Available on request"
+    }
+  ],
+  "has_size_guide": false,
+  "size_selector_label": "",
+  "size_selector_part_no": "",
+  "size_guide_heading": "",
+  "size_guide_badge": "",
+  "size_rows": [],
+  "has_instruments_table": true,
+  "instruments_heading": "Instruments Included",
+  "instruments_badge": "15 Instruments • 21 pieces",
+  "instruments_download_label": "Download full parts list",
+  "instrument_rows": [
+    {
+      "number": "01",
+      "instrument": "Dissector, Penfield No. 1",
+      "part_number": "LE-DIS-101",
+      "qty": "1",
+      "notes_col": "Dural elevation and dissection"
+    },
+    {
+      "number": "02",
+      "instrument": "Dissector, Penfield No. 4",
+      "part_number": "LE-DIS-104",
+      "qty": "1",
+      "notes_col": "Blunt dissection"
+    },
+    {
+      "number": "03",
+      "instrument": "Micro Scissors, straight, 18cm",
+      "part_number": "LE-MSS-018",
+      "qty": "1",
+      "notes_col": ""
+    },
+    {
+      "number": "04",
+      "instrument": "Micro Scissors, curved, 18cm",
+      "part_number": "LE-MSC-018",
+      "qty": "1",
+      "notes_col": ""
+    },
+    {
+      "number": "05",
+      "instrument": "Bipolar Forceps, bayonet, 18cm",
+      "part_number": "LE-BPF-018B",
+      "qty": "1",
+      "notes_col": "For use with bipolar generator"
+    },
+    {
+      "number": "06",
+      "instrument": "Bayonet Forceps, 18cm",
+      "part_number": "LE-BAY-018",
+      "qty": "2",
+      "notes_col": ""
+    },
+    {
+      "number": "07",
+      "instrument": "Brain Retractor, 10mm",
+      "part_number": "LE-BRT-010",
+      "qty": "2",
+      "notes_col": "For self-retaining system"
+    },
+    {
+      "number": "08",
+      "instrument": "Brain Retractor, 15mm",
+      "part_number": "LE-BRT-015",
+      "qty": "2",
+      "notes_col": "For self-retaining system"
+    },
+    {
+      "number": "09",
+      "instrument": "Suction Tube, malleable, 3Fr",
+      "part_number": "LE-SUC-003M",
+      "qty": "2",
+      "notes_col": "LawtonElite malleable tip"
+    },
+    {
+      "number": "10",
+      "instrument": "Suction Tube, malleable, 5Fr",
+      "part_number": "LE-SUC-005M",
+      "qty": "2",
+      "notes_col": "LawtonElite malleable tip"
+    },
+    {
+      "number": "11",
+      "instrument": "Nerve Hook, right angle",
+      "part_number": "LE-NHK-001",
+      "qty": "1",
+      "notes_col": ""
+    },
+    {
+      "number": "12",
+      "instrument": "Micro Probe, blunt",
+      "part_number": "LE-PRB-001",
+      "qty": "1",
+      "notes_col": "Vessel and nerve identification"
+    },
+    {
+      "number": "13",
+      "instrument": "Curette, straight, 2mm",
+      "part_number": "LE-CUR-002",
+      "qty": "1",
+      "notes_col": ""
+    },
+    {
+      "number": "14",
+      "instrument": "Curette, angled, 2mm",
+      "part_number": "LE-CUR-002A",
+      "qty": "1",
+      "notes_col": ""
+    },
+    {
+      "number": "15",
+      "instrument": "Instrument Tray with lid and holders",
+      "part_number": "LE-TRY-SKB",
+      "qty": "1",
+      "notes_col": "316L stainless steel, autoclavable"
+    }
+  ],
+  "accessories_heading": "ACCESSORIES",
+  "accessories": [
+    {
+      "product": "replacement-suction-tubes",
+      "caption": "Malleable • 3Fr and 5Fr",
+      "image_override": "",
+      "product_title": "Replacement Suction Tubes"
+    },
+    {
+      "product": "replacement-brain-retractors",
+      "caption": "10mm and 15mm",
+      "image_override": "",
+      "product_title": "Replacement Brain Retractors"
+    },
+    {
+      "product": "instrument-tray-silicone-mat",
+      "caption": "Replacement holder",
+      "image_override": "",
+      "product_title": "Instrument Tray Silicone Mat"
+    },
+    {
+      "product": "transport-case",
+      "caption": "Hard shell, foam lined",
+      "image_override": "",
+      "product_title": "Transport Case"
+    }
+  ],
+  "related_heading": "RELATED PRODUCTS",
+  "related_products": [
+    {
+      "product": "lawtonelite-bypass",
+      "caption": "Instrumentation Set",
+      "product_title": "LawtonElite Bypass"
+    },
+    {
+      "product": "lawtonelite-malleable-suction-tubes",
+      "caption": "Product Families",
+      "product_title": "LawtonElite Malleable Suction Tubes"
+    },
+    {
+      "product": "keyhole-instrumentation-set",
+      "caption": "Instrumentation Sets",
+      "product_title": "Keyhole Instrumentation Set"
+    }
+  ],
+  "testimonial_quote": "“The LawtonElite set has everything I need for a skull base case in one tray. The instruments are perfectly balanced and the quality is consistently exceptional. It has genuinely changed how I prepare for these procedures.”",
+  "testimonial_name": "– Prof Name Here, MD PhD",
+  "testimonial_dept": "Department of Neurosurgery, Institution Here",
+  "buttons": [
+    {
+      "cta": {
+        "url": "http://task-11.local/contact-us/",
+        "title": "Schedule a Demo",
+        "target": ""
+      }
+    },
+    {
+      "cta": {
+        "url": "#download-brochure",
+        "title": "Download product brochures",
+        "target": ""
+      }
+    }
+  ]
+}

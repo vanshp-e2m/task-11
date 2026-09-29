@@ -1,0 +1,533 @@
+{
+  "page_slug": "resources",
+  "assets": [
+    {
+      "file": "video-intro-lawton.jpg",
+      "name": "video-intro-lawton.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2852 (335x219)"
+      ],
+      "role": "intro video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-lawtonelite-series.jpg",
+      "name": "video-lawtonelite-series.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2817 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-lawtonelite-microscissors.jpg",
+      "name": "video-lawtonelite-microscissors.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2825 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-e3-evans-elite-endoscopic-instrument-set.jpg",
+      "name": "video-e3-evans-elite-endoscopic-instrument-set.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2827 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-dr-youssefs-cranial-nerve-dissection-set.jpg",
+      "name": "video-dr-youssefs-cranial-nerve-dissection-set.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2830 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-sugita-ii-multi-purpose-headframe.jpg",
+      "name": "video-sugita-ii-multi-purpose-headframe.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2820 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-mst-7300b-bx-table-for-microsurgery-1.jpg",
+      "name": "video-mst-7300b-bx-table-for-microsurgery-1.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2826 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-mst-7300b-bx-table-for-microsurgery-2.jpg",
+      "name": "video-mst-7300b-bx-table-for-microsurgery-2.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2831 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-mst-7300bx-table-for-microsurgery.jpg",
+      "name": "video-mst-7300bx-table-for-microsurgery.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2828 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-keyhole-approach-brain-surgery.jpg",
+      "name": "video-keyhole-approach-brain-surgery.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2818 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-keyhole-approach-brain-surgery-extended.jpg",
+      "name": "video-keyhole-approach-brain-surgery-extended.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2819 (303x236)"
+      ],
+      "role": "testimonial video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-fact-sugita-ii-multi-purpose-headframe.jpg",
+      "name": "video-fact-sugita-ii-multi-purpose-headframe.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2791 (303x236)"
+      ],
+      "role": "fast-facts video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-fact-feather-instruments-with.jpg",
+      "name": "video-fact-feather-instruments-with.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2793 (303x236)"
+      ],
+      "role": "fast-facts video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.jpg",
+      "name": "video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2798 (303x236)"
+      ],
+      "role": "fast-facts video thumbnail",
+      "containsLiveText": false,
+      "cleaned": "play icon removed"
+    },
+    {
+      "file": "brochure-lawton-elite-series.jpg",
+      "name": "brochure-lawton-elite-series.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2747 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-lawtonelite-neurovascular-bypass-instruments.jpg",
+      "name": "brochure-lawtonelite-neurovascular-bypass-instruments.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2748 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-lawtonelite-micro-dissection-instruments.jpg",
+      "name": "brochure-lawtonelite-micro-dissection-instruments.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2749 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-lawtonelite-microscissors.jpg",
+      "name": "brochure-lawtonelite-microscissors.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2750 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-lawton-elite-reposable-microscissors.jpg",
+      "name": "brochure-lawton-elite-reposable-microscissors.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2751 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-evans-elite-endoscopic-instruments.jpg",
+      "name": "brochure-evans-elite-endoscopic-instruments.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2718 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-evans-360-rotatables.jpg",
+      "name": "brochure-evans-360-rotatables.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2719 (217x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-e3-mithras-bipolar.jpg",
+      "name": "brochure-e3-mithras-bipolar.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2720 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-kelly-endoscopic-endonasal-instrument-set.jpg",
+      "name": "brochure-kelly-endoscopic-endonasal-instrument-set.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2691 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-kelly-endonasal-instrument-set.jpg",
+      "name": "brochure-kelly-endonasal-instrument-set.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2692 (217x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-kelly-keyhole-instrument-set.jpg",
+      "name": "brochure-kelly-keyhole-instrument-set.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2693 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-day-bailes-tapered-locking-suction-tubes.jpg",
+      "name": "brochure-day-bailes-tapered-locking-suction-tubes.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2671 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-dr-youssefs-cranial-nerve-dissection-set.jpg",
+      "name": "brochure-dr-youssefs-cranial-nerve-dissection-set.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2672 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-feather-k-6420-micro-blade-angled-for-precision-incisions.jpg",
+      "name": "brochure-feather-k-6420-micro-blade-angled-for-precision-incisions.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2651 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-t-endo-clips.jpg",
+      "name": "brochure-t-endo-clips.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2652 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-cerebellar-pontine-tumor-instruments.jpg",
+      "name": "brochure-cerebellar-pontine-tumor-instruments.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2631 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-skull-base-instrumentation.jpg",
+      "name": "brochure-skull-base-instrumentation.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2632 (217x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-mst-7300-series-mizuho-mobile-microsurgery-table.jpg",
+      "name": "brochure-mst-7300-series-mizuho-mobile-microsurgery-table.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2598 (210x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-sugita-ii-multi-purpose.jpg",
+      "name": "brochure-sugita-ii-multi-purpose.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2599 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-radiolucent-head-frame.jpg",
+      "name": "brochure-radiolucent-head-frame.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2600 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-smart-fix-head-frame-and-holder.jpg",
+      "name": "brochure-smart-fix-head-frame-and-holder.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2601 (210x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-t2-clips-sugita-titanium-aneurysm-clips-and-appliers.jpg",
+      "name": "brochure-t2-clips-sugita-titanium-aneurysm-clips-and-appliers.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2577 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-feather-micro-surgical-blade-for-fine-incision.jpg",
+      "name": "brochure-feather-micro-surgical-blade-for-fine-incision.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2578 (237x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-vascular-management-solutions-from-mizuho.jpg",
+      "name": "brochure-vascular-management-solutions-from-mizuho.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2522 (210x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-feather-micro-surgery.jpg",
+      "name": "brochure-feather-micro-surgery.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2524 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-microscissors.jpg",
+      "name": "brochure-microscissors.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2526 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-malleable-instrument-set-for-neuroendoscopy.jpg",
+      "name": "brochure-malleable-instrument-set-for-neuroendoscopy.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2527 (210x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-endoscopic-workflow.jpg",
+      "name": "brochure-endoscopic-workflow.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2528 (210x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-skull-base-workflow.jpg",
+      "name": "brochure-skull-base-workflow.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2523 (210x245)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    },
+    {
+      "file": "brochure-neurovascular-doppler-systems.jpg",
+      "name": "brochure-neurovascular-doppler-systems.jpg",
+      "type": "raster",
+      "method": "crop of the approved 1x export (#28)",
+      "figmaNodes": [
+        "1:2525 (210x236)"
+      ],
+      "role": "brochure cover",
+      "containsLiveText": false,
+      "cleaned": "download badge removed"
+    }
+  ]
+}

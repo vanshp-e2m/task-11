@@ -1,0 +1,126 @@
+{
+  "slug": "product-sugita-ii-head-frame",
+  "title": "Sugita II Head Frame",
+  "product_category": "head-holding-systems",
+  "procedure": [
+    "craniotomy",
+    "skull-base",
+    "aneurysm",
+    "neuroendoscopy"
+  ],
+  "product_configuration": "",
+  "gallery_image": "seed/images/product-main/main-gallery.jpg",
+  "gallery_thumbnails": [
+    {
+      "type": "placeholder"
+    },
+    {
+      "type": "placeholder"
+    },
+    {
+      "type": "placeholder"
+    },
+    {
+      "type": "video",
+      "video_url": ""
+    }
+  ],
+  "quick_facts": "Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+  "family_pill": "",
+  "model_line": "Model SGT-II • SGT-II-RL (radiolucent)",
+  "description": "The Sugita II provides secure 3-point cranial fixation with a lightweight aluminium frame. Available in standard and radiolucent configurations, compatible with all major neurosurgical approaches and navigation systems.",
+  "spec_caption": "KEY SPECIFICATIONS",
+  "spec_rows": [
+    {
+      "label": "Configuration",
+      "value": "Standard + radiolucent versions"
+    },
+    {
+      "label": "Pin configuration",
+      "value": "3-pin or 4-pin"
+    },
+    {
+      "label": "Maximum torque",
+      "value": "4 Nm per pin (torque-limiting)"
+    },
+    {
+      "label": "Navigation",
+      "value": "Compatible — all major systems"
+    }
+  ],
+  "has_size_guide": false,
+  "size_selector_label": "",
+  "size_selector_part_no": "",
+  "size_guide_heading": "",
+  "size_guide_badge": "",
+  "size_rows": [],
+  "has_instruments_table": false,
+  "instruments_heading": "",
+  "instruments_badge": "",
+  "instruments_download_label": "",
+  "instrument_rows": [],
+  "accessories_heading": "ACCESSORIES",
+  "accessories": [
+    {
+      "product": "mst-7300-surgical-table",
+      "caption": "Recommended pairing",
+      "image_override": "",
+      "product_title": "MST 7300 Surgical Table"
+    },
+    {
+      "product": "sugita-pin-set",
+      "caption": "3-pin & 4-pin options",
+      "image_override": "",
+      "product_title": "Sugita Pin Set"
+    },
+    {
+      "product": "mayfield-table-adapter",
+      "caption": "Table interface bracket",
+      "image_override": "",
+      "product_title": "Mayfield Table Adapter"
+    },
+    {
+      "product": "gel-head-rest",
+      "caption": "Paediatric & prone support",
+      "image_override": "",
+      "product_title": "Gel Head Rest"
+    }
+  ],
+  "related_heading": "RELATED PRODUCTS",
+  "related_products": [
+    {
+      "product": "sugita-multipurpose-head-frame-classic",
+      "caption": "Head holding • Standard configuration",
+      "product_title": "Sugita Multipurpose Head Frame Classic"
+    },
+    {
+      "product": "mst-7300-neurosurgical-table",
+      "caption": "Surgical Tables • Compatible pairing",
+      "product_title": "MST 7300 Neurosurgical Table"
+    },
+    {
+      "product": "product-feather-blades",
+      "caption": "Instruments • Skull base procedures",
+      "product_title": "Feather Blades"
+    }
+  ],
+  "testimonial_quote": "“The Sugita II has been my first choice for complex skull base cases for over a decade. The stability is unmatched, and the radiolucent version has become essential for our intraoperative imaging workflows.”",
+  "testimonial_name": "– Prof Name Here, MD PhD",
+  "testimonial_dept": "Department of Neurosurgery, Institution Here",
+  "buttons": [
+    {
+      "cta": {
+        "url": "http://task-11.local/contact-us/",
+        "title": "Schedule a Demo",
+        "target": ""
+      }
+    },
+    {
+      "cta": {
+        "url": "#download-brochure",
+        "title": "Download product brochures",
+        "target": ""
+      }
+    }
+  ]
+}

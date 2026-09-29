@@ -1,0 +1,2882 @@
+{
+  "meta": {
+    "project": "mizuho-america",
+    "brand": "Mizuho America",
+    "prefix": "mizuho",
+    "prefix_note": "Derived from brand name; flag for developer confirmation before use in ACF group/field keys.",
+    "source_dir": "source/html/_extracted/ (shared extraction layer output; fallback source/ if absent)",
+    "pages_count": 9,
+    "sections_count": 33,
+    "homepage_slug_note": "Detected page id 'home' (index.html). Developer-confirmed: built in WordPress as inner page slug 'mizuho-home', not the literal WP front-page slug 'home'.",
+    "builder_split_note": "Per project CLAUDE.md: Home/Products(CPT+archive)/Resources/Sales Hub = ACF; About Us + Contact Us = Elementor (not part of this 9-page HTML extraction); header/footer = Elementor Theme Builder templates (already exist as templates 61/62) -- recorded below as 'shared' chrome, not page sections."
+  },
+  "tokens": {
+    "fonts": {
+      "heading": "Freeman",
+      "body": "Open Sans",
+      "nav_ui_secondary": "Montserrat",
+      "accent_numerals": "Mukta",
+      "loading": "google-fonts",
+      "google_fonts_request": "https://fonts.googleapis.com/css2?family=Freeman:wght@400&family=Open+Sans:wght@300;400;600;700&family=Mukta:wght@700&family=Montserrat:wght@300;500;700&family=Fraunces:wght@700&display=swap",
+      "notes": "--font-heading (Freeman) and --font-body (Open Sans) are the only two custom-property fonts, but Montserrat is used directly (not via a custom property) for header/footer nav-adjacent UI text and several stat/label elements, and Mukta for isolated numeral styling. A 'Fraunces Full' @font-face is declared in every stylesheet and loaded via the same Google Fonts request, but a CSS comment ('Montserrat runs wider than Gotham') implies the real intended display typeface is a licensed 'Gotham' not present in this export, with Fraunces/Montserrat possibly serving as stand-ins. Flag with design for confirmation of the true display font before finalizing @font-face / Elementor Kit typography."
+    },
+    "colors": {
+      "primary": "#0065B3",
+      "sky": "#00B3F0",
+      "navy": "#002842",
+      "text": "#090909",
+      "light_sky": "#77DCFF",
+      "white": "#FFFFFF",
+      "black": "#000000",
+      "divider": "#D9D9D9",
+      "muted": "#666666",
+      "mobile_bg": "#FCFEFF",
+      "search_bg": "#00B3F033",
+      "source_note": "source/html/tokens.json's top-level colors.primary/secondary (#FFFFFF / #0065B3) are a frequency-heuristic misread of the CSS (logged upstream as issue #53) -- #FFFFFF is just the page background, not the brand primary. The values above are read directly from each CSS file's :root block, byte-identical across all 9 stylesheets, and match the developer-confirmed brand palette (primary #0065B3, sky #00B3F0, navy #002842, text #090909, light sky #77DCFF)."
+    },
+    "canvas_classes": [],
+    "canvas_notes": "No section-level background/theme class system exists (no s-paper/s-cream equivalents). Every header/section/footer instead carries a single reset utility class '.rs' that (a) defines a fluid --u scaling unit sized against a 1440px desktop canvas, and (b) at <=1023px automatically swaps EVERY '.rs' element's background to #FCFEFF (--color-mobile-bg) EXCEPT '.pb' (home's procedure-band section) and '.site-foot' (footer), which keep their own explicit backgrounds. This mobile background swap is pure CSS (:not() selectors), not a class toggled in markup -- the theme/CSS build must replicate the same selector exception list, not a flat background swap on all sections.",
+    "breakpoints": [
+      1024,
+      1023
+    ],
+    "breakpoints_notes": "Seeded from source/html/tokens.json. The two numbers are ONE boundary, not two separate breakpoints: desktop = @media (min-width: 1024px), mobile = @media (max-width: 1023px). No tablet-specific breakpoint exists anywhere across the 9 CSS files. QA/audit viewports should use two widths straddling this single boundary (matching the fluid canvas's own 1440px reference for desktop, e.g. 1440/390), not a hardcoded 3-viewport default.",
+    "notes": "Spacing scale: --space-xs 8px / --space-sm 16px / --space-md 24px / --space-lg 48px / --space-xl 96px. Radii: --radius-sm 5px / --radius-md 10px / --radius-lg 20px. Focus ring: --interaction-focus-ring: 0 0 0 3px #00B3F059. Hover mix: --interaction-hover-mix: 85% (used with color-mix()). Utility classes '.d-only' / '.m-only' toggle desktop-only / mobile-only content at the 1024px boundary via CSS display:none (not JS) -- these must be preserved verbatim in the markup (not resolved/stripped at build time), since desktop and mobile variants sometimes carry different copy, not just different layout (e.g. hero-meta / value-columns line breaks). All 9 pages request the full Google Fonts family list regardless of which fonts that page's own CSS actually uses -- a copy/paste artifact worth trimming when the CSS is rebuilt."
+  },
+  "assets": {
+    "css": [
+      "css/mizuho-home.css (home)",
+      "css/product-main.css (product-sugita-ii-head-frame -- base product template)",
+      "css/product-variation-a.css (product-lawtonelite-skull-base-set -- instruments-table variant)",
+      "css/product-variation-b.css (product-feather-blades -- size-selector variant)",
+      "css/product-browse.css (products archive)",
+      "css/resources.css (resources)",
+      "css/sales-hub-dashboard.css",
+      "css/sales-hub-login.css",
+      "css/resource-library.css (sales-hub-resource-library)"
+    ],
+    "js": [
+      "js/main.js"
+    ],
+    "images_note": "118 images + 24 svgs inventoried in source/html/assets.json; 0 missing_assets (every referenced path resolves). Each page ships its OWN duplicated /assets/<page-slug>/ folder containing identical copies of shared files (e.g. logo-mizuho-header-srgb.png appears once per page folder, byte-identical) -- this is a static-export artifact, not 9 distinct logos. The ACF/theme build should canonicalize these into one media-library asset per unique file, not import 9 copies. Per-section image samples are recorded inline on each field below rather than duplicated in a flat top-level list.",
+    "external_assets": [
+      "https://fonts.gstatic.com/... (Open Sans, Freeman, Mukta, Montserrat, Fraunces woff2 files via Google Fonts -- see tokens.fonts)"
+    ]
+  },
+  "js_hooks": [
+    {
+      "hook": ".site-head__toggle",
+      "source": "js/main.js",
+      "rule": "Click handler toggles aria-expanded on the button, .is-open on #site-primary-nav, and .nav-open on <body>. Preserve these exact selectors/ids/classes (button class site-head__toggle, nav id site-primary-nav, body class nav-open) in both header variants (public and sales-hub) -- this is the ONLY JS behavior in the entire site."
+    }
+  ],
+  "js_hooks_notes": "main.js is the ONLY script in the project (9 lines, no dependencies). It is linked on 8 of 9 pages; sales-hub-login.html does NOT load js/main.js, consistent with that page having no header/mobile-nav to toggle (see shared.header notes). No data-* attributes exist anywhere in the 9 HTML pages -- every other interactive-looking element (filters, search, pager, tabs, size selector, size-guide 'selected' row, download/watch links) is static markup with no JS wiring; treat all of it as a visual prototype of future behavior, not an implemented feature, when planning ACF/PHP.",
+  "anchors": [
+    {
+      "target": "#procedure-band",
+      "sources": [
+        "home hero-carousel .hero-browse (in-page)"
+      ],
+      "cross_page": false
+    },
+    {
+      "target": "#testimonials",
+      "sources": [
+        "home intro-statement .intro-btn (in-page)",
+        "resources resources-intro .ri-btns solid button (in-page, resolves to resources.html's OWN #testimonials block, which is structurally different content from home's #testimonials -- same id, two unrelated sections on two different pages)"
+      ],
+      "cross_page": false
+    },
+    {
+      "target": "#brochures",
+      "sources": [
+        "resources resources-intro .ri-btns line button (in-page)"
+      ],
+      "cross_page": false
+    },
+    {
+      "target": "#browse-by-product",
+      "sources": [
+        "products products-intro .pbh-link",
+        "products browse-by-procedure .pr-more x3 (all three items reuse the same generic target instead of a per-item anchor)",
+        "products browse-by-product filter form/search form/pager (self-refresh links)"
+      ],
+      "cross_page": false
+    },
+    {
+      "target": "#account",
+      "sources": [
+        "sales-hub-dashboard header .ph-account (sales-hub-dashboard.html#account, in-page)"
+      ],
+      "cross_page": false
+    },
+    {
+      "target": "products.html",
+      "sources": [
+        "all breadcrumbs on the 3 product-detail pages",
+        "header 'Products' nav item on product-detail pages + products.html itself",
+        "related-products/accessories tiles that happen to link to a real page instead of a placeholder hash"
+      ],
+      "cross_page": true
+    },
+    {
+      "target": "product-sugita-ii-head-frame.html / product-feather-blades.html / product-lawtonelite-skull-base-set.html",
+      "sources": [
+        "products browse-by-procedure .pr-view (all 3, real working cross-links)",
+        "product-detail related-products tiles (some, not all -- see notes)"
+      ],
+      "cross_page": true,
+      "notes": "products.html's 'Browse by procedure' block links to real product pages; home's near-identical procedure-band block (same 3 procedures, same copy pattern) links to broken hash anchors instead (#tumor-products etc). products.html is the correct/working version of that pattern -- flag the home version as needing the same fix."
+    },
+    {
+      "target": "#products",
+      "sources": [
+        "header nav 'Products' link on home + resources ONLY"
+      ],
+      "cross_page": false,
+      "notes": "DEFECT: no element with id='products' exists on ANY of the 9 pages. On the other 4 public pages (3 product-detail + products.html) the SAME nav label 'Products' instead links to the real products.html with is-current state. The header 'Products' nav link is inconsistent site-wide -- two different hrefs for the same label depending which page you're on. Flag prominently for the developer; likely should always be href to products.html."
+    },
+    {
+      "target": "#overview",
+      "sources": [
+        "pd-tabs 'Overview' tab on ALL 3 product-detail pages"
+      ],
+      "cross_page": false,
+      "notes": "DEFECT, systematic: no id='overview' exists on any product-detail page (the real first section id is 'product-overview'). The other two tabs on each page (Size Guide / Instruments Included / Accessories) correctly resolve. Same bug on all 3 product template instances -- worth fixing once at the template level."
+    },
+    {
+      "target": "#download-brochure",
+      "sources": [
+        "pd-ctas 'Download product brochures' button, repeated on product-overview AND testimonial sections of all 3 product-detail pages (6 occurrences)"
+      ],
+      "cross_page": false,
+      "notes": "No id='download-brochure' exists anywhere; resources.html's real brochure downloads use unique per-brochure ids (#download-<slug>) instead. Placeholder/aspirational anchor."
+    },
+    {
+      "target": "#product-<slug> (many distinct values)",
+      "sources": [
+        "accessories tiles and some related-products tiles across home, products.html, and all 3 product-detail pages"
+      ],
+      "cross_page": false,
+      "notes": "None of these ids resolve anywhere in the 9-page extraction -- they are placeholder cross-references to individual accessory/related product detail pages that don't exist in this export (only 3 example product-detail pages + 1 archive were built). Informational for the ACF planner: these are strong candidates for a Product CPT relationship/related-products field once more product records exist, not necessarily bugs to fix."
+    },
+    {
+      "target": "#video-*, #watch-*, #brochure-*, #download-*, #read-more-topic-*, #video-fact-*",
+      "sources": [
+        "resources.html testimonials/fast-facts/brochures sections (dozens of occurrences)",
+        "sales-hub-resource-library.html tile-dl downloads",
+        "home testimonials .ts-watch links"
+      ],
+      "cross_page": false,
+      "notes": "None resolve to any element -- every video-play, download, and 'read more' trigger across the resources-style sections is a decorative placeholder anchor with no lightbox/modal/detail target in the static export. Treat as intended-but-unbuilt interactive behavior (video modal, PDF download, expandable copy), not literal navigation."
+    },
+    {
+      "target": "#careers, #by-procedure, #by-category, #head-holding-systems, #instruments, #surgical-tables, #vascular-management",
+      "sources": [
+        "shared public footer, Products + Company columns (all 6 public pages)"
+      ],
+      "cross_page": false,
+      "notes": "None of these ids exist anywhere (products.html's real section ids are 'browse-by-procedure'/'browse-by-product', not 'by-procedure'/'by-category'). Consistent placeholder footer nav across every public page."
+    },
+    {
+      "target": "#privacy-policy, #terms-of-use, #cookie-policy, #accessibility",
+      "sources": [
+        "shared public footer legal nav (all 6 public pages)",
+        "shared sales-hub footer legal nav (all 3 sales-hub pages, terms/privacy only)"
+      ],
+      "cross_page": false,
+      "notes": "Standard placeholder legal-page anchors, none resolve. Low-risk/expected; will map to real WP legal pages."
+    },
+    {
+      "target": "#en, #esp",
+      "sources": [
+        "header language switcher, all 8 pages that have a header"
+      ],
+      "cross_page": false,
+      "notes": "Decorative, non-functional language switcher (EN marked is-current); no ESP content/route exists anywhere in the export."
+    },
+    {
+      "target": "#search",
+      "sources": [
+        "header search form action, all 8 pages that have a header"
+      ],
+      "cross_page": false,
+      "notes": "role=search form with no real submission target; decorative prototype of a future site search."
+    },
+    {
+      "target": "sales-hub-login.html",
+      "sources": [
+        "sales-hub-dashboard .db-acc-btns 'Log in' button"
+      ],
+      "cross_page": true,
+      "notes": "DEFECT (developer-confirmed, known fact): the dashboard header already shows a logged-in identity ('Hello, John Q.' / 'John Q. Public' in the header) yet the Account panel offers a prominent 'Log in' button pointing at the login page. Record verbatim; flag as a content/UX inconsistency to confirm with design (should probably read 'Log out' or be removed once real auth exists)."
+    },
+    {
+      "target": "../../sales-hub-dashboard/html/",
+      "sources": [
+        "sales-hub-login.html login form action (method=get)"
+      ],
+      "cross_page": true,
+      "notes": "Non-standard relative path fragment, not a real WP route -- static-prototype placeholder for wherever real authentication will post to. Flag for the developer building the login flow."
+    }
+  ],
+  "shared": {
+    "header_public": {
+      "fragment": "spec/fragments/shared/header-public.html",
+      "used_on": [
+        "home",
+        "product-feather-blades",
+        "product-lawtonelite-skull-base-set",
+        "product-sugita-ii-head-frame",
+        "products",
+        "resources"
+      ],
+      "nav": [
+        {
+          "label": "Products",
+          "href": "VARIES -- see notes"
+        },
+        {
+          "label": "About Mizuho America",
+          "href": "http://task-11.local/about-us/"
+        },
+        {
+          "label": "Clinical Resources",
+          "href": "http://task-11.local/resources/"
+        },
+        {
+          "label": "Contact & Support",
+          "href": "http://task-11.local/contact-us/"
+        }
+      ],
+      "other_elements": [
+        "Language switcher EN(is-current)/ESP (decorative, no ESP route)",
+        "'Find an Account Manager' link -> /contact-us/ (mobile-only variant on sales-hub header)",
+        "Mobile nav toggle button (.site-head__toggle, see js_hooks)",
+        "Search form (.hd-search, decorative, action=#search)",
+        "'Sales Portal' button -> /sales-hub/",
+        "'Contact Us' button -> /contact-us/",
+        "Phone link tel:8006992547"
+      ],
+      "identical_on": [
+        "all 6 public pages, EXCEPT: (1) logo <img> src -- each page points at its own duplicated /assets/<page>/logo-mizuho-header-srgb.png copy of the identical file; (2) which nav <li><a> carries class=is-current/aria-current=page, matching the current page; (3) see the '#products vs products.html' defect below."
+      ],
+      "notes": "DEFECT: the 'Products' nav link is NOT consistent across pages carrying this same header. On home + resources it is href='#products' (broken, no matching id anywhere). On the 3 product-detail pages + products.html itself it is href='products.html' (real, and marked is-current there). Same label, two different behaviors depending on page. Recorded once here rather than per-page; see anchors[] entries for '#products' and 'products.html' for full detail."
+    },
+    "footer_public": {
+      "fragment": "spec/fragments/shared/footer-public.html",
+      "used_on": [
+        "home",
+        "product-feather-blades",
+        "product-lawtonelite-skull-base-set",
+        "product-sugita-ii-head-frame",
+        "products",
+        "resources"
+      ],
+      "menus": {
+        "Products": [
+          "By Procedure #by-procedure (broken)",
+          "By Category #by-category (broken)",
+          "Head Holding Systems #head-holding-systems (broken)",
+          "Instruments #instruments (broken)",
+          "Surgical Tables #surgical-tables (broken)",
+          "Vascular Management #vascular-management (broken)"
+        ],
+        "Clinical": [
+          "Videos -> /resources/",
+          "Clinical Case Studies -> /resources/ (same URL as Videos)",
+          "Events -> /resources/ (same URL again)"
+        ],
+        "Company": [
+          "About Mizuho -> /about-us/",
+          "Careers #careers (broken)"
+        ],
+        "Support": [
+          "Find an Account Manager -> /contact-us/",
+          "Contact Us -> /contact-us/",
+          "Technical Support -> /contact-us/",
+          "Customer Service -> /contact-us/",
+          "FAQs -> /contact-us/",
+          "Sale Hub -> /sales-hub/ (note: label reads 'Sale Hub', singular/no 's', vs the rest of the site's 'Sales Hub' / 'Sales Portal' -- verbatim copy inconsistency, flag)"
+        ]
+      },
+      "contact_block": {
+        "heading": "Contact & Support",
+        "intro": "Interested in a product demo? Have any questions? Want to chat? Contact Us. (link wraps 'Contact Us.')",
+        "hours": "Hours: Monday-Friday: 6:30 am–5:00 pm (PST)",
+        "reach": [
+          "Phone: 800-699-2547 (tel: link)",
+          "Fax: 510-324-4545 (plain text, not a link)",
+          "Email: customerservice@mizuho.com (mailto: link)",
+          "Address: 30057 Ahem Avenue, Union City, CA 94587 (plain text)"
+        ]
+      },
+      "brand_block": {
+        "logo": "logo-mizuho-footer-reversed.png",
+        "copyright": "© 2026 Mizuho America, Inc. All rights reserved."
+      },
+      "legal_nav": [
+        "Privacy Policy #privacy-policy (broken)",
+        "Terms of Use #terms-of-use (broken)",
+        "Cookie Policy #cookie-policy (broken)",
+        "Accessibility #accessibility (broken)"
+      ],
+      "identical_on": [
+        "all 6 public pages, EXCEPT the ft-brand logo <img> src (same per-page duplicated-asset pattern as the header)"
+      ]
+    },
+    "header_sales_hub": {
+      "fragment": "spec/fragments/shared/header-sales-hub.html",
+      "used_on": [
+        "sales-hub-dashboard",
+        "sales-hub-resource-library"
+      ],
+      "not_used_on": "sales-hub-login -- this page has NO <header> landmark at all; <main> is the first element in <body>. Confirmed by direct inspection, not an extraction gap.",
+      "nav": [
+        {
+          "label": "Dashboard",
+          "href": "sales-hub-dashboard.html"
+        },
+        {
+          "label": "Resources",
+          "href": "sales-hub-resource-library.html"
+        },
+        {
+          "label": "Cross-Reference",
+          "href": "http://task-11.local/sales-hub/cross-reference/"
+        },
+        {
+          "label": "Training",
+          "href": "http://task-11.local/sales-hub/training/"
+        }
+      ],
+      "other_elements": [
+        "'Sales Portal' text link back to sales-hub-dashboard.html (desktop-only)",
+        "Hardcoded username 'John Q. Public' (desktop-only) -- no real auth, demo persona used throughout the Sales Hub",
+        "'Account' link -> sales-hub-dashboard.html#account (desktop-only)",
+        "Language switcher + 'Find an Account Manager' (mobile-only variants, same markup as public header)",
+        "Mobile nav toggle (same .site-head__toggle behavior)"
+      ],
+      "identical_on": [
+        "sales-hub-dashboard, sales-hub-resource-library, EXCEPT logo src (per-page asset copy) and which nav item carries is-current"
+      ]
+    },
+    "footer_sales_hub": {
+      "fragment_dashboard": "spec/fragments/shared/footer-sales-hub-dashboard.html",
+      "fragment_resource_library": "spec/fragments/shared/footer-sales-hub.html",
+      "fragment_login": "spec/fragments/shared/footer-sales-hub-login.html",
+      "used_on": [
+        "sales-hub-dashboard",
+        "sales-hub-resource-library",
+        "sales-hub-login"
+      ],
+      "content": {
+        "logo": "logo-mizuho-footer-reversed.png",
+        "copyright_line": "Sales Hub • © 2026 Mizuho America, Inc. All rights reserved.",
+        "legal_nav": [
+          "Privacy Policy #privacy-policy (broken)",
+          "Terms of Use #terms-of-use (broken)"
+        ]
+      },
+      "identical_on": [
+        "structurally identical on all 3 sales-hub pages (logo src + copy), EXCEPT one class difference -- see notes"
+      ],
+      "notes": "DELTA, unexplained: sales-hub-dashboard.html's <footer> carries an EXTRA class 'pf--center' (class=\"site-foot portal-foot pf--center rs\") that neither sales-hub-resource-library.html nor sales-hub-login.html have (class=\"site-foot portal-foot rs\"). Content is otherwise identical. Open question for the developer: is the dashboard footer intentionally center-aligned as a one-off, or is the class missing from the other two pages by mistake?"
+    }
+  },
+  "forms": [
+    {
+      "page": "shared header (all 8 pages with a header)",
+      "section": "site-header",
+      "form_selector": ".hd-search",
+      "fields": [
+        {
+          "type": "search",
+          "name": "q",
+          "label": "Search (visually-hidden label)",
+          "placeholder": "Search..."
+        }
+      ],
+      "submit_label": "(no visible submit button -- icon-only, styled via CSS)",
+      "notes": "action=\"#search\", decorative/non-functional prototype of site search. Not a lead form; do not model as ACF/contact form."
+    },
+    {
+      "page": "products",
+      "section": "browse-by-product",
+      "form_selector": ".fl-form (filters)",
+      "fields": [
+        {
+          "type": "checkbox-group",
+          "name": "category",
+          "label": "PRODUCT CATEGORY",
+          "options": [
+            "Instruments",
+            "Head-holding systems (checked by default)",
+            "Surgical tables",
+            "Vascular management"
+          ]
+        },
+        {
+          "type": "checkbox-group",
+          "name": "configuration",
+          "label": "PRODUCT CONFIGURATION",
+          "options": [
+            "Instrumentation sets",
+            "Product families by size/variant",
+            "Individual products"
+          ]
+        },
+        {
+          "type": "checkbox-group",
+          "name": "procedure",
+          "label": "PROCEDURE",
+          "options": [
+            "Tumor removal",
+            "Aneurysm",
+            "Endoscopic endonasal approach"
+          ]
+        }
+      ],
+      "submit_label": "Clear all filters (reset button; no explicit apply/submit -- implies live filtering)",
+      "notes": "action=\"#browse-by-product\", static mockup of a future taxonomy filter UI (no live JS). 'Head-holding systems' checked + result set below shows exactly the 4 head-holding-systems tiles, i.e. the filtered STATE is hardcoded to match, not computed."
+    },
+    {
+      "page": "products",
+      "section": "browse-by-product",
+      "form_selector": ".pb-search",
+      "fields": [
+        {
+          "type": "search",
+          "name": "q",
+          "label": "Search products (visually-hidden)",
+          "placeholder": "Search products, part numbers, or instrument names"
+        }
+      ],
+      "submit_label": "Search",
+      "notes": "action=\"#browse-by-product\", decorative."
+    },
+    {
+      "page": "sales-hub-resource-library",
+      "section": "resource-results",
+      "form_selector": ".fl-form (filters)",
+      "fields": [
+        {
+          "type": "checkbox-group",
+          "name": "resource_type",
+          "label": "RESOURCE TYPE",
+          "options": [
+            "Brochures & spec sheets (checked, count 8)",
+            "Videos (count 7)"
+          ]
+        },
+        {
+          "type": "checkbox-group",
+          "name": "product_category",
+          "label": "PRODUCT CATEGORY",
+          "options": [
+            "Head Holding Systems (checked, count 4)",
+            "Instruments (count 3)",
+            "Surgical Tables (count 2)",
+            "Vascular Management (count 2)"
+          ]
+        }
+      ],
+      "submit_label": "Clear all filters",
+      "notes": "action=\"#resource-results\", same static-mockup pattern as the products filter (counts are hardcoded, no live JS)."
+    },
+    {
+      "page": "sales-hub-resource-library",
+      "section": "resource-results",
+      "form_selector": ".rl-search + #rl-sort",
+      "fields": [
+        {
+          "type": "search",
+          "name": "q",
+          "label": "Search resources (visually-hidden)",
+          "placeholder": "Search brochures, spec sheets, videos..."
+        },
+        {
+          "type": "select",
+          "name": "sort",
+          "label": "Sort (visually-hidden)",
+          "options": [
+            "Sort: A-Z",
+            "Sort: Z-A",
+            "Sort: Newest"
+          ]
+        }
+      ],
+      "submit_label": "Search",
+      "notes": "action=\"#resource-results\", decorative."
+    },
+    {
+      "page": "sales-hub-login",
+      "section": "sales-hub-login",
+      "form_selector": ".lg-form",
+      "fields": [
+        {
+          "type": "email",
+          "name": "log",
+          "label": "Email address",
+          "placeholder": "rep_name@example.com",
+          "required": true,
+          "autocomplete": "username"
+        },
+        {
+          "type": "password",
+          "name": "pwd",
+          "label": "Password",
+          "placeholder": "************",
+          "required": true,
+          "autocomplete": "current-password"
+        }
+      ],
+      "submit_label": "Log in to Sales Hub",
+      "notes": "action=\"../../sales-hub-dashboard/html/\" method=\"get\" -- not a real route (relative path fragment, GET method would also expose the password in the URL). Genuine auth form; delivery must go through a real WP login mechanism, never modeled as an ACF form. Separate 'Forgot your password?' link points to the real http://task-11.local/wp-login.php?action=lostpassword."
+    }
+  ],
+  "placeholders": [
+    {
+      "text": "Prof Name Here, MD PhD / Department of Neurosurgery, Institution Here",
+      "occurrences": [
+        "product-feather-blades#testimonial",
+        "product-lawtonelite-skull-base-set#testimonial",
+        "product-sugita-ii-head-frame#testimonial"
+      ],
+      "note": "Identical placeholder attribution on ALL THREE product-detail testimonial quotes -- the quotes themselves are real/unique copy, only the attributor name+credentials are unfilled. Highest-priority content-to-confirm."
+    },
+    {
+      "text": "FPO IMAGE (thumbnail button text)",
+      "occurrences": [
+        "product-feather-blades#product-overview .pd-thumbs (3 of 4 slots)",
+        "product-sugita-ii-head-frame#product-overview .pd-thumbs (3 of 4 slots)"
+      ],
+      "note": "product-lawtonelite-skull-base-set's equivalent thumbnails (a-thumb-1/2/3.jpg) are real images -- inconsistent completeness across the 3 example product-detail pages, not a site-wide pattern."
+    },
+    {
+      "text": "Sales HUb - REP Portal",
+      "occurrences": [
+        "sales-hub-login h1.lg-h1"
+      ],
+      "note": "Verbatim capitalization typo ('HUb') in the page's only heading. Recorded as-is per no-invent rule; flag for a copy fix."
+    },
+    {
+      "text": "Hello, John Q. / John Q. Public",
+      "occurrences": [
+        "sales-hub-dashboard header .ph-user",
+        "sales-hub-dashboard#dashboard h1.db-h1"
+      ],
+      "note": "Hardcoded demo persona standing in for the logged-in sales rep's real name -- confirm whether this should be dynamic (current user display name) once real auth exists."
+    },
+    {
+      "text": "– (no literal [CONFIRM]/[TBD] bracket markers found anywhere)",
+      "occurrences": [],
+      "note": "Grepped all 9 pages for [CONFIRM, [TBD, lorem ipsum, TODO, xxx -- none found. The only content placeholders in this project are the ones listed above (attribution names, FPO thumbnails, and the login-page typo), plus the structural 'this page has no real id=X target' anchor defects captured in anchors[]."
+    }
+  ],
+  "pages": [
+    {
+      "file": "index.html",
+      "slug": "home",
+      "title": "Mizuho America | Neurosurgical Instruments, Tables & Head-Holding Systems",
+      "body_classes": [],
+      "notes": "In WordPress this is the inner page slug 'mizuho-home' (developer-confirmed), not the literal front page.",
+      "sections": [
+        {
+          "id": "hero-carousel",
+          "index": 0,
+          "fragment": "spec/fragments/home/01-hero-carousel.html",
+          "tag": "section",
+          "classes": [
+            "hero",
+            "rs"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "headline",
+              "type": "text",
+              "sample": "Neurological success is your mindset. ours, too.",
+              "selector": "h1.hero-h1",
+              "notes": "'ours, too.' is wrapped in its own <span> (accent styling) -- restricted-HTML text, preserve the span."
+            },
+            {
+              "name": "browse_link_label",
+              "type": "text",
+              "sample": "Browse by Procedure",
+              "selector": ".hero-browse span",
+              "notes": "wrapping link href=#procedure-band, valid in-page anchor to this page's own procedure-band section"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "hero_cards",
+              "selector": ".hero-card",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/mizuho-home/hero-product-sugita-ii-head-frame-card-crop.png",
+                  "notes": "alt: 'Sugita ll Multi-Purpose Head Frame'"
+                },
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Sugita ll Multi-Purpose Head Frame"
+                },
+                {
+                  "name": "link",
+                  "type": "link",
+                  "sample": "#sugita-ii-head-frame",
+                  "notes": "BROKEN: no id='sugita-ii-head-frame' anywhere in the 9-page export -- almost certainly meant to cross-link to product-sugita-ii-head-frame.html. 2nd card's link (#mst-7300-tables) is equally broken with no matching MST 7300 product page in this export."
+                }
+              ]
+            },
+            {
+              "name": "hero_ctas",
+              "selector": ".hero-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Explore All Products"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "#products",
+                  "notes": "BROKEN, see top-level anchors['#products'] defect. 2nd CTA 'Request a Demo' correctly links to /contact-us/."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "'.hero-dots' shows 3 dot indicators (i.is-on, i, i) for only 2 visible hero-cards, and there is no JS anywhere wiring a carousel -- looks like a design mockup of an unbuilt 3-slide carousel. Flag as open question (are there meant to be 3 hero products?)."
+        },
+        {
+          "id": "intro-statement",
+          "index": 1,
+          "fragment": "spec/fragments/home/02-intro-statement.html",
+          "tag": "section",
+          "classes": [
+            "intro",
+            "rs"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "We are Mizuho AMERICA: delivering world-class collective expertise with a personalized approach",
+              "selector": "h2.intro-h2"
+            },
+            {
+              "name": "body",
+              "type": "richtext",
+              "sample": "Singularly focused on neurosurgery, Mizuho America is dedicated to delivering an exceptional experience to help you achieve your surgical goals across a broad range of procedures and patients.",
+              "selector": "p.intro-p"
+            },
+            {
+              "name": "cta_label",
+              "type": "text",
+              "sample": "Watch what clinical experts say about us",
+              "selector": ".intro-btn",
+              "notes": "href=#testimonials, valid in-page anchor"
+            }
+          ],
+          "repeats": [],
+          "js_hooks": [],
+          "notes": "trailing <hr class=intro-rule> is purely decorative."
+        },
+        {
+          "id": "value-columns",
+          "index": 2,
+          "fragment": "spec/fragments/home/03-value-columns.html",
+          "tag": "section",
+          "classes": [
+            "vc",
+            "rs"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "closing_cta_label",
+              "type": "text",
+              "sample": "Check out our downloadable brochures",
+              "selector": ".vc-btn",
+              "notes": "href=#downloadable-brochures -- BROKEN, no matching id anywhere; likely meant resources.html#brochures."
+            }
+          ],
+          "repeats": [
+            {
+              "name": "value_cards",
+              "selector": ".vc-card",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "icon",
+                  "type": "image",
+                  "sample": "assets/mizuho-home/value-icon-surgeon-centric.png"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Surgeon-centric",
+                  "selector": ".vc-title"
+                },
+                {
+                  "name": "lead",
+                  "type": "richtext",
+                  "sample": "Products designed exclusively<br> for neurosurgeons",
+                  "selector": ".vc-lead",
+                  "notes": "contains a <br class=d-only> (desktop-only line break) -- restricted-HTML"
+                },
+                {
+                  "name": "body",
+                  "type": "richtext",
+                  "sample": "With an expansive portfolio of instruments available individually and in convenient, timesaving sets and kits, we are committed to helping you optimize precision, efficiency, and workflow in the OR",
+                  "selector": ".vc-body"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "procedure-band",
+          "index": 3,
+          "fragment": "spec/fragments/home/04-procedure-band.html",
+          "tag": "section",
+          "classes": [
+            "pb",
+            "rs"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "A robust portfolio of instruments, tables, head-holding systems, and vascular management devices for your diverse neurosurgical procedures",
+              "selector": "h2.pb-h2"
+            },
+            {
+              "name": "closing_text",
+              "type": "text",
+              "sample": "And beyond—review the full list of supported procedures here",
+              "selector": ".pb-closing"
+            },
+            {
+              "name": "closing_cta_label",
+              "type": "text",
+              "sample": "Supported Procedures",
+              "selector": ".pb-btn span",
+              "notes": "href=#supported-procedures -- BROKEN"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "procedure_items",
+              "selector": ".pb-item",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "icon",
+                  "type": "image",
+                  "sample": "assets/mizuho-home/procedure-icon-tumor-removal-trim.png"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Tumor Removal",
+                  "selector": "h3"
+                },
+                {
+                  "name": "view_label",
+                  "type": "text",
+                  "sample": "View product →",
+                  "selector": ".pb-view",
+                  "notes": "href=#tumor-products -- BROKEN"
+                },
+                {
+                  "name": "more_label",
+                  "type": "text",
+                  "sample": "See Malleable Instruments and more →",
+                  "selector": ".pb-more",
+                  "notes": "href=#malleable-instruments -- BROKEN"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "This is the same 'browse by 3 procedures' pattern as products.html#browse-by-procedure, but ALL 7 of this section's anchor targets are broken hashes, whereas the products.html version links to real product pages. See top-level anchors[] entry for the cross-page comparison."
+        },
+        {
+          "id": "testimonials",
+          "index": 4,
+          "fragment": "spec/fragments/home/05-testimonials.html",
+          "tag": "section",
+          "classes": [
+            "ts",
+            "rs"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Testimonials",
+              "selector": "h2.ts-h2"
+            },
+            {
+              "name": "intro",
+              "type": "text",
+              "sample": "Leaders in the field of neurosurgery discuss Mizuho America’s pivotal role in expanding the neurosurgical armamentarium.",
+              "selector": ".ts-intro"
+            },
+            {
+              "name": "mobile_cta_label",
+              "type": "text",
+              "sample": "Watch what clinical experts say about us",
+              "selector": ".ts-mcta",
+              "notes": "m-only, href=#clinical-experts -- BROKEN"
+            },
+            {
+              "name": "featured_quote",
+              "type": "richtext",
+              "sample": "“I Have found the mizuho america team to be...<br> forward-thinking, and have a genuine interest in the advancement of surgical instrumentation.”",
+              "selector": ".ts-quote p",
+              "notes": "contains <br class=d-only>"
+            },
+            {
+              "name": "featured_quote_attribution",
+              "type": "text",
+              "sample": "– James Evans, MD",
+              "selector": ".ts-attr"
+            },
+            {
+              "name": "more_link_label",
+              "type": "text",
+              "sample": "See more testimonials",
+              "selector": ".ts-more",
+              "notes": "href=#more-testimonials -- BROKEN"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "testimonial_cards",
+              "selector": ".ts-card",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "thumbnail",
+                  "type": "image",
+                  "sample": "assets/mizuho-home/testimonial-thumb-lawton.jpg",
+                  "notes": "alt: 'Michael T. Lawton, MD'"
+                },
+                {
+                  "name": "name",
+                  "type": "text",
+                  "sample": "Michael T. Lawton, MD",
+                  "selector": ".ts-name"
+                },
+                {
+                  "name": "role",
+                  "type": "text",
+                  "sample": "President and CEO,",
+                  "selector": ".ts-role"
+                },
+                {
+                  "name": "rest",
+                  "type": "richtext",
+                  "sample": "Barrow Neurological Institute<br>Professor and Chair, Neurosurgery<br>Chief, Neurovascular Surgery",
+                  "selector": ".ts-rest",
+                  "notes": "multiple <br> line breaks -- restricted-HTML"
+                },
+                {
+                  "name": "watch_link_label",
+                  "type": "text",
+                  "sample": "Watch now",
+                  "selector": ".ts-watch",
+                  "notes": "href=#watch-lawton -- BROKEN, no video modal target"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "This section shares the id 'testimonials' with a COMPLETELY different section on resources.html (see that page). Same-id, different-page, different-content -- not a shared fragment."
+        },
+        {
+          "id": "about-stats",
+          "index": 5,
+          "fragment": "spec/fragments/home/06-about-stats.html",
+          "tag": "section",
+          "classes": [
+            "ab",
+            "rs"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "About Mizuho America",
+              "selector": "h2.ab-h2"
+            },
+            {
+              "name": "body",
+              "type": "richtext",
+              "sample": "Established in Boston, Massachusetts in 1993, Mizuho America is part of Mizuho Corporation, a global medical products company with more than a century of commitment to providing surgeons with meticulously crafted equipment for their OR needs.",
+              "selector": ".ab-p",
+              "notes": "truncated sample; full paragraph is longer"
+            },
+            {
+              "name": "cta_label",
+              "type": "text",
+              "sample": "Explore our story",
+              "selector": ".ab-btn",
+              "notes": "href=/about-us/, cross-page to the separately-built (Elementor) About Us page -- out of scope for this ACF build, by design per CLAUDE.md builder split"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "stats",
+              "selector": ".ab-stat",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "number",
+                  "type": "text",
+                  "sample": "30+",
+                  "selector": ".ab-num"
+                },
+                {
+                  "name": "label",
+                  "type": "richtext",
+                  "sample": "years serving the neurosurgery community",
+                  "selector": ".ab-label",
+                  "notes": "2nd stat's label contains a <br> ('neurosurgical<br>products')"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "file": "product-feather-blades.html",
+      "slug": "product-feather-blades",
+      "title": "Feather Blades | Mizuho America",
+      "body_classes": [],
+      "notes": "Known fact (developer-confirmed): these are THREE EXAMPLES of ONE single-product template, not three unrelated page designs. Base template = product-sugita-ii-head-frame (overview + accessories + testimonial + related-products, no configurator). Variation A = product-lawtonelite-skull-base-set adds an 'instruments included' table. Variation B = product-feather-blades adds a size selector + size-guide table. The html-acf-planner should treat product-overview/accessories/testimonial/related-products as the common fields of a Product CPT, and size-guide/instruments-included as either optional CPT fields or a variant-flag-driven flexible block -- this spec stays descriptive, not prescriptive. This page is VARIATION B: adds a blade-size selector + a size-guide table section.",
+      "sections": [
+        {
+          "id": "product-overview",
+          "index": 0,
+          "fragment": "spec/fragments/product-feather-blades/01-product-overview.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "pd"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "page_kicker",
+              "type": "text",
+              "sample": "Products",
+              "selector": "h1.pd-h1"
+            },
+            {
+              "name": "gallery_image",
+              "type": "image",
+              "sample": "assets/product-variation-b/b-gallery.jpg",
+              "selector": ".pd-gallery img",
+              "notes": "alt: 'Feather Blades'"
+            },
+            {
+              "name": "quick_facts",
+              "type": "text",
+              "sample": "Instrumentation Set Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+              "selector": ".pd-facts"
+            },
+            {
+              "name": "family_pill",
+              "type": "text",
+              "sample": "Product Family",
+              "selector": ".pd-pill",
+              "notes": "only present on this variant -- Lawtonelite uses a different pill text ('Instrumentation Set'), Sugita has NO pill at all. Confirm whether this is a controlled vocabulary (product-type taxonomy label) or freeform."
+            },
+            {
+              "name": "title",
+              "type": "text",
+              "sample": "Feather Blades",
+              "selector": "h2.pd-title"
+            },
+            {
+              "name": "model_line",
+              "type": "text",
+              "sample": "Part no.: FB-0480 • Available in 6 sizes",
+              "selector": ".pd-model"
+            },
+            {
+              "name": "description",
+              "type": "richtext",
+              "sample": "Precision feather blades for neurosurgical dural incision and fine dissection. Available in six widths to suit the surgical approach. Compatible with standard size 3 and size 4 scalpel handles.",
+              "selector": ".pd-desc"
+            },
+            {
+              "name": "size_selector_label",
+              "type": "text",
+              "sample": "SELECT BLADE SIZE",
+              "selector": ".pd-select-h"
+            },
+            {
+              "name": "size_selector_part_no",
+              "type": "text",
+              "sample": "Part no.: FB-040 Pack of 10",
+              "selector": ".pd-part",
+              "notes": "updates alongside the selected size in the live design intent; static in this export"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "breadcrumbs",
+              "selector": ".crumbs ol li",
+              "count": 5,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Products"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "products.html"
+                }
+              ]
+            },
+            {
+              "name": "thumbnails",
+              "selector": ".pd-thumbs li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "type",
+                  "type": "text",
+                  "sample": "FPO IMAGE"
+                }
+              ],
+              "notes": "PLACEHOLDER -- same as Sugita page"
+            },
+            {
+              "name": "tags",
+              "selector": ".pd-tags li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Craniotomy"
+                }
+              ]
+            },
+            {
+              "name": "size_options",
+              "selector": ".pd-size option",
+              "count": 6,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "2.0 mm"
+                }
+              ],
+              "notes": "6 sizes: 2.0/3.0/4.0(selected)/5.0/6.0/8.0 mm. Non-functional select (no JS updates the spec table/part-no on change)."
+            },
+            {
+              "name": "spec_rows",
+              "selector": ".pd-chart .pd-spec tbody tr",
+              "count": 5,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Blade width"
+                },
+                {
+                  "name": "value",
+                  "type": "text",
+                  "sample": "4.0 mm"
+                }
+              ],
+              "notes": "table caption 'SELECTED SIZE – SPECIFICATIONS', values correspond to the 4.0mm default-selected size"
+            },
+            {
+              "name": "ctas",
+              "selector": ".pd-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Schedule a Demo"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "http://task-11.local/contact-us/"
+                }
+              ],
+              "notes": "2nd CTA href=#download-brochure -- BROKEN"
+            },
+            {
+              "name": "product_tabs",
+              "selector": ".pd-tabs li",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Overview"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "#overview"
+                }
+              ],
+              "notes": "3 tabs: Overview(#overview BROKEN)/Size Guide(#size-guide, is-current, valid)/Accessories(#accessories, valid)"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "size-guide",
+          "index": 1,
+          "fragment": "spec/fragments/product-feather-blades/02-size-guide.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "tb"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "SIZE GUIDE",
+              "selector": "h2.sec-h"
+            },
+            {
+              "name": "badge",
+              "type": "text",
+              "sample": "6 sizes available",
+              "selector": ".tb-badge"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "size_rows",
+              "selector": ".tb-table tbody tr",
+              "count": 6,
+              "fields": [
+                {
+                  "name": "width",
+                  "type": "text",
+                  "sample": "2.0 mm"
+                },
+                {
+                  "name": "part_number",
+                  "type": "text",
+                  "sample": "FB-020"
+                },
+                {
+                  "name": "length",
+                  "type": "text",
+                  "sample": "25 mm"
+                },
+                {
+                  "name": "handle",
+                  "type": "text",
+                  "sample": "Size 3"
+                },
+                {
+                  "name": "application",
+                  "type": "text",
+                  "sample": "Fine dural incision, tight corridors"
+                }
+              ],
+              "notes": "one row (4.0mm) carries class='is-selected' matching the size-selector's default 'selected' option in product-overview -- a static cross-reference between the two, not live JS."
+            }
+          ],
+          "js_hooks": [],
+          "notes": "UNIQUE to this variant (Variation B)."
+        },
+        {
+          "id": "accessories",
+          "index": 2,
+          "fragment": "spec/fragments/product-feather-blades/03-accessories.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ts",
+            "ts--accessories"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "ACCESSORIES",
+              "selector": "h2.sec-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "tiles",
+              "selector": ".tiles .tile",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-variation-b/b-accessories-size-3-scalpel-handle.jpg"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Size 3 Scalpel Handle",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "For 2.0 & 3.0 mm blades",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "#product-size-3-scalpel-handle",
+                  "notes": "BROKEN -- future product"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "testimonial",
+          "index": 3,
+          "fragment": "spec/fragments/product-feather-blades/04-testimonial.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "tq"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "quote",
+              "type": "richtext",
+              "sample": "“The precision of Mizuho feather blades is second to none. The 4mm is my go-to for standard craniotomies — the edge holds beautifully and the fit on a size 4 handle is always secure. I won’t use anything else.”",
+              "selector": ".tq-quote p"
+            },
+            {
+              "name": "attribution_name",
+              "type": "text",
+              "sample": "– Prof Name Here, MD PhD",
+              "selector": ".tq-name",
+              "notes": "PLACEHOLDER"
+            },
+            {
+              "name": "attribution_dept",
+              "type": "text",
+              "sample": "Department of Neurosurgery, Institution Here",
+              "selector": ".tq-dept",
+              "notes": "PLACEHOLDER"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "ctas",
+              "selector": ".tq-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Schedule a Demo"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "http://task-11.local/contact-us/"
+                }
+              ],
+              "notes": "2nd CTA href=#download-brochure -- BROKEN"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "related-products",
+          "index": 4,
+          "fragment": "spec/fragments/product-feather-blades/05-related-products.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ts",
+            "ts--related-products"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "RELATED PRODUCTS",
+              "selector": "h2.sec-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "tiles",
+              "selector": ".tiles .tile",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-variation-b/b-related-products-scalpel-handles.jpg"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Scalpel Handles",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Product Families • Sizes 3 & 4",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "product-feather-blades.html",
+                  "notes": "1st tile self-links to this page. 2nd + 3rd tiles both link to product-lawtonelite-skull-base-set.html (valid cross-page, same target twice for different labels 'Microscissors' and 'Skull Base Instrumentation Set')."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "file": "product-lawtonelite-skull-base-set.html",
+      "slug": "product-lawtonelite-skull-base-set",
+      "title": "LawtonElite Skull Base Instrumentation Set | Mizuho America",
+      "body_classes": [],
+      "notes": "Known fact (developer-confirmed): these are THREE EXAMPLES of ONE single-product template. This page is VARIATION A: adds an 'instruments included' parts-list table instead of a size selector.",
+      "sections": [
+        {
+          "id": "product-overview",
+          "index": 0,
+          "fragment": "spec/fragments/product-lawtonelite-skull-base-set/01-product-overview.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "pd"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "page_kicker",
+              "type": "text",
+              "sample": "Products",
+              "selector": "h1.pd-h1"
+            },
+            {
+              "name": "gallery_image",
+              "type": "image",
+              "sample": "assets/product-variation-a/a-gallery.jpg",
+              "selector": ".pd-gallery img",
+              "notes": "alt: 'LawtonElite Skull Base Instrumentation Set'"
+            },
+            {
+              "name": "quick_facts",
+              "type": "text",
+              "sample": "Instrumentation Set Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+              "selector": ".pd-facts"
+            },
+            {
+              "name": "family_pill",
+              "type": "text",
+              "sample": "Instrumentation Set",
+              "selector": ".pd-pill",
+              "notes": "different pill text than product-feather-blades's 'Product Family' -- see notes there"
+            },
+            {
+              "name": "title",
+              "type": "text",
+              "sample": "LawtonElite Skull Base Instrumentation Set",
+              "selector": "h2.pd-title"
+            },
+            {
+              "name": "model_line",
+              "type": "text",
+              "sample": "Ref: LE-SKB-SET • 15 instruments • Stainless steel tray",
+              "selector": ".pd-model"
+            },
+            {
+              "name": "description",
+              "type": "richtext",
+              "sample": "A curated set of precision instruments for skull base surgery, developed in collaboration with Dr. Michael Lawton. Supplied in a sterilizable stainless steel tray with individual instrument holders.",
+              "selector": ".pd-desc"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "breadcrumbs",
+              "selector": ".crumbs ol li",
+              "count": 5,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Products"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "products.html"
+                }
+              ]
+            },
+            {
+              "name": "thumbnails",
+              "selector": ".pd-thumbs li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-variation-a/a-thumb-1.jpg"
+                }
+              ],
+              "notes": "NOT placeholder -- this is the one product-detail example with REAL thumbnail images (a-thumb-1/2/3.jpg) instead of 'FPO IMAGE' buttons; 4th slot is still a non-functional video-play trigger."
+            },
+            {
+              "name": "tags",
+              "selector": ".pd-tags li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Skull Base"
+                }
+              ]
+            },
+            {
+              "name": "spec_rows",
+              "selector": ".pd-spec tbody tr",
+              "count": 5,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Total instruments"
+                },
+                {
+                  "name": "value",
+                  "type": "text",
+                  "sample": "15 (21 pieces including multiples)"
+                }
+              ],
+              "notes": "table has NO <caption> (Sugita's has 'KEY SPECIFICATIONS', Feather Blades' has 'SELECTED SIZE – SPECIFICATIONS') -- inconsistent caption presence across the 3 variants"
+            },
+            {
+              "name": "ctas",
+              "selector": ".pd-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Schedule a Demo"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "http://task-11.local/contact-us/"
+                }
+              ],
+              "notes": "2nd CTA href=#download-brochure -- BROKEN"
+            },
+            {
+              "name": "product_tabs",
+              "selector": ".pd-tabs li",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Overview"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "#overview"
+                }
+              ],
+              "notes": "3 tabs: Overview(#overview BROKEN)/Instruments Included(#instruments-included, is-current, valid)/Accessories(#accessories, valid)"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "instruments-included",
+          "index": 1,
+          "fragment": "spec/fragments/product-lawtonelite-skull-base-set/02-instruments-included.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "tb"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Instruments Included",
+              "selector": "h2.sec-h"
+            },
+            {
+              "name": "badge",
+              "type": "text",
+              "sample": "15 Instruments • 21 pieces",
+              "selector": ".tb-badge"
+            },
+            {
+              "name": "download_link_label",
+              "type": "text",
+              "sample": "Download full parts list",
+              "selector": ".tb-dl",
+              "notes": "href=#download-parts-list -- BROKEN"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "instrument_rows",
+              "selector": ".tb-table tbody tr",
+              "count": 15,
+              "fields": [
+                {
+                  "name": "number",
+                  "type": "text",
+                  "sample": "01"
+                },
+                {
+                  "name": "instrument",
+                  "type": "text",
+                  "sample": "Dissector, Penfield No. 1"
+                },
+                {
+                  "name": "part_number",
+                  "type": "text",
+                  "sample": "LE-DIS-101"
+                },
+                {
+                  "name": "qty",
+                  "type": "text",
+                  "sample": "1"
+                },
+                {
+                  "name": "notes_col",
+                  "type": "text",
+                  "sample": "Dural elevation and dissection"
+                }
+              ],
+              "notes": "the 'notes' column is empty on several rows (e.g. rows 03, 04, 11, 13, 14) -- must render cleanly when empty, per CLAUDE.md optional-field rule. UNIQUE to this variant (Variation A)."
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "accessories",
+          "index": 2,
+          "fragment": "spec/fragments/product-lawtonelite-skull-base-set/03-accessories.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ts",
+            "ts--accessories"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "ACCESSORIES",
+              "selector": "h2.sec-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "tiles",
+              "selector": ".tiles .tile",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-variation-a/a-accessories-replacement-suction-tubes.jpg"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Replacement Suction Tubes",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Malleable • 3Fr and 5Fr",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "#product-replacement-suction-tubes",
+                  "notes": "BROKEN -- future product"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "testimonial",
+          "index": 3,
+          "fragment": "spec/fragments/product-lawtonelite-skull-base-set/04-testimonial.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "tq"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "quote",
+              "type": "richtext",
+              "sample": "“The LawtonElite set has everything I need for a skull base case in one tray. The instruments are perfectly balanced and the quality is consistently exceptional. It has genuinely changed how I prepare for these procedures.”",
+              "selector": ".tq-quote p"
+            },
+            {
+              "name": "attribution_name",
+              "type": "text",
+              "sample": "– Prof Name Here, MD PhD",
+              "selector": ".tq-name",
+              "notes": "PLACEHOLDER"
+            },
+            {
+              "name": "attribution_dept",
+              "type": "text",
+              "sample": "Department of Neurosurgery, Institution Here",
+              "selector": ".tq-dept",
+              "notes": "PLACEHOLDER"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "ctas",
+              "selector": ".tq-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Schedule a Demo"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "http://task-11.local/contact-us/"
+                }
+              ],
+              "notes": "2nd CTA href=#download-brochure -- BROKEN"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "related-products",
+          "index": 4,
+          "fragment": "spec/fragments/product-lawtonelite-skull-base-set/05-related-products.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ts",
+            "ts--related-products"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "RELATED PRODUCTS",
+              "selector": "h2.sec-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "tiles",
+              "selector": ".tiles .tile",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-variation-a/a-related-products-lawtonelite-bypass.jpg"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "LawtonElite Bypass",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Instrumentation Set",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "#product-lawtonelite-bypass",
+                  "notes": "BROKEN. Unlike the other 2 product-detail pages, ALL THREE related-products tiles on this page are broken hash anchors (no real cross-page links at all) -- inconsistent with feather-blades/sugita, which each have at least one working cross-page related link."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "file": "product-sugita-ii-head-frame.html",
+      "slug": "product-sugita-ii-head-frame",
+      "title": "Sugita II Head Frame | Mizuho America",
+      "body_classes": [],
+      "notes": "Known fact (developer-confirmed): these are THREE EXAMPLES of ONE single-product template, not three unrelated page designs. Base template = product-sugita-ii-head-frame (overview + accessories + testimonial + related-products, no configurator). Variation A = product-lawtonelite-skull-base-set adds an 'instruments included' table. Variation B = product-feather-blades adds a size selector + size-guide table. The html-acf-planner should treat product-overview/accessories/testimonial/related-products as the common fields of a Product CPT, and size-guide/instruments-included as either optional CPT fields or a variant-flag-driven flexible block -- this spec stays descriptive, not prescriptive. This page is the BASE variant (no size-guide, no instruments table).",
+      "sections": [
+        {
+          "id": "product-overview",
+          "index": 0,
+          "fragment": "spec/fragments/product-sugita-ii-head-frame/01-product-overview.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "pd"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "page_kicker",
+              "type": "text",
+              "sample": "Products",
+              "selector": "h1.pd-h1",
+              "notes": "Literally the word 'Products' on every product-detail page, not the product name -- reads like a section/breadcrumb-style page title rather than a per-product H1. Record verbatim; likely intentional (breadcrumb root label) but confirm with design since it means the true H1 text never changes per product."
+            },
+            {
+              "name": "gallery_image",
+              "type": "image",
+              "sample": "assets/product-main/main-gallery.jpg",
+              "selector": ".pd-gallery img",
+              "notes": "alt: 'Sugita II Head Frame'"
+            },
+            {
+              "name": "quick_facts",
+              "type": "text",
+              "sample": "Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+              "selector": ".pd-facts",
+              "notes": "label text here is 'Quick Facts:' -- the other 2 variants say 'Instrumentation Set Quick Facts:' (genuine per-page copy variance, not a bug, but confirm which is correct going forward)"
+            },
+            {
+              "name": "title",
+              "type": "text",
+              "sample": "Sugita II Head Frame",
+              "selector": "h2.pd-title"
+            },
+            {
+              "name": "model_line",
+              "type": "text",
+              "sample": "Model SGT-II • SGT-II-RL (radiolucent)",
+              "selector": ".pd-model"
+            },
+            {
+              "name": "description",
+              "type": "richtext",
+              "sample": "The Sugita II provides secure 3-point cranial fixation with a lightweight aluminium frame. Available in standard and radiolucent configurations, compatible with all major neurosurgical approaches and navigation systems.",
+              "selector": ".pd-desc"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "breadcrumbs",
+              "selector": ".crumbs ol li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Products"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "products.html"
+                }
+              ],
+              "notes": "last item (current page) has no href, aria-current=page"
+            },
+            {
+              "name": "thumbnails",
+              "selector": ".pd-thumbs li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "type",
+                  "type": "text",
+                  "sample": "FPO IMAGE"
+                }
+              ],
+              "notes": "PLACEHOLDER: 3 of 4 thumb slots are non-functional 'FPO IMAGE' buttons with no real image, 4th is a video-play trigger (also non-functional, href-less button). See top-level placeholders[]."
+            },
+            {
+              "name": "tags",
+              "selector": ".pd-tags li",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Craniotomy"
+                }
+              ]
+            },
+            {
+              "name": "spec_rows",
+              "selector": ".pd-spec tbody tr",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Configuration"
+                },
+                {
+                  "name": "value",
+                  "type": "text",
+                  "sample": "Standard + radiolucent versions"
+                }
+              ],
+              "notes": "table has <caption>KEY SPECIFICATIONS</caption>"
+            },
+            {
+              "name": "ctas",
+              "selector": ".pd-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Schedule a Demo"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "http://task-11.local/contact-us/"
+                }
+              ],
+              "notes": "2nd CTA 'Download product brochures' href=#download-brochure -- BROKEN, see top-level anchors[]"
+            },
+            {
+              "name": "product_tabs",
+              "selector": ".pd-tabs li",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Overview"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "#overview"
+                }
+              ],
+              "notes": "DEFECT (systematic, all 3 product pages): 'Overview' tab href=#overview does not resolve (real section id is 'product-overview'). 'Accessories' tab href=#accessories correctly resolves."
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "accessories",
+          "index": 1,
+          "fragment": "spec/fragments/product-sugita-ii-head-frame/02-accessories.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ts",
+            "ts--accessories"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "ACCESSORIES",
+              "selector": "h2.sec-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "tiles",
+              "selector": ".tiles .tile",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-main/main-accessories-mst-7300-surgical-table.jpg"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "MST 7300 Surgical Table",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Recommended pairing",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "#product-mst-7300-surgical-table",
+                  "notes": "BROKEN -- future accessory product page not built. See top-level anchors[] note on Product CPT relationship candidate."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "testimonial",
+          "index": 2,
+          "fragment": "spec/fragments/product-sugita-ii-head-frame/03-testimonial.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "tq"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "quote",
+              "type": "richtext",
+              "sample": "“The Sugita II has been my first choice for complex skull base cases for over a decade. The stability is unmatched, and the radiolucent version has become essential for our intraoperative imaging workflows.”",
+              "selector": ".tq-quote p"
+            },
+            {
+              "name": "attribution_name",
+              "type": "text",
+              "sample": "– Prof Name Here, MD PhD",
+              "selector": ".tq-name",
+              "notes": "PLACEHOLDER -- see top-level placeholders[]"
+            },
+            {
+              "name": "attribution_dept",
+              "type": "text",
+              "sample": "Department of Neurosurgery, Institution Here",
+              "selector": ".tq-dept",
+              "notes": "PLACEHOLDER"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "ctas",
+              "selector": ".tq-ctas a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Schedule a Demo"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "http://task-11.local/contact-us/"
+                }
+              ],
+              "notes": "2nd CTA href=#download-brochure -- BROKEN, same as product-overview"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "related-products",
+          "index": 3,
+          "fragment": "spec/fragments/product-sugita-ii-head-frame/04-related-products.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ts",
+            "ts--related-products"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "RELATED PRODUCTS",
+              "selector": "h2.sec-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "tiles",
+              "selector": ".tiles .tile",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-main/main-related-products-sugita-multipurpose-head-frame-classic.jpg"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Sugita Multipurpose Head Frame Classic",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Head holding • Standard configuration",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "product-sugita-ii-head-frame.html",
+                  "notes": "content oddity: 1st tile links back to THIS SAME page (self-referential 'related' item). 3rd tile links to product-feather-blades.html (valid, different product -- demonstrates real cross-product relation). 2nd tile (#product-mst-7300-neurosurgical-table) is BROKEN/future."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "file": "products.html",
+      "slug": "products",
+      "title": "Products | Mizuho America",
+      "body_classes": [],
+      "notes": "The product archive/listing shell. Known fact: this is where a future Product CPT archive (with category/configuration/procedure taxonomy filters) will live; the filters, result count, and active-filter chip are all statically hardcoded to a fixed 'Head Holding Systems, 4 products' state, not computed.",
+      "sections": [
+        {
+          "id": "products-intro",
+          "index": 0,
+          "fragment": "spec/fragments/products/01-products-intro.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "pbh"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "page_title",
+              "type": "text",
+              "sample": "Products",
+              "selector": "h1.pbh-h1"
+            },
+            {
+              "name": "heading",
+              "type": "richtext",
+              "sample": "High-quality products for your<br>high-stakes procedures",
+              "selector": "h2.pbh-h2",
+              "notes": "contains a <br>"
+            },
+            {
+              "name": "subheading",
+              "type": "text",
+              "sample": "Explore our expansive portfolio of tools designed specifically for neurosurgeons",
+              "selector": ".pbh-sub"
+            },
+            {
+              "name": "body",
+              "type": "richtext",
+              "sample": "For more than 30 years, Mizuho America has focused exclusively on providing neurosurgeons with reliable, durable products designed for the rigorous and intricate procedures they perform every day to improve patients’ lives.",
+              "selector": ".pbh-body",
+              "notes": "truncated sample; full paragraph continues"
+            },
+            {
+              "name": "cta_label",
+              "type": "text",
+              "sample": "Take a product tour now",
+              "selector": ".pbh-link",
+              "notes": "href=#browse-by-product, valid in-page anchor"
+            }
+          ],
+          "repeats": [],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "browse-by-procedure",
+          "index": 1,
+          "fragment": "spec/fragments/products/02-browse-by-procedure.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "pr"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Browse by procedure",
+              "selector": "h2.pr-h2"
+            },
+            {
+              "name": "lead",
+              "type": "text",
+              "sample": "Interested in learning about our selection of tools for some of the most common neurosurgical procedures? Just click on your area of interest below.",
+              "selector": ".pr-lead"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "procedure_items",
+              "selector": ".pr-item",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "icon",
+                  "type": "image",
+                  "sample": "assets/product-browse/procedure-icon-tumor-removal.png"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Tumor Removal",
+                  "selector": "h3.pr-title"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "product-lawtonelite-skull-base-set.html",
+                  "notes": "VALID, real cross-page link (contrast with home's near-identical procedure-band, which has the same 3 procedures but BROKEN hash-anchor links -- this page is the working version)"
+                },
+                {
+                  "name": "more_label",
+                  "type": "text",
+                  "sample": "See Malleable Instruments and more →",
+                  "selector": ".pr-more",
+                  "notes": "href=#browse-by-product for all 3 items (generic, not item-specific -- same target regardless of procedure)"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "browse-by-product",
+          "index": 2,
+          "fragment": "spec/fragments/products/03-browse-by-product.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "pbp"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Browse by product",
+              "selector": "h2.pbp-h2"
+            },
+            {
+              "name": "lead",
+              "type": "text",
+              "sample": "We’re proud to offer more than 1,800 neurosurgical products, and we’ve made it easy for you to find the ones that suit your practice needs. Just enter your criteria in the search bar, or filter your search by product category, product configuration, and/or procedure.",
+              "selector": ".pbp-lead"
+            },
+            {
+              "name": "filters_heading",
+              "type": "text",
+              "sample": "EXPLORE OUR PRODUCTS",
+              "selector": ".pbf-h"
+            },
+            {
+              "name": "filters_subheading",
+              "type": "text",
+              "sample": "Check all boxes that apply to your search.",
+              "selector": ".pbf-sub"
+            },
+            {
+              "name": "result_count",
+              "type": "text",
+              "sample": "4 products found",
+              "selector": ".pb-count",
+              "notes": "hardcoded, see forms[] entry for the filter form itself"
+            },
+            {
+              "name": "active_filter_chip",
+              "type": "text",
+              "sample": "Head Holding Systems",
+              "selector": ".pb-active .chip",
+              "notes": "hardcoded single active chip"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "product_tiles",
+              "selector": ".tiles .ptile",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/product-browse/tile-sugita-ii-head-frame-product-brochure.jpg"
+                },
+                {
+                  "name": "tag",
+                  "type": "text",
+                  "sample": "Head Holding Systems",
+                  "selector": ".tile-tag"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Sugita II Head Frame",
+                  "selector": "h3.tile-title"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Model SGT-II : SGT-II-RL",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "procedure_tags",
+                  "type": "repeat",
+                  "sample": "Craniotomy, Aneurysm, +2",
+                  "notes": "NESTED repeat (.ptags li, 1-3 items incl. a '+N more' overflow chip on some tiles) -- exceeds ACF one-level nesting if product_tiles itself is already a repeater; flag for html-acf-planner"
+                },
+                {
+                  "name": "view_link",
+                  "type": "link",
+                  "sample": "product-sugita-ii-head-frame.html",
+                  "notes": "only the 1st tile links to a real page; the other 3 (#product-radiolucent-head-frame etc) are BROKEN/future-product placeholders"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "Filter form + search form captured in top-level forms[]. Pager (Prev/1/Next) is decorative, all links self-target #browse-by-product, Prev/Next marked aria-disabled=true."
+        }
+      ]
+    },
+    {
+      "file": "resources.html",
+      "slug": "resources",
+      "title": "Resources | Mizuho America",
+      "body_classes": [],
+      "notes": "Known fact: the testimonials expert-video list and the brochures collaboration list are BOTH repeating records (CPT candidates per the orchestrator's brief), not one-off hand-authored sections. This is the largest/densest page in the export (62KB, 5 main sections).",
+      "sections": [
+        {
+          "id": "resources-intro",
+          "index": 0,
+          "fragment": "spec/fragments/resources/01-resources-intro.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ri"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "page_title",
+              "type": "text",
+              "sample": "RESOURCES",
+              "selector": "h1.ri-h1"
+            },
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Watch. Read. Discover.",
+              "selector": "h2.ri-h2"
+            },
+            {
+              "name": "body",
+              "type": "richtext",
+              "sample": "Welcome to the Mizuho America library for neurosurgeons. From testimonials by renowned leaders in the field to product brochures, we’ve curated a collection of resources that will introduce you to our wide selection of neurosurgical devices—designed to help you overcome obstacles, fill instrumentation gaps, and refine and elevate surgical techniques.",
+              "selector": ".ri-body"
+            },
+            {
+              "name": "featured_video_thumbnail",
+              "type": "image",
+              "sample": "assets/resources/video-intro-lawton.jpg",
+              "notes": "alt: 'Michael T. Lawton, MD'; link href=#video-intro-lawton -- BROKEN, no video modal target"
+            },
+            {
+              "name": "featured_quote",
+              "type": "richtext",
+              "sample": "“When you have the right instruments in your hand, then you can just focus on the task and you can focus on, you know, battling that disease and getting the job done.”",
+              "selector": ".ri-quote p"
+            },
+            {
+              "name": "featured_quote_attribution",
+              "type": "text",
+              "sample": "Michael T. Lawton, MD",
+              "selector": ".ri-cite"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "intro_ctas",
+              "selector": ".ri-btns a",
+              "count": 2,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Explore our video selection now"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "#testimonials"
+                }
+              ],
+              "notes": "both valid in-page anchors to this page's own #testimonials / #brochures sections"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "testimonials",
+          "index": 1,
+          "fragment": "spec/fragments/resources/02-testimonials.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "rt"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "TESTIMONIALS: Hear from neurosurgical experts",
+              "selector": "h2.rt-h2"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "expert_entries",
+              "selector": ".rt-ex (across 3 visually-separated .rt-row groups; the row grouping is purely a decorative <hr>-separated layout, not a meaningful data grouping)",
+              "count": 7,
+              "fields": [
+                {
+                  "name": "bio",
+                  "type": "richtext",
+                  "sample": "Michael T. Lawton, MD / President and CEO, Barrow Neurological Institute / Professor and Chair, Neurosurgery Chief, Neurovascular Surgery",
+                  "selector": ".tx-bio",
+                  "notes": "freeform block of 1-5 <p> lines (name bolded, then role/institution lines) -- line count and content vary per expert, cannot be split into fixed sub-fields; treat as one richtext blob per entry"
+                },
+                {
+                  "name": "videos",
+                  "type": "repeat",
+                  "sample": "Topic: LawtonElite Series -- Tools that support surgical precision and control...",
+                  "notes": "NESTED repeat (.rt-vids li), 1-2 videos per expert -- exceeds ACF one-level nesting (row > expert > video); flag for html-acf-planner. Each video item has: thumbnail image, topic title, OPTIONAL blurb, OPTIONAL 'Read more' link (href=#read-more-topic-<slug>, all BROKEN, no target). The last expert entry in row 3 ('Keyhole Approach...') has a 2nd video with NO topic/blurb at all, just a bare 'Extended Version' label -- optional sub-fields must render cleanly when empty."
+                }
+              ]
+            },
+            {
+              "name": "expert_entries[shared-caption exception]",
+              "selector": ".rt-ex--shared (the 5th entry: Eric Sauvageau, MD + Ricardo Hanel, MD co-credited)",
+              "count": 1,
+              "fields": [
+                {
+                  "name": "bio",
+                  "type": "richtext",
+                  "sample": "Eric Sauvageau, MD, Surgical Director of Neuro-Oncology / Ricardo Hanel, MD, PhD, Cerebrovascular Neurosurgeon / Co-Medical Directors, Baptist Stroke & Cerebrovascular Center, Jacksonville, Florida"
+                },
+                {
+                  "name": "videos",
+                  "type": "repeat",
+                  "sample": "2 video thumbnails, both titled 'MST-7300B&BX Table for Microsurgery'"
+                },
+                {
+                  "name": "shared_caption",
+                  "type": "richtext",
+                  "sample": "Topic: MST-7300B&BX Table for Microsurgery / Versatile low height that empowers surgeons to optimally position themselves and their patients",
+                  "notes": "STRUCTURAL EXCEPTION: unlike every other expert entry (where each video has its OWN caption nested inside its own <li>), this entry has ONE caption block as a SIBLING of the video list, shared across both of its videos. Flag explicitly -- the repeater item shape is not 100% uniform across all 7 entries."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "Shares the id 'testimonials' with home's #testimonials section -- completely different content/structure, just a same-page-family id coincidence (each page is independent)."
+        },
+        {
+          "id": "fast-facts",
+          "index": 2,
+          "fragment": "spec/fragments/resources/03-fast-facts.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "ff"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "FAST FACTS: MORE TO EXPLORE",
+              "selector": "h2.ff-h2"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "fact_items",
+              "selector": ".ff-item",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "title",
+                  "type": "richtext",
+                  "sample": "Sugita II Multi-Purpose Headframe",
+                  "selector": "h3.ff-title",
+                  "notes": "2nd item's title contains a <br> ('Feather Instruments With<br>Interchangeable Blades')"
+                },
+                {
+                  "name": "video_thumbnail",
+                  "type": "image",
+                  "sample": "assets/resources/video-fact-sugita-ii-multi-purpose-headframe.jpg",
+                  "notes": "href=#video-fact-* -- BROKEN"
+                },
+                {
+                  "name": "caption",
+                  "type": "text",
+                  "sample": "See what makes this flexible, customizable device a valuable addition to your OR",
+                  "selector": "p.ff-cap"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "brochures",
+          "index": 3,
+          "fragment": "spec/fragments/resources/04-brochures.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "br"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "SEE HOW OUR COLLABORATIONS HAVE HELPED ADVANCE INSTRUMENTATION",
+              "selector": "h2.br-h2"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "collaboration_groups",
+              "selector": ".bg (bg-1 through bg-9)",
+              "count": 9,
+              "fields": [
+                {
+                  "name": "collaborator_text",
+                  "type": "richtext",
+                  "sample": "Lawton Elite Series -- Designed in collaboration with Michael T. Lawton, MD, President and CEO, Barrow Neurological Institute; Professor and Chair, Neurosurgery; Chief, Neurovascular Surgery",
+                  "selector": ".bg-copy",
+                  "notes": "OPTIONAL -- group 9 (bg-9) has NO .bg-text/.bg-copy block at all, just a bare card grid. Must render cleanly when empty."
+                },
+                {
+                  "name": "brochure_cards",
+                  "type": "repeat",
+                  "sample": "Lawton Elite Series brochure cover (cover image + title 'Lawton Elite Series' + 'Read description' link)",
+                  "notes": "NESTED repeat (.bc), 1 to 7 cards per group (30 brochure cards total across the 9 groups) -- exceeds ACF one-level nesting (group > card); flag for html-acf-planner. Card shape varies: most have a bolded title + 'Read description' link; several (bg-4, bg-5, bg-8 'half' layouts) instead have an unbolded excerpt line THEN the link (class bc-cap--excerpt), with no separate title -- treat title as optional. Every card's link (href=#download-<slug> on the cover, #brochure-<slug> on 'Read description') is BROKEN, no PDF/detail target exists in this export."
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "Known fact (developer-confirmed): this is a repeating-record / CPT candidate (e.g. a 'Collaboration' or 'Brochure' post type with a collaborator/product-family taxonomy), not one hand-built section. 30 total brochure cards is far too many to hand-author as flat ACF repeater rows."
+        },
+        {
+          "id": "continue-your-visit",
+          "index": 4,
+          "fragment": "spec/fragments/resources/05-continue-your-visit.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "bl"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Continue your visit with us...",
+              "selector": "h2.bl-h2"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "links",
+              "selector": ".bl-btns a",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Discover our wide range of products"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "#bottom-link-1"
+                }
+              ],
+              "notes": "all 3 hrefs (#bottom-link-1/2/3) are BROKEN placeholders"
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "file": "sales-hub-dashboard.html",
+      "slug": "sales-hub-dashboard",
+      "title": "Dashboard | Sales Hub | Mizuho America",
+      "body_classes": [],
+      "notes": "Uses the SALES-HUB header/footer chrome (portal-head/portal-foot), not the public one -- see shared.header_sales_hub / shared.footer_sales_hub.",
+      "sections": [
+        {
+          "id": "dashboard",
+          "index": 0,
+          "fragment": "spec/fragments/sales-hub-dashboard/01-dashboard.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "db"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Hello, John Q.",
+              "selector": "h1.db-h1",
+              "notes": "hardcoded demo persona -- see top-level placeholders[]"
+            },
+            {
+              "name": "lead",
+              "type": "text",
+              "sample": "Explore tools to keep Mizuho America top of mind with neurosurgeons before, during, and after the sale",
+              "selector": ".db-lead"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "stats",
+              "selector": ".db-stats li",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "number",
+                  "type": "text",
+                  "sample": "4"
+                },
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Product categories available"
+                }
+              ]
+            },
+            {
+              "name": "tools",
+              "selector": ".db-tools li",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "icon",
+                  "type": "image",
+                  "sample": "assets/sales-hub-dashboard/icon-tool-resource-library.png"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Resource Library",
+                  "notes": "wrapped in a link, e.g. href=sales-hub-resource-library.html (valid); 2nd/3rd tools link to real external WP routes (/sales-hub/cross-reference/, /sales-hub/training/) outside this 9-page export"
+                },
+                {
+                  "name": "description",
+                  "type": "text",
+                  "sample": "Brochures, spec sheets, and product videos"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "account",
+          "index": 1,
+          "fragment": "spec/fragments/sales-hub-dashboard/02-account.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "db-acc"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "ACCOUNT",
+              "selector": "h2.db-acc-h"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "account_actions",
+              "selector": ".db-acc-btns a",
+              "count": 3,
+              "fields": [
+                {
+                  "name": "label",
+                  "type": "text",
+                  "sample": "Log in"
+                },
+                {
+                  "name": "url",
+                  "type": "link",
+                  "sample": "sales-hub-login.html"
+                }
+              ],
+              "notes": "DEFECT (developer-confirmed): 'Log in' button on a dashboard that already displays a logged-in identity in its own header ('Hello, John Q.' / 'John Q. Public'). 2nd action 'Account details' href=#account-details is BROKEN. 3rd 'Change password' correctly links to the real WP lost-password route."
+            }
+          ],
+          "js_hooks": [],
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "file": "sales-hub-login.html",
+      "slug": "sales-hub-login",
+      "title": "Log in | Sales Hub | Mizuho America",
+      "body_classes": [],
+      "notes": "UNIQUE among all 9 pages: no <header> element at all (body goes straight into <main>), and js/main.js is NOT linked (no mobile nav to toggle since there's no header). Uses only the sales-hub footer chrome.",
+      "sections": [
+        {
+          "id": "sales-hub-login",
+          "index": 0,
+          "fragment": "spec/fragments/sales-hub-login/00-sales-hub-login.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "lg"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "logo",
+              "type": "image",
+              "sample": "assets/sales-hub-login/logo-mizuho-header-srgb.png",
+              "selector": ".lg-logo"
+            },
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "Sales HUb - REP Portal",
+              "selector": "h1.lg-h1",
+              "notes": "PLACEHOLDER/typo ('HUb') -- see top-level placeholders[]"
+            },
+            {
+              "name": "forgot_password_label",
+              "type": "text",
+              "sample": "Forgot your password?",
+              "selector": ".lg-forgot",
+              "notes": "href = real WP lostpassword route"
+            },
+            {
+              "name": "note",
+              "type": "richtext",
+              "sample": "Sales Hub access is for registered Mizuho America sales representatives only.<br>To request access, contact your account manager.",
+              "selector": ".lg-note",
+              "notes": "contains a <br>"
+            }
+          ],
+          "repeats": [],
+          "js_hooks": [],
+          "notes": "Login form itself captured in top-level forms[] (.lg-form)."
+        }
+      ]
+    },
+    {
+      "file": "sales-hub-resource-library.html",
+      "slug": "sales-hub-resource-library",
+      "title": "Resource Library | Sales Hub | Mizuho America",
+      "body_classes": [],
+      "notes": "Uses the SALES-HUB header/footer chrome. Structurally a near-twin of products.html#browse-by-product / the public tiles pattern, but scoped to internal reps.",
+      "sections": [
+        {
+          "id": "resource-library-intro",
+          "index": 0,
+          "fragment": "spec/fragments/sales-hub-resource-library/01-resource-library-intro.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "rl-band"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "heading",
+              "type": "text",
+              "sample": "RESOURCE LIBRARY",
+              "selector": "h1.rlb-h1"
+            },
+            {
+              "name": "body",
+              "type": "text",
+              "sample": "From downloadable brochures to testimonial and training videos: materials to help you gain and retain customers",
+              "selector": ".rlb-body"
+            }
+          ],
+          "repeats": [],
+          "js_hooks": [],
+          "notes": ""
+        },
+        {
+          "id": "resource-results",
+          "index": 1,
+          "fragment": "spec/fragments/sales-hub-resource-library/02-resource-results.html",
+          "tag": "section",
+          "classes": [
+            "rs",
+            "rl-main"
+          ],
+          "anchor_target": true,
+          "fields": [
+            {
+              "name": "result_count",
+              "type": "text",
+              "sample": "4 resources",
+              "selector": ".rl-count",
+              "notes": "hardcoded, see top-level forms[] for the filter form"
+            }
+          ],
+          "repeats": [
+            {
+              "name": "resource_tiles",
+              "selector": ".tiles .tile",
+              "count": 4,
+              "fields": [
+                {
+                  "name": "image",
+                  "type": "image",
+                  "sample": "assets/resource-library/tile-sugita-ii-head-frame-product-brochure.jpg"
+                },
+                {
+                  "name": "tag",
+                  "type": "text",
+                  "sample": "Head Holding Systems",
+                  "selector": ".tile-tag"
+                },
+                {
+                  "name": "pdf_badge",
+                  "type": "image",
+                  "sample": "assets/resource-library/icon-pdf.png",
+                  "notes": "decorative PDF icon overlay"
+                },
+                {
+                  "name": "title",
+                  "type": "text",
+                  "sample": "Sugita II Head Frame – Product Brochure",
+                  "selector": "h2.tile-title",
+                  "notes": "heading level h2 here vs h3 on every other public-facing 'tile' pattern (products archive, accessories, related-products, fast-facts) -- inconsistent heading hierarchy, flag for accessibility/consistency review"
+                },
+                {
+                  "name": "sub",
+                  "type": "text",
+                  "sample": "Head Holding Systems",
+                  "selector": "p.tile-sub"
+                },
+                {
+                  "name": "download_link_label",
+                  "type": "text",
+                  "sample": "Download",
+                  "selector": ".tile-dl",
+                  "notes": "href=#download-<slug> -- BROKEN, same non-functional-download pattern as resources.html's brochures"
+                }
+              ]
+            }
+          ],
+          "js_hooks": [],
+          "notes": "Filter form + search/sort form captured in top-level forms[]."
+        }
+      ]
+    }
+  ]
+}

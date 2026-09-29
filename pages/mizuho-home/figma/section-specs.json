@@ -1,0 +1,1432 @@
+{
+  "figma_canvas_width": 1440,
+  "figma_canvas_height": 5716,
+  "page_slug": "mizuho-home",
+  "extracted_at": "2026-09-25T07:10:00Z",
+  "figma_file_key": "jSb9GvLZzl7AFll93svlAE",
+  "figma_version": "2403008669101368304",
+  "desktop_frame": "1:9",
+  "mobile_frame": "1:400",
+  "mobile_canvas_width": 430,
+  "tablet_frame": null,
+  "responsive_note": "'430' overrides are exact values from the mobile frame (auto-layout). No tablet frame: 768/1024 must be derived.",
+  "font_substitution": {
+    "Gotham": "Montserrat"
+  },
+  "sections": {
+    "site_header": {
+      "global": true,
+      "globalNote": "Site-wide header -> Elementor Pro Theme Builder template (project-config global_settings). Not an FC layout of this page.",
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:117",
+      "mobileNodeId": "1:401",
+      "screenshotFile": "screenshots/desktop/01-site-header.png",
+      "screenshotFile2x": "screenshots/desktop/2x/01-site-header@2x.png",
+      "section": {
+        "paddingTop": "24px",
+        "paddingBottom": "0px",
+        "paddingLeft": "24px",
+        "paddingRight": "26px",
+        "backgroundColor": "#FFFFFF",
+        "minHeight": "137px"
+      },
+      "elements": {
+        "lang_switcher": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "500",
+          "fontSize": "13px",
+          "lineHeight": "15.6px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#000000",
+          "figmaFontFamily": "Gotham",
+          "figmaFontWeight": "350 (PostScript Gotham-Medium)",
+          "note": "EN / ESP in ONE text layer separated by 4 typed spaces; active language underlined by a 22px x 1px #000000 line 18px below text top."
+        },
+        "lang_active_underline": {
+          "width": "22px",
+          "height": "1px",
+          "backgroundColor": "#000000",
+          "marginTop": "2px"
+        },
+        "logo": {
+          "width": "200px",
+          "height": "61px",
+          "objectFit": "contain",
+          "note": "Raster (CMYK JPEG) image fill, centred at x=713 (7px left of page centre 720). Source: Site Settings logo."
+        },
+        "account_manager_link": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "500",
+          "fontSize": "13px",
+          "lineHeight": "15.6px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#000000",
+          "figmaFontFamily": "Gotham",
+          "figmaFontWeight": "350",
+          "textAlign": "right"
+        },
+        "primary_nav": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "600",
+          "fontSize": "13px",
+          "lineHeight": "17.7px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#000000",
+          "gap": "24px",
+          "note": "4 items in ONE text layer separated by 7 typed spaces; 24px gap measured from render, not a Figma property."
+        },
+        "search_input": {
+          "width": "161px",
+          "height": "29px",
+          "backgroundColor": "#00B3F033",
+          "borderRadius": "5px",
+          "paddingLeft": "12px",
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "13px",
+          "lineHeight": "17.7px",
+          "color": "#000000"
+        },
+        "button_sales_portal": {
+          "width": "117px",
+          "height": "29px",
+          "backgroundColor": "#0065B3",
+          "borderRadius": "5px",
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "13px",
+          "lineHeight": "17.7px",
+          "color": "#FFFFFF",
+          "textAlign": "center",
+          "marginLeft": "10px"
+        },
+        "button_contact": {
+          "width": "109px",
+          "height": "29px",
+          "backgroundColor": null,
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "borderColor": "#00B3F0",
+          "borderRadius": "5px",
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "13px",
+          "lineHeight": "17.7px",
+          "color": "#00B3F0",
+          "textAlign": "center",
+          "marginLeft": "11px"
+        },
+        "phone": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "13px",
+          "lineHeight": "17.7px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#000000",
+          "textAlign": "right",
+          "marginTop": "12px"
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 3,
+        "rows": "row1 y24-85: lang (x24) | logo (centre) | account manager (right); row2 y84-113: nav (x61) | search+Sales Portal+Contact Us (right); row3 y125: phone (right)"
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "10px",
+            "paddingBottom": "10px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#FCFEFF"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "gap": "18px",
+            "flexDirection": "column"
+          },
+          "elements": {
+            "logo": {
+              "width": "118px",
+              "height": "31px"
+            },
+            "menu_toggle": {
+              "width": "19px",
+              "height": "19px",
+              "color": "#000000",
+              "asset": "images/icon-menu.svg"
+            },
+            "row1": {
+              "display": "flex",
+              "justifyContent": "space-between",
+              "note": "logo left, hamburger right (Figma gap 253px = space-between)"
+            },
+            "row2": {
+              "display": "flex",
+              "justifyContent": "space-between",
+              "note": "EN/ESP left, Find an Account Manager right"
+            }
+          },
+          "hidden": [
+            "primary_nav",
+            "search_input",
+            "button_sales_portal",
+            "button_contact",
+            "phone"
+          ],
+          "note": "Hidden items presumably live in the hamburger drawer - NO drawer design exists in Figma."
+        }
+      }
+    },
+    "hero_carousel": {
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:81 (part: 1:111, 1:94, 1:99, 1:82, 1:87, 1:90, 1:114, 1:113)",
+      "mobileNodeId": "1:411",
+      "groupBoundaryNote": "Figma group 'Main Intro Section' (1:81) holds TWO visual sections: this hero and intro_statement. Split at y=1091 (frame coords).",
+      "screenshotFile": "screenshots/desktop/02-hero-carousel.png",
+      "screenshotFile2x": "screenshots/desktop/2x/02-hero-carousel@2x.png",
+      "section": {
+        "paddingTop": "33px",
+        "paddingBottom": "0px",
+        "paddingLeft": "104px",
+        "paddingRight": "112px",
+        "backgroundColor": "#FFFFFF"
+      },
+      "elements": {
+        "heading": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "70px",
+          "lineHeight": "70px",
+          "letterSpacing": "0px",
+          "textTransform": "uppercase",
+          "color": "#0065B3",
+          "maxWidth": "1247px",
+          "marginBottom": "38px",
+          "marginLeft": "-8px",
+          "note": "Text starts at x=96 (8px left of cards at x=104). Box h=175 but only 2 lines (140px); marginBottom 38px is from line boxes (box-derived value is 3px)."
+        },
+        "heading_accent": {
+          "color": "#00B3F0",
+          "note": "Second sentence 'ours, too.' is a colour-override span inside the same text layer -> <span> / second field."
+        },
+        "slide_card": {
+          "width": "572px",
+          "height": "592px",
+          "aspectRatio": "572/592",
+          "borderRadius": "51px",
+          "objectFit": "cover",
+          "gap": "80px",
+          "note": "Image radius 51px (left) / 50px (right). Border rect r48 3px #00B3F0 is VISIBLE on the right card, HIDDEN on the left card (1:95)."
+        },
+        "slide_card_border": {
+          "borderWidth": "3px",
+          "borderStyle": "solid",
+          "borderColor": "#00B3F0",
+          "borderRadius": "48px"
+        },
+        "slide_label": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "19px",
+          "lineHeight": "40px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "height": "45px",
+          "borderRadius": "13px",
+          "textAlign": "center",
+          "marginTop": "31px",
+          "paddingLeft": null,
+          "paddingRight": null,
+          "note": "Fixed-width rects (308px / 372px), not hugging. Top offset 31px (left) vs 28px (right); text line-height 40px vs 45px."
+        },
+        "slide_arrow": {
+          "width": "55px",
+          "height": "55px",
+          "marginRight": "36px",
+          "marginBottom": "39px",
+          "asset": "images/icon-arrow-circle-right.svg",
+          "note": "Right inset 36px (left card) vs 34px (right card)."
+        },
+        "cta_primary": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "18px",
+          "lineHeight": "23.94px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "width": "216px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "paddingLeft": "35px",
+          "paddingRight": "35px"
+        },
+        "cta_secondary": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "18px",
+          "lineHeight": "23.94px",
+          "color": "#00B3F0",
+          "backgroundColor": null,
+          "width": "288px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "borderColor": "#00B3F0",
+          "paddingLeft": "84px",
+          "paddingRight": "88px"
+        },
+        "browse_link": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "18px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#0065B3",
+          "gap": "32px",
+          "marginLeft": "46px",
+          "icon": "images/icon-arrow-down.svg (14px, 2px stroke)"
+        },
+        "pagination_dot": {
+          "width": "24px",
+          "height": "24px",
+          "borderRadius": "50%",
+          "backgroundColor": "#D9D9D9",
+          "gap": "8px"
+        },
+        "pagination_dot_active": {
+          "backgroundColor": "#0065B3"
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 2,
+        "gap": "80px",
+        "rowGap": "43px",
+        "ctaRow": {
+          "layoutMode": "flex (Frame 11 auto-layout)",
+          "gap": "34px"
+        }
+      },
+      "repeaters": {
+        "slides": {
+          "count_designed": 2,
+          "fields": [
+            "image",
+            "title",
+            "link"
+          ],
+          "note": "3 pagination dots but only 2 slides designed."
+        }
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#FCFEFF"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "columns": 1,
+            "gap": "36px",
+            "cardsGap": "18px",
+            "buttonsGap": "18px"
+          },
+          "elements": {
+            "heading": {
+              "fontSize": "48px",
+              "lineHeight": "55.2px",
+              "note": "Hard line break after 'mindset.'"
+            },
+            "slide_card": {
+              "width": "390px",
+              "height": "403.6px",
+              "borderRadius": "34.77px",
+              "note": "Cards STACK vertically; both borders hidden."
+            },
+            "slide_label": {
+              "fontSize": "12px",
+              "lineHeight": "27.27px",
+              "height": "30.7px",
+              "borderRadius": "8.86px",
+              "paddingLeft": "19px",
+              "paddingRight": "20px",
+              "marginTop": "21px"
+            },
+            "slide_arrow": {
+              "width": "38px",
+              "height": "38px",
+              "marginRight": "22px",
+              "marginBottom": "19.6px"
+            },
+            "browse_link": {
+              "fontSize": "14px",
+              "lineHeight": "18.62px",
+              "gap": "8.15px",
+              "icon": "images/icon-arrow-down-mobile.svg (12px)"
+            },
+            "pagination_dot": {
+              "width": "15px",
+              "height": "15px",
+              "gap": "5px"
+            },
+            "cta_primary": {
+              "width": "100%",
+              "height": "50px"
+            },
+            "cta_secondary": {
+              "width": "100%",
+              "height": "50px"
+            }
+          },
+          "order": [
+            "heading",
+            "slide cards (stacked)",
+            "browse_link + pagination row",
+            "cta_primary",
+            "cta_secondary"
+          ],
+          "note": "ORDER CHANGE: on desktop the CTA buttons precede the browse link/dots; on mobile the browse link/dots row comes first, then full-width buttons."
+        }
+      }
+    },
+    "intro_statement": {
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:81 (part: 1:108, 1:109, 1:105, 1:106, 1:104)",
+      "mobileNodeId": "1:439 (+ divider 1:444)",
+      "screenshotFile": "screenshots/desktop/03-intro-statement.png",
+      "screenshotFile2x": "screenshots/desktop/2x/03-intro-statement@2x.png",
+      "section": {
+        "paddingTop": "68px",
+        "paddingBottom": "0px",
+        "paddingLeft": "107px",
+        "paddingRight": "117px",
+        "backgroundColor": "#FFFFFF"
+      },
+      "elements": {
+        "heading": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "45px",
+          "lineHeight": "55px",
+          "letterSpacing": "0px",
+          "textTransform": "uppercase",
+          "color": "#0065B3",
+          "maxWidth": "1216px",
+          "marginBottom": "23px",
+          "note": "Box h=175 overlaps the body box; 23px is from 2 line boxes (110px)."
+        },
+        "body": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "300",
+          "fontSize": "25px",
+          "lineHeight": "45px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909",
+          "maxWidth": "1216px",
+          "marginBottom": "24px"
+        },
+        "button": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "16px",
+          "lineHeight": "40px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "width": "303px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "paddingLeft": "20px",
+          "paddingRight": null,
+          "note": "Rect + separate text layer (not auto-layout). Text box is 355px wide, wider than the 303px rect; rendered label ends ~23px before the rect edge."
+        },
+        "divider": {
+          "width": "1262px",
+          "height": "1px",
+          "backgroundColor": "#00B3F0",
+          "marginLeft": "-23px",
+          "marginTop": "70px",
+          "note": "Line 3 (1:104) at y=1492 sits at the BOTTOM of the Main Intro group - it separates intro_statement from value_columns, not hero from intro."
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 1
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#FCFEFF"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "gap": "36px"
+          },
+          "elements": {
+            "heading": {
+              "fontSize": "36px",
+              "lineHeight": "41.4px"
+            },
+            "body": {
+              "fontSize": "18px",
+              "lineHeight": "24.51px"
+            },
+            "button": {
+              "width": "100%",
+              "height": "50px",
+              "lineHeight": "21.28px",
+              "textAlign": "center",
+              "paddingLeft": "35px",
+              "paddingRight": "35px"
+            },
+            "divider": {
+              "width": "390px"
+            }
+          }
+        }
+      }
+    },
+    "value_columns": {
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:31",
+      "mobileNodeId": "1:445",
+      "screenshotFile": "screenshots/desktop/04-value-columns.png",
+      "screenshotFile2x": "screenshots/desktop/2x/04-value-columns@2x.png",
+      "section": {
+        "paddingTop": "103px",
+        "paddingBottom": "93px",
+        "paddingLeft": "107px",
+        "paddingRight": "94px",
+        "backgroundColor": "#FFFFFF"
+      },
+      "elements": {
+        "column_title": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "24px",
+          "lineHeight": "31.92px",
+          "letterSpacing": "0px",
+          "textTransform": "uppercase",
+          "color": "#00B3F0",
+          "marginBottom": "18px"
+        },
+        "column_icon": {
+          "width": "100px",
+          "height": "98px",
+          "objectFit": "contain",
+          "marginBottom": "25px",
+          "note": "Raster PNG icons (56x55 .. 60x43 source px) shown at ~100px -> upscaled ~1.8x. Heights 98/90/84/72; Figma compensates with gaps 25/33/39/51 so every lead line starts at +173px from the title top. Use a fixed 98px icon box."
+        },
+        "column_lead": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "600",
+          "fontSize": "16px",
+          "lineHeight": "30px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909",
+          "fontStyle": "italic"
+        },
+        "column_body": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "300",
+          "fontSize": "16px",
+          "lineHeight": "30px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909",
+          "marginTop": "30px",
+          "note": "Separated from the lead by an empty paragraph (30px)."
+        },
+        "column_divider": {
+          "width": "1px",
+          "height": "470px",
+          "backgroundColor": "#00B3F0"
+        },
+        "column": {
+          "width": "259px",
+          "paddingLeft": "30px",
+          "note": "Column pitch ~315px; text widths 253/259/259/259; column 4 body is inset 13.3px more than its title."
+        },
+        "button": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "16px",
+          "lineHeight": "40px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "width": "293px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "paddingLeft": "20px",
+          "marginTop": "61px"
+        }
+      },
+      "grid": {
+        "layoutMode": "grid",
+        "columns": 4,
+        "gap": "30px",
+        "columnGap": "30px",
+        "note": "Vertical 1px #00B3F0 dividers between columns."
+      },
+      "repeaters": {
+        "columns": {
+          "count_designed": 4,
+          "fields": [
+            "title",
+            "icon",
+            "lead",
+            "body"
+          ]
+        }
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#FCFEFF"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "columns": 1,
+            "gap": "28px",
+            "note": "Columns stack; vertical dividers become horizontal 1px #00B3F0 390px lines between columns."
+          },
+          "elements": {
+            "column_title": {
+              "fontSize": "20px",
+              "lineHeight": "26.6px",
+              "marginBottom": "12px"
+            },
+            "column_icon": {
+              "width": "79px",
+              "height": "77px",
+              "note": "79x77 / 88x80 / 87x73 / 96x69"
+            },
+            "column_lead": {
+              "fontSize": "14px",
+              "lineHeight": "28px",
+              "marginTop": "28px"
+            },
+            "column_body": {
+              "fontSize": "14px",
+              "lineHeight": "28px",
+              "marginTop": "28px"
+            },
+            "button": {
+              "width": "100%",
+              "lineHeight": "21.28px",
+              "textAlign": "center",
+              "marginTop": "0px"
+            }
+          }
+        }
+      }
+    },
+    "procedure_band": {
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:145",
+      "mobileNodeId": "1:471",
+      "screenshotFile": "screenshots/desktop/05-procedure-band.png",
+      "screenshotFile2x": "screenshots/desktop/2x/05-procedure-band@2x.png",
+      "section": {
+        "paddingTop": "51px",
+        "paddingBottom": "58px",
+        "paddingLeft": "76px",
+        "paddingRight": "62px",
+        "backgroundColor": "#0065B3",
+        "minHeight": "555px"
+      },
+      "elements": {
+        "heading": {
+          "fontFamily": "Mukta",
+          "fontWeight": "700",
+          "fontSize": "34px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "maxWidth": "1137px",
+          "marginBottom": "58px"
+        },
+        "item_icon": {
+          "width": "146px",
+          "height": "146px",
+          "objectFit": "contain",
+          "note": "Raster PNG. Sizes 146x146 / 114x158 / 184x167; icon-to-text gap 10 / 15 / 6px."
+        },
+        "item_title": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "700",
+          "fontSize": "20px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham"
+        },
+        "item_link_primary": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "700",
+          "fontSize": "16px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham",
+          "note": "'View product ->'"
+        },
+        "item_link_secondary": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "700",
+          "fontSize": "16px",
+          "lineHeight": "26px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#77DCFF",
+          "figmaFontFamily": "Gotham",
+          "marginTop": "26px"
+        },
+        "closing_text": {
+          "fontFamily": "Mukta",
+          "fontWeight": "700",
+          "fontSize": "32px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "marginTop": "56px"
+        },
+        "button": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "18px",
+          "lineHeight": "50px",
+          "color": "#0065B3",
+          "backgroundColor": "#FFFFFF",
+          "width": "391px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "borderWidth": "2px",
+          "borderStyle": "solid",
+          "borderColor": "#00B3F0",
+          "paddingLeft": "19px",
+          "paddingRight": "24px",
+          "justifyContent": "space-between",
+          "icon": "images/icon-arrow-down.svg (14px, #0065B3)",
+          "note": "Label left, arrow right (24px inset). paddingLeft measured from render."
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 3,
+        "gap": "97px",
+        "note": "Item x = 85 / 566 / 944 (pitch 481 / 378) - not an even grid."
+      },
+      "repeaters": {
+        "procedures": {
+          "count_designed": 3,
+          "fields": [
+            "icon",
+            "title",
+            "product_link",
+            "secondary_link_text",
+            "secondary_link_url"
+          ]
+        }
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#0065B3"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "columns": 1,
+            "gap": "36px"
+          },
+          "elements": {
+            "heading": {
+              "fontSize": "28px",
+              "lineHeight": "46.54px"
+            },
+            "item_icon": {
+              "width": "119px",
+              "height": "119px",
+              "note": "119 / 113x103 / 83x115 (in 131px frame); text column always starts 156px from content edge"
+            },
+            "item_title": {
+              "fontSize": "18px",
+              "lineHeight": "24px"
+            },
+            "item_link_primary": {
+              "fontSize": "14px",
+              "lineHeight": "40px"
+            },
+            "item_link_secondary": {
+              "fontSize": "14px",
+              "lineHeight": "22px",
+              "marginTop": "22px"
+            },
+            "closing_text": {
+              "fontSize": "28px",
+              "lineHeight": "46.54px"
+            },
+            "button": {
+              "width": "100%",
+              "borderWidth": "0px",
+              "lineHeight": "21.28px",
+              "fontSize": "16px",
+              "paddingLeft": "35px",
+              "paddingRight": "35px",
+              "icon": "images/icon-arrow-down-mobile.svg (12px)",
+              "note": "No border on mobile."
+            }
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:57",
+      "mobileNodeId": "1:487 + 1:518 (quote) with dividers 1:517, 1:523",
+      "groupBoundaryNote": "One Figma group on desktop; mobile splits the pull quote into its own frame (1:518). Kept as ONE layout here (videos + quote).",
+      "screenshotFile": "screenshots/desktop/06-testimonials.png",
+      "section": {
+        "paddingTop": "91px",
+        "paddingBottom": "0px",
+        "paddingLeft": "76px",
+        "paddingRight": "82px",
+        "backgroundColor": "#FFFFFF"
+      },
+      "elements": {
+        "eyebrow_heading": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "34px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "uppercase",
+          "color": "#0065B3"
+        },
+        "intro": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "400",
+          "fontSize": "20px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909",
+          "marginBottom": "6px",
+          "maxWidth": "1177px"
+        },
+        "video_thumb": {
+          "width": "409px",
+          "height": "272px",
+          "aspectRatio": "409/272",
+          "objectFit": "cover",
+          "borderRadius": "0px",
+          "note": "Raster JPEG 409x272 (1x only). Thumbnails have burned-in video lower-thirds (names) inside the photo."
+        },
+        "play_icon": {
+          "width": "53px",
+          "height": "53px",
+          "asset": "images/icon-play-circle.svg",
+          "note": "Centred on thumb."
+        },
+        "bio_name": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "18px",
+          "lineHeight": "30px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#0065B3"
+        },
+        "bio_role_first": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "300",
+          "fontSize": "14px",
+          "lineHeight": "30px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909"
+        },
+        "bio_role": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "300",
+          "fontSize": "14px",
+          "lineHeight": "22px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909"
+        },
+        "bio": {
+          "marginTop": "17px",
+          "paddingLeft": "19px",
+          "note": "Bio inset 21 / 19 / 17px from the thumb edge."
+        },
+        "watch_button": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "14px",
+          "lineHeight": "50px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "width": "93px",
+          "height": "40px",
+          "borderRadius": "5px",
+          "marginTop": "17px",
+          "note": "'Watch now' is a text run inside the bio text layer, positioned over separate rects -> build as a real button. Middle one sits 22px lower (longer bio)."
+        },
+        "divider": {
+          "width": "1282px",
+          "height": "1px",
+          "backgroundColor": "#00B3F0",
+          "marginTop": "82px",
+          "note": "82px below the lowest Watch-now button (104px below the other two)."
+        },
+        "quote": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "34px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "uppercase",
+          "color": "#0065B3",
+          "textAlign": "center",
+          "maxWidth": "998px",
+          "marginTop": "57px",
+          "marginBottom": "8px"
+        },
+        "quote_attribution": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "300",
+          "fontSize": "24px",
+          "lineHeight": "45px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909",
+          "textAlign": "center",
+          "marginBottom": "44px"
+        },
+        "more_button": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "16px",
+          "lineHeight": "40px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "width": "179px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "paddingLeft": "17px"
+        },
+        "more_button_rules": {
+          "width": "513px",
+          "height": "1px",
+          "backgroundColor": "#00B3F0",
+          "note": "Two 513px lines flank the button, vertically centred."
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 3,
+        "gap": "28px",
+        "note": "Column gaps 27px / 29px."
+      },
+      "repeaters": {
+        "videos": {
+          "count_designed": 3,
+          "fields": [
+            "thumbnail",
+            "video_url",
+            "name",
+            "role_lines",
+            "button_label"
+          ]
+        },
+        "quote": {
+          "single": true,
+          "fields": [
+            "quote",
+            "attribution"
+          ]
+        }
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#FCFEFF"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "columns": 1,
+            "gap": "36px"
+          },
+          "elements": {
+            "eyebrow_heading": {
+              "fontSize": "28px",
+              "lineHeight": "50px",
+              "marginBottom": "12px"
+            },
+            "intro": {
+              "fontSize": "18px",
+              "lineHeight": "24.51px",
+              "fontWeight": "300"
+            },
+            "video_thumb": {
+              "width": "390px",
+              "height": "259.4px"
+            },
+            "play_icon": {
+              "width": "44.2px",
+              "height": "44.2px"
+            },
+            "bio": {
+              "marginTop": "6.67px",
+              "paddingTop": "9.54px",
+              "paddingRight": "9.54px",
+              "paddingBottom": "9.54px",
+              "paddingLeft": "20.02px",
+              "gap": "16px"
+            },
+            "bio_name": {
+              "fontSize": "16px",
+              "lineHeight": "28.61px"
+            },
+            "bio_role_first": {
+              "fontSize": "13px",
+              "lineHeight": "28.61px"
+            },
+            "bio_role": {
+              "fontSize": "13px",
+              "lineHeight": "21px"
+            },
+            "watch_button": {
+              "width": "140px",
+              "height": "50px",
+              "fontSize": "16px",
+              "lineHeight": "21.28px",
+              "paddingLeft": "35px",
+              "paddingRight": "35px"
+            },
+            "extra_cta": {
+              "note": "Mobile adds a full-width 'Watch what clinical experts say about us' button after the videos (desktop has it only in intro_statement)."
+            },
+            "quote": {
+              "fontSize": "24px",
+              "lineHeight": "31.92px",
+              "marginTop": "44px"
+            },
+            "quote_attribution": {
+              "fontSize": "20px",
+              "lineHeight": "27.24px"
+            },
+            "more_button": {
+              "width": "100%",
+              "textAlign": "center"
+            },
+            "more_button_rules": {
+              "note": "Flanking lines removed; full-width 390px dividers above and below the quote block instead."
+            }
+          }
+        }
+      }
+    },
+    "about_stats": {
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:10",
+      "mobileNodeId": "1:524",
+      "screenshotFile": "screenshots/desktop/07-about-stats.png",
+      "screenshotFile2x": "screenshots/desktop/2x/07-about-stats@2x.png",
+      "section": {
+        "paddingTop": "95px",
+        "paddingBottom": "99px",
+        "paddingLeft": "76px",
+        "paddingRight": null,
+        "backgroundColor": "#FFFFFF"
+      },
+      "elements": {
+        "heading": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "34px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#0065B3",
+          "textAlign": "center",
+          "marginBottom": "21px",
+          "note": "Typed in capitals (no textCase). Centre is 14.5px left of the page centre."
+        },
+        "body": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "400",
+          "fontSize": "16px",
+          "lineHeight": "36px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#090909",
+          "textAlign": "center",
+          "maxWidth": "1090px",
+          "marginBottom": "26px",
+          "note": "Text layer starts with two empty lines to clear the separately-placed heading."
+        },
+        "stat": {
+          "width": "421px",
+          "height": "250px",
+          "note": "Pitch 370px. Stat 1 sits 4px lower than stats 2 and 3."
+        },
+        "stat_panel": {
+          "width": "146px",
+          "height": "250px",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": "10px",
+          "boxShadow": "21px 0px 21px -23px #000000",
+          "note": "White panel drawn ON TOP of the card's left 15px; creates the shadow edge."
+        },
+        "stat_card": {
+          "width": "290px",
+          "height": "162px",
+          "borderRadius": "20px",
+          "backgroundColor": "#0065B3",
+          "marginLeft": "131px",
+          "marginTop": "44px",
+          "paddingLeft": "50px",
+          "note": "Colours alternate: #0065B3 / #00B3F0 / #0065B3."
+        },
+        "stat_card_alt": {
+          "backgroundColor": "#00B3F0"
+        },
+        "stat_number": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "64px",
+          "lineHeight": "36px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "note": "line-height < font-size (Figma value)."
+        },
+        "stat_label": {
+          "fontFamily": "Open Sans",
+          "fontWeight": "700",
+          "fontSize": "16px",
+          "lineHeight": "18px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "marginTop": "21px"
+        },
+        "button": {
+          "fontFamily": "Freeman",
+          "fontWeight": "400",
+          "fontSize": "16px",
+          "lineHeight": "40px",
+          "color": "#FFFFFF",
+          "backgroundColor": "#0065B3",
+          "width": "150px",
+          "height": "50px",
+          "borderRadius": "5px",
+          "paddingLeft": "19px",
+          "marginTop": "20px"
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 3,
+        "gap": null,
+        "pitch": "370px",
+        "note": "Stat row spans x=76..1236: NOT centred (76px left vs 204px right)."
+      },
+      "repeaters": {
+        "stats": {
+          "count_designed": 3,
+          "fields": [
+            "number",
+            "label",
+            "colour_variant"
+          ]
+        }
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#FCFEFF"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "columns": 1,
+            "gap": "36px"
+          },
+          "elements": {
+            "heading": {
+              "fontSize": "24px",
+              "lineHeight": "31.92px",
+              "textTransform": "uppercase",
+              "marginBottom": "22px"
+            },
+            "body": {
+              "fontSize": "14px",
+              "lineHeight": "28px"
+            },
+            "stat": {
+              "width": "350px",
+              "height": "250px",
+              "note": "Stacked; 350px wide at x=20 -> not centred (20px left, 60px right)."
+            },
+            "stat_panel": {
+              "width": "75px",
+              "note": "75 / 75 / 71px"
+            },
+            "stat_card": {
+              "marginLeft": "60px",
+              "marginTop": "43.2px",
+              "note": "offset 60 / 60 / 56px"
+            },
+            "button": {
+              "width": "100%",
+              "lineHeight": "21.28px",
+              "textAlign": "center"
+            }
+          }
+        }
+      }
+    },
+    "site_footer": {
+      "global": true,
+      "globalNote": "Site-wide footer -> Elementor Pro Theme Builder template; business data from Site Settings (m11-site-settings).",
+      "spacingSource": "absolute-coordinates",
+      "figmaNodeId": "1:132",
+      "mobileNodeId": "1:545",
+      "screenshotFile": "screenshots/desktop/08-site-footer.png",
+      "section": {
+        "paddingTop": "70px",
+        "paddingBottom": "36px",
+        "paddingLeft": "78px",
+        "paddingRight": "82px",
+        "backgroundColor": "#0065B3",
+        "minHeight": "960px"
+      },
+      "elements": {
+        "contact_heading": {
+          "fontFamily": "Fraunces",
+          "fontWeight": "700",
+          "fontSize": "34px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "note": "Fraunces - a 5th font, used only here."
+        },
+        "contact_text": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "300",
+          "fontSize": "20px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham",
+          "note": "'Contact Us.' run is weight 700."
+        },
+        "contact_hours": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "300",
+          "fontSize": "20px",
+          "lineHeight": "30px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham"
+        },
+        "details_intro": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "300",
+          "fontSize": "25px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham",
+          "marginTop": "36px"
+        },
+        "details_line": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "700",
+          "fontSize": "25px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham",
+          "note": "Phone / Fax / Email lines bold (label AND value); Address line weight 300."
+        },
+        "divider": {
+          "width": "1279px",
+          "height": "1px",
+          "backgroundColor": "#FFFFFF",
+          "marginTop": "68px",
+          "marginBottom": "51px"
+        },
+        "menu_heading": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "700",
+          "fontSize": "25px",
+          "lineHeight": "50px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham"
+        },
+        "menu_link": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "300",
+          "fontSize": "20px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham"
+        },
+        "logo": {
+          "width": "200px",
+          "height": "58px",
+          "objectFit": "contain",
+          "marginLeft": "-34px",
+          "note": "Logo at x=44, 34px left of the content edge (78)."
+        },
+        "copyright": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "300",
+          "fontSize": "14px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham"
+        },
+        "legal_links": {
+          "fontFamily": "Montserrat",
+          "fontWeight": "300",
+          "fontSize": "14px",
+          "lineHeight": "40px",
+          "letterSpacing": "0px",
+          "textTransform": "none",
+          "color": "#FFFFFF",
+          "figmaFontFamily": "Gotham",
+          "note": "4 links in one text layer separated by 6 typed spaces; right edge ~1405 vs divider end 1358."
+        }
+      },
+      "grid": {
+        "layoutMode": "absolute",
+        "columns": 4,
+        "gap": null,
+        "note": "Menu columns at x=78 / 453 / 794 / 1081 (pitch 375 / 341 / 287)."
+      },
+      "repeaters": {
+        "menu_columns": {
+          "count_designed": 4,
+          "note": "WP menus (Products, Clinical, Company, Support)"
+        }
+      },
+      "responsive": {
+        "430": {
+          "spacingSource": "auto-layout",
+          "section": {
+            "paddingTop": "44px",
+            "paddingBottom": "44px",
+            "paddingLeft": "20px",
+            "paddingRight": "20px",
+            "backgroundColor": "#0065B3"
+          },
+          "grid": {
+            "layoutMode": "flex",
+            "columns": 2,
+            "gap": "36px",
+            "note": "Menus in a 2x2 grid (rows gap 36px)."
+          },
+          "elements": {
+            "contact_heading": {
+              "fontSize": "28px"
+            },
+            "contact_text": {
+              "fontSize": "18px",
+              "lineHeight": "40px"
+            },
+            "contact_hours": {
+              "fontSize": "18px",
+              "lineHeight": "30px"
+            },
+            "details_intro": {
+              "fontSize": "20px",
+              "lineHeight": "32px"
+            },
+            "details_line": {
+              "fontSize": "20px",
+              "lineHeight": "32px"
+            },
+            "menu_heading": {
+              "fontSize": "22px",
+              "lineHeight": "50px"
+            },
+            "menu_link": {
+              "fontSize": "16px",
+              "lineHeight": "40px"
+            },
+            "logo": {
+              "marginLeft": "0px",
+              "note": "Logo stacked above copyright, gap 8px"
+            },
+            "copyright": {
+              "fontSize": "12px",
+              "lineHeight": "14.4px"
+            },
+            "legal_links": {
+              "fontSize": "12px",
+              "lineHeight": "14.4px"
+            }
+          }
+        }
+      }
+    }
+  }
+}

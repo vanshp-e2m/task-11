@@ -1,0 +1,38 @@
+[
+ {
+  "ability": "dev/acf-read-write-values",
+  "target": "post:231",
+  "ts": "2026-09-28 15:15:14",
+  "audit_id": 2380
+ },
+ {
+  "ability": "dev/acf-read-write-values",
+  "target": "post:230",
+  "ts": "2026-09-28 15:16:35",
+  "audit_id": 2382
+ },
+ {
+  "ability": "dev/acf-read-write-values",
+  "target": "post:231",
+  "ts": "2026-09-28 15:16:38",
+  "audit_id": 2384
+ },
+ {
+  "ability": "dev/acf-read-write-values",
+  "target": "post:232",
+  "ts": "2026-09-28 15:16:41",
+  "audit_id": 2386
+ },
+ {
+  "ability": "dev/acf-read-write-values",
+  "target": "post:231",
+  "ts": "2026-09-28 15:16:52",
+  "audit_id": 2388
+ },
+ {
+  "ability": "dev/acf-read-write-values",
+  "target": "post:231",
+  "ts": "2026-09-28 15:17:41",
+  "audit_id": 2390
+ }
+]

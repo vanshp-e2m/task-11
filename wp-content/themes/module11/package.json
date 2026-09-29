@@ -1,0 +1,9 @@
+{
+  "name": "module11-theme",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "sass assets/scss/main.scss assets/css/main.css --style=compressed --no-source-map",
+    "watch": "sass --watch assets/scss/main.scss assets/css/main.css"
+  }
+}

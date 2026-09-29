@@ -1,0 +1,87 @@
+[
+  {
+    "acf_fc_layout": "sh_dashboard",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "dashboard"
+    },
+    "lead": "Explore tools to keep Mizuho America top of mind with neurosurgeons before, during, and after the sale",
+    "stats": [
+      {
+        "label": "Product categories available"
+      },
+      {
+        "label": "Brochures & spec sheets"
+      },
+      {
+        "label": "Training videos"
+      }
+    ],
+    "tools": [
+      {
+        "icon": "seed/images/sales-hub-dashboard/icon-tool-resource-library.png",
+        "title": "Resource Library",
+        "link": {
+          "url": "http://task-11.local/sales-hub/resource-library/",
+          "title": "Resource Library",
+          "target": ""
+        },
+        "description": "Brochures, spec sheets, and product videos"
+      },
+      {
+        "icon": "seed/images/sales-hub-dashboard/icon-tool-cross-reference-tool.png",
+        "title": "Cross-Reference Tool",
+        "link": {
+          "url": "http://task-11.local/sales-hub/cross-reference/",
+          "title": "Cross-Reference Tool",
+          "target": ""
+        },
+        "description": "Find the Mizuho equivalent for any competitor product"
+      },
+      {
+        "icon": "seed/images/sales-hub-dashboard/icon-tool-training-hub.png",
+        "title": "Training Hub",
+        "link": {
+          "url": "http://task-11.local/sales-hub/training/",
+          "title": "Training Hub",
+          "target": ""
+        },
+        "description": "Product training videos for all Mizuho categories."
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "sh_account",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "account"
+    },
+    "heading": "ACCOUNT",
+    "account_actions": [
+      {
+        "label": "Log in",
+        "url": {
+          "url": "http://task-11.local/sales-hub/",
+          "title": "Log in",
+          "target": ""
+        }
+      },
+      {
+        "label": "Account details",
+        "url": {
+          "url": "#account-details",
+          "title": "Account details",
+          "target": ""
+        }
+      },
+      {
+        "label": "Change password",
+        "url": {
+          "url": "http://task-11.local/wp-login.php?action=lostpassword",
+          "title": "Change password",
+          "target": ""
+        }
+      }
+    ]
+  }
+]

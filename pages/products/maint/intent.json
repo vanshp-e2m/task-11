@@ -1,0 +1,13 @@
+{
+  "task_type": "content_update",
+  "summary": "Build step B1 of the approved ACF plan (spec/acf-plan.json): create the empty WordPress page 'products' that will host the Product Browse Flexible Content sections. This write only creates the shell; the template assignment, sections and content are a later, separately verified step.",
+  "declared_targets": [{"kind": "page", "id": 89, "slug": "products"}],
+  "declared_changes": [
+    {"target": "page:89", "field": "post_title", "before": null, "after": "Products"},
+    {"target": "page:89", "field": "post_name", "before": null, "after": "products"},
+    {"target": "page:89", "field": "post_status", "before": null, "after": "publish"},
+    {"target": "page:89", "field": "post_content", "before": null, "after": ""}
+  ],
+  "reference": {"kind": "none", "note": "Shell page: no design content yet. Expected: published, permalink http://task-11.local/products/ returns 200 with the site header/footer and an empty body."},
+  "blast_radius": ["products", "mizuho-home"]
+}

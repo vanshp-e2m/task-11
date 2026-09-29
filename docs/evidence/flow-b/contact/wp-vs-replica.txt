@@ -1,0 +1,3 @@
+contact      1440 W=1440  sections=3 missing=[] worst=0.91%  contact-intro:0.43%/+1 faq:0.91%/+0 before-you-go:0.68%/+0
+contact       768 W=768   sections=3 missing=[] worst=4.58%  contact-intro:2.58%/+11 faq:2.86%/+2 before-you-go:4.58%/+0
+contact       430 W=430   sections=3 missing=[] worst=4.95%  contact-intro:1.32%/+10 faq:4.95%/+2 before-you-go:3.37%/+0

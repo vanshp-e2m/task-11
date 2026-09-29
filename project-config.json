@@ -1,0 +1,203 @@
+{
+  "site_mode": "new",
+  "builder": "acf",
+  "acf_present": true,
+  "acf_role": "page-structure",
+  "elementor_present": true,
+  "theme": {
+    "name": "Module 11",
+    "stylesheet": "module11",
+    "parent": "hello-elementor",
+    "is_block_theme": false,
+    "theme_mode": "classic",
+    "styling": "scss",
+    "function_prefix": "m11_",
+    "scss_entry": "wp-content/themes/module11/assets/scss/main.scss",
+    "acf_json": "wp-content/themes/module11/acf-json",
+    "flex_template_parts": "wp-content/themes/module11/template-parts/flex-blocks",
+    "scss_layout_partials": "wp-content/themes/module11/assets/scss/layouts"
+  },
+  "site": {
+    "url": "http://task-11.local",
+    "environment": "local",
+    "wp_cli": "tools/wp.sh",
+    "db_port": 10053
+  },
+  "input_mode": "figma_url",
+  "figma_source": "url",
+  "figma": {
+    "file_key": "jSb9GvLZzl7AFll93svlAE",
+    "file_url": "https://www.figma.com/design/jSb9GvLZzl7AFll93svlAE/Module-11-figma-design",
+    "token_source": "env FIGMA_TOKEN, loaded from .secrets/figma-token (gitignored)",
+    "page_frame": "1:9",
+    "canvas_width": 1440,
+    "frames": {
+      "home_desktop": "1:9",
+      "home_mobile": "1:400",
+      "about_desktop": "1:161",
+      "about_mobile": "1:2237"
+    },
+    "note": "No tablet frames in the file; tablet (768/1024) is derived. Mobile frames are 430px wide."
+  },
+  "acf": {
+    "flexible_field": "sections",
+    "layouts": [],
+    "options_page": {
+      "slug": "m11-site-settings",
+      "post_id": "options",
+      "group": "group_m11_site_settings"
+    }
+  },
+  "design_tokens": {
+    "colors": {
+      "primary": "#0065b3",
+      "sky": "#00b3f0",
+      "navy": "#002842",
+      "text": "#090909",
+      "white": "#ffffff",
+      "light_sky": "#77dcff",
+      "divider": "#d9d9d9"
+    },
+    "fonts": {
+      "heading": "Freeman",
+      "body": "Open Sans",
+      "secondary": "Montserrat (substitute for commercial Gotham)",
+      "accent": "Mukta"
+    }
+  },
+  "pages": [
+    {
+      "slug": "mizuho-home",
+      "figma_frame": "1:9",
+      "mobile_frame": "1:400",
+      "flow": "A",
+      "builder": "acf",
+      "note": "Built as an INNER page (DevCommand never touches a homepage, issue #8). The developer sets it as the front page manually at the end (Settings > Reading), after a snapshot."
+    },
+    {
+      "slug": "about-us",
+      "figma_frame": "1:161",
+      "mobile_frame": "1:2237",
+      "flow": "B",
+      "builder": "elementor"
+    }
+  ],
+  "qa_breakpoints": {
+    "core": [
+      1440,
+      768,
+      430
+    ],
+    "full": [
+      1920,
+      1440,
+      1024,
+      768,
+      430
+    ]
+  },
+  "project": {
+    "purpose": "Module 11 capstone on a local practice site (task-11.local) — never a client site.",
+    "flows": {
+      "A": "Figma -> HTML -> DevCommand/DevConnect -> editable WordPress page (ACF Flexible Content)",
+      "B": "Same, with header, footer, colours and typography as central global settings",
+      "maintenance": "Ticket on a site built with a different builder (ticket not yet received)"
+    },
+    "css_framework": "none (custom SCSS, OOCSS/utility)",
+    "slider_library": "swiper",
+    "font_source": "google",
+    "fonts": [
+      "Freeman",
+      "Open Sans",
+      "Montserrat",
+      "Mukta",
+      "Fraunces"
+    ],
+    "dependency_method": "cdn",
+    "global_settings": {
+      "header_footer": "Elementor Pro Theme Builder templates (site-wide, incl. the ACF-coded Home)",
+      "colors_typography": "Elementor Kit (Site Settings); theme SCSS reads --e-global-color-* variables",
+      "business_data": "ACF options page m11-site-settings (phone, fax, email, address, hours, socials, logo); Elementor via dynamic tags, PHP via m11_get_setting()"
+    },
+    "additional_requirements": "Home = Flow A (ACF Flexible Content, coded). About Us = Flow B (Elementor native widgets). Hero is a Swiper slider backed by a repeater. Gotham replaced by Montserrat. No tablet frames in Figma: tablet layout is derived and documented. Log every tooling error in docs/issues-log.md.",
+    "input_mode": "html_zip",
+    "input_mode_note": "2026-09-28: Flow A conversion stage. The Figma design was first converted to generated HTML (pages/<slug>/html/, DevCommand figma-html pipeline); the ACF pages are now fed to DevCommand's HTML->ACF pipeline as one site ZIP (tools/figma_html/package_acf_site.py). Top-level input_mode stays figma_url for the Figma stage.",
+    "fonts_note": "Fraunces 700 = footer \"Contact & Support\" heading only (issues-log #26)",
+    "allow_homepage_build": true
+  },
+  "elementor": {
+    "kit_id": 6,
+    "theme_templates": {
+      "header": 61,
+      "footer": 62
+    },
+    "container_width": 1240,
+    "breakpoints": {
+      "mobile": 767,
+      "tablet": 1024
+    },
+    "dynamic_tags_group": "m11-site-settings",
+    "chrome_generator": "tools/elementor/build_chrome.py"
+  },
+  "pages_created": {
+    "mizuho-home": 14,
+    "about-us": 15,
+    "contact-us": 16,
+    "resources": 17,
+    "sales-hub": 18,
+    "sales-hub/dashboard": 19,
+    "sales-hub/resource-library": 20,
+    "sales-hub/cross-reference": 21,
+    "sales-hub/training": 22
+  },
+  "menus": {
+    "Primary": 2,
+    "Footer - Products": 3,
+    "Footer - Clinical": 4,
+    "Footer - Company": 5,
+    "Footer - Support": 6,
+    "Legal": 7,
+    "Language": 8,
+    "Sales Hub": 9,
+    "Sales Hub - Legal": 10
+  },
+  "html_source": {
+    "archive_path": "./source/html-site.zip",
+    "status": "homepage-confirmed",
+    "homepage_candidate": "home",
+    "homepage_confirmed": true
+  },
+  "output_structure": {
+    "pages_root": "pages"
+  },
+  "build_sequence": {
+    "detected_pages": [
+      "home",
+      "product-feather-blades",
+      "product-lawtonelite-skull-base-set",
+      "product-sugita-ii-head-frame",
+      "products",
+      "resources",
+      "sales-hub-dashboard",
+      "sales-hub-login",
+      "sales-hub-resource-library"
+    ],
+    "homepage": "home",
+    "current_page": "home",
+    "mode": "sequential",
+    "require_page_approval": true
+  },
+  "approvals": {
+    "page_inventory": {
+      "status": "approved",
+      "approved_by": "developer",
+      "approved_at": "2026-09-28",
+      "note": "9 pages; homepage = home (WordPress inner page mizuho-home, issue #8)"
+    },
+    "pages": {
+      "home": {
+        "status": "planned"
+      }
+    }
+  }
+}

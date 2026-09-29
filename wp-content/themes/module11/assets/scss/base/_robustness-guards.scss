@@ -1,0 +1,70 @@
+@use "../abstracts/mixins" as *;
+
+// Hand-written guards for the GENERATED layout partials (tools/figma_html/split_replica_css.py rewrites those files).
+// Each rule here closes a defect found by the robustness test (tools/evidence/robustness.py, docs/evidence/robustness/).
+
+// Sales Hub dashboard tool icons rendered at their natural size inside the 84×85 tile: a wrong-ratio upload (e.g. 600×1800)
+// stretched the tile to 252px and distorted the icon (object-fit: fill). Fixed Figma icon box (70×61, the widest drawn icon),
+// icon letterboxed inside it: the drawn icons (69/55/70 × 61) look identical, any other ratio can no longer move the tile.
+.m11-page-dashboard .db-icon img {
+	width: 70px;
+	height: 61px;
+	object-fit: contain;
+}
+
+// Fixed-height single-line labels (height = line box, often white-space: nowrap). With a longer label (robustness "long" case)
+// the text ran out of the button/pill or was hidden. They now wrap and grow; flex keeps a single line exactly centred as drawn.
+.m11-page-mizuho-home .hero-pill,
+.m11-page-mizuho-home .ts-watch,
+.m11-page-resources .bl-btn,
+.m11-page-dashboard .db-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	white-space: normal;
+	text-align: center;
+	overflow-wrap: anywhere;
+}
+
+.m11-page-mizuho-home .hero-pill,
+.m11-page-mizuho-home .ts-watch,
+.m11-page-resources .bl-btn,
+.m11-page-dashboard .db-btn,
+.m11-page-mizuho-home .pb-btn span {
+	line-height: 1.2;
+}
+
+.m11-page-mizuho-home .vc-title {
+	height: auto;
+	white-space: normal;
+}
+
+// the Supported Procedures label is absolutely placed inside its button; centre it vertically so two lines still fit
+.m11-page-mizuho-home .pb-btn span {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@include minmedia(1024px) {
+	.m11-page-mizuho-home .hero-pill { min-height: u(45); padding-block: u(2); }
+	.m11-page-mizuho-home .ts-watch { min-height: u(40); }
+	.m11-page-resources .bl-btn { min-height: u(50); }
+	.m11-page-dashboard .db-btn { min-height: u(45); }
+	.m11-page-mizuho-home .vc-title { min-height: u(50); }
+}
+
+@include maxmedia(1023px) {
+	.m11-page-mizuho-home .hero-pill { min-height: 31px; }
+	.m11-page-mizuho-home .ts-watch,
+	.m11-page-resources .bl-btn,
+	.m11-page-dashboard .db-btn { min-height: 50px; }
+}
+
+// Resources brochure excerpt cards: Figma mobile (Resources - m) puts "Read description" on its own line under the excerpt.
+// The replica hard-coded that per card from Figma's desktop line breaks; one mobile rule does it for any excerpt (issues-log #68).
+@include maxmedia(1023px) {
+	.m11-page-resources .bc-cap--excerpt .more {
+		display: block;
+	}
+}

@@ -1,0 +1,61 @@
+{
+    "key": "group_m11_button_group",
+    "title": "Button Group",
+    "fields": [
+        {
+            "key": "field_m11_bg_buttons",
+            "label": "Buttons",
+            "name": "buttons",
+            "type": "repeater",
+            "instructions": "Add one or more buttons.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 6,
+            "layout": "table",
+            "button_label": "Add Button",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_m11_bg_buttons_cta",
+                    "label": "Button link",
+                    "name": "cta",
+                    "type": "link",
+                    "instructions": "Button label and destination URL.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "acf-field-group"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "House clone-source library. Cloned as 'button_group' wherever a repeatable set of buttons is needed.",
+    "show_in_rest": 0,
+    "modified": 1790400000
+}

@@ -1,0 +1,22 @@
+{
+  "findings": [
+    {
+      "severity": "high",
+      "kind": "invented_class",
+      "source_id": "current-menu-item",
+      "property": "class",
+      "expected": "a class already used by peer pages, or theme/core vocabulary",
+      "actual": "current-menu-item (used 12x; appears on no peer page)",
+      "delta": null,
+      "rule": "peer_vocabulary"
+    }
+  ],
+  "peer_count": 1,
+  "content_selector": "page-content",
+  "counts": {
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "unverifiable": []
+}

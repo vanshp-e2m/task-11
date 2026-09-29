@@ -1,0 +1,129 @@
+{
+    "key": "group_m11_title_content_cta_block",
+    "title": "Title/Content/CTA Block",
+    "fields": [
+        {
+            "key": "field_m11_tcc_heading_tag",
+            "label": "Heading tag",
+            "name": "heading_tag",
+            "type": "select",
+            "instructions": "Choose the HTML heading level for accessible document structure.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "h1",
+                "h2": "h2",
+                "h3": "h3",
+                "h4": "h4",
+                "h5": "h5",
+                "h6": "h6",
+                "p": "p",
+                "span": "span"
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_m11_tcc_heading",
+            "label": "Heading",
+            "name": "heading",
+            "type": "text",
+            "instructions": "Short heading text. Restricted HTML (em, span, strong, br) is preserved.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_m11_tcc_content",
+            "label": "Content",
+            "name": "content",
+            "type": "textarea",
+            "instructions": "Paragraph copy.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_m11_tcc_cta",
+            "label": "CTA link",
+            "name": "cta",
+            "type": "link",
+            "instructions": "Optional call-to-action link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_m11_tcc_social_icon",
+            "label": "Social icon",
+            "name": "social_icon",
+            "type": "image",
+            "instructions": "Optional icon image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_m11_tcc_social_link",
+            "label": "Social link label",
+            "name": "social_link",
+            "type": "text",
+            "instructions": "Optional label shown next to the social icon.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "acf-field-group"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "House clone-source library. Cloned whole as 'heading_with_content', or partially as 'page_heading' (heading_tag+heading), 'section_heading' (heading_tag+heading+content), or 'cta' (the cta link field alone).",
+    "show_in_rest": 0,
+    "modified": 1790400000
+}

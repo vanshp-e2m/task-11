@@ -1,0 +1,1427 @@
+// About Us (Elementor page 15, tree from tools/elementor/build_about.py).
+// Every string is a native widget; this partial only lays them out and sets type.
+// Desktop (>=1024): Figma frame 1:161 coordinates in u() (1 design px at 1440, scales down with the page).
+// Mobile (<=1023): Figma mobile frame 1:2237 auto-layout (44/20 padding, 36 gap), column capped at 640px.
+// Decoration that has no content (divider lines, slider dots, timeline scrubber, carousel arrows) is drawn here.
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+@mixin ft($ff, $wt, $size, $lh) {
+	font-family: $ff;
+	font-weight: $wt;
+	font-size: u($size);
+	line-height: u($lh);
+}
+
+@mixin fm($ff, $wt, $size, $lh) {
+	font-family: $ff;
+	font-weight: $wt;
+	font-size: #{$size}px;
+	line-height: #{$lh}px;
+}
+
+// Figma box: left edge + width inside the 1440 frame.
+@mixin box($x, $w) {
+	margin-left: u($x);
+	width: u($w);
+}
+
+// 1px rule drawn as a background layer (Elementor owns the containers' ::before).
+@function rule($x, $w, $y: 0) {
+	@return linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat calc(var(--x0) + #{u($x)}) $y / u($w) 1px;
+}
+
+@function dot($color, $x, $y, $d) {
+	@return radial-gradient(circle closest-side, $color 92%, transparent 100%) no-repeat $x $y / $d $d;
+}
+
+$arrow-l: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 55'%3E%3Cpath d='M38 27.5H18m8-8-8 8 8 8' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
+$arrow-r: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 55'%3E%3Cpath d='M17 27.5h20m-8-8 8 8-8 8' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
+$scrubber: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 146 50'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M29 25H16m5-5-5 5 5 5M117 25h13m-5-5 5 5-5 5'/%3E%3Cpath d='M57 17v16M65 17v16M73 17v16M81 17v16M89 17v16' stroke-opacity='.3'/%3E%3C/g%3E%3C/svg%3E";
+
+// ------------------------------------------------------------------ base (all widths)
+.e-con.au {
+	container-type: inline-size;
+	--u: min(1px, 100cqw / 1440);
+	--x0: max(0px, (100cqw - 1440px) / 2);
+	background: var(--clr-white);
+	color: var(--clr-text);
+	overflow-x: clip;
+}
+
+// Elementor gives every container 10px padding + 20px gap from the Kit; the design positions everything itself.
+// Elementor also wraps containers below 767px, which pushed the hero caption into a second column at 390.
+.au,
+.au .e-con {
+	flex-wrap: nowrap;
+	padding: 0;
+	gap: 0;
+}
+
+.au .elementor-widget {
+	flex-shrink: 0;
+	margin: 0;
+	max-width: 100%;
+}
+
+.au .elementor-widget .elementor-heading-title {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+	color: inherit;
+	text-transform: inherit;
+	letter-spacing: inherit;
+	text-align: inherit;
+	overflow-wrap: break-word;
+}
+
+.au .elementor-widget p,
+.au .elementor-widget ul {
+	margin: 0;
+}
+
+.au .elementor-widget-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.au .au-btn .elementor-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0 12px;
+	border: 0;
+	background: var(--clr-primary);
+	color: var(--clr-white);
+	font-family: var(--ff-heading);
+	font-weight: 400;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: 0;
+	transition: background-color 0.2s, color 0.2s;
+
+	&:hover,
+	&:focus-visible {
+		background: var(--clr-navy);
+		color: var(--clr-white);
+	}
+}
+
+.au .au-btn--outline .elementor-button {
+	background: transparent;
+	box-shadow: inset 0 0 0 2px var(--clr-sky);
+	color: var(--clr-sky);
+
+	&:hover,
+	&:focus-visible {
+		background: color-mix(in srgb, var(--clr-sky) 10%, transparent);
+		color: var(--clr-sky);
+	}
+}
+
+.au .au-btn .elementor-button-icon svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+.au .au-btn--dark .elementor-button,
+.au .au-btn--dark .elementor-button:hover {
+	color: var(--clr-primary);
+}
+
+// Headings (Figma: Freeman, Mizuho Blue, uppercase unless noted)
+.au .au-h1,
+.au .au-h2,
+.au .au-value-title,
+.au .au-close-quote {
+	font-family: var(--ff-heading);
+	font-weight: 400;
+	color: var(--clr-primary);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.au .au-h1 {
+	text-align: left;
+}
+
+.au .au-h2--nocase {
+	text-transform: none;
+}
+
+.au .au-hero-quote,
+.au .au-hero-cite,
+.au .au-intro-text,
+.au .au-intro-close,
+.au .au-mission-quote,
+.au .au-mission-by,
+.au .au-plus,
+.au .au-value-label,
+.au .au-member-name,
+.au .au-member-role,
+.au .au-heritage-text,
+.au .au-tl-sub,
+.au .au-collab-text,
+.au .au-sugita-cap,
+.au .au-expert-name,
+.au .au-expert-text,
+.au .au-global-sub,
+.au .au-close-cite {
+	font-family: var(--ff-body);
+	color: var(--clr-text);
+	text-transform: none;
+}
+
+.au .au-intro-close,
+.au .au-mission-quote,
+.au .au-mission-by,
+.au .au-heritage-text,
+.au .au-tl-sub,
+.au .au-value-label,
+.au .au-close-cite {
+	text-align: center;
+}
+
+.au .au-hero-quote {
+	font-weight: 700;
+}
+
+.au .au-hero-cite,
+.au .au-intro-text,
+.au .au-intro-close,
+.au .au-collab-text,
+.au .au-global-sub,
+.au .au-mission-by {
+	font-weight: 400;
+}
+
+.au .au-mission-quote,
+.au .au-heritage-text,
+.au .au-tl-sub,
+.au .au-plus,
+.au .au-value-label,
+.au .au-member-role,
+.au .au-expert-text,
+.au .au-close-cite {
+	font-weight: 300;
+}
+
+.au .au-mission-quote em {
+	font-style: italic;
+}
+
+.au .au-mission-by {
+	color: var(--clr-primary);
+	text-transform: uppercase;
+}
+
+.au .au-intro-text li,
+.au .au-member-name,
+.au .au-expert-name,
+.au .au-sugita-cap,
+.au strong {
+	font-weight: 700;
+}
+
+.au .au-member-name {
+	color: var(--clr-primary);
+}
+
+.au .au-sugita-cap {
+	text-align: right;
+	text-transform: uppercase;
+}
+
+// Value boxes: 20% Sky Blue → white, hairline border
+.au .au-value-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	border: 1px solid color-mix(in srgb, var(--clr-text) 10%, transparent);
+	border-radius: 10px;
+	background: linear-gradient(90deg, color-mix(in srgb, var(--clr-sky) 20%, var(--clr-white)), var(--clr-white));
+}
+
+.au .au-value {
+	align-items: center;
+}
+
+.au .au-value-icon img {
+	object-fit: contain;
+}
+
+// Stat cards (intro + global band): coloured card with a white (navy on the band) shadow panel lying over its left edge.
+.au .au-stat {
+	position: relative;
+	flex: none;
+}
+
+.au .au-stat:nth-child(1) { z-index: 4; }
+.au .au-stat:nth-child(2) { z-index: 3; }
+.au .au-stat:nth-child(3) { z-index: 2; }
+.au .au-stat:nth-child(4) { z-index: 1; }
+
+.au .au-stat-card {
+	position: absolute;
+	z-index: 1;
+	justify-content: flex-start;
+	align-items: flex-start;
+	color: var(--clr-white);
+	font-family: var(--ff-body);
+	font-weight: 700;
+}
+
+.au .au-stat--blue .au-stat-card { background: var(--clr-primary); }
+.au .au-stat--sky .au-stat-card { background: var(--clr-sky); }
+.au .au-stat--light .au-stat-card { background: var(--clr-light-sky); }
+
+.au .au-stat::after {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	background: var(--clr-white);
+}
+
+.au .au-stat--g::after {
+	background: var(--clr-navy);
+}
+
+.au .au-stat-num {
+	white-space: nowrap;
+}
+
+// Figma per-character tracking (spans written by build_about.py)
+.au .au-ls-1 { letter-spacing: -0.1em; }
+.au .au-ls-c { letter-spacing: -0.05em; }
+.au .au-ls-s { letter-spacing: -0.12em; }
+
+// Timeline (scales as one piece with --tu: the Figma mobile frame is the desktop one at 390/1264)
+.au .au-tl {
+	flex: none;
+}
+
+.au .au-tl-bar {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: tu(67);
+	padding: 0 tu(32) 0 tu(28);
+	border-radius: tu(10);
+	background: linear-gradient(90deg, var(--clr-sky), var(--clr-primary));
+}
+
+.au .au-tl-bar-label {
+	width: auto;
+	font-family: var(--ff-body);
+	font-weight: 300;
+	font-size: tu(32);
+	line-height: tu(20);
+	color: var(--clr-white);
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.au .au-tl-years {
+	flex-direction: row;
+	gap: tu(10);
+	height: tu(323);
+	margin-top: tu(25);
+}
+
+.au .au-yr {
+	flex: none;
+	justify-content: flex-end;
+	align-items: center;
+	width: tu(63);
+	height: 100%;
+	padding-bottom: tu(8);
+	border-radius: tu(12);
+	color: var(--clr-white);
+	font-family: var(--ff-body);
+	font-weight: 300;
+}
+
+.au .au-yr--faint { background: color-mix(in srgb, var(--clr-sky) 50%, var(--clr-white)); }
+.au .au-yr--sky { background: var(--clr-sky); }
+.au .au-yr--deep { background: color-mix(in srgb, var(--clr-primary) 80%, var(--clr-white)); }
+
+.au .au-yr-year {
+	width: auto;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	font-size: tu(48);
+	line-height: tu(48);
+	white-space: nowrap;
+}
+
+.au .au-yr--now {
+	justify-content: flex-start;
+	width: tu(314);
+	margin-right: tu(1);
+	padding: tu(19) 0 0;
+	background: var(--clr-primary);
+}
+
+.au .au-yr-now-year {
+	width: tu(233);
+	padding-bottom: tu(19);
+	border-bottom: 1px solid color-mix(in srgb, var(--clr-white) 50%, transparent);
+	font-size: tu(88);
+	line-height: tu(88);
+	letter-spacing: -0.05em;
+	text-align: center;
+}
+
+.au .au-yr-now-text {
+	width: tu(249);
+	margin-top: tu(25);
+	font-weight: 400;
+	font-size: tu(20);
+	line-height: tu(28);
+	text-align: center;
+}
+
+.au .au-tl-foot {
+	position: relative;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: tu(12);
+	padding-top: tu(43);
+}
+
+// Scrubber track + handle (decorative: the milestones are all visible, nothing scrolls)
+.au .au-tl-foot::before,
+.au .au-tl-foot::after {
+	content: "";
+	position: absolute;
+	border: 0;
+	opacity: 1;
+	mix-blend-mode: normal;
+}
+
+.au .au-tl-foot::before {
+	top: tu(17);
+	left: 0;
+	width: 100%;
+	height: tu(15);
+	border-radius: tu(5);
+	background: var(--clr-sky);
+}
+
+.au .au-tl-foot::after {
+	top: 0;
+	left: tu(458);
+	width: tu(146);
+	height: tu(50);
+	border-radius: tu(12);
+	background: var(--clr-primary) url($scrubber) center / 100% 100% no-repeat;
+	box-shadow: 0 0 tu(14) tu(2) color-mix(in srgb, var(--clr-navy) 35%, transparent);
+}
+
+.au .au-tl-end {
+	width: auto;
+	font-family: var(--ff-body);
+	font-weight: 300;
+	font-size: max(#{tu(14)}, 6px);
+	line-height: tu(20);
+	color: var(--clr-text);
+	text-transform: uppercase;
+}
+
+// Collaborator carousel arrows (3 cards are all visible, so the arrows are decoration)
+.au .au-experts {
+	position: relative;
+}
+
+.au .au-experts::before,
+.au .au-experts::after {
+	content: "";
+	position: absolute;
+	border: 0;
+	border-radius: 50%;
+	opacity: 1;
+	mix-blend-mode: normal;
+	background: var(--clr-light-sky) center / 100% 100% no-repeat;
+}
+
+.au .au-experts::before { background-image: url($arrow-l); }
+.au .au-experts::after { background-image: url($arrow-r); }
+
+.au .au-global {
+	background-color: var(--clr-navy);
+	background-repeat: no-repeat;
+}
+
+.au .au-global-h {
+	font-family: var(--ff-heading);
+	font-weight: 400;
+	color: var(--clr-white);
+	text-align: center;
+	text-transform: none;
+}
+
+.au .au-global-sub {
+	color: var(--clr-white);
+	text-align: center;
+}
+
+.au .au-hero-media {
+	position: relative;
+	justify-content: flex-end;
+	align-items: flex-start;
+	background-repeat: no-repeat;
+}
+
+.au .au-hero-portrait img {
+	border-radius: inherit;
+}
+
+// ------------------------------------------------------------------ desktop: Figma 1:161
+@include minmedia($bp-tablet) {
+	.au .au-m-only {
+		display: none;
+	}
+
+	.au > .e-con {
+		align-items: flex-start;
+		padding-left: var(--x0);
+		padding-right: var(--x0);
+	}
+
+	.au .au-btn .elementor-button {
+		height: u(50);
+		border-radius: u(5);
+		font-size: u(16);
+	}
+
+	// hero (section starts under the 179px header)
+	.au .au-hero {
+		padding-top: u(15);
+		padding-bottom: u(123);
+		background: dot(var(--clr-primary), calc(var(--x0) + #{u(1254)}), u(746), u(24)),
+			dot(var(--clr-dot), calc(var(--x0) + #{u(1286)}), u(746), u(24)),
+			dot(var(--clr-dot), calc(var(--x0) + #{u(1318)}), u(746), u(24));
+	}
+
+	.au .au-h1 {
+		@include box(96, 1247);
+		@include ft(var(--ff-heading), 400, 45, 70);
+	}
+
+	.au .au-hero-media {
+		@include box(94, 1247);
+		height: u(600);
+		margin-top: u(13);
+		padding: 0 0 u(38) u(51);
+		border-radius: u(20);
+		background-size: cover;
+		background-position: center;
+	}
+
+	// (.au-hero-media > …: Elementor's `.elementor-widget:not(:last-child)` margin rule has the same specificity as one class)
+	.au .au-hero-media > .au-hero-portrait {
+		width: u(154);
+		height: u(181);
+		margin-bottom: u(31);
+		border-radius: u(15);
+		overflow: hidden;
+	}
+
+	.au .au-hero-quote {
+		width: u(482);
+		@include ft(var(--ff-body), 700, 24, 32);
+		text-indent: u(-11);
+	}
+
+	.au .au-hero-cite {
+		width: u(462);
+		margin-top: u(21);
+		@include ft(var(--ff-body), 400, 16, 22);
+	}
+
+	// intro + stats
+	.au .au-intro {
+		padding-top: u(88);
+		padding-bottom: u(100);
+		background: rule(91, 1252), rule(89, 1262, 100%);
+	}
+
+	.au .au-h2 {
+		font-size: u(34);
+		line-height: u(50);
+	}
+
+	.au .au-intro-h { @include box(146, 1166); }
+
+	.au .au-intro-text {
+		@include box(146, 1166);
+		margin-top: u(21);
+		@include ft(var(--ff-body), 400, 16, 32);
+		text-align: center;
+
+		ul {
+			margin-top: u(32);
+			padding: 0;
+			list-style: disc inside;
+		}
+	}
+
+	.au .au-stats {
+		position: relative;
+		width: u(1440);
+		height: u(302);
+		margin-top: u(37);
+	}
+
+	.au .au-stats .au-stat {
+		position: absolute;
+		top: 0;
+		height: u(302);
+	}
+
+	.au .au-stat-card {
+		top: u(44);
+		left: u(131);
+		height: u(218);
+		padding-left: u(40);
+		border-radius: u(20);
+	}
+
+	.au .au-stat::after {
+		width: u(146);
+		height: 100%;
+		border-radius: u(10);
+		box-shadow: u(21) 0 u(21) u(-23) #000;
+	}
+
+	.au .au-stat-num {
+		font-size: u(64);
+		line-height: u(36);
+	}
+
+	.au .au-stat-label {
+		margin: u(21) 0 0 u(2);
+		font-size: u(14);
+		line-height: u(18);
+	}
+
+	// (left, card width, card padding-top, label width)
+	$intro-stats: (0 245 50 193) (302 258 38 197) (615 258 30 186) (932 245 64 115);
+	@each $s in $intro-stats {
+		$i: index($intro-stats, $s);
+		.au .au-stats .au-stat:nth-child(#{$i}) {
+			left: u(nth($s, 1));
+			width: u(131 + nth($s, 2));
+
+			.au-stat-card { width: u(nth($s, 2)); padding-top: u(nth($s, 3)); }
+			.au-stat-label { width: u(nth($s, 4)); }
+		}
+	}
+
+	.au .au-stats .au-stat:nth-child(3) {
+		.au-stat-num { font-size: u(42); }
+		.au-stat-label { margin-top: u(17); }
+	}
+
+	.au .au-intro-close {
+		@include box(241, 955);
+		margin-top: u(23);
+		@include ft(var(--ff-body), 400, 16, 32);
+	}
+
+	.au .au-intro-btn {
+		@include box(565, 283);
+		margin-top: u(21);
+	}
+
+	// mission, values, team
+	.au .au-mission {
+		padding-top: u(87);
+		padding-bottom: u(93);
+		background: rule(83, 1274, 100%);
+	}
+
+	.au .au-mission-h { @include box(505, 412); }
+
+	.au .au-mission-quote {
+		@include box(197, 1041);
+		margin-top: u(19);
+		@include ft(var(--ff-body), 300, 32, 46);
+	}
+
+	.au .au-mission-by {
+		@include box(217, 1001);
+		margin-top: u(9);
+		@include ft(var(--ff-body), 400, 14, 34);
+	}
+
+	.au .au-values {
+		flex-direction: row;
+		width: auto;
+		gap: u(16);
+		margin: u(51) 0 0 u(89);
+	}
+
+	.au .au-value-group {
+		width: u(623);
+	}
+
+	.au .au-value-title {
+		height: u(60);
+		padding: u(7) 0 u(3);
+		border-radius: u(10);
+		font-size: u(34);
+		line-height: u(50);
+	}
+
+	// Figma centres the titles off the box centre (creed -26px, principles -12px)
+	.au .au-value-group--creed .au-value-title { padding-right: u(52); }
+	.au .au-value-group--principles .au-value-title { padding-right: u(24); }
+
+	.au .au-value-row {
+		position: relative;
+		height: u(90);
+		margin-top: u(31);
+	}
+
+	.au .au-value-row > * {
+		position: absolute;
+		top: 0;
+		transform: translateX(-50%);
+	}
+
+	.au .au-value {
+		width: u(220);
+		gap: u(-1);
+	}
+
+	.au .au-value-label,
+	.au .au-plus {
+		width: auto;
+		font-size: u(24);
+		line-height: u(24);
+		white-space: nowrap;
+	}
+
+	.au .au-value-icon {
+		width: u(67);
+		height: u(67);
+	}
+
+	// centre x of value, +, value, +, value (relative to the box)
+	@each $group, $xs in (creed: 69 168 276 398 494, principles: 100 238 328 427 533) {
+		@for $i from 1 through 5 {
+			.au .au-value-group--#{$group} .au-value-row > :nth-child(#{$i}) { left: u(nth($xs, $i)); }
+		}
+	}
+
+	.au .au-team-h {
+		@include box(181, 1068);
+		margin-top: u(74);
+	}
+
+	.au .au-team {
+		flex-direction: row;
+		justify-content: flex-start;
+		@include box(79, 1282);
+		margin-top: u(22);
+	}
+
+	.au .au-member {
+		width: u(150);
+		min-height: u(266);
+	}
+
+	.au .au-member:nth-child(2) { width: u(151); }
+
+	$team-gap: 0 10 12 12 12 13 12 10;
+	@for $i from 2 through 8 {
+		.au .au-member:nth-child(#{$i}) { margin-left: u(nth($team-gap, $i)); }
+	}
+
+	.au .au-member-img {
+		width: 100%;
+		height: u(171);
+		border-radius: u(15);
+		overflow: hidden;
+	}
+
+	.au .au-member-name {
+		margin-top: u(14);
+		@include ft(var(--ff-body), 700, 16, 30);
+	}
+
+	.au .au-member-role {
+		margin-top: u(4);
+		@include ft(var(--ff-body), 300, 14, 22);
+	}
+
+	// heritage + timeline
+	.au .au-heritage {
+		padding-top: u(87);
+		padding-bottom: u(101);
+	}
+
+	.au .au-heritage-h { @include box(86, 1264); }
+
+	.au .au-heritage-text {
+		@include box(182, 1066);
+		margin-top: u(37);
+		@include ft(var(--ff-body), 300, 25, 40);
+
+		p + p { margin-top: u(40); }
+	}
+
+	.au .au-heritage-btn {
+		@include box(546, 333);
+		margin-top: u(29);
+	}
+
+	.au .au-tl-h {
+		@include box(92, 1257);
+		margin-top: u(94);
+		line-height: u(55);
+	}
+
+	.au .au-tl-sub {
+		@include box(92, 1257);
+		margin-top: u(-1);
+		@include ft(var(--ff-body), 300, 25, 45);
+	}
+
+	.au .au-tl {
+		--tu: var(--u);
+		@include box(89, 1264);
+		margin-top: u(52);
+	}
+
+	.au .au-tl-btn {
+		@include box(515, 394);
+		margin-top: u(31);
+	}
+
+	// collaborations
+	.au .au-collab {
+		padding-top: u(105);
+		padding-bottom: u(100);
+		background: rule(89, 1263);
+	}
+
+	.au .au-collab-h { @include box(141, 1128); }
+
+	.au .au-collab-row {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		@include box(89, 1257);
+		margin-top: u(74);
+	}
+
+	.au .au-collab-text {
+		width: u(879);
+		@include ft(var(--ff-body), 400, 16, 32);
+
+		p + p { margin-top: u(32); }
+	}
+
+	.au .au-sugita {
+		width: u(339);
+	}
+
+	.au .au-sugita-img {
+		width: 100%;
+		height: u(342);
+		border-radius: u(15);
+		overflow: hidden;
+	}
+
+	.au .au-sugita-cap {
+		margin-top: u(8);
+		@include ft(var(--ff-body), 700, 16, 32);
+	}
+
+	.au .au-experts-h {
+		@include box(212, 998);
+		margin-top: u(65);
+	}
+
+	// Figma frames the cards at a fixed 653px (Evans), taller than their text; the demo row sits under that.
+	.au .au-experts {
+		flex-direction: row;
+		gap: u(31.5);
+		min-height: u(653);
+		@include box(165, 1114);
+		margin-top: u(51);
+	}
+
+	.au .au-experts::before,
+	.au .au-experts::after {
+		top: u(111);
+		width: u(55);
+		height: u(55);
+	}
+
+	.au .au-experts::before { left: u(-74); }
+	.au .au-experts::after { left: u(1129); }
+
+	.au .au-expert {
+		flex: none;
+		width: u(350);
+	}
+
+	.au .au-expert-img {
+		width: 100%;
+		height: u(272);
+		border-radius: u(15);
+		overflow: hidden;
+	}
+
+	.au .au-expert-name {
+		margin-top: u(15);
+		@include ft(var(--ff-body), 700, 18, 30);
+	}
+
+	.au .au-expert-text {
+		margin-top: u(4);
+		@include ft(var(--ff-body), 300, 14, 22);
+
+		p + p { margin-top: u(22); }
+	}
+
+	.au .au-expert:nth-child(2) .au-expert-text { margin-top: 0; }
+
+	.au .au-demo {
+		width: u(1440);
+		height: u(50);
+		margin-top: u(44);
+		background: linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat u(96) u(26) / u(485) 1px,
+			linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat u(858) u(26) / u(485) 1px;
+	}
+
+	.au .au-demo-btn { @include box(622, 200); }
+
+	// global presence band
+	.au .au-global {
+		padding-top: u(58);
+		padding-bottom: u(50);
+		background-size: 100% auto;
+		background-position: center top;
+	}
+
+	.au .au-global-h {
+		@include box(95, 1243);
+		@include ft(var(--ff-heading), 400, 34, 50);
+	}
+
+	.au .au-global-sub {
+		@include box(95, 1243);
+		margin-top: u(-2);
+		@include ft(var(--ff-body), 400, 20, 40);
+	}
+
+	.au .au-gstats {
+		position: relative;
+		width: u(1440);
+		height: u(250);
+		margin-top: u(667);
+	}
+
+	.au .au-gstats .au-stat {
+		position: absolute;
+		top: 0;
+		width: u(328);
+		height: u(250);
+	}
+
+	.au .au-gstats .au-stat-card {
+		width: u(197);
+		height: u(169);
+		padding-top: u(41);
+	}
+
+	@each $x in 22 328 636 964 {
+		.au .au-gstats .au-stat:nth-child(#{index(22 328 636 964, $x)}) { left: u($x); }
+	}
+
+	.au .au-gstats .au-stat:nth-child(3) .au-stat-card { padding-top: u(34); }
+	$g-label-w: 141 135 141 134;
+	@for $i from 1 through 4 {
+		.au .au-gstats .au-stat:nth-child(#{$i}) .au-stat-label { width: u(nth($g-label-w, $i)); }
+	}
+
+	// closing quote + CTAs
+	.au .au-close {
+		padding-top: u(87);
+		padding-bottom: u(100);
+	}
+
+	.au .au-close-quote {
+		@include box(227, 982);
+		font-size: u(34);
+		line-height: u(50);
+	}
+
+	.au .au-close-cite {
+		@include box(575, 300);
+		margin-top: u(7);
+		@include ft(var(--ff-body), 300, 24, 45);
+	}
+
+	.au .au-close-btns {
+		flex-direction: row;
+		width: auto;
+		gap: u(34);
+		margin: u(58) 0 0 u(237);
+	}
+
+	.au .au-close-btn {
+		width: u(288);
+
+		&:first-child { width: u(321); }
+
+		.elementor-button { font-size: u(18); }
+		.elementor-button-content-wrapper { gap: u(16); }
+		.elementor-button-icon { font-size: u(14); }
+	}
+}
+
+// ------------------------------------------------------------------ mobile: Figma 1:2237
+@include maxmedia($bp-tablet - 1) {
+	.e-con.au {
+		--mx: max(20px, (100cqw - 640px) / 2);
+	}
+
+	.au > .e-con {
+		gap: 36px;
+		padding: 44px var(--mx);
+	}
+
+	.au > .e-con > .elementor-widget,
+	.au > .e-con > .e-con {
+		width: 100%;
+	}
+
+	.au .au-btn .elementor-button {
+		height: 50px;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+
+	// hero
+	.au .au-hero {
+		background: dot(var(--clr-primary), right calc(var(--mx) + 40px), bottom 44px, 15px),
+			dot(var(--clr-dot), right calc(var(--mx) + 20px), bottom 44px, 15px),
+			dot(var(--clr-dot), right var(--mx), bottom 44px, 15px);
+	}
+
+	.au .au-h1 {
+		@include fm(var(--ff-heading), 400, 36, 41.4);
+	}
+
+	.au .au-hero-media {
+		aspect-ratio: 390 / 473;
+		margin-bottom: 33px;
+		padding: 20px 20px 28px;
+		border-radius: 20px;
+		background-size: 258% auto;
+		background-position: 40.3% 0;
+	}
+
+	.au .au-hero-media > .au-hero-portrait {
+		width: 72px;
+		height: 84px;
+		margin-bottom: 15px;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+
+	.au .au-hero-quote {
+		@include fm(var(--ff-body), 700, 20, 26);
+	}
+
+	.au .au-qmark,
+	.au .au-br-d {
+		display: none;
+	}
+
+	.au .au-hero-cite {
+		margin-top: 17px;
+		@include fm(var(--ff-body), 400, 14, 22);
+	}
+
+	// section rules (Figma lines 3, 6, 4, 5)
+	.au .au-intro {
+		background: linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat var(--mx) 0 / calc(100% - 2 * var(--mx)) 1px,
+			linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat var(--mx) 100% / calc(100% - 2 * var(--mx)) 1px;
+	}
+
+	.au .au-mission {
+		background: linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat var(--mx) 100% / calc(100% - 2 * var(--mx)) 1px;
+	}
+
+	.au .au-collab {
+		background: linear-gradient(var(--clr-sky), var(--clr-sky)) no-repeat var(--mx) 0 / calc(100% - 2 * var(--mx)) 1px;
+	}
+
+	.au .au-h2 {
+		font-size: 28px;
+		line-height: 50px;
+	}
+
+	// intro
+	.au .au-intro-h {
+		font-size: 26px;
+		line-height: 35.1px;
+		text-align: left;
+	}
+
+	.au .au-intro-text {
+		@include fm(var(--ff-body), 400, 16, 32);
+
+		ul {
+			margin-top: 36px;
+			padding-left: 24px;
+			list-style: disc outside;
+		}
+
+		li {
+			line-height: 22px;
+		}
+
+		li + li {
+			margin-top: 12px;
+		}
+	}
+
+	.au .au-stats {
+		gap: 36px;
+	}
+
+	.au .au-stats .au-stat {
+		height: 302px;
+	}
+
+	.au .au-stat-card {
+		top: 44px;
+		left: 57px;
+		height: 218px;
+		padding: 50px 0 0 40px;
+		border-radius: 20px;
+	}
+
+	.au .au-stat::after {
+		width: 72px;
+		height: 100%;
+		border-radius: 10px;
+		box-shadow: 21px 0 21px -23px #000;
+	}
+
+	.au .au-stat-num {
+		font-size: 64px;
+		line-height: 36px;
+	}
+
+	.au .au-stat-label {
+		margin: 21px 0 0 2px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	$m-stats: (245 50 193) (258 38 197) (258 30 186) (245 64 115);
+	@each $s in $m-stats {
+		.au .au-stats .au-stat:nth-child(#{index($m-stats, $s)}) {
+			width: #{57 + nth($s, 1)}px;
+
+			.au-stat-card { width: #{nth($s, 1)}px; padding-top: #{nth($s, 2)}px; }
+			.au-stat-label { width: #{nth($s, 3)}px; }
+		}
+	}
+
+	.au .au-stats .au-stat:nth-child(3) {
+		.au-stat-num { font-size: 42px; }
+		.au-stat-label { margin-top: 17px; }
+	}
+
+	.au .au-intro-close {
+		@include fm(var(--ff-body), 400, 16, 32);
+	}
+
+	// mission
+	// Chrome's Open Sans Light Italic sets ~1% wider than Figma's; this keeps Figma's line breaks
+	.au .au-mission-quote {
+		margin-top: -24px;
+		@include fm(var(--ff-body), 300, 22, 34);
+		letter-spacing: -0.012em;
+	}
+
+	.au .au-mission-by {
+		margin-top: -24px;
+		@include fm(var(--ff-body), 400, 12, 22);
+	}
+
+	.au .au-values,
+	.au .au-value-group {
+		gap: 36px;
+	}
+
+	.au .au-value-group {
+		gap: 24px;
+	}
+
+	.au .au-value-title {
+		padding: 7px 0 3px;
+		font-size: 24px;
+		line-height: 31.9px;
+	}
+
+	// (Elementor containers default to width:100% and wrap below 767px, so each item would take a line)
+	.au .au-value-row {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.au .au-value {
+		flex: none;
+		width: auto;
+	}
+
+	.au .au-value-group--creed .au-value-row {
+		width: calc(100% - 16px);
+	}
+
+	.au .au-value-label,
+	.au .au-plus {
+		width: auto;
+		@include fm(var(--ff-body), 300, 16, 21.8);
+	}
+
+	.au .au-value-group--principles .au-value:first-child .au-value-label {
+		width: 83px;
+	}
+
+	.au .au-value-icon {
+		width: 50px;
+		height: 50px;
+	}
+
+	.au .au-value-group--principles .au-value-icon {
+		width: 53px;
+		height: 53px;
+	}
+
+	.au .au-team-h {
+		font-size: 22px;
+		line-height: 36px;
+	}
+
+	.au .au-team {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 150px);
+		justify-content: center;
+		gap: 36px;
+	}
+
+	// Figma mobile pairs the team differently from the desktop row
+	@each $n, $o in (1: 1, 2: 3, 3: 5, 4: 4, 5: 6, 6: 2, 7: 8, 8: 7) {
+		.au .au-member:nth-child(#{$n}) { order: $o; }
+	}
+
+	.au .au-member {
+		min-height: 266px;
+	}
+
+	.au .au-member-img {
+		width: 150px;
+		height: 171px;
+		border-radius: 15px;
+		overflow: hidden;
+	}
+
+	.au .au-member-name {
+		margin-top: 14px;
+		@include fm(var(--ff-body), 700, 16, 30);
+	}
+
+	.au .au-member-role {
+		margin-top: 4px;
+		@include fm(var(--ff-body), 300, 14, 22);
+	}
+
+	// heritage + timeline
+	.au .au-heritage-text {
+		margin-top: -24px;
+		@include fm(var(--ff-body), 300, 22, 40);
+
+		p + p { margin-top: 40px; }
+	}
+
+	.au .au-tl-h {
+		margin-top: 52px;
+		line-height: 40px;
+	}
+
+	.au .au-tl-sub {
+		margin-top: -24px;
+		@include fm(var(--ff-body), 300, 22, 40);
+	}
+
+	.au .au-tl {
+		--tu: calc(min(640px, 100cqw - 40px) / 1264);
+	}
+
+	// collaborations
+	.au .au-collab-h {
+		line-height: 40px;
+		text-align: left;
+	}
+
+	.au .au-collab-row {
+		gap: 36px;
+		margin-top: -24px;
+	}
+
+	.au .au-collab-text {
+		@include fm(var(--ff-body), 400, 14, 29);
+
+		p + p { margin-top: 29px; }
+	}
+
+	// Ratio on the wrapper, image out of flow: in a flex column Chrome sizes the wrapper from the image's
+	// natural width (339px -> 341.6px tall) and clips the bottom.
+	.au .au-sugita-img,
+	.au .au-expert-img {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			inset: 0;
+		}
+	}
+
+	.au .au-sugita-img {
+		aspect-ratio: 390 / 393;
+		border-radius: 17px;
+	}
+
+	.au .au-sugita-cap {
+		margin-top: 9px;
+		@include fm(var(--ff-body), 700, 14, 19.1);
+	}
+
+	.au .au-experts-h {
+		margin-top: 52px;
+		line-height: 40px;
+	}
+
+	.au .au-experts {
+		gap: 36px;
+		padding: 0 20px 91px;
+	}
+
+	.au .au-experts::before,
+	.au .au-experts::after {
+		top: auto;
+		bottom: 0;
+		width: 55px;
+		height: 55px;
+	}
+
+	.au .au-experts::before { left: 0; }
+	.au .au-experts::after { right: 0; }
+
+	.au .au-expert-img {
+		aspect-ratio: 351 / 272;
+		border-radius: 15px;
+	}
+
+	.au .au-expert-name {
+		margin-top: 15px;
+		@include fm(var(--ff-body), 700, 18, 30);
+	}
+
+	.au .au-expert-text {
+		margin-top: 4px;
+		@include fm(var(--ff-body), 300, 14, 22);
+
+		p + p { margin-top: 22px; }
+	}
+
+	// global presence band: Figma shows the whole source image at 430x366 from y=255; our clean map is its
+	// 0.2108-0.9951 crop, i.e. y=332, natural ratio
+	.au .au-global {
+		background-size: 100% auto;
+		background-position: 0 332px;
+	}
+
+	.au .au-global-h {
+		@include fm(var(--ff-heading), 400, 28, 48);
+	}
+
+	.au .au-global-sub {
+		margin-top: -18px;
+		@include fm(var(--ff-body), 400, 20, 30);
+	}
+
+	.au .au-gstats {
+		flex-direction: column-reverse;
+		align-self: center;
+		width: 249px;
+		margin-top: 238px;
+	}
+
+	.au .au-gstats .au-stat {
+		width: 249px;
+		height: 250px;
+	}
+
+	.au .au-gstats .au-stat-card {
+		top: 43px;
+		left: 52px;
+		width: 197px;
+		height: 169px;
+		padding-top: 41px;
+	}
+
+	.au .au-gstats .au-stat:nth-child(3) .au-stat-card { padding-top: 34px; }
+
+	.au .au-gstats .au-stat::after {
+		width: 67px;
+	}
+
+	@for $i from 1 through 4 {
+		.au .au-gstats .au-stat:nth-child(#{$i}) .au-stat-label { width: #{nth(141 135 141 134, $i)}px; }
+	}
+
+	// closing
+	.au .au-close-quote {
+		font-size: 24px;
+		line-height: 31.9px;
+	}
+
+	.au .au-close-cite {
+		@include fm(var(--ff-body), 300, 20, 27.2);
+	}
+
+	.au .au-close-btns {
+		gap: 12px;
+	}
+
+	.au .au-close-btn .elementor-button-content-wrapper {
+		gap: 10px;
+	}
+
+	.au .au-close-btn .elementor-button-icon {
+		font-size: 12px;
+	}
+}

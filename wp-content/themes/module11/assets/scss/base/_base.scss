@@ -1,0 +1,47 @@
+body {
+	font-family: var(--ff-body);
+	color: var(--clr-text);
+	background: var(--clr-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--ff-heading);
+	overflow-wrap: anywhere; // long headings must wrap, never overflow
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.m11-container {
+	width: 100%;
+	max-width: var(--container);
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+// ACF replica pages are full-bleed 1440 frames (the layout partials scale with --u against <main>).
+// Hello Elementor caps `.site-main` at 1140px (body:not([class*=elementor-page-]) .site-main, specificity 0,2,1) — lift it.
+html body .site-main.m11-flex-page,
+html body .site-main.m11-product-page {
+	max-width: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+// Hello Elementor's reset.css styles every table / quote (td,th { border; padding: 15px; vertical-align: top },
+// odd-row tint, cite italics). The replica never had those, so neutralise them on the ACF pages only:
+// (0,1,4) beats Hello's (0,1,3) and loses to the layout partials' scoped rules (0,2,x).
+html body .m11-flex-page table td, html body .m11-flex-page table th,
+html body .m11-product-page table td, html body .m11-product-page table th {
+	border: 0;
+	padding: 0;
+	vertical-align: middle;
+	background-color: transparent;
+	line-height: inherit;
+}
+html body .m11-flex-page table, html body .m11-product-page table { margin: 0; border: 0; font-size: inherit; }
+html body .m11-flex-page figcaption, html body .m11-product-page figcaption,
+html body .m11-flex-page cite, html body .m11-product-page cite { font-style: normal; }

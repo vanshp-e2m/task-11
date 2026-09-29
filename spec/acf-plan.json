@@ -1,0 +1,1734 @@
+{
+  "approved": true,
+  "meta": {
+    "project": "mizuho-america",
+    "generated_from": "spec/site-spec.json",
+    "pipeline_step": "HTML -> ACF planner (Flow A)",
+    "scope_note": "Per CLAUDE.md builder split: Home / Products (CPT+archive) / Resources / Sales Hub are ACF (this plan). About Us + Contact Us are Elementor (Flow B, not part of the 9-page HTML extraction, no layouts planned here). Header/footer = existing Elementor Theme Builder templates 61/62 (public) + a NEW Sales Hub portal pair recommended below.",
+    "approved": true,
+    "status": "APPROVED \u2014 21 rows approved as proposed; all 12 open questions answered. See decision_record. Implementation ('a perfect replica is the goal') proceeds end to end per the developer's instruction to the main session."
+  },
+  "prefix": {
+    "value": "m11",
+    "conflict_note": "spec/site-spec.json meta.prefix suggests 'mizuho' (brand-derived, flagged there for confirmation). This plan uses 'm11' instead because CLAUDE.md (checked-in project standard, takes precedence) already fixes ACF Local JSON keys as group_m11_* / field_m11* and the theme function prefix as m11_. Not an open question -- resolved in favour of the existing, already-approved house convention."
+  },
+  "conventions": {
+    "flexible_field": "sections (ONE field, on pages using page_template == page-flexible.php)",
+    "layout_naming": "layout name snake_case -> template part template-parts/flex-blocks/<kebab-case>.php + assets/scss/layouts/_<kebab-case>.scss",
+    "two_tab_convention": "Every FC layout below begins with tab:'Section Settings' + clone:common_settings, then tab:'Section Content' + the layout's own fields, per the house standard. Not applied to the two CPT field groups (m11_product, m11_resource) since they are plain field groups, not FC layouts -- see 'cpt_field_group_deviation' open question.",
+    "richtext_mapping": "Spec fields typed 'richtext' split two ways per house convention: short accent/heading fragments carrying an embedded <span>/<br> (e.g. hero headline, value-card lead) -> ACF type 'text', rendered through restricted wp_kses (em,span,strong,br); longer paragraph copy (body copy, quotes, bios, descriptions) -> ACF type 'textarea' with new_lines:'', rendered with nl2br(esc_html()). Called out per-field only where the mapping is non-obvious.",
+    "no_default_value": "No ACF field in this plan carries default_value, per CLAUDE.md. Placeholder/typo content found in the spec (attribution names, 'FPO IMAGE', the 'Sales HUb' typo) is recorded as sample seed content only, never as a default_value or invented correction.",
+    "anchors": "Every FC layout below carries anchor_target:true in the spec and gets its optional anchor via common_settings.sec_id (house standard) -- no separate anchor field. instructions text on sec_id recommends the id needed to keep a real in-page link working (e.g. 'procedure-band' on Home's procedure_band layout) where the spec's anchors[] map shows a valid in-page target."
+  },
+  "layouts": [
+    {
+      "name": "hero_carousel",
+      "template_part": "template-parts/flex-blocks/hero-carousel.php",
+      "classification": "Local",
+      "classification_reasoning": "Unique to mizuho-home; single-page evidence (only ACF page with a Swiper hero). Not a generic reusable pattern -- specific hero-card/CTA shape.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.15,
+      "source_sections": [
+        "home/hero-carousel"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "headline",
+          "type": "text",
+          "notes": "wp_kses restricted (em,span,strong,br) -- preserves the accent <span> on 'ours, too.'"
+        },
+        {
+          "name": "browse_link_label",
+          "type": "text",
+          "instructions": "Anchor target: keep this pointing at the procedure_band layout's sec_id (default 'procedure-band')."
+        }
+      ],
+      "repeats": [
+        {
+          "name": "hero_cards",
+          "min": 0,
+          "max": 3,
+          "instructions": "Add Hero Card (2 cards is correct content -- CONFIRMED decision_record q4. The 3rd dot indicator is a known, already-decided design inconsistency: dots are drawn from the real slide count in the source markup, not content this build controls. max stays 3 so a 3rd card isn't structurally forced, but 2 is the correct seed content.)",
+          "fields": [
+            {
+              "name": "image",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "label",
+              "type": "text"
+            },
+            {
+              "name": "link",
+              "type": "link",
+              "return_format": "array"
+            }
+          ]
+        },
+        {
+          "name": "hero_ctas",
+          "min": 0,
+          "max": 4,
+          "fields": [
+            {
+              "name": "label",
+              "type": "text"
+            },
+            {
+              "name": "url",
+              "type": "link",
+              "return_format": "array"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "intro_statement",
+      "template_part": "template-parts/flex-blocks/intro-statement.php",
+      "classification": "Global (provisional)",
+      "classification_reasoning": "Built entirely from house clones (heading_with_content partial + cta) -- a generic reusable 'text/CTA band' pattern per the skill's Global carve-out, even though only Home uses it today within ACF scope. Provisional: no second ACF page currently instantiates it (products_intro and sh_resource_library_intro are near-twins with different field counts, kept separate by default -- see open questions #2/#3).",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.3,
+      "source_sections": [
+        "home/intro-statement"
+      ],
+      "clones_used": [
+        "section_heading (heading_tag+heading+content)",
+        "cta"
+      ],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text (from section_heading clone)"
+        },
+        {
+          "name": "body",
+          "type": "textarea (from section_heading clone's content field)"
+        },
+        {
+          "name": "cta_label",
+          "type": "text",
+          "instructions": "Anchor target: home's own testimonial_home layout sec_id (default 'testimonials')."
+        }
+      ],
+      "repeats": []
+    },
+    {
+      "name": "value_columns",
+      "template_part": "template-parts/flex-blocks/value-columns.php",
+      "classification": "Local",
+      "classification_reasoning": "Single-page evidence; 4-icon value-prop grid specific to Home.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.1,
+      "source_sections": [
+        "home/value-columns"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "closing_cta_label",
+          "type": "text",
+          "instructions": "Spec href is broken (#downloadable-brochures); likely meant resources.html#brochures -- point this at the real Resources page + resources_brochures layout's sec_id once both exist. Flagged, not silently fixed."
+        }
+      ],
+      "repeats": [
+        {
+          "name": "value_cards",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "icon",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "name": "lead",
+              "type": "text",
+              "notes": "wp_kses restricted -- preserves <br class=d-only>"
+            },
+            {
+              "name": "body",
+              "type": "textarea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "procedure_band",
+      "template_part": "template-parts/flex-blocks/procedure-band.php",
+      "classification": "Local",
+      "classification_reasoning": "Fidelity-first default, CONFIRMED (decision_record q1): near-identical repeater shape to Products' browse_by_procedure, scored COMPATIBLE (0.80), but the developer confirmed the two procedure bands differ in height, type and layout in the design and directed they stay separate -- a pixel replica is the goal. Not merged.",
+      "reuse_verdict": "COMPATIBLE",
+      "reuse_score": 0.8,
+      "reuse_compared_to": "browse_by_procedure",
+      "source_sections": [
+        "home/procedure-band"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "closing_text",
+          "type": "text"
+        },
+        {
+          "name": "closing_cta_label",
+          "type": "text",
+          "notes": "href broken (#supported-procedures) -- pass-through, flag for developer."
+        }
+      ],
+      "repeats": [
+        {
+          "name": "procedure_items",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "icon",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "name": "view_label",
+              "type": "text",
+              "notes": "href broken on Home (#tumor-products etc); products.html's twin section has REAL cross-page links -- flag for developer to fix Home's links to match once product permalinks exist."
+            },
+            {
+              "name": "more_label",
+              "type": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "testimonial_home",
+      "template_part": "template-parts/flex-blocks/testimonial-home.php",
+      "classification": "Local",
+      "classification_reasoning": "Distinct field set from both the product-detail testimonial (CPT fields) and resources_testimonials (expert/video relationship pattern) -- fails the merge test against both, kept as its own layout per fidelity-first default.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.25,
+      "source_sections": [
+        "home/testimonials"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "intro",
+          "type": "textarea"
+        },
+        {
+          "name": "mobile_cta_label",
+          "type": "text",
+          "notes": "m-only; href broken (#clinical-experts)"
+        },
+        {
+          "name": "featured_quote",
+          "type": "textarea",
+          "notes": "nl2br; preserves <br class=d-only>"
+        },
+        {
+          "name": "featured_quote_attribution",
+          "type": "text"
+        },
+        {
+          "name": "more_link_label",
+          "type": "text",
+          "notes": "href broken (#more-testimonials)"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "testimonial_cards",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "thumbnail",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "name",
+              "type": "text"
+            },
+            {
+              "name": "role",
+              "type": "text"
+            },
+            {
+              "name": "rest",
+              "type": "textarea",
+              "notes": "nl2br; multiple <br> lines"
+            },
+            {
+              "name": "watch_link_label",
+              "type": "text",
+              "notes": "href broken, no video modal target in this build phase"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "about_stats",
+      "template_part": "template-parts/flex-blocks/about-stats.php",
+      "classification": "Local (provisional)",
+      "classification_reasoning": "Site inventory notes this stats-band pattern also appears on About Us ('Version 1' variant), but About Us is Elementor-built (Flow B, out of ACF scope) so there is no cross-ACF-page reuse evidence -- single-page evidence within this plan's scope.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.2,
+      "source_sections": [
+        "home/about-stats"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "type": "textarea"
+        },
+        {
+          "name": "cta_label",
+          "type": "text",
+          "notes": "href = /about-us/, cross-build to the Elementor page; leave as a plain URL field, not a post-object relationship (About Us is not an ACF post in this build)."
+        }
+      ],
+      "repeats": [
+        {
+          "name": "stats",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "number",
+              "type": "text"
+            },
+            {
+              "name": "label",
+              "type": "textarea",
+              "notes": "nl2br; 2nd stat has an embedded <br>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "products_intro",
+      "template_part": "template-parts/flex-blocks/products-intro.php",
+      "classification": "Local",
+      "classification_reasoning": "CONFIRMED (decision_record q2): EXTEND-scored (0.62) superset of intro_statement's fields, but kept separate per the developer's fidelity-first instruction. Not folded.",
+      "reuse_verdict": "EXTEND",
+      "reuse_score": 0.62,
+      "reuse_compared_to": "intro_statement",
+      "source_sections": [
+        "products/products-intro"
+      ],
+      "clones_used": [
+        "page_heading (heading_tag+heading)",
+        "cta"
+      ],
+      "fields": [
+        {
+          "name": "page_title",
+          "type": "text"
+        },
+        {
+          "name": "heading",
+          "type": "text",
+          "notes": "wp_kses restricted -- preserves <br>"
+        },
+        {
+          "name": "subheading",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "type": "textarea"
+        },
+        {
+          "name": "cta_label",
+          "type": "text",
+          "instructions": "Valid in-page anchor -> browse_by_product layout's sec_id (default 'browse-by-product')."
+        }
+      ],
+      "repeats": []
+    },
+    {
+      "name": "browse_by_procedure",
+      "template_part": "template-parts/flex-blocks/browse-by-procedure.php",
+      "classification": "Local",
+      "classification_reasoning": "Fidelity-first default, CONFIRMED (decision_record q1): near-twin of Home's procedure_band (COMPATIBLE, 0.80) but the developer confirmed the two differ in height/type/layout and directed they stay separate.",
+      "reuse_verdict": "COMPATIBLE",
+      "reuse_score": 0.8,
+      "reuse_compared_to": "procedure_band",
+      "source_sections": [
+        "products/browse-by-procedure"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "lead",
+          "type": "textarea"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "procedure_items",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "icon",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "name": "view_link",
+              "type": "link",
+              "return_format": "array",
+              "notes": "real, working cross-links to product single posts in this section (contrast with Home's broken twin)."
+            },
+            {
+              "name": "more_label",
+              "type": "text",
+              "notes": "href = #browse-by-product on all 3 items (generic self-target), pass-through verbatim."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "browse_by_product",
+      "template_part": "template-parts/flex-blocks/browse-by-product.php",
+      "classification": "Local",
+      "classification_reasoning": "Houses the live m11_product archive query + filter/search chrome inline on the 'products' page. Editable editorial copy (heading/lead/filter labels) is a layout; the tile grid itself is query output, not authored content -- see static_content.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.1,
+      "source_sections": [
+        "products/browse-by-product"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "lead",
+          "type": "textarea"
+        },
+        {
+          "name": "filters_heading",
+          "type": "text"
+        },
+        {
+          "name": "filters_subheading",
+          "type": "text"
+        }
+      ],
+      "repeats": [],
+      "query_note": "result_count, active_filter_chip and product_tiles (incl. the nested procedure_tags) render entirely from a WP_Query against m11_product filtered by product_category/procedure/product_configuration taxonomy terms + the .pb-search term -- see static_content. This also resolves the spec's flagged nesting-limit concern for procedure_tags: it was never modeled as an ACF repeater, so the one-level nesting limit does not apply.",
+      "filter_form_note": "forms[] '.fl-form' (category/configuration/procedure checkboxes) and '.pb-search' are decorative/static in the source (no live JS); checkbox labels come from the product_category/product_configuration/procedure taxonomy term names (generated, not ACF content). Recorded here narratively -- not a JSON static_content entry because forms[] fields are not part of this section's spec fields/repeats."
+    },
+    {
+      "name": "resources_intro",
+      "template_part": "template-parts/flex-blocks/resources-intro.php",
+      "classification": "Local",
+      "classification_reasoning": "Richer than intro_statement/products_intro (adds featured_video_thumbnail + featured_quote + featured_quote_attribution + a 2-item CTA repeater) -- a genuinely different block, not a mergeable variant (would be the 'variant toggling a large field block' over-merge the skill warns against). NEW.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.4,
+      "source_sections": [
+        "resources/resources-intro"
+      ],
+      "clones_used": [
+        "cta (for intro_ctas rows)"
+      ],
+      "fields": [
+        {
+          "name": "page_title",
+          "type": "text"
+        },
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "type": "textarea"
+        },
+        {
+          "name": "featured_video_thumbnail",
+          "type": "image",
+          "return_format": "id",
+          "notes": "link target (#video-intro-lawton) is a broken decorative video-modal placeholder -- no modal built this phase."
+        },
+        {
+          "name": "featured_quote",
+          "type": "textarea"
+        },
+        {
+          "name": "featured_quote_attribution",
+          "type": "text"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "intro_ctas",
+          "min": 0,
+          "max": 4,
+          "fields": [
+            {
+              "name": "label",
+              "type": "text"
+            },
+            {
+              "name": "url",
+              "type": "link",
+              "return_format": "array",
+              "instructions": "Both are valid in-page anchors to this page's own resources_testimonials / resources_brochures layouts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "resources_testimonials",
+      "template_part": "template-parts/flex-blocks/resources-testimonials.php",
+      "classification": "Local",
+      "classification_reasoning": "Distinct entirely from testimonial_home and the product CPT testimonial fields -- expert-bio + video-relationship pattern unique to Resources.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.15,
+      "source_sections": [
+        "resources/testimonials"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "expert_entries",
+          "min": 0,
+          "max": 12,
+          "instructions": "Add Expert Entry",
+          "nesting_resolution": "Spec flags 'videos' as a NESTED repeat inside the expert repeater, exceeding the one-level FC->layout->repeater nesting limit. Resolved by making 'videos' a RELATIONSHIP field (-> m11_resource CPT, filtered to resource_type=video) instead of a sub-repeater: no nesting violation, and each video's own thumbnail/title/excerpt render straight from its m11_resource post -- single source of truth shared with the Sales Hub Resource Library.",
+          "fields": [
+            {
+              "name": "bio",
+              "type": "textarea",
+              "notes": "freeform 1-5 line block per expert; not split into name/role/institution sub-fields, matches spec's own note that line count varies."
+            },
+            {
+              "name": "videos",
+              "type": "relationship",
+              "post_type": "m11_resource",
+              "filters": [
+                "search",
+                "taxonomy:resource_type=video"
+              ],
+              "return_format": "id"
+            },
+            {
+              "name": "shared_caption",
+              "type": "textarea",
+              "instructions": "Leave empty for the normal case (each video's own m11_resource title/excerpt is the caption). Fill in only for the one expert entry (Sauvageau/Hanel) whose 2 videos share ONE caption instead of per-video captions -- when set, the template renders this instead of per-video captions.",
+              "notes": "covers the spec's documented 'shared-caption exception' row without breaking the uniform repeater shape."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "fast_facts",
+      "template_part": "template-parts/flex-blocks/fast-facts.php",
+      "classification": "Local",
+      "classification_reasoning": "Only 3 curated items, fixed count in the spec -- kept as a small plain repeater rather than a relationship to m11_resource (fails the CPT test: not an ongoing/growing catalogue, a one-off curated highlight reel). Flagged as an alternative in open question #5. CONFIRMED (decision_record q5): kept as a plain repeater, not converted to a relationship.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.2,
+      "source_sections": [
+        "resources/fast-facts"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "fact_items",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "title",
+              "type": "text",
+              "notes": "wp_kses restricted -- 2nd item has an embedded <br>"
+            },
+            {
+              "name": "video_thumbnail",
+              "type": "image",
+              "return_format": "id",
+              "notes": "link is a broken decorative video-modal placeholder"
+            },
+            {
+              "name": "caption",
+              "type": "textarea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "resources_brochures",
+      "template_part": "template-parts/flex-blocks/resources-brochures.php",
+      "classification": "Local",
+      "classification_reasoning": "Developer-confirmed CPT candidate (30 brochure cards across 9 groups). Kept as a page-scoped layout because the GROUPING (collaborator_text + which resources belong to that group) is editorial curation of the Resources page, even though the cards themselves are m11_resource posts.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.2,
+      "source_sections": [
+        "resources/brochures"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "collaboration_groups",
+          "min": 0,
+          "max": 15,
+          "instructions": "Add Collaboration Group",
+          "nesting_resolution": "Spec flags 'brochure_cards' as a NESTED repeat inside collaboration_groups, exceeding the one-level nesting limit. Resolved the same way as resources_testimonials: brochure_cards becomes a RELATIONSHIP field to m11_resource (filtered to resource_type in [brochure, spec_sheet]), 1-7 posts per group. Card image/title/'Read description' link render from each linked m11_resource post -- fixes the spec's broken #download-<slug>/#brochure-<slug> placeholder anchors by pointing at the real resource_file/permalink once uploaded.",
+          "fields": [
+            {
+              "name": "collaborator_text",
+              "type": "textarea",
+              "instructions": "Optional -- leave empty for group 9, which has no collaborator copy in the source."
+            },
+            {
+              "name": "brochure_cards",
+              "type": "relationship",
+              "post_type": "m11_resource",
+              "filters": [
+                "search",
+                "taxonomy:resource_type"
+              ],
+              "return_format": "id"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bottom_links_band",
+      "template_part": "template-parts/flex-blocks/bottom-links-band.php",
+      "classification": "Global (provisional)",
+      "classification_reasoning": "Generic 'Before you go...' heading + link-list pattern per the skill's reusable-pattern carve-out and the site inventory doc (also used on About/Contact, both Elementor-built and therefore not reachable through this shared ACF layout). Only Resources uses it within ACF scope today -- single-page evidence, marked provisional Global for when/if another ACF page needs it.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.25,
+      "source_sections": [
+        "resources/continue-your-visit"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "links",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "label",
+              "type": "text"
+            },
+            {
+              "name": "url",
+              "type": "link",
+              "return_format": "array",
+              "notes": "all 3 hrefs broken placeholders (#bottom-link-1/2/3) in the source -- pass-through, flag for developer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sh_dashboard",
+      "template_part": "template-parts/flex-blocks/sh-dashboard.php",
+      "classification": "Local",
+      "classification_reasoning": "Sales Hub dashboard greeting/stat/tool-card block, single-page evidence, restricted-audience content.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.15,
+      "source_sections": [
+        "sales-hub-dashboard/dashboard"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "lead",
+          "type": "textarea"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "stats",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "label",
+              "type": "text"
+            }
+          ],
+          "notes": "'number' is NOT an ACF field -- computed (decision_record q6, CONFIRMED mapping): row 1 'Product categories available' = count of non-empty product_category terms (>=1 published m11_product assigned); row 2 'Brochures & spec sheets' = count of published m11_resource posts with resource_type in (brochure, spec_sheet); row 3 'Training videos' = count of published m11_resource posts with resource_type = video. Each row's 'label' stays ACF-editable text; the number is keyed to its row index against these 3 fixed queries for html-php-writer."
+        }
+      ],
+      "repeats_extra": [
+        {
+          "name": "tools",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "icon",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "name": "link",
+              "type": "link",
+              "return_format": "array",
+              "instructions": "Added beyond the spec's narrow 'fields' array: the href is documented only in a 'notes' annotation on 'title' there, but the given project fact explicitly requires tool cards to have 'editable ... links'. Not invented content -- the href values already exist in the source HTML (sales-hub-resource-library.html + the two external Sales Hub routes)."
+            },
+            {
+              "name": "description",
+              "type": "textarea"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sh_account",
+      "template_part": "template-parts/flex-blocks/sh-account.php",
+      "classification": "Local",
+      "classification_reasoning": "Single-page evidence, Sales Hub dashboard account panel.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.1,
+      "source_sections": [
+        "sales-hub-dashboard/account"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        }
+      ],
+      "repeats": [
+        {
+          "name": "account_actions",
+          "min": 0,
+          "max": 6,
+          "fields": [
+            {
+              "name": "label",
+              "type": "text",
+              "notes": "CONFIRMED (decision_record q7): kept editable and seeded exactly as drawn, INCLUDING 'Log in'. Flagged as a design defect for the client in docs/issues-log.md #49 ('Sales Hub design defects (flagged, followed as drawn)') -- not silently corrected."
+            },
+            {
+              "name": "url",
+              "type": "link",
+              "return_format": "array"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "sh_login",
+      "template_part": "template-parts/flex-blocks/sh-login.php",
+      "classification": "Local",
+      "classification_reasoning": "Unique layout for the unauthenticated Sales Hub landing/login screen; no header, dedicated chrome, genuine WP auth form (wp_login_form()) wired in beside the editable copy fields.",
+      "reuse_verdict": "NEW",
+      "reuse_score": 0.1,
+      "source_sections": [
+        "sales-hub-login/sales-hub-login"
+      ],
+      "clones_used": [],
+      "target_page": "CONFIRMED: sales-hub (WP page id 18) -- unauthenticated portal landing/login. Dashboard = page 19, Resource Library = page 20 (restated for the record, decision_record).",
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text",
+          "notes": "Placeholder/typo pass-through verbatim ('Sales HUb - REP Portal') per no-invent rule -- editor can correct the copy in wp-admin."
+        },
+        {
+          "name": "forgot_password_label",
+          "type": "text",
+          "instructions": "URL is hardcoded in the template to the real wp-login.php?action=lostpassword route (not a spec field, not ACF)."
+        },
+        {
+          "name": "note",
+          "type": "textarea",
+          "notes": "nl2br; contains one <br>"
+        }
+      ],
+      "repeats": [],
+      "auth_note": "The .lg-form (email/password) is a genuine authentication form -- delivered via wp_login_form() with custom label args, never modeled as ACF fields, per the forms rule. Not part of this layout's fields/repeats."
+    },
+    {
+      "name": "sh_resource_library_intro",
+      "template_part": "template-parts/flex-blocks/sh-resource-library-intro.php",
+      "classification": "Local",
+      "classification_reasoning": "CONFIRMED (decision_record q3): EXTEND-scored (0.68) subset of intro_statement's fields, but kept separate per the developer's fidelity-first instruction. Not folded.",
+      "reuse_verdict": "EXTEND",
+      "reuse_score": 0.68,
+      "reuse_compared_to": "intro_statement",
+      "source_sections": [
+        "sales-hub-resource-library/resource-library-intro"
+      ],
+      "clones_used": [],
+      "fields": [
+        {
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "name": "body",
+          "type": "textarea"
+        }
+      ],
+      "repeats": []
+    },
+    {
+      "name": "sh_resource_results",
+      "template_part": "template-parts/flex-blocks/sh-resource-results.php",
+      "classification": "Local",
+      "classification_reasoning": "Structural layout housing the live m11_resource query + filter chrome for the Sales Hub Resource Library, mirroring browse_by_product's role on the public Products page. No unique editable content fields evidenced in the spec beyond the computed result_count.",
+      "reuse_verdict": "COMPATIBLE",
+      "reuse_score": 0.72,
+      "reuse_compared_to": "browse_by_product",
+      "source_sections": [
+        "sales-hub-resource-library/resource-results"
+      ],
+      "clones_used": [],
+      "fields": [],
+      "repeats": [],
+      "query_note": "result_count and resource_tiles render from a WP_Query against m11_resource filtered by resource_type/product_category -- see static_content. Filter checkbox labels/counts come from taxonomy term names + computed counts (forms[] '.fl-form', not a spec section field -- narrative note only, same as browse_by_product)."
+    },
+    {
+      "name": "m11_product_fields",
+      "template_part": "single-m11_product.php (CPT field group, not an FC layout)",
+      "classification": "Custom Post Type (field group)",
+      "classification_reasoning": "Pointer entry so this plan-level claim registry accounts for every product-detail spec section; full field breakdown lives under cpts[] (post_type m11_product) by tab.",
+      "reuse_verdict": "N/A (CPT, not a section layout)",
+      "reuse_score": null,
+      "source_sections": [
+        "product-feather-blades/product-overview",
+        "product-feather-blades/accessories",
+        "product-feather-blades/testimonial",
+        "product-feather-blades/related-products",
+        "product-lawtonelite-skull-base-set/product-overview",
+        "product-lawtonelite-skull-base-set/accessories",
+        "product-lawtonelite-skull-base-set/testimonial",
+        "product-lawtonelite-skull-base-set/related-products",
+        "product-sugita-ii-head-frame/product-overview",
+        "product-sugita-ii-head-frame/accessories",
+        "product-sugita-ii-head-frame/testimonial",
+        "product-sugita-ii-head-frame/related-products",
+        "product-feather-blades/size-guide",
+        "product-lawtonelite-skull-base-set/instruments-included"
+      ],
+      "clones_used": [
+        "media",
+        "button_group"
+      ],
+      "fields": [],
+      "repeats": [],
+      "see_also": "cpts[] entry post_type=m11_product for the real field-by-tab detail."
+    },
+    {
+      "name": "m11_resource_fields",
+      "template_part": "(CPT field group, not an FC layout; no single template built this phase)",
+      "classification": "Custom Post Type (field group)",
+      "classification_reasoning": "Pointer entry so this plan-level claim registry accounts for every resources/sales-hub-resource-library spec section that surfaces m11_resource records; full field breakdown lives under cpts[] (post_type m11_resource).",
+      "reuse_verdict": "N/A (CPT, not a section layout)",
+      "reuse_score": null,
+      "source_sections": [
+        "resources/testimonials",
+        "resources/brochures",
+        "sales-hub-resource-library/resource-results"
+      ],
+      "clones_used": [
+        "media"
+      ],
+      "fields": [],
+      "repeats": [],
+      "see_also": "cpts[] entry post_type=m11_resource for the real field detail. Note: resources/testimonials and resources/brochures are ALSO claimed by the resources_testimonials and resources_brochures FC layouts above (the layout houses the page-level curation; this CPT group houses the underlying resource records the relationship fields point at) -- both claims are legitimate, not a conflict."
+    }
+  ],
+  "cpts": [
+    {
+      "post_type": "m11_product",
+      "classification": "Custom Post Type",
+      "classification_reasoning": "Repeatable independent entity with its own permalink, natural taxonomies (category/procedure/configuration), and is explicitly the CPT test's textbook case per the developer-confirmed brief: 3 'product page' designs = ONE single-product template with optional sections.",
+      "register": {
+        "labels_base": "Product",
+        "public": true,
+        "has_archive": false,
+        "rewrite": {
+          "slug": "products",
+          "with_front": false
+        },
+        "supports": [
+          "title",
+          "thumbnail"
+        ],
+        "show_in_rest": true,
+        "template_file": "single-m11_product.php",
+        "note": "CONFIRMED (decision_record q8): has_archive:false, WP page 'products' (page-flexible.php, sections FC) is the browse experience, rewrite slug 'products' so singles are /products/<slug>/. The 'products' page does NOT exist yet in WordPress -- see build_steps B1."
+      },
+      "field_group_deviation_note": "This is a plain ACF field group (post_type == m11_product), NOT an FC layout inside 'sections' -- the mandatory two-tab/common_settings convention is an FC-layout rule and does not strictly apply here (a single product has one fixed template, not stackable sections). Plain admin tabs (no common_settings clone) are used instead for organisation. Flagged as open question #9 for sign-off since it's a deliberate deviation from the house FC convention. CONFIRMED (decision_record q9): accepted as-is.",
+      "tabs": [
+        {
+          "tab": "Overview",
+          "source_sections": [
+            "product-feather-blades/product-overview",
+            "product-lawtonelite-skull-base-set/product-overview",
+            "product-sugita-ii-head-frame/product-overview"
+          ],
+          "clones_used": [
+            "media (for gallery_image + gallery_thumbnails rows)"
+          ],
+          "fields": [
+            {
+              "name": "title",
+              "type": "NATIVE post_title",
+              "notes": "Not a duplicate ACF field -- uses the core WP Title box (get_the_title())."
+            },
+            {
+              "name": "gallery_image",
+              "type": "image",
+              "return_format": "id"
+            },
+            {
+              "name": "gallery_thumbnails",
+              "type": "repeater",
+              "min": 0,
+              "max": 6,
+              "sub_fields": [
+                {
+                  "name": "type",
+                  "type": "select",
+                  "choices": [
+                    "image",
+                    "video",
+                    "placeholder"
+                  ]
+                },
+                {
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "id",
+                  "conditional_on": "type=image"
+                },
+                {
+                  "name": "video_url",
+                  "type": "url",
+                  "conditional_on": "type=video"
+                }
+              ],
+              "notes": "type=placeholder renders the template's fallback 'FPO IMAGE' label -- see static_content for thumbnails.type on the 2 pages that are still all-placeholder; lawtonelite's 3 real thumbs map to type=image rows and stay fully editable/claimed."
+            },
+            {
+              "name": "quick_facts",
+              "type": "text"
+            },
+            {
+              "name": "family_pill",
+              "type": "text",
+              "instructions": "Optional -- leave empty for base-variant products (e.g. Sugita II has no pill). Kept as a plain free-text field rather than deriving it from the product_configuration taxonomy term, to avoid inventing a label-mapping the spec doesn't evidence."
+            },
+            {
+              "name": "model_line",
+              "type": "text"
+            },
+            {
+              "name": "description",
+              "type": "textarea"
+            },
+            {
+              "name": "spec_caption",
+              "type": "text",
+              "instructions": "Optional table caption -- Sugita says 'KEY SPECIFICATIONS', Feather Blades says 'SELECTED SIZE \u2013 SPECIFICATIONS', LawtonElite has none. Leave empty to render no caption."
+            },
+            {
+              "name": "spec_rows",
+              "type": "repeater",
+              "min": 0,
+              "max": 10,
+              "sub_fields": [
+                {
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "name": "value",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "Configurator (optional)",
+          "source_sections": [
+            "product-feather-blades/size-guide",
+            "product-lawtonelite-skull-base-set/instruments-included"
+          ],
+          "fields": [
+            {
+              "name": "has_size_guide",
+              "type": "true_false"
+            },
+            {
+              "name": "size_selector_label",
+              "type": "text",
+              "conditional_on": "has_size_guide"
+            },
+            {
+              "name": "size_selector_part_no",
+              "type": "text",
+              "conditional_on": "has_size_guide"
+            },
+            {
+              "name": "size_guide_heading",
+              "type": "text",
+              "conditional_on": "has_size_guide"
+            },
+            {
+              "name": "size_guide_badge",
+              "type": "text",
+              "conditional_on": "has_size_guide"
+            },
+            {
+              "name": "size_rows",
+              "type": "repeater",
+              "conditional_on": "has_size_guide",
+              "min": 0,
+              "max": 12,
+              "sub_fields": [
+                {
+                  "name": "width",
+                  "type": "text"
+                },
+                {
+                  "name": "part_number",
+                  "type": "text"
+                },
+                {
+                  "name": "length",
+                  "type": "text"
+                },
+                {
+                  "name": "handle",
+                  "type": "text"
+                },
+                {
+                  "name": "application",
+                  "type": "text"
+                },
+                {
+                  "name": "is_selected",
+                  "type": "true_false",
+                  "instructions": "Marks which size row is the default-highlighted one (spec: 4.0mm carries class='is-selected'). Editor-controlled instead of hardcoded."
+                }
+              ],
+              "notes": "size_options (the dropdown in product-overview) is DERIVED from this repeater's width values at render time, not duplicated as a separate field -- see static_content (size_options.label)."
+            },
+            {
+              "name": "has_instruments_table",
+              "type": "true_false"
+            },
+            {
+              "name": "instruments_heading",
+              "type": "text",
+              "conditional_on": "has_instruments_table"
+            },
+            {
+              "name": "instruments_badge",
+              "type": "text",
+              "conditional_on": "has_instruments_table"
+            },
+            {
+              "name": "instruments_download_label",
+              "type": "text",
+              "conditional_on": "has_instruments_table"
+            },
+            {
+              "name": "instrument_rows",
+              "type": "repeater",
+              "conditional_on": "has_instruments_table",
+              "min": 0,
+              "max": 30,
+              "sub_fields": [
+                {
+                  "name": "number",
+                  "type": "text"
+                },
+                {
+                  "name": "instrument",
+                  "type": "text"
+                },
+                {
+                  "name": "part_number",
+                  "type": "text"
+                },
+                {
+                  "name": "qty",
+                  "type": "text"
+                },
+                {
+                  "name": "notes_col",
+                  "type": "text",
+                  "instructions": "Optional -- several rows are empty in the source, must render cleanly when blank."
+                }
+              ]
+            }
+          ],
+          "notes": "Two independent booleans (not one variant select) because a product could plausibly need neither, either, or (in principle) both blocks -- matches ACF's native conditional_logic and does not trigger the skill's 'variant select toggling a large field block = over-merged' warning (these ARE genuinely optional sub-blocks of one entity, not squashed unrelated sections)."
+        },
+        {
+          "tab": "Accessories & Related",
+          "source_sections": [
+            "product-feather-blades/accessories",
+            "product-feather-blades/related-products",
+            "product-lawtonelite-skull-base-set/accessories",
+            "product-lawtonelite-skull-base-set/related-products",
+            "product-sugita-ii-head-frame/accessories",
+            "product-sugita-ii-head-frame/related-products"
+          ],
+          "fields": [
+            {
+              "name": "accessories",
+              "type": "repeater",
+              "min": 0,
+              "max": 8,
+              "sub_fields": [
+                {
+                  "name": "product",
+                  "type": "post_object",
+                  "post_type": "m11_product",
+                  "instructions": "Most accessory targets in the spec (#product-<slug>) don't resolve to a real product yet -- this field stays empty until that product exists; no placeholder post is invented."
+                },
+                {
+                  "name": "caption",
+                  "type": "text",
+                  "instructions": "Optional override for the tile subtext (e.g. 'For 2.0 & 3.0 mm blades') when it doesn't match the linked product's own model_line."
+                },
+                {
+                  "name": "image_override",
+                  "type": "image",
+                  "return_format": "id",
+                  "instructions": "Optional -- falls back to the linked product's gallery_image when empty."
+                }
+              ]
+            },
+            {
+              "name": "related_products",
+              "type": "repeater",
+              "min": 0,
+              "max": 6,
+              "sub_fields": [
+                {
+                  "name": "product",
+                  "type": "post_object",
+                  "post_type": "m11_product"
+                },
+                {
+                  "name": "caption",
+                  "type": "text",
+                  "instructions": "Optional override."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tab": "Testimonial & CTAs",
+          "source_sections": [
+            "product-feather-blades/testimonial",
+            "product-lawtonelite-skull-base-set/testimonial",
+            "product-sugita-ii-head-frame/testimonial"
+          ],
+          "clones_used": [
+            "button_group (buttons repeater)"
+          ],
+          "fields": [
+            {
+              "name": "testimonial_quote",
+              "type": "textarea"
+            },
+            {
+              "name": "testimonial_name",
+              "type": "text",
+              "notes": "Placeholder pass-through verbatim ('Prof Name Here, MD PhD') on all 3 example products -- highest-priority content-to-confirm per the spec's placeholders[]."
+            },
+            {
+              "name": "testimonial_dept",
+              "type": "text",
+              "notes": "Placeholder pass-through verbatim."
+            },
+            {
+              "name": "buttons",
+              "type": "repeater (button_group clone)",
+              "min": 0,
+              "max": 4,
+              "instructions": "ONE field, rendered in BOTH the product-overview position AND the testimonial position (spec shows the identical 2-CTA set twice per product) -- single source of truth instead of duplicate data entry. This is a DRY collapse within one CPT entity, not an FC merge, so the merge test doesn't apply."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "post_type": "m11_resource",
+      "classification": "Custom Post Type",
+      "classification_reasoning": "Developer-confirmed repeating record (brochures/spec sheets/videos), shown on BOTH the public Resources page and the Sales Hub Resource Library -- textbook 'metadata reused in multiple contexts' CPT test.",
+      "register": {
+        "labels_base": "Resource",
+        "public": true,
+        "has_archive": false,
+        "supports": [
+          "title",
+          "thumbnail"
+        ],
+        "show_in_rest": true,
+        "note": "No single-resource.php built this phase -- resources surface only via relationship fields (resources_testimonials.videos, resources_brochures.brochure_cards) and CPT queries (sh_resource_results, and the fast_facts/testimonial patterns if open question #5 is accepted). Flagged as an explicit scope decision, not an oversight."
+      },
+      "field_group_deviation_note": "Same as m11_product -- plain field group, no common_settings/two-tab convention. CONFIRMED (decision_record q9): accepted as-is.",
+      "source_sections": [
+        "resources/testimonials",
+        "resources/brochures",
+        "sales-hub-resource-library/resource-results"
+      ],
+      "clones_used": [
+        "media (video_type/image/mobile_img/custom_video/third_party_url)"
+      ],
+      "fields": [
+        {
+          "name": "cover_image",
+          "type": "image",
+          "return_format": "id",
+          "notes": "brochure/spec-sheet cover or video thumbnail"
+        },
+        {
+          "name": "resource_file",
+          "type": "file",
+          "return_format": "url",
+          "instructions": "PDF for brochures/spec sheets. Fixes the spec's site-wide broken #download-<slug> placeholder anchors once populated."
+        },
+        {
+          "name": "video (clone: media)",
+          "type": "clone",
+          "conditional_on": "resource_type taxonomy = video"
+        },
+        {
+          "name": "excerpt",
+          "type": "textarea",
+          "instructions": "Used as the 'Read description' blurb / brochure card excerpt / video topic blurb depending on context."
+        }
+      ],
+      "taxonomies_used": [
+        "resource_type",
+        "product_category (shared with m11_product)"
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "product_category",
+      "hierarchical": true,
+      "attached_to": [
+        "m11_product",
+        "m11_resource"
+      ],
+      "terms": [
+        "Head Holding Systems",
+        "Instruments",
+        "Surgical Tables",
+        "Vascular Management"
+      ],
+      "reasoning": "Shared vocabulary between products and resources -- one source of truth, per given project facts. Powers the product breadcrumb, the products-archive filter, and the Resource Library filter."
+    },
+    {
+      "name": "procedure",
+      "hierarchical": false,
+      "attached_to": [
+        "m11_product"
+      ],
+      "terms": [
+        "Craniotomy",
+        "Aneurysm",
+        "Tumor Removal",
+        "Skull Base",
+        "Endoscopic Endonasal",
+        "Keyhole",
+        "Neuroendoscopy",
+        "Dural Incision"
+      ],
+      "reasoning": "Drives product .pd-tags chips (product-overview tags repeat -- see static_content) and the Browse-by-procedure filter."
+    },
+    {
+      "name": "product_configuration",
+      "hierarchical": false,
+      "attached_to": [
+        "m11_product"
+      ],
+      "terms": [
+        "Instrumentation sets",
+        "Product families by size or variant",
+        "Individual products"
+      ],
+      "reasoning": "Powers the products-archive PRODUCT CONFIGURATION filter checkboxes. NOT used to derive family_pill (kept as a free-text field instead, see cpts.m11_product.family_pill)."
+    },
+    {
+      "name": "resource_type",
+      "hierarchical": false,
+      "attached_to": [
+        "m11_resource"
+      ],
+      "terms": [
+        "Brochure",
+        "Spec Sheet",
+        "Video"
+      ],
+      "reasoning": "Distinguishes downloadable PDFs from video resources; drives the resource_tiles pdf_badge icon and the videos/brochure_cards relationship filters."
+    }
+  ],
+  "options_page": {
+    "existing": {
+      "slug": "m11-site-settings",
+      "group": "group_m11_site_settings",
+      "fields_already_covering_this_plan": [
+        "site_logo (used by sh_login's logo)",
+        "sales_hub_name"
+      ],
+      "note": "Per given project facts, business data (logo, phone, fax, email, hours, address, sales hub name) already lives here -- reused as-is, not redefined in this plan."
+    },
+    "planned_additions": [
+      {
+        "field": "product_page_kicker",
+        "type": "text",
+        "reason": "All 3 example product pages show the IDENTICAL literal text 'Products' as the h1 kicker (spec: 'reads like a section/breadcrumb-style page title rather than a per-product H1'). Promoted to ONE site-wide Options field instead of duplicating identical data across every product post -- still editable in wp-admin (m11_get_setting()), just not per-post. See static_content (page_kicker, all 3 product pages)."
+      }
+    ],
+    "no_new_options_pages_needed": "Header/Footer/SEO options pages are not proposed -- the existing Elementor Theme Builder header/footer (61/62) + m11-site-settings already cover everything this design needs (per the skill: 'only create the pages the source design actually needs')."
+  },
+  "menus": {
+    "existing_native_wp_menus": {
+      "Primary": 2,
+      "Footer - Products": 3,
+      "Footer - Clinical": 4,
+      "Footer - Company": 5,
+      "Footer - Support": 6,
+      "Legal": 7,
+      "Language": 8,
+      "Sales Hub": 9,
+      "Sales Hub - Legal": 10
+    },
+    "note": "Already registered under Flow B (design-system/menus.json, project-config.json). No ACF work needed for site-wide nav (public header/footer nav, footer columns, legal nav, Sales Hub portal nav) -- native wp_nav_menu() per the skill's Navigation rule, not repeaters. Listed here for the shared-region coverage requirement, and because the 'Sales Hub' (9) / 'Sales Hub - Legal' (10) menus are exactly the portal nav the sh_login/sh_dashboard/sh_resource_results layouts sit inside.",
+    "sales_hub_portal_chrome_recommendation": {
+      "status": "DECIDED (decision_record q10) -- build step B4",
+      "decision": "Two new Elementor Theme Builder templates -- 'Sales Hub Header' and 'Sales Hub Footer' -- with Display Conditions on the sales-hub page tree (page 18 + descendants 19-22), matching the existing public header/footer (61/62) mechanism. Header condition EXCLUDES page 18 (Login has no <header> landmark per spec). Footer condition INCLUDES pages 18/19/20 (Login uses the portal footer per shared.footer_sales_hub.used_on in the spec)."
+    },
+    "primary_menu_products_fix": {
+      "status": "DECIDED (decision_record q12) -- build step B5",
+      "decision": "Native edit to the existing Primary menu (id 2): point its 'Products' item at the new 'products' page's permalink. Fixes the spec's anchors[] '#products' vs 'products.html' inconsistency on every page at once (the Elementor header template reads the same native menu everywhere) -- no ACF field, no per-page fix needed."
+    }
+  },
+  "forms": {
+    "genuine_forms": [
+      {
+        "form": "sales-hub-login .lg-form",
+        "handling": "wp_login_form() with custom label/placeholder args matching the spec (email 'rep_name@example.com', password autocomplete='current-password'), NOT ACF fields. Delivered through real WP auth.",
+        "layout": "sh_login"
+      }
+    ],
+    "decorative_non_functional": [
+      "header .hd-search (all 8 pages with a header -- lives in Elementor header template 61, out of ACF scope)",
+      "products .fl-form + .pb-search (browse_by_product layout -- labels come from taxonomy terms, not ACF content)",
+      "sales-hub-resource-library .fl-form + .rl-search/#rl-sort (sh_resource_results layout -- same pattern)"
+    ],
+    "reasoning": "Per the forms rule: submission = a forms plugin for genuine leads, but none of the decorative filter/search forms above collect a lead or submit anywhere in the source (all action=#... self-targets, no live JS) -- they stay as read-only UI chrome this build phase, not wired to a forms plugin. Only the Sales Hub login is a genuine auth form."
+  },
+  "static_content": [
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "page_kicker",
+      "reason": "Identical literal 'Products' label on every product page -- promoted to the single m11-site-settings 'product_page_kicker' Options field instead of per-post duplication (still editable, just not per-post)."
+    },
+    {
+      "section": "product-lawtonelite-skull-base-set/product-overview",
+      "field": "page_kicker",
+      "reason": "Identical literal 'Products' label on every product page -- promoted to the single m11-site-settings 'product_page_kicker' Options field instead of per-post duplication (still editable, just not per-post)."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "page_kicker",
+      "reason": "Identical literal 'Products' label on every product page -- promoted to the single m11-site-settings 'product_page_kicker' Options field instead of per-post duplication (still editable, just not per-post)."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "breadcrumbs.label",
+      "reason": "Breadcrumb trail is generated from the post's assigned product_category term + page hierarchy (Products > Category > Product Title), not authored content."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "breadcrumbs.url",
+      "reason": "Same -- structural navigation, generated from taxonomy + permalinks."
+    },
+    {
+      "section": "product-lawtonelite-skull-base-set/product-overview",
+      "field": "breadcrumbs.label",
+      "reason": "Breadcrumb trail is generated from the post's assigned product_category term + page hierarchy, not authored content."
+    },
+    {
+      "section": "product-lawtonelite-skull-base-set/product-overview",
+      "field": "breadcrumbs.url",
+      "reason": "Same -- structural navigation, generated from taxonomy + permalinks."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "breadcrumbs.label",
+      "reason": "Breadcrumb trail is generated from the post's assigned product_category term + page hierarchy, not authored content."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "breadcrumbs.url",
+      "reason": "Same -- structural navigation, generated from taxonomy + permalinks."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "thumbnails.type",
+      "reason": "'FPO IMAGE' is the template's fallback label for an empty gallery_thumbnails row -- the editable surface is the thumbnail image field itself, not this placeholder string."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "thumbnails.type",
+      "reason": "'FPO IMAGE' is the template's fallback label for an empty gallery_thumbnails row -- the editable surface is the thumbnail image field itself, not this placeholder string."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "tags.label",
+      "reason": "Rendered from the post's assigned procedure taxonomy terms, not free text."
+    },
+    {
+      "section": "product-lawtonelite-skull-base-set/product-overview",
+      "field": "tags.label",
+      "reason": "Rendered from the post's assigned procedure taxonomy terms, not free text."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "tags.label",
+      "reason": "Rendered from the post's assigned procedure taxonomy terms, not free text."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "product_tabs.label",
+      "reason": "Tab bar is generated by the template from fixed logic (Overview always + Size Guide/Instruments Included only when that optional block is filled + Accessories always); also fixes the spec's systematic #overview anchor defect by construction at the template layer."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "product_tabs.url",
+      "reason": "Same -- structural, template-generated tab targets."
+    },
+    {
+      "section": "product-lawtonelite-skull-base-set/product-overview",
+      "field": "product_tabs.label",
+      "reason": "Tab bar is generated by the template from fixed logic (Overview always + Size Guide/Instruments Included only when that optional block is filled + Accessories always); also fixes the spec's systematic #overview anchor defect by construction at the template layer."
+    },
+    {
+      "section": "product-lawtonelite-skull-base-set/product-overview",
+      "field": "product_tabs.url",
+      "reason": "Same -- structural, template-generated tab targets."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "product_tabs.label",
+      "reason": "Tab bar is generated by the template from fixed logic (Overview always + Accessories always, no optional block on the base variant); also fixes the spec's systematic #overview anchor defect by construction at the template layer."
+    },
+    {
+      "section": "product-sugita-ii-head-frame/product-overview",
+      "field": "product_tabs.url",
+      "reason": "Same -- structural, template-generated tab targets."
+    },
+    {
+      "section": "product-feather-blades/product-overview",
+      "field": "size_options.label",
+      "reason": "The size dropdown's options are derived from the size_rows repeater's own 'width' values at render time, keeping the dropdown and the size-guide table in sync from one source instead of duplicating the same 6 sizes twice."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "result_count",
+      "reason": "Computed live from the WP_Query result count (product_category/procedure/product_configuration + search filters), not authored copy."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "active_filter_chip",
+      "reason": "Computed from the currently-selected taxonomy filter(s), not authored copy."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "product_tiles.image",
+      "reason": "Rendered entirely from the m11_product CPT query (post's own gallery_image) -- editors manage this by editing the product post, not the archive page."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "product_tiles.tag",
+      "reason": "Rendered from the product's assigned product_category term."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "product_tiles.title",
+      "reason": "Rendered from the product post's title."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "product_tiles.sub",
+      "reason": "Rendered from the product post's model_line field."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "product_tiles.procedure_tags",
+      "reason": "Rendered from the product's assigned procedure taxonomy terms (also resolves the spec's flagged nesting-limit concern -- never modeled as an ACF repeater)."
+    },
+    {
+      "section": "products/browse-by-product",
+      "field": "product_tiles.view_link",
+      "reason": "Rendered from the product post's own permalink."
+    },
+    {
+      "section": "sales-hub-dashboard/dashboard",
+      "field": "heading",
+      "reason": "Per the given project fact, the dashboard greeting is built from the logged-in user's display name (wp_get_current_user()), not editor content. Placeholder 'Hello, John Q.' in the spec is the demo persona this build shows pre-auth-integration."
+    },
+    {
+      "section": "sales-hub-dashboard/dashboard",
+      "field": "stats.number",
+      "reason": "Per the given project fact ('counts from queries'), each stat's number is computed live from a WP_Query, not authored data. The row's label stays editable."
+    },
+    {
+      "section": "sales-hub-login/sales-hub-login",
+      "field": "logo",
+      "reason": "Sourced from the existing m11-site-settings 'site_logo' Options field, not a per-page field -- keeps one logo source of truth across public + Sales Hub chrome."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "result_count",
+      "reason": "Computed live from the WP_Query result count (resource_type/product_category filters), not authored copy."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "resource_tiles.image",
+      "reason": "Rendered entirely from the m11_resource CPT query (post's own cover_image)."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "resource_tiles.tag",
+      "reason": "Rendered from the resource's assigned product_category term."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "resource_tiles.pdf_badge",
+      "reason": "Decorative icon derived from the resource_type taxonomy term (brochure/spec sheet vs video), not a per-item field."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "resource_tiles.title",
+      "reason": "Rendered from the resource post's title."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "resource_tiles.sub",
+      "reason": "Rendered from the resource's assigned product_category term (same value as .tag in the source markup)."
+    },
+    {
+      "section": "sales-hub-resource-library/resource-results",
+      "field": "resource_tiles.download_link_label",
+      "reason": "Rendered from the resource post's own resource_file -- fixed 'Download' label with the real file URL, matching the fix already planned for resources_brochures."
+    }
+  ],
+  "template_strategy": {
+    "page_flexible_pages": [
+      "mizuho-home (sections: hero_carousel, intro_statement, value_columns, procedure_band, testimonial_home, about_stats)",
+      "products (sections: products_intro, browse_by_procedure, browse_by_product)",
+      "resources (sections: resources_intro, resources_testimonials, fast_facts, resources_brochures, bottom_links_band)",
+      "sales-hub / login screen (sections: sh_login) -- page id 18",
+      "sales-hub/dashboard (sections: sh_dashboard, sh_account) -- page id 19",
+      "sales-hub/resource-library (sections: sh_resource_library_intro, sh_resource_results) -- page id 20"
+    ],
+    "location_rule": "page_template == page-flexible.php for every page above (never post_type == page).",
+    "unplanned_sales_hub_pages": "DECIDED (decision_record q11): sales-hub/cross-reference (21) and sales-hub/training (22) stay plain placeholder pages -- NO page-flexible.php/sections work planned for either, no layouts, until a design exists (build step B6).",
+    "cpt_templates": [
+      "single-m11_product.php (fixed section order: product-overview, optional size-guide/instruments-included, accessories, testimonial, related-products)"
+    ],
+    "auth_and_access": "sales_rep role (per given project facts) gates sh_dashboard/sh_resource_results templates; capability checks + redirect-to-login are a template/functions.php concern for html-php-writer, not an ACF field.",
+    "products_page_build_note": "The 'products' page referenced throughout this plan does NOT exist in WordPress yet (current pages: 14 mizuho-home, 15 about-us, 16 contact-us, 17 resources, 18 sales-hub, 19 dashboard, 20 resource-library, 21 cross-reference, 22 training) -- its creation is build step B1."
+  },
+  "clone_library": {
+    "house_standard_source_groups": [
+      "Common Section Options -> common_settings",
+      "Media Block -> media",
+      "Title/Content/CTA Block -> heading_with_content + partials (page_heading, section_heading, cta)",
+      "Button Group -> button_group"
+    ],
+    "reuse_count": "common_settings clones into all 19 FC layouts above (anchor/hide/padding/colour overrides). media clones into hero_carousel's hero_cards images (via plain image sub-fields, not the full media block -- see note) and the m11_resource CPT's video block. heading_with_content partials clone into intro_statement, products_intro, and several layout headings. button_group clones into intro_ctas-style CTA rows and the m11_product CPT's shared testimonial/overview buttons field. 19 FC layouts + 2 CPT groups reuse 4 house source components instead of hand-declaring heading/media/CTA/button fields ~20+ separate times.",
+    "note": "Where a repeat item only needs a single plain image field (e.g. hero_cards.image, value_cards.icon, testimonial_cards.thumbnail) the full Media Block clone (media_type/video_type/mobile_img/etc.) is NOT used -- that would add unused fields to simple icon/photo slots. The media clone is reserved for genuinely video-capable slots (m11_resource's video field)."
+  },
+  "open_questions": "RESOLVED -- see decision_record. All 12 questions answered by the developer via the main session (end-to-end conversion instruction); no open questions remain.",
+  "decision_record": {
+    "attributed_to": "main session on the developer's end-to-end instruction",
+    "date": "2026-09-28",
+    "approvals": "All 21 rows in docs/acf-review-table.md approved as proposed, no changes.",
+    "decisions": [
+      {
+        "q": 1,
+        "topic": "procedure_band vs browse_by_procedure",
+        "decision": "Kept SEPARATE (not merged). Fidelity-first: the two procedure bands differ in height, type and layout in the design -- a pixel replica is the goal, so the COMPATIBLE (0.80) score is not acted on."
+      },
+      {
+        "q": 2,
+        "topic": "products_intro vs intro_statement",
+        "decision": "Kept SEPARATE (not folded). Same fidelity-first reasoning as #1 -- the EXTEND (0.62) score is not acted on."
+      },
+      {
+        "q": 3,
+        "topic": "sh_resource_library_intro vs intro_statement",
+        "decision": "Kept SEPARATE (not folded). Same fidelity-first reasoning as #1/#2 -- the EXTEND (0.68) score is not acted on."
+      },
+      {
+        "q": 4,
+        "topic": "hero_carousel dot count vs card count",
+        "decision": "2 hero cards is correct content. The 3rd dot is a known, already-decided design inconsistency (dots are drawn from the real slide count in the source, not content this build controls). hero_cards.max stays 3 (room for a 3rd card without forcing one)."
+      },
+      {
+        "q": 5,
+        "topic": "fast_facts sourcing",
+        "decision": "Kept as its own plain repeater (3 curated items) -- NOT converted to an m11_resource relationship."
+      },
+      {
+        "q": 6,
+        "topic": "sh_dashboard.stats computed-number mapping",
+        "decision": "Row 1 label 'Product categories available' = count of non-empty product_category terms (terms with >=1 published m11_product assigned). Row 2 label 'Brochures & spec sheets' = count of published m11_resource posts with resource_type in (brochure, spec_sheet). Row 3 label 'Training videos' = count of published m11_resource posts with resource_type = video. Labels stay ACF-editable text; numbers stay computed (static_content), keyed to these 3 fixed queries by row index -- for html-php-writer."
+      },
+      {
+        "q": 7,
+        "topic": "sh_account 'Log in' defect",
+        "decision": "Kept editable and seeded exactly as drawn, INCLUDING 'Log in'. This is a flagged design defect for the client (docs/issues-log.md #49 -- 'Sales Hub design defects (flagged, followed as drawn)'), not silently corrected by this build."
+      },
+      {
+        "q": 8,
+        "topic": "m11_product archive mechanism",
+        "decision": "Confirmed has_archive:false; the WP page 'products' (page-flexible.php, sections FC) is the browse experience. m11_product rewrite slug stays 'products' so single products resolve to /products/<slug>/. The 'products' page does NOT exist yet in WordPress (current pages: 14 mizuho-home, 15 about-us, 16 contact-us, 17 resources, 18 sales-hub, 19 dashboard, 20 resource-library, 21 cross-reference, 22 training) -- its creation is listed as build step B1 below."
+      },
+      {
+        "q": 9,
+        "topic": "CPT field group FC-convention deviation",
+        "decision": "Accepted. m11_product and m11_resource stay plain ACF field groups (post_type location rule, admin tabs allowed for organisation) -- NOT FC layouts, no common_settings/two-tab convention."
+      },
+      {
+        "q": 10,
+        "topic": "Sales Hub portal chrome mechanism",
+        "decision": "Elementor Theme Builder templates ('Sales Hub Header', 'Sales Hub Footer') with Display Conditions on the sales-hub page tree (18 + descendants 19-22), matching the existing public 61/62 mechanism. The header condition EXCLUDES page 18 (sales-hub / Login -- no <header> landmark per spec); the footer condition INCLUDES all of 18/19/20 (Login uses the portal footer, per shared.footer_sales_hub.used_on in the spec)."
+      },
+      {
+        "q": 11,
+        "topic": "sales-hub/cross-reference and sales-hub/training",
+        "decision": "Left as placeholder pages (21, 22) with NO layouts planned -- no page-flexible.php/sections work for these two; they stay plain placeholder pages until a design exists."
+      },
+      {
+        "q": 12,
+        "topic": "Header 'Products' nav link defect (spec anchors[] entry)",
+        "decision": "Fixed in the build via a native Primary menu (id 2) edit -- point the existing 'Products' menu item at the new 'products' page once created. Not an ACF field; fixes the header on every page at once (Elementor Theme Builder template 61 reads the same native menu everywhere). Listed as build step B5 below."
+      },
+      {
+        "topic": "Sales Hub page-id mapping (confirmed, not a question -- restated for the record)",
+        "decision": "sales-hub-login.html -> WP page 18 'sales-hub' (portal root/login for unauthenticated visitors). sales-hub-dashboard.html -> WP page 19 'sales-hub/dashboard'. sales-hub-resource-library.html -> WP page 20 'sales-hub/resource-library'. As originally proposed; kept as-is."
+      }
+    ]
+  },
+  "build_steps": [
+    {
+      "id": "B1",
+      "step": "Create WP page 'products' (page_template page-flexible.php) -- does not exist yet. Attach layouts products_intro, browse_by_procedure, browse_by_product in that order."
+    },
+    {
+      "id": "B2",
+      "step": "Register m11_product (has_archive:false, rewrite slug 'products') and m11_resource CPTs + taxonomies (product_category shared, procedure, product_configuration, resource_type) before seeding any product/resource content."
+    },
+    {
+      "id": "B3",
+      "step": "Build ACF field groups: m11-site-settings addition (product_page_kicker), m11_product CPT group (4 tabs), m11_resource CPT group, and the 19 FC layouts (acf-json Local JSON, group_m11_*/field_m11* keys)."
+    },
+    {
+      "id": "B4",
+      "step": "Build the 2 new Elementor Theme Builder templates ('Sales Hub Header' excl. page 18, 'Sales Hub Footer' incl. pages 18/19/20) with Display Conditions on the sales-hub page tree, matching the 61/62 pattern."
+    },
+    {
+      "id": "B5",
+      "step": "Edit the existing Primary menu (id 2) 'Products' item to point at the new 'products' page permalink -- fixes the spec's #products / products.html inconsistency (anchors[] defect) site-wide in one edit, no template change needed."
+    },
+    {
+      "id": "B6",
+      "step": "Leave sales-hub/cross-reference (21) and sales-hub/training (22) as plain placeholder pages -- no sections FC, no layouts, per decision #11."
+    }
+  ]
+}

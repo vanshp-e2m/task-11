@@ -1,0 +1,218 @@
+{
+    "key": "group_m11_media_block",
+    "title": "Media Block",
+    "fields": [
+        {
+            "key": "field_m11_mb_media_type",
+            "label": "Media type",
+            "name": "media_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Choose whether this slot shows an image or a video.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "image",
+                "video": "video"
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "return_format": "value",
+            "default_value": false,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_m11_mb_video_type",
+            "label": "Video source",
+            "name": "video_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Only used when Media type is Video.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_mb_media_type",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "custom": "custom",
+                "third_party": "third_party"
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "return_format": "value",
+            "default_value": false,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_m11_mb_image",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Image shown on desktop.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_mb_media_type",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_m11_mb_mobile_img",
+            "label": "Mobile image",
+            "name": "mobile_img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional. Falls back to Image when empty.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_mb_media_type",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_m11_mb_custom_video",
+            "label": "Custom video file",
+            "name": "custom_video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Uploaded video file (desktop).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_m11_mb_custom_video_mobile",
+            "label": "Custom video file — mobile",
+            "name": "custom_video_mobile",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Optional. Falls back to the desktop file when empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_m11_mb_third_party_url",
+            "label": "Third-party video URL",
+            "name": "third_party_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "YouTube\/Vimeo URL. Only used when Video source is Third party. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": "",
+            "placeholder": "https:\/\/…, \/page\/ or #section",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "acf-field-group"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "House clone-source library. Never attached directly; cloned as 'media' wherever a genuinely video-capable slot is needed.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1790673882
+}

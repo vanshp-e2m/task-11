@@ -1,0 +1,395 @@
+{
+  "page_slug": "mizuho-home",
+  "assets": [
+    {
+      "file": "value-icon-surgeon-centric.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "a0a89c8a46160de8a3526d808191b3a788855f3d",
+      "section": "value_columns",
+      "role": "column 1 icon",
+      "figmaNodes": [
+        "1:40 (100x98)",
+        "1:449 (79x77)"
+      ],
+      "sourcePx": "56x55",
+      "colorMode": "RGBA",
+      "bytes": 4098,
+      "containsLiveText": false,
+      "note": "Tiny raster, upscaled ~1.8x; light frame baked into the pixels."
+    },
+    {
+      "file": "value-icon-consistent-quality.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "d1e087a29a85dbbdefd8aa0fdc595f0a2c8a86b0",
+      "section": "value_columns",
+      "role": "column 2 icon",
+      "figmaNodes": [
+        "1:45 (99x90)",
+        "1:455 (88x80)"
+      ],
+      "sourcePx": "53x48",
+      "colorMode": "RGBA",
+      "bytes": 2751,
+      "containsLiveText": false,
+      "note": "Tiny raster."
+    },
+    {
+      "file": "value-icon-notable-names.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "7df7d5fce16f90abbe24c2a7cb93844c74569deb",
+      "section": "value_columns",
+      "role": "column 3 icon",
+      "figmaNodes": [
+        "1:50 (100x84)",
+        "1:461 (87x73)"
+      ],
+      "sourcePx": "50x42",
+      "colorMode": "RGBA",
+      "bytes": 3161,
+      "containsLiveText": false,
+      "note": "Tiny raster."
+    },
+    {
+      "file": "value-icon-personal-partnership.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "3e91764ba36478a53ee9cda931bf4fce5636f0b8",
+      "section": "value_columns",
+      "role": "column 4 icon",
+      "figmaNodes": [
+        "1:55 (100x72)",
+        "1:467 (96x69)"
+      ],
+      "sourcePx": "60x43",
+      "colorMode": "RGBA",
+      "bytes": 3613,
+      "containsLiveText": false,
+      "note": "Tiny raster."
+    },
+    {
+      "file": "testimonial-thumb-lawton.jpg",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "7693b4197a51a3cd44785a9ede7aaf859df11fd1",
+      "section": "testimonials",
+      "role": "video 1 thumbnail (Lawton)",
+      "figmaNodes": [
+        "1:70 (409x272)",
+        "1:493",
+        "1:501 + 1:509 (stale fill underneath)"
+      ],
+      "sourcePx": "409x272",
+      "colorMode": "RGB",
+      "bytes": 30622,
+      "containsLiveText": false,
+      "note": "1x only; burned-in video lower-third."
+    },
+    {
+      "file": "testimonial-thumb-evans.jpg",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "d47735cacaf08232a7d2dffbd356c93c9280612d",
+      "section": "testimonials",
+      "role": "video 2 thumbnail (Evans)",
+      "figmaNodes": [
+        "1:71 (408x272)",
+        "1:501 (top fill)"
+      ],
+      "sourcePx": "409x272",
+      "colorMode": "RGB",
+      "bytes": 29114,
+      "containsLiveText": false,
+      "note": "1x only; burned-in video lower-third."
+    },
+    {
+      "file": "testimonial-thumb-youssef.jpg",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "99d90701bf0d7022ea5bc5c1fb13bc00cdf9660d",
+      "section": "testimonials",
+      "role": "video 3 thumbnail (Youssef)",
+      "figmaNodes": [
+        "1:72 (409x272)",
+        "1:509 (top fill)"
+      ],
+      "sourcePx": "409x272",
+      "colorMode": "RGB",
+      "bytes": 35935,
+      "containsLiveText": false,
+      "note": "1x only; burned-in video lower-third."
+    },
+    {
+      "file": "hero-product-sugita-ii-head-frame.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "67b869a02c0c89a5bb7bd21e5a4b8b5f236f4c0c",
+      "section": "hero_carousel",
+      "role": "slide 1 image",
+      "figmaNodes": [
+        "1:96 (572x592, cropped via imageTransform)",
+        "1:416",
+        "1:422 (hidden underneath)"
+      ],
+      "sourcePx": "1499x878",
+      "colorMode": "RGBA",
+      "bytes": 1520636,
+      "containsLiveText": false,
+      "note": "Raw fill; the -card-crop derivative matches the Figma crop."
+    },
+    {
+      "file": "hero-product-mst-7300-table.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "ebeb83b7c72ef55d5badb3d67815d24a75080b76",
+      "section": "hero_carousel",
+      "role": "slide 2 image",
+      "figmaNodes": [
+        "1:101 (572x592, cropped)",
+        "1:422 (top fill)"
+      ],
+      "sourcePx": "1581x898",
+      "colorMode": "RGBA",
+      "bytes": 432321,
+      "containsLiveText": false,
+      "note": "Raw fill; the -card-crop derivative matches the Figma crop."
+    },
+    {
+      "file": "logo-mizuho-header.jpg",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "c068a5b27157eb494246255bef9aac04ac2d855b",
+      "section": "site_header",
+      "role": "logo",
+      "figmaNodes": [
+        "1:125 (200x61)",
+        "1:403 (118x31)"
+      ],
+      "sourcePx": "1674x513",
+      "colorMode": "CMYK",
+      "bytes": 769775,
+      "containsLiveText": false,
+      "note": "Raster CMYK JPEG, no transparency; there is no vector logo in the file. Belongs in Site Settings."
+    },
+    {
+      "file": "logo-mizuho-footer-reversed.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "dff92f8559c652c692eab0d2613c79bcd4f94793",
+      "section": "site_footer",
+      "role": "logo (reversed)",
+      "figmaNodes": [
+        "1:141 (200x58)",
+        "1:556 (200x58)"
+      ],
+      "sourcePx": "508x147",
+      "colorMode": "RGBA",
+      "bytes": 13004,
+      "containsLiveText": false,
+      "note": "Reversed logo PNG. Belongs in Site Settings."
+    },
+    {
+      "file": "procedure-icon-tumor-removal.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "65fae476798e6c15d9f0b511fd003cc319b0df2a",
+      "section": "procedure_band",
+      "role": "item 1 icon (tumor removal)",
+      "figmaNodes": [
+        "1:150 (146x146, STRETCH crop)",
+        "1:474 (119x119)"
+      ],
+      "sourcePx": "632x602",
+      "colorMode": "RGBA",
+      "bytes": 18248,
+      "containsLiveText": false,
+      "note": "White line-art PNG."
+    },
+    {
+      "file": "procedure-icon-endoscopic-endonasal.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "fdd4a5aa3d19aaab23699238c94bc6945d17adb2",
+      "section": "procedure_band",
+      "role": "item 3 icon (endoscopic endonasal)",
+      "figmaNodes": [
+        "1:153 (184x167, STRETCH crop)",
+        "1:477 (113x103)"
+      ],
+      "sourcePx": "4096x4096",
+      "colorMode": "RGBA",
+      "bytes": 595177,
+      "containsLiveText": false,
+      "note": "4096x4096 / 595 KB - oversized; resize before upload."
+    },
+    {
+      "file": "procedure-icon-aneurysm.png",
+      "type": "raster",
+      "method": "raw image fill (GET /v1/files/:key/images)",
+      "imageRef": "58341e616b01ed474316c44e48d7d6e85cf6f965",
+      "section": "procedure_band",
+      "role": "item 2 icon (aneurysm)",
+      "figmaNodes": [
+        "1:156 (114x158)",
+        "1:481 (83x115)"
+      ],
+      "sourcePx": "902x1246",
+      "colorMode": "RGBA",
+      "bytes": 27796,
+      "containsLiveText": false,
+      "note": "White line-art PNG."
+    },
+    {
+      "file": "hero-product-sugita-ii-head-frame-card-crop.png",
+      "type": "raster-derivative",
+      "method": "local crop of the raw fill using the fill's imageTransform",
+      "derivedFrom": "hero-product-sugita-ii-head-frame.png",
+      "section": "hero_carousel",
+      "role": "slide 1 image pre-cropped to the Figma card crop (572:592)",
+      "sourcePx": "756x783",
+      "bytes": 649916,
+      "containsLiveText": false
+    },
+    {
+      "file": "hero-product-mst-7300-table-card-crop.png",
+      "type": "raster-derivative",
+      "method": "local crop of the raw fill using the fill's imageTransform",
+      "derivedFrom": "hero-product-mst-7300-table.png",
+      "section": "hero_carousel",
+      "role": "slide 2 image pre-cropped to the Figma card crop (572:592)",
+      "sourcePx": "868x898",
+      "bytes": 225148,
+      "containsLiveText": false
+    },
+    {
+      "file": "icon-arrow-circle-right.svg",
+      "type": "svg",
+      "method": "built locally from Figma vector geometry (GET /v1/files/:key/nodes?geometry=paths); the render endpoint was rate-limited",
+      "figmaNodes": "1:115/1:116 (55x55); mobile 1:417/1:423 (38x38)",
+      "section": "hero_carousel",
+      "role": "slide arrow (white circle, arrow cut out)",
+      "bytes": 376,
+      "containsLiveText": false
+    },
+    {
+      "file": "icon-play-circle.svg",
+      "type": "svg",
+      "method": "built locally from Figma vector geometry (GET /v1/files/:key/nodes?geometry=paths); the render endpoint was rate-limited",
+      "figmaNodes": "1:73/1:75/1:77 (53x53); mobile 1:494/1:502/1:510",
+      "section": "testimonials",
+      "role": "play button",
+      "bytes": 909,
+      "containsLiveText": false
+    },
+    {
+      "file": "icon-arrow-down.svg",
+      "type": "svg",
+      "method": "built locally from Figma vector geometry (GET /v1/files/:key/nodes?geometry=paths); the render endpoint was rate-limited",
+      "figmaNodes": "1:88, 1:159 (14px line, 2px stroke, outlined)",
+      "section": "hero_carousel + procedure_band",
+      "role": "down arrow (Browse by Procedure / Supported Procedures)",
+      "bytes": 574,
+      "containsLiveText": false
+    },
+    {
+      "file": "icon-arrow-down-mobile.svg",
+      "type": "svg",
+      "method": "built locally from Figma vector geometry (GET /v1/files/:key/nodes?geometry=paths); the render endpoint was rate-limited",
+      "figmaNodes": "1:428, 1:486 (12px)",
+      "section": "hero_carousel + procedure_band (mobile)",
+      "role": "down arrow, mobile weight",
+      "bytes": 571,
+      "containsLiveText": false
+    },
+    {
+      "file": "icon-menu.svg",
+      "type": "svg",
+      "method": "built locally from Figma vector geometry (GET /v1/files/:key/nodes?geometry=paths); the render endpoint was rate-limited",
+      "figmaNodes": "1:404/1:405 (19x19)",
+      "section": "site_header (mobile)",
+      "role": "hamburger",
+      "bytes": 344,
+      "containsLiveText": false
+    }
+  ],
+  "verification": [
+    {
+      "section": "site_header",
+      "imageNodes": 1,
+      "vectorIcons": "1 (mobile menu)",
+      "extracted": "1 raster + 1 svg",
+      "status": "complete"
+    },
+    {
+      "section": "hero_carousel",
+      "imageNodes": 2,
+      "vectorIcons": "2 arrow circles + 1 down arrow",
+      "extracted": "2 raster (+2 crops) + 3 svg incl. mobile arrow",
+      "status": "complete"
+    },
+    {
+      "section": "intro_statement",
+      "imageNodes": 0,
+      "vectorIcons": "0",
+      "extracted": "-",
+      "status": "complete"
+    },
+    {
+      "section": "value_columns",
+      "imageNodes": 4,
+      "vectorIcons": "0",
+      "extracted": "4 raster",
+      "status": "complete (low-resolution sources)"
+    },
+    {
+      "section": "procedure_band",
+      "imageNodes": 3,
+      "vectorIcons": "1 down arrow (shared)",
+      "extracted": "3 raster + shared svg",
+      "status": "complete"
+    },
+    {
+      "section": "testimonials",
+      "imageNodes": 3,
+      "vectorIcons": "3 play icons",
+      "extracted": "3 raster + 1 svg",
+      "status": "complete"
+    },
+    {
+      "section": "about_stats",
+      "imageNodes": 0,
+      "vectorIcons": "0",
+      "extracted": "-",
+      "status": "complete"
+    },
+    {
+      "section": "site_footer",
+      "imageNodes": 1,
+      "vectorIcons": "0",
+      "extracted": "1 raster",
+      "status": "complete"
+    }
+  ],
+  "totals": {
+    "unique_image_fills_both_frames": 14,
+    "raster_files": 14,
+    "derivatives": 2,
+    "svg": 5,
+    "files_on_disk": 21
+  },
+  "not_exportable_as_svg": [
+    "logo (raster fills only: header CMYK JPEG, footer PNG)",
+    "value-column icons (raster PNG fills)",
+    "procedure icons (raster PNG fills)"
+  ],
+  "css_only": [
+    "pagination dots",
+    "buttons",
+    "dividers",
+    "stat cards + panel shadow",
+    "hero card border"
+  ],
+  "media_library_dedup": "Checked read-only via WP-CLI: 0 attachments in the task-11.local media library, so there is nothing to dedup against."
+}

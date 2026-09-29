@@ -1,0 +1,200 @@
+[
+  {
+    "acf_fc_layout": "hero_carousel",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "hero-carousel"
+    },
+    "headline": "Neurological success is your mindset. ours, too.",
+    "browse_link_label": "Browse by Procedure",
+    "browse_link_url": "#procedure-band",
+    "hero_cards": [
+      {
+        "image": "seed/images/mizuho-home/hero-product-sugita-ii-head-frame-card-crop.png",
+        "label": "Sugita ll Multi-Purpose Head Frame",
+        "link": {
+          "url": "http://task-11.local/products/product-sugita-ii-head-frame/",
+          "title": "Sugita ll Multi-Purpose Head Frame",
+          "target": ""
+        }
+      },
+      {
+        "image": "seed/images/mizuho-home/hero-product-mst-7300-table-card-crop.png",
+        "label": "MST 7300 Series Microneurosurgery Tables",
+        "link": {
+          "url": "",
+          "title": "",
+          "target": ""
+        }
+      }
+    ],
+    "hero_ctas": [
+      {
+        "label": "Explore All Products",
+        "url": {
+          "url": "http://task-11.local/products/",
+          "title": "Explore All Products",
+          "target": ""
+        }
+      },
+      {
+        "label": "Request a Demo",
+        "url": {
+          "url": "http://task-11.local/contact-us/",
+          "title": "Request a Demo",
+          "target": ""
+        }
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "intro_statement",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "intro-statement"
+    },
+    "heading_tag": "",
+    "heading": "We are Mizuho AMERICA: delivering world-class collective expertise with a personalized approach",
+    "content": "Singularly focused on neurosurgery, Mizuho America is dedicated to delivering an exceptional experience to help you achieve your surgical goals across a broad range of procedures and patients.",
+    "cta_label": "Watch what clinical experts say about us",
+    "cta_url": "#testimonials"
+  },
+  {
+    "acf_fc_layout": "value_columns",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "value-columns"
+    },
+    "closing_cta_label": "Check out our downloadable brochures",
+    "closing_cta_url": "http://task-11.local/resources/#brochures",
+    "value_cards": [
+      {
+        "icon": "seed/images/mizuho-home/value-icon-surgeon-centric.png",
+        "title": "Surgeon-centric",
+        "lead": "Products designed exclusively<br class=\"d-only\"> for neurosurgeons",
+        "body": "With an expansive portfolio of instruments available individually and in convenient, timesaving sets and kits, we are committed to helping you optimize precision, efficiency, and workflow in the OR"
+      },
+      {
+        "icon": "seed/images/mizuho-home/value-icon-consistent-quality.png",
+        "title": "Consistent quality",
+        "lead": "Handcrafted tools for exceptional quality, performance and longevity",
+        "body": "Our tools are produced with the utmost care and integrity, adhering to stringent manufacturing protocols, so you can confidently rely on them for your delicate, high-stakes procedures"
+      },
+      {
+        "icon": "seed/images/mizuho-home/value-icon-notable-names.png",
+        "title": "Notable names",
+        "lead": "Longstanding collaborations with renowned neurosurgeons",
+        "body": "We’ve become a global leader in the field of neurosurgical tools through our ongoing work with clinical experts to help identify and fill unmet needs in the OR"
+      },
+      {
+        "icon": "seed/images/mizuho-home/value-icon-personal-partnership.png",
+        "title": "Personal partnership",
+        "lead": "Supporting you before, during,<br class=\"d-only\"> and after the sale",
+        "body": "We not only stand behind our high-quality products; we stand with you to ensure your questions are answered, your needs are met, and your input and insights are heard"
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "procedure_band",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "procedure-band"
+    },
+    "heading": "A robust portfolio of instruments, tables, head-holding systems, and vascular management devices for your diverse neurosurgical procedures",
+    "closing_text": "And beyond—review the full list of supported procedures here",
+    "closing_cta_label": "Supported Procedures",
+    "closing_cta_url": "#supported-procedures",
+    "procedure_items": [
+      {
+        "icon": "seed/images/mizuho-home/procedure-icon-tumor-removal-trim.png",
+        "title": "Tumor Removal",
+        "view_label": "View product →",
+        "view_url": "#tumor-products",
+        "more_label": "See Malleable Instruments and more →",
+        "more_url": "#malleable-instruments"
+      },
+      {
+        "icon": "seed/images/mizuho-home/procedure-icon-aneurysm-trim.png",
+        "title": "Aneurysm",
+        "view_label": "View product →",
+        "view_url": "#aneurysm-products",
+        "more_label": "See Sugita TII Aneurysm Clips and more →",
+        "more_url": "#sugita-tii-aneurysm-clips"
+      },
+      {
+        "icon": "seed/images/mizuho-home/procedure-icon-endoscopic-endonasal-trim.png",
+        "title": "Endoscopic Endonasal Approach",
+        "view_label": "View product →",
+        "view_url": "#endo-products",
+        "more_label": "See E3 Evans Elite Endoscopic Instrument Set and more →",
+        "more_url": "#e3-evans-elite-endoscopic-set"
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "testimonial_home",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "testimonials"
+    },
+    "heading": "Testimonials",
+    "intro": "Leaders in the field of neurosurgery discuss Mizuho America’s pivotal role in expanding the neurosurgical armamentarium.",
+    "mobile_cta_label": "Watch what clinical experts say about us",
+    "mobile_cta_url": "#clinical-experts",
+    "featured_quote": "“I Have found the mizuho america team to be...<br class=\"d-only\"> forward-thinking, and have a genuine interest in the advancement of surgical instrumentation.”",
+    "featured_quote_attribution": "– James Evans, MD",
+    "more_link_label": "See more testimonials",
+    "more_link_url": "#more-testimonials",
+    "testimonial_cards": [
+      {
+        "thumbnail": "seed/images/mizuho-home/testimonial-thumb-lawton.jpg",
+        "name": "Michael T. Lawton, MD",
+        "role": "President and CEO,",
+        "rest": "Barrow Neurological Institute<br>Professor and Chair, Neurosurgery<br>Chief, Neurovascular Surgery",
+        "watch_link_label": "Watch now",
+        "watch_url": "#watch-lawton"
+      },
+      {
+        "thumbnail": "seed/images/mizuho-home/testimonial-thumb-evans.jpg",
+        "name": "James J. Evans, MD",
+        "role": "Professor, Neurological Surgery &amp; Otolaryngology",
+        "rest": "Division Chief, Brain Tumor and Stereotactic<br>Radiosurgery Division<br>Director, Cranial Base and Pituitary Surgery<br>Director, Cranial Base and Endoscopic Surgery Fellowship",
+        "watch_link_label": "Watch now",
+        "watch_url": "#watch-evans"
+      },
+      {
+        "thumbnail": "seed/images/mizuho-home/testimonial-thumb-youssef.jpg",
+        "name": "A. Samy Youssef, MD, PhD",
+        "role": "Professor &amp; Vice Chairman of Education",
+        "rest": "Departments of Neurosurgery &amp; Otolaryngology<br>Director of Skull Base Surgery<br>University of Colorado School of Medicine",
+        "watch_link_label": "Watch now",
+        "watch_url": "#watch-youssef"
+      }
+    ]
+  },
+  {
+    "acf_fc_layout": "about_stats",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "about-stats"
+    },
+    "heading": "About Mizuho America",
+    "body": "Established in Boston, Massachusetts in 1993, Mizuho America is part of Mizuho Corporation, a global medical products company with more than a century of commitment to providing surgeons with meticulously crafted equipment for their OR needs. With deep expertise in neurosurgical products, Mizuho America has built a legacy of quality, reliability, and trusted partnership with healthcare professionals. From problem-solving instrument sets developed with clinical experts, to ongoing support of neurosurgeons every day, Mizuho America remains committed to solutions that can help facilitate greater control, precision, and efficiency during the procedure with the goal of better outcomes after.",
+    "cta_label": "Explore our story",
+    "cta_url": "http://task-11.local/about-us/",
+    "stats": [
+      {
+        "number": "30+",
+        "label": "years serving the neurosurgery community"
+      },
+      {
+        "number": "1,800+",
+        "label": "neurosurgical<br>products"
+      },
+      {
+        "number": "1000+",
+        "label": "hospitals served"
+      }
+    ]
+  }
+]

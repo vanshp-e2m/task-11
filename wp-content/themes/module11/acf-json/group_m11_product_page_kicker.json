@@ -1,0 +1,39 @@
+{
+    "key": "group_m11_product_page_kicker",
+    "title": "Product Page Kicker",
+    "fields": [
+        {
+            "key": "field_m11_product_page_kicker",
+            "label": "Product page kicker",
+            "name": "product_page_kicker",
+            "type": "text",
+            "instructions": "All example product pages show the identical literal text 'Products' as the h1 kicker (reads like a section/breadcrumb-style page title rather than a per-product H1). One site-wide value instead of duplicating identical data across every product post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "m11-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Single addition to the existing m11-site-settings options page. The existing group_m11_site_settings.json is NOT regenerated — see wp-content/themes/module11/acf-json/group_m11_site_settings.json.",
+    "show_in_rest": 0,
+    "modified": 1790400000
+}

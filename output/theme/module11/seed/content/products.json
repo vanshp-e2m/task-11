@@ -1,0 +1,73 @@
+[
+ {
+  "acf_fc_layout": "products_intro",
+  "common_settings": {
+   "hide_section": "",
+   "sec_id": "products-intro"
+  },
+  "page_title": "Products",
+  "heading_tag": "",
+  "heading": "High-quality products for your<br>high-stakes procedures",
+  "subheading": "Explore our expansive portfolio of tools designed specifically for neurosurgeons",
+  "body": "For more than 30 years, Mizuho America has focused exclusively on providing neurosurgeons with reliable, durable products designed for the rigorous and intricate procedures they perform every day to improve patients’ lives. Our collaborations with clinical experts as well as our extensive knowledge of the neurosurgical landscape have resulted in an exceptionally wide range of handcrafted tools and patented features that we invite you to discover here.",
+  "cta_label": "Take a product tour now",
+  "cta_url": "#browse-by-product",
+  "background_image": 253,
+  "background_image_mobile": 254
+ },
+ {
+  "acf_fc_layout": "browse_by_procedure",
+  "common_settings": {
+   "hide_section": "",
+   "sec_id": "browse-by-procedure"
+  },
+  "heading": "Browse by procedure",
+  "lead": "Interested in learning about our selection of tools for some of the most common neurosurgical procedures? Just click on your area of interest below.",
+  "procedure_items": [
+   {
+    "icon": "seed/images/product-browse/procedure-icon-tumor-removal.png",
+    "title": "Tumor Removal",
+    "view_link": {
+     "url": "http://task-11.local/products/product-lawtonelite-skull-base-set/",
+     "title": "Tumor Removal",
+     "target": ""
+    },
+    "more_label": "See Malleable Instruments and more →",
+    "more_url": "#browse-by-product"
+   },
+   {
+    "icon": "seed/images/product-browse/procedure-icon-aneurysm.png",
+    "title": "Aneurysm",
+    "view_link": {
+     "url": "http://task-11.local/products/product-sugita-ii-head-frame/",
+     "title": "Aneurysm",
+     "target": ""
+    },
+    "more_label": "See Sugita TII Aneurysm Clips and more →",
+    "more_url": "#browse-by-product"
+   },
+   {
+    "icon": "seed/images/product-browse/procedure-icon-endoscopic-endonasal.png",
+    "title": "Endoscopic Endonasal Approach",
+    "view_link": {
+     "url": "http://task-11.local/products/product-feather-blades/",
+     "title": "Endoscopic Endonasal Approach",
+     "target": ""
+    },
+    "more_label": "See E3 Evans Elite Endoscopic Instrument Set and more →",
+    "more_url": "#browse-by-product"
+   }
+  ]
+ },
+ {
+  "acf_fc_layout": "browse_by_product",
+  "common_settings": {
+   "hide_section": "",
+   "sec_id": "browse-by-product"
+  },
+  "heading": "Browse by product",
+  "lead": "We’re proud to offer more than 1,800 neurosurgical products, and we’ve made it easy for you to find the ones that suit your practice needs. Just enter your criteria in the search bar, or filter your search by product category, product configuration, and/or procedure.",
+  "filters_heading": "EXPLORE OUR PRODUCTS",
+  "filters_subheading": "Check all boxes that apply to your search."
+ }
+]

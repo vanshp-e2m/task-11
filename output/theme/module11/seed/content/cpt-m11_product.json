@@ -1,0 +1,1214 @@
+[
+  {
+    "slug": "product-sugita-ii-head-frame",
+    "title": "Sugita II Head Frame",
+    "product_category": "head-holding-systems",
+    "procedure": [
+      "craniotomy",
+      "skull-base",
+      "aneurysm",
+      "neuroendoscopy"
+    ],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-gallery.jpg",
+    "gallery_thumbnails": [
+      {
+        "type": "placeholder"
+      },
+      {
+        "type": "placeholder"
+      },
+      {
+        "type": "placeholder"
+      },
+      {
+        "type": "video",
+        "video_url": ""
+      }
+    ],
+    "quick_facts": "Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+    "family_pill": "",
+    "model_line": "Model SGT-II • SGT-II-RL (radiolucent)",
+    "description": "The Sugita II provides secure 3-point cranial fixation with a lightweight aluminium frame. Available in standard and radiolucent configurations, compatible with all major neurosurgical approaches and navigation systems.",
+    "spec_caption": "KEY SPECIFICATIONS",
+    "spec_rows": [
+      {
+        "label": "Configuration",
+        "value": "Standard + radiolucent versions"
+      },
+      {
+        "label": "Pin configuration",
+        "value": "3-pin or 4-pin"
+      },
+      {
+        "label": "Maximum torque",
+        "value": "4 Nm per pin (torque-limiting)"
+      },
+      {
+        "label": "Navigation",
+        "value": "Compatible — all major systems"
+      }
+    ],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "ACCESSORIES",
+    "accessories": [
+      {
+        "product": "mst-7300-surgical-table",
+        "caption": "Recommended pairing",
+        "image_override": ""
+      },
+      {
+        "product": "sugita-pin-set",
+        "caption": "3-pin & 4-pin options",
+        "image_override": ""
+      },
+      {
+        "product": "mayfield-table-adapter",
+        "caption": "Table interface bracket",
+        "image_override": ""
+      },
+      {
+        "product": "gel-head-rest",
+        "caption": "Paediatric & prone support",
+        "image_override": ""
+      }
+    ],
+    "related_heading": "RELATED PRODUCTS",
+    "related_products": [
+      {
+        "product": "sugita-multipurpose-head-frame-classic",
+        "caption": "Head holding • Standard configuration"
+      },
+      {
+        "product": "mst-7300-neurosurgical-table",
+        "caption": "Surgical Tables • Compatible pairing"
+      },
+      {
+        "product": "product-feather-blades",
+        "caption": "Instruments • Skull base procedures"
+      }
+    ],
+    "testimonial_quote": "“The Sugita II has been my first choice for complex skull base cases for over a decade. The stability is unmatched, and the radiolucent version has become essential for our intraoperative imaging workflows.”",
+    "testimonial_name": "– Prof Name Here, MD PhD",
+    "testimonial_dept": "Department of Neurosurgery, Institution Here",
+    "buttons": [
+      {
+        "cta": {
+          "url": "http://task-11.local/contact-us/",
+          "title": "Schedule a Demo",
+          "target": ""
+        }
+      },
+      {
+        "cta": {
+          "url": "#download-brochure",
+          "title": "Download product brochures",
+          "target": ""
+        }
+      }
+    ]
+  },
+  {
+    "slug": "product-lawtonelite-skull-base-set",
+    "title": "LawtonElite Skull Base Instrumentation Set",
+    "product_category": "instruments",
+    "procedure": [
+      "skull-base",
+      "craniotomy",
+      "keyhole"
+    ],
+    "product_configuration": "instrumentation-sets",
+    "gallery_image": "seed/images/product-variation-a/a-gallery.jpg",
+    "gallery_thumbnails": [
+      {
+        "type": "image",
+        "image": "seed/images/product-variation-a/a-thumb-1.jpg"
+      },
+      {
+        "type": "image",
+        "image": "seed/images/product-variation-a/a-thumb-2.jpg"
+      },
+      {
+        "type": "image",
+        "image": "seed/images/product-variation-a/a-thumb-3.jpg"
+      },
+      {
+        "type": "video",
+        "video_url": ""
+      }
+    ],
+    "quick_facts": "Instrumentation Set Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+    "family_pill": "Instrumentation Set",
+    "model_line": "Ref: LE-SKB-SET • 15 instruments • Stainless steel tray",
+    "description": "A curated set of precision instruments for skull base surgery, developed in collaboration with Dr. Michael Lawton. Supplied in a sterilizable stainless steel tray with individual instrument holders.",
+    "spec_caption": "",
+    "spec_rows": [
+      {
+        "label": "Total instruments",
+        "value": "15 (21 pieces including multiples)"
+      },
+      {
+        "label": "Tray material",
+        "value": "316L stainless steel"
+      },
+      {
+        "label": "Tray dimensions",
+        "value": "340 x 240 x 40 mm"
+      },
+      {
+        "label": "Sterilization",
+        "value": "Steam autoclave or ETO"
+      },
+      {
+        "label": "Custom configurations",
+        "value": "Available on request"
+      }
+    ],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": true,
+    "instruments_heading": "Instruments Included",
+    "instruments_badge": "15 Instruments • 21 pieces",
+    "instruments_download_label": "Download full parts list",
+    "instrument_rows": [
+      {
+        "number": "01",
+        "instrument": "Dissector, Penfield No. 1",
+        "part_number": "LE-DIS-101",
+        "qty": "1",
+        "notes_col": "Dural elevation and dissection"
+      },
+      {
+        "number": "02",
+        "instrument": "Dissector, Penfield No. 4",
+        "part_number": "LE-DIS-104",
+        "qty": "1",
+        "notes_col": "Blunt dissection"
+      },
+      {
+        "number": "03",
+        "instrument": "Micro Scissors, straight, 18cm",
+        "part_number": "LE-MSS-018",
+        "qty": "1",
+        "notes_col": ""
+      },
+      {
+        "number": "04",
+        "instrument": "Micro Scissors, curved, 18cm",
+        "part_number": "LE-MSC-018",
+        "qty": "1",
+        "notes_col": ""
+      },
+      {
+        "number": "05",
+        "instrument": "Bipolar Forceps, bayonet, 18cm",
+        "part_number": "LE-BPF-018B",
+        "qty": "1",
+        "notes_col": "For use with bipolar generator"
+      },
+      {
+        "number": "06",
+        "instrument": "Bayonet Forceps, 18cm",
+        "part_number": "LE-BAY-018",
+        "qty": "2",
+        "notes_col": ""
+      },
+      {
+        "number": "07",
+        "instrument": "Brain Retractor, 10mm",
+        "part_number": "LE-BRT-010",
+        "qty": "2",
+        "notes_col": "For self-retaining system"
+      },
+      {
+        "number": "08",
+        "instrument": "Brain Retractor, 15mm",
+        "part_number": "LE-BRT-015",
+        "qty": "2",
+        "notes_col": "For self-retaining system"
+      },
+      {
+        "number": "09",
+        "instrument": "Suction Tube, malleable, 3Fr",
+        "part_number": "LE-SUC-003M",
+        "qty": "2",
+        "notes_col": "LawtonElite malleable tip"
+      },
+      {
+        "number": "10",
+        "instrument": "Suction Tube, malleable, 5Fr",
+        "part_number": "LE-SUC-005M",
+        "qty": "2",
+        "notes_col": "LawtonElite malleable tip"
+      },
+      {
+        "number": "11",
+        "instrument": "Nerve Hook, right angle",
+        "part_number": "LE-NHK-001",
+        "qty": "1",
+        "notes_col": ""
+      },
+      {
+        "number": "12",
+        "instrument": "Micro Probe, blunt",
+        "part_number": "LE-PRB-001",
+        "qty": "1",
+        "notes_col": "Vessel and nerve identification"
+      },
+      {
+        "number": "13",
+        "instrument": "Curette, straight, 2mm",
+        "part_number": "LE-CUR-002",
+        "qty": "1",
+        "notes_col": ""
+      },
+      {
+        "number": "14",
+        "instrument": "Curette, angled, 2mm",
+        "part_number": "LE-CUR-002A",
+        "qty": "1",
+        "notes_col": ""
+      },
+      {
+        "number": "15",
+        "instrument": "Instrument Tray with lid and holders",
+        "part_number": "LE-TRY-SKB",
+        "qty": "1",
+        "notes_col": "316L stainless steel, autoclavable"
+      }
+    ],
+    "accessories_heading": "ACCESSORIES",
+    "accessories": [
+      {
+        "product": "replacement-suction-tubes",
+        "caption": "Malleable • 3Fr and 5Fr",
+        "image_override": ""
+      },
+      {
+        "product": "replacement-brain-retractors",
+        "caption": "10mm and 15mm",
+        "image_override": ""
+      },
+      {
+        "product": "instrument-tray-silicone-mat",
+        "caption": "Replacement holder",
+        "image_override": ""
+      },
+      {
+        "product": "transport-case",
+        "caption": "Hard shell, foam lined",
+        "image_override": ""
+      }
+    ],
+    "related_heading": "RELATED PRODUCTS",
+    "related_products": [
+      {
+        "product": "lawtonelite-bypass",
+        "caption": "Instrumentation Set"
+      },
+      {
+        "product": "lawtonelite-malleable-suction-tubes",
+        "caption": "Product Families"
+      },
+      {
+        "product": "keyhole-instrumentation-set",
+        "caption": "Instrumentation Sets"
+      }
+    ],
+    "testimonial_quote": "“The LawtonElite set has everything I need for a skull base case in one tray. The instruments are perfectly balanced and the quality is consistently exceptional. It has genuinely changed how I prepare for these procedures.”",
+    "testimonial_name": "– Prof Name Here, MD PhD",
+    "testimonial_dept": "Department of Neurosurgery, Institution Here",
+    "buttons": [
+      {
+        "cta": {
+          "url": "http://task-11.local/contact-us/",
+          "title": "Schedule a Demo",
+          "target": ""
+        }
+      },
+      {
+        "cta": {
+          "url": "#download-brochure",
+          "title": "Download product brochures",
+          "target": ""
+        }
+      }
+    ]
+  },
+  {
+    "slug": "product-feather-blades",
+    "title": "Feather Blades",
+    "product_category": "instruments",
+    "procedure": [
+      "craniotomy",
+      "keyhole",
+      "skull-base",
+      "dural-incision"
+    ],
+    "product_configuration": "product-families-by-size-variant",
+    "gallery_image": "seed/images/product-variation-b/b-gallery.jpg",
+    "gallery_thumbnails": [
+      {
+        "type": "placeholder"
+      },
+      {
+        "type": "placeholder"
+      },
+      {
+        "type": "placeholder"
+      },
+      {
+        "type": "video",
+        "video_url": ""
+      }
+    ],
+    "quick_facts": "Instrumentation Set Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+    "family_pill": "Product Family",
+    "model_line": "Part no.: FB-0480 • Available in 6 sizes",
+    "description": "Precision feather blades for neurosurgical dural incision and fine dissection. Available in six widths to suit the surgical approach. Compatible with standard size 3 and size 4 scalpel handles.",
+    "spec_caption": "SELECTED SIZE – SPECIFICATIONS",
+    "spec_rows": [
+      {
+        "label": "Blade width",
+        "value": "4.0 mm"
+      },
+      {
+        "label": "Blade length",
+        "value": "28 mm"
+      },
+      {
+        "label": "Compatible handle",
+        "value": "Size 4 scalpel handle"
+      },
+      {
+        "label": "Material",
+        "value": "High-carbon stainless steel"
+      },
+      {
+        "label": "Sterile",
+        "value": "Single-use, individually wrapped"
+      }
+    ],
+    "has_size_guide": true,
+    "size_selector_label": "SELECT BLADE SIZE",
+    "size_selector_part_no": "Part no.: FB-040 Pack of 10",
+    "size_guide_heading": "SIZE GUIDE",
+    "size_guide_badge": "6 sizes available",
+    "size_rows": [
+      {
+        "width": "2.0 mm",
+        "part_number": "FB-020",
+        "length": "25 mm",
+        "handle": "Size 3",
+        "application": "Fine dural incision, tight corridors",
+        "is_selected": false
+      },
+      {
+        "width": "3.0 mm",
+        "part_number": "FB-030",
+        "length": "25 mm",
+        "handle": "Size 3",
+        "application": "Dural incision, keyhole approaches",
+        "is_selected": false
+      },
+      {
+        "width": "4.0 mm",
+        "part_number": "FB-040",
+        "length": "28 mm",
+        "handle": "Size 4",
+        "application": "Standard craniotomy, general use",
+        "is_selected": true
+      },
+      {
+        "width": "5.0 mm",
+        "part_number": "FB-050",
+        "length": "28 mm",
+        "handle": "Size 4",
+        "application": "Standard craniotomy, wider incision",
+        "is_selected": false
+      },
+      {
+        "width": "6.0 mm",
+        "part_number": "FB-060",
+        "length": "32 mm",
+        "handle": "Size 4",
+        "application": "Wider dural incision",
+        "is_selected": false
+      },
+      {
+        "width": "8.0 mm",
+        "part_number": "FB-080",
+        "length": "32 mm",
+        "handle": "Size 4",
+        "application": "Broad dural opening, trauma cases",
+        "is_selected": false
+      }
+    ],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "ACCESSORIES",
+    "accessories": [
+      {
+        "product": "size-3-scalpel-handle",
+        "caption": "For 2.0 & 3.0 mm blades",
+        "image_override": ""
+      },
+      {
+        "product": "size-4-scalpel-handle",
+        "caption": "For 4.0 – 8.0 mm blades",
+        "image_override": ""
+      },
+      {
+        "product": "blade-remover",
+        "caption": "Safe single-hand removal",
+        "image_override": ""
+      },
+      {
+        "product": "blade-disposal-container",
+        "caption": "OR-safe sharps disposal",
+        "image_override": ""
+      }
+    ],
+    "related_heading": "RELATED PRODUCTS",
+    "related_products": [
+      {
+        "product": "product-feather-blades",
+        "caption": "Product Families • Sizes 3 & 4"
+      },
+      {
+        "product": "product-lawtonelite-skull-base-set",
+        "caption": "Instrumentation Sets • Straight & curved"
+      },
+      {
+        "product": "product-lawtonelite-skull-base-set",
+        "caption": "Instrumentation Sets"
+      }
+    ],
+    "testimonial_quote": "“The precision of Mizuho feather blades is second to none. The 4mm is my go-to for standard craniotomies — the edge holds beautifully and the fit on a size 4 handle is always secure. I won’t use anything else.”",
+    "testimonial_name": "– Prof Name Here, MD PhD",
+    "testimonial_dept": "Department of Neurosurgery, Institution Here",
+    "buttons": [
+      {
+        "cta": {
+          "url": "http://task-11.local/contact-us/",
+          "title": "Schedule a Demo",
+          "target": ""
+        }
+      },
+      {
+        "cta": {
+          "url": "#download-brochure",
+          "title": "Download product brochures",
+          "target": ""
+        }
+      }
+    ]
+  },
+  {
+    "slug": "radiolucent-head-frame",
+    "title": "Radiolucent Head Frame",
+    "product_category": "head-holding-systems",
+    "procedure": [
+      "aneurysm",
+      "tumor-removal"
+    ],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-browse/tile-radiolucent-head-frame-spec-sheet.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Model SGT-RL",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "smart-fix-head-holder",
+    "title": "Smart Fix Head Holder",
+    "product_category": "head-holding-systems",
+    "procedure": [
+      "endoscopic-endonasal"
+    ],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-browse/tile-smart-fix-head-holder-spec-sheet.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Model SF-100",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "head-frame-accessories",
+    "title": "Head Frame Accessories",
+    "product_category": "head-holding-systems",
+    "procedure": [
+      "craniotomy",
+      "aneurysm"
+    ],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-browse/tile-head-frame-accessories.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Pins, adapters & holders",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "mst-7300-surgical-table",
+    "title": "MST 7300 Surgical Table",
+    "product_category": "surgical-tables",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-accessories-mst-7300-surgical-table.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Recommended pairing",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "sugita-pin-set",
+    "title": "Sugita Pin Set",
+    "product_category": "head-holding-systems",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-accessories-sugita-pin-set.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "3-pin & 4-pin options",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "mayfield-table-adapter",
+    "title": "Mayfield Table Adapter",
+    "product_category": "surgical-tables",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-accessories-mayfield-table-adapter.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Table interface bracket",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "gel-head-rest",
+    "title": "Gel Head Rest",
+    "product_category": "head-holding-systems",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-accessories-gel-head-rest.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Paediatric & prone support",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "sugita-multipurpose-head-frame-classic",
+    "title": "Sugita Multipurpose Head Frame Classic",
+    "product_category": "head-holding-systems",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-related-products-sugita-multipurpose-head-frame-classic.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Head holding • Standard configuration",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "mst-7300-neurosurgical-table",
+    "title": "MST 7300 Neurosurgical Table",
+    "product_category": "surgical-tables",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-main/main-related-products-mst-7300-neurosurgical-table.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Surgical Tables • Compatible pairing",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "replacement-suction-tubes",
+    "title": "Replacement Suction Tubes",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-a/a-accessories-replacement-suction-tubes.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Malleable • 3Fr and 5Fr",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "replacement-brain-retractors",
+    "title": "Replacement Brain Retractors",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-a/a-accessories-replacement-brain-retractors.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "10mm and 15mm",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "instrument-tray-silicone-mat",
+    "title": "Instrument Tray Silicone Mat",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-a/a-accessories-instrument-tray-silicone-mat.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Replacement holder",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "transport-case",
+    "title": "Transport Case",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-a/a-accessories-transport-case.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Hard shell, foam lined",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "lawtonelite-bypass",
+    "title": "LawtonElite Bypass",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "instrumentation-sets",
+    "gallery_image": "seed/images/product-variation-a/a-related-products-lawtonelite-bypass.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Instrumentation Set",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "lawtonelite-malleable-suction-tubes",
+    "title": "LawtonElite Malleable Suction Tubes",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "product-families-by-size-variant",
+    "gallery_image": "seed/images/product-variation-a/a-related-products-lawtonelite-malleable-suction-tubes.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Product Families",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "keyhole-instrumentation-set",
+    "title": "Keyhole Instrumentation Set",
+    "product_category": "instruments",
+    "procedure": [
+      "keyhole"
+    ],
+    "product_configuration": "instrumentation-sets",
+    "gallery_image": "seed/images/product-variation-a/a-related-products-keyhole-instrumentation-set.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Instrumentation Sets",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "size-3-scalpel-handle",
+    "title": "Size 3 Scalpel Handle",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-b/b-accessories-size-3-scalpel-handle.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "For 2.0 & 3.0 mm blades",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "size-4-scalpel-handle",
+    "title": "Size 4 Scalpel Handle",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-b/b-accessories-size-4-scalpel-handle.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "For 4.0 – 8.0 mm blades",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "blade-remover",
+    "title": "Blade Remover",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-b/b-accessories-blade-remover.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "Safe single-hand removal",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  },
+  {
+    "slug": "blade-disposal-container",
+    "title": "Blade Disposal Container",
+    "product_category": "instruments",
+    "procedure": [],
+    "product_configuration": "",
+    "gallery_image": "seed/images/product-variation-b/b-accessories-blade-disposal-container.jpg",
+    "gallery_thumbnails": [],
+    "quick_facts": "",
+    "family_pill": "",
+    "model_line": "OR-safe sharps disposal",
+    "description": "",
+    "spec_caption": "",
+    "spec_rows": [],
+    "has_size_guide": false,
+    "size_selector_label": "",
+    "size_selector_part_no": "",
+    "size_guide_heading": "",
+    "size_guide_badge": "",
+    "size_rows": [],
+    "has_instruments_table": false,
+    "instruments_heading": "",
+    "instruments_badge": "",
+    "instruments_download_label": "",
+    "instrument_rows": [],
+    "accessories_heading": "",
+    "accessories": [],
+    "related_heading": "",
+    "related_products": [],
+    "testimonial_quote": "",
+    "testimonial_name": "",
+    "testimonial_dept": "",
+    "buttons": []
+  }
+]

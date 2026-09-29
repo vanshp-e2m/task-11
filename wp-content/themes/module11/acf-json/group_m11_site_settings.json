@@ -1,0 +1,169 @@
+{
+    "key": "group_m11_site_settings",
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_m11ss_tab_brand",
+            "label": "Brand",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m11ss_logo",
+            "label": "Logo (header)",
+            "name": "m11_logo",
+            "type": "image",
+            "instructions": "Shown in the header on every page. Use an SVG or a transparent PNG at least 250px wide.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_m11ss_logo_reversed",
+            "label": "Logo (footer, white version)",
+            "name": "m11_logo_reversed",
+            "type": "image",
+            "instructions": "White logo for the blue footer. If empty, the header logo is used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_m11ss_tab_contact",
+            "label": "Contact details",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m11ss_phone",
+            "label": "Phone",
+            "name": "m11_phone",
+            "type": "text",
+            "instructions": "Shown in the header, the footer and on the Contact page, and used for tap-to-call links. Example: 800-699-2547",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_m11ss_fax",
+            "label": "Fax",
+            "name": "m11_fax",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_m11ss_email",
+            "label": "Email",
+            "name": "m11_email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_m11ss_hours",
+            "label": "Opening hours",
+            "name": "m11_hours",
+            "type": "text",
+            "instructions": "Example: Monday-Friday: 6:30 am-5:00 pm (PST)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_m11ss_address",
+            "label": "Address",
+            "name": "m11_address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 2,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_m11ss_tab_hub",
+            "label": "Sales Hub",
+            "name": "",
+            "type": "tab",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_m11ss_hub_name",
+            "label": "Portal name",
+            "name": "m11_hub_name",
+            "type": "text",
+            "instructions": "Shown in the Sales Hub header and footer, e.g. 'Sales Hub'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "m11-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Values used in more than one place (header, footer, Contact page, Sales Hub). Single-use text lives in its own Elementor template.",
+    "show_in_rest": 0,
+    "modified": 1790327524
+}

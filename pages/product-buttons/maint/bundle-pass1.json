@@ -1,0 +1,277 @@
+{
+ "phase0": {
+  "ok": true,
+  "blocked_reason": null,
+  "no_baseline": false,
+  "dry_run": false,
+  "crash_flag": false,
+  "notes": "get-instructions is empty (no read-only phrases). Safety: environment local, dry_run_default false, snapshots_retention 10, crash_flag not tripped, domain lock trusted to http://task-11.local. Preflight: all 3 product URLs and 3 replicas return HTTP 200, no auth wall. No maint-runner baseline directory existed, so DevConnect's own pre-write scoped backups plus snapshot 10 served as the baseline."
+ },
+ "measured": {
+  "findings": [],
+  "notes": [
+   "Capture engine substituted: node Playwright (plugin scripts/node_modules) read getComputedStyle/getBoundingClientRect of .pd-ctas, .tq-ctas and each child <a> on the WP page and on the HTML replica. The values were written in the canonical flat {source_id:{property:value}} shape and fed to compare_rendered_measurements.py -> measured_assert.py at each width (78 captures: 3 products x 2 sides x 13 widths).",
+   "Widths: qa_breakpoints.core 1440,768,430 (project-config) + 390 (CLAUDE.md) + boundaries discovered from the page's own CSSOM: 1200,1025,1024,1023,992,767,600,599,479. resolve_qa_widths.py could not discover them because python playwright is missing, so the same design_probe.js COLLECT_BOUNDARIES payload was run through node Playwright instead.",
+   "Result at every width: each page has 1 .pd-ctas and 1 .tq-ctas, 2 links in each, with the same text/href/class as the replica (pbtn pbtn--solid / pbtn pbtn--line). Width, height, dx and dy are identical, as are flex-direction, wrap, gap, colours, background, border, radius and links per row. No overflow and no horizontal page scroll.",
+   "All 234 raw measured_assert findings were line_height (replica 'normal' vs site 16-24px). Under the typography-authority rule they move to inherited_from_site: reported, not counted."
+  ],
+  "inherited_from_site": {
+   "property": "line_height",
+   "count": 234,
+   "detail": "The replica computes line-height:normal on .pd-ctas/.tq-ctas and their <a>. The WP page computes 24px (17.07px/17.08px/20px on the buttons at 1024/1025/1200) from the site cascade (Hello Elementor/Kit body line-height). Box heights match on both sides, so no geometry moves.",
+   "files": [
+    "after\\measured-product-feather-blades-1023.json",
+    "after\\measured-product-feather-blades-1024.json",
+    "after\\measured-product-feather-blades-1025.json",
+    "after\\measured-product-feather-blades-1200.json",
+    "after\\measured-product-feather-blades-1440.json",
+    "after\\measured-product-feather-blades-390.json",
+    "after\\measured-product-feather-blades-430.json",
+    "after\\measured-product-feather-blades-479.json",
+    "after\\measured-product-feather-blades-599.json",
+    "after\\measured-product-feather-blades-600.json",
+    "after\\measured-product-feather-blades-767.json",
+    "after\\measured-product-feather-blades-768.json",
+    "after\\measured-product-feather-blades-992.json",
+    "after\\measured-product-lawtonelite-skull-base-set-1023.json",
+    "after\\measured-product-lawtonelite-skull-base-set-1024.json",
+    "after\\measured-product-lawtonelite-skull-base-set-1025.json",
+    "after\\measured-product-lawtonelite-skull-base-set-1200.json",
+    "after\\measured-product-lawtonelite-skull-base-set-1440.json",
+    "after\\measured-product-lawtonelite-skull-base-set-390.json",
+    "after\\measured-product-lawtonelite-skull-base-set-430.json",
+    "after\\measured-product-lawtonelite-skull-base-set-479.json",
+    "after\\measured-product-lawtonelite-skull-base-set-599.json",
+    "after\\measured-product-lawtonelite-skull-base-set-600.json",
+    "after\\measured-product-lawtonelite-skull-base-set-767.json",
+    "after\\measured-product-lawtonelite-skull-base-set-768.json",
+    "after\\measured-product-lawtonelite-skull-base-set-992.json",
+    "after\\measured-product-sugita-ii-head-frame-1023.json",
+    "after\\measured-product-sugita-ii-head-frame-1024.json",
+    "after\\measured-product-sugita-ii-head-frame-1025.json",
+    "after\\measured-product-sugita-ii-head-frame-1200.json",
+    "after\\measured-product-sugita-ii-head-frame-1440.json",
+    "after\\measured-product-sugita-ii-head-frame-390.json",
+    "after\\measured-product-sugita-ii-head-frame-430.json",
+    "after\\measured-product-sugita-ii-head-frame-479.json",
+    "after\\measured-product-sugita-ii-head-frame-599.json",
+    "after\\measured-product-sugita-ii-head-frame-600.json",
+    "after\\measured-product-sugita-ii-head-frame-767.json",
+    "after\\measured-product-sugita-ii-head-frame-768.json",
+    "after\\measured-product-sugita-ii-head-frame-992.json"
+   ]
+  }
+ },
+ "attribution": {
+  "declared": [
+   {
+    "target": "post:230",
+    "field": "acf:buttons",
+    "before": [],
+    "after": [
+     {
+      "cta": {
+       "url": "http://task-11.local/contact-us/",
+       "title": "Schedule a Demo",
+       "target": ""
+      }
+     },
+     {
+      "cta": {
+       "url": "#download-brochure",
+       "title": "Download product brochures",
+       "target": ""
+      }
+     }
+    ],
+    "attribution": "declared in intent"
+   },
+   {
+    "target": "post:231",
+    "field": "acf:buttons",
+    "before": [],
+    "after": [
+     {
+      "cta": {
+       "url": "http://task-11.local/contact-us/",
+       "title": "Schedule a Demo",
+       "target": ""
+      }
+     },
+     {
+      "cta": {
+       "url": "#download-brochure",
+       "title": "Download product brochures",
+       "target": ""
+      }
+     }
+    ],
+    "attribution": "declared in intent"
+   },
+   {
+    "target": "post:232",
+    "field": "acf:buttons",
+    "before": [],
+    "after": [
+     {
+      "cta": {
+       "url": "http://task-11.local/contact-us/",
+       "title": "Schedule a Demo",
+       "target": ""
+      }
+     },
+     {
+      "cta": {
+       "url": "#download-brochure",
+       "title": "Download product brochures",
+       "target": ""
+      }
+     }
+    ],
+    "attribution": "declared in intent"
+   }
+  ],
+  "scope_violations": [],
+  "pre_existing": [],
+  "unattributable": [],
+  "verdict_input": {
+   "has_scope_violation": false
+  },
+  "notes": [
+   "audit.json was built from dev/get-audit-log rows 2380-2390 (http_method MCP-TOOL, post_id 230/231/232). The server log recorded every dispatch, so attribution rests on evidence, not on a reconstruction.",
+   "Observed changes come from DevConnect's pre-write scoped DB backups (230: 1790608595-HVE8Q8Bx, 231: 1790608514-AFf4ksTZ, 232: 1790608600-jvLoE9ix) diffed against DB snapshot backups/10-before-portal-chrome.sql (taken 15:23:31 GMT, after the writes). The only rows that changed on the 3 posts are buttons, _buttons_0_cta, _buttons_1_cta, buttons_0_cta, buttons_1_cta. wp_posts rows are unchanged (post_modified still 14:45 GMT).",
+   "Outside the task window: _elementor_page_assets (a:0:{}) is now gone from 230/231/232. It was still there in snapshot 10 (after these writes) and in 231's 15:17:41 pre-write backup, and only 3 posts site-wide still have it. So it was cleared site-wide by the later Elementor portal-chrome writes (15:23-15:29 GMT). It is a regenerated cache key and was not caused by this task."
+  ]
+ },
+ "pixel": {
+  "findings": [
+   {
+    "severity": "low",
+    "kind": "pixel_text_antialias",
+    "source_id": ".pd-ctas/.tq-ctas",
+    "property": "glyph pixels",
+    "expected": "<=500 px",
+    "actual": "max 894 px; 45 of 78 crops over 500; 3 crops differ by 1px in height (sub-pixel box height)",
+    "delta": null,
+    "rule": "pixel_secondary",
+    "note": "Inspected diff-product-sugita-ii-head-frame-tq-ctas-768.png: only glyph pixels differ. Backgrounds, borders, radii, the arrow icon and the button boxes match exactly. The text sits a fraction of a pixel differently because of the inherited line-height (see measured.inherited_from_site). Crops were re-captured sub-pixel-aligned (body offset to integer page coordinates) to remove box-position noise. Kept as low: not a defect of this data write."
+   }
+  ],
+  "diff_pixels": 894,
+  "fail_at": 500,
+  "failed": true,
+  "engine": "pixelmatch + pngjs from plugin scripts/node_modules, threshold 0.1, fail_at 500 flat. visual_compare.py could not run because pixelmatch_compare.js spawns 'npx', which is ENOENT on Windows without a shell (spawnSync npx ENOENT). The shared script was not edited.",
+  "evidence": "pages/product-buttons/maint/shots/ (reference-*, built-*, diff-*), summary in after/pixel.json"
+ },
+ "non_visual": {
+  "findings": [
+   {
+    "severity": "low",
+    "kind": "dead_in_page_anchor",
+    "source_id": "buttons_1_cta",
+    "property": "href",
+    "expected": "an element with id=download-brochure",
+    "actual": "#download-brochure has no target on WP or on the replica",
+    "delta": null,
+    "rule": "link",
+    "note": "The URL was declared and matches the replica exactly, so this write is not at fault. It is a placeholder that does nothing when clicked and needs a real brochure URL or section later."
+   }
+  ],
+  "checks": [
+   "read_all on 230/231/232 returns exactly the 2 declared cta links (url/title/target), in order",
+   "raw postmeta: buttons=2; buttons_0_cta/buttons_1_cta serialized arrays equal the intent; _buttons/_buttons_N_cta point at field_m11_pf_buttons / field_m11_pf_buttons_cta; no leftover clone-era keys",
+   "http://task-11.local/contact-us/ returns 200",
+   "product pages return 200; no console errors, no page errors, no 4xx/5xx subresources on WP or replica",
+   "PHP log: no fatals. The only warnings are the pre-existing 'Undefined array key type' in wp-includes/rest-api.php, which fires on every bridge dispatch, read-only ones included (5418 times earlier today), and does not come from this data"
+  ]
+ },
+ "unverifiable": [],
+ "pass_number": 1,
+ "cap": 3,
+ "gate_coverage": [
+  {
+   "component": "environment",
+   "phase": "0",
+   "status": "ran",
+   "state": "pass",
+   "note": "get-instructions, get-safety-status, preflight"
+  },
+  {
+   "component": "validate_intent.py",
+   "phase": "1",
+   "status": "ran",
+   "state": "pass",
+   "note": "valid, 0 warnings; content_update is verifiable"
+  },
+  {
+   "component": "baseline",
+   "phase": "2",
+   "status": "substituted",
+   "state": "warn",
+   "note": "no pages/product-buttons/maint/baseline/; used DevConnect pre-write scoped backups + snapshot 10"
+  },
+  {
+   "component": "verify_stored_integrity.py",
+   "phase": "2b",
+   "status": "not applicable",
+   "state": "pass",
+   "note": "no post_content or markup was written; the stored serialized ACF values were compared field by field with the intent instead"
+  },
+  {
+   "component": "measured assertion",
+   "phase": "3",
+   "status": "ran (engine substituted)",
+   "state": "pass",
+   "note": "node Playwright computed styles -> compare_rendered_measurements.py -> measured_assert.py; 13 widths"
+  },
+  {
+   "component": "resolve_qa_widths.py discovery",
+   "phase": "3",
+   "status": "substituted",
+   "state": "warn",
+   "note": "python playwright missing; boundaries collected with the same COLLECT_BOUNDARIES payload through node Playwright"
+  },
+  {
+   "component": "peer_conformance.py",
+   "phase": "3b",
+   "status": "not applicable",
+   "state": "pass",
+   "note": "reference.kind is html and this is not a new page; no content or CSS was written"
+  },
+  {
+   "component": "visual_compare.py",
+   "phase": "4",
+   "status": "substituted",
+   "state": "warn",
+   "note": "npx ENOENT on Windows; ran pixelmatch directly at fail_at 500"
+  },
+  {
+   "component": "non-visual technical checks",
+   "phase": "5",
+   "status": "ran",
+   "state": "pass",
+   "note": "HTTP, console, subresources, PHP log, read-backs"
+  },
+  {
+   "component": "attribute_changes.py",
+   "phase": "6",
+   "status": "ran",
+   "state": "pass",
+   "note": "3 declared, 0 scope violations; the audit log held the real rows"
+  }
+ ],
+ "escaped_defects": [
+  {
+   "title": "Intermediate wrong value on post 231",
+   "detail": "From 15:16:52 to 15:17:41 GMT, buttons_1_cta on 231 held '#download-parts-list'. The 15:17:41 write set it back to '#download-brochure'. The earlier 15:15:14 write also left rows without the 'buttons' count until 15:16:51.",
+   "evidence": "backups 1790608611-zHmzqV3Y vs 1790608661-VncPE3ZS",
+   "why_missed": "Not a current defect (the final state is correct); recorded so the write history is honest."
+  },
+  {
+   "title": "QA reads leave backups",
+   "detail": "dev/acf-read-write-values with action read_all is gated like a write: each of this run's 3 reads created a scoped DB backup (1790609499/501/504) and an audit row. No site data changed.",
+   "evidence": "dev/list-backups, audit ids 2418-2422",
+   "why_missed": "The gatekeeper matches on the ability slug, not the action."
+  }
+ ]
+}

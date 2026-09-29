@@ -1,0 +1,184 @@
+{
+  "slug": "product-feather-blades",
+  "title": "Feather Blades",
+  "product_category": "instruments",
+  "procedure": [
+    "craniotomy",
+    "keyhole",
+    "skull-base",
+    "dural-incision"
+  ],
+  "product_configuration": "product-families-by-size-variant",
+  "gallery_image": "seed/images/product-variation-b/b-gallery.jpg",
+  "gallery_thumbnails": [
+    {
+      "type": "placeholder"
+    },
+    {
+      "type": "placeholder"
+    },
+    {
+      "type": "placeholder"
+    },
+    {
+      "type": "video",
+      "video_url": ""
+    }
+  ],
+  "quick_facts": "Instrumentation Set Quick Facts: 35+ years in neurosurgery • Used in 40+ countries",
+  "family_pill": "Product Family",
+  "model_line": "Part no.: FB-0480 • Available in 6 sizes",
+  "description": "Precision feather blades for neurosurgical dural incision and fine dissection. Available in six widths to suit the surgical approach. Compatible with standard size 3 and size 4 scalpel handles.",
+  "spec_caption": "SELECTED SIZE – SPECIFICATIONS",
+  "spec_rows": [
+    {
+      "label": "Blade width",
+      "value": "4.0 mm"
+    },
+    {
+      "label": "Blade length",
+      "value": "28 mm"
+    },
+    {
+      "label": "Compatible handle",
+      "value": "Size 4 scalpel handle"
+    },
+    {
+      "label": "Material",
+      "value": "High-carbon stainless steel"
+    },
+    {
+      "label": "Sterile",
+      "value": "Single-use, individually wrapped"
+    }
+  ],
+  "has_size_guide": true,
+  "size_selector_label": "SELECT BLADE SIZE",
+  "size_selector_part_no": "Part no.: FB-040 Pack of 10",
+  "size_guide_heading": "SIZE GUIDE",
+  "size_guide_badge": "6 sizes available",
+  "size_rows": [
+    {
+      "width": "2.0 mm",
+      "part_number": "FB-020",
+      "length": "25 mm",
+      "handle": "Size 3",
+      "application": "Fine dural incision, tight corridors",
+      "is_selected": false
+    },
+    {
+      "width": "3.0 mm",
+      "part_number": "FB-030",
+      "length": "25 mm",
+      "handle": "Size 3",
+      "application": "Dural incision, keyhole approaches",
+      "is_selected": false
+    },
+    {
+      "width": "4.0 mm",
+      "part_number": "FB-040",
+      "length": "28 mm",
+      "handle": "Size 4",
+      "application": "Standard craniotomy, general use",
+      "is_selected": true
+    },
+    {
+      "width": "5.0 mm",
+      "part_number": "FB-050",
+      "length": "28 mm",
+      "handle": "Size 4",
+      "application": "Standard craniotomy, wider incision",
+      "is_selected": false
+    },
+    {
+      "width": "6.0 mm",
+      "part_number": "FB-060",
+      "length": "32 mm",
+      "handle": "Size 4",
+      "application": "Wider dural incision",
+      "is_selected": false
+    },
+    {
+      "width": "8.0 mm",
+      "part_number": "FB-080",
+      "length": "32 mm",
+      "handle": "Size 4",
+      "application": "Broad dural opening, trauma cases",
+      "is_selected": false
+    }
+  ],
+  "has_instruments_table": false,
+  "instruments_heading": "",
+  "instruments_badge": "",
+  "instruments_download_label": "",
+  "instrument_rows": [],
+  "accessories_heading": "ACCESSORIES",
+  "accessories": [
+    {
+      "product": "size-3-scalpel-handle",
+      "caption": "For 2.0 & 3.0 mm blades",
+      "image_override": "",
+      "product_title": "Size 3 Scalpel Handle"
+    },
+    {
+      "product": "size-4-scalpel-handle",
+      "caption": "For 4.0 – 8.0 mm blades",
+      "image_override": "",
+      "product_title": "Size 4 Scalpel Handle"
+    },
+    {
+      "product": "blade-remover",
+      "caption": "Safe single-hand removal",
+      "image_override": "",
+      "product_title": "Blade Remover"
+    },
+    {
+      "product": "blade-disposal-container",
+      "caption": "OR-safe sharps disposal",
+      "image_override": "",
+      "product_title": "Blade Disposal Container"
+    }
+  ],
+  "related_heading": "RELATED PRODUCTS",
+  "related_products": [
+    {
+      "product": "product-feather-blades",
+      "caption": "Product Families • Sizes 3 & 4",
+      "product_title": "Feather Blades"
+    },
+    {
+      "product": "product-lawtonelite-skull-base-set",
+      "caption": "Instrumentation Sets • Straight & curved",
+      "product_title": "LawtonElite Skull Base Instrumentation Set"
+    },
+    {
+      "product": "product-lawtonelite-skull-base-set",
+      "caption": "Instrumentation Sets",
+      "product_title": "LawtonElite Skull Base Instrumentation Set"
+    }
+  ],
+  "testimonial_quote": "“The precision of Mizuho feather blades is second to none. The 4mm is my go-to for standard craniotomies — the edge holds beautifully and the fit on a size 4 handle is always secure. I won’t use anything else.”",
+  "testimonial_name": "– Prof Name Here, MD PhD",
+  "testimonial_dept": "Department of Neurosurgery, Institution Here",
+  "buttons": [
+    {
+      "cta": {
+        "url": "http://task-11.local/contact-us/",
+        "title": "Schedule a Demo",
+        "target": ""
+      }
+    },
+    {
+      "cta": {
+        "url": "#download-brochure",
+        "title": "Download product brochures",
+        "target": ""
+      }
+    }
+  ],
+  "_related_products_spec_tile_titles_not_renderable": [
+    "Scalpel Handles",
+    "Microscissors",
+    "Skull Base Instrumentation Set"
+  ]
+}

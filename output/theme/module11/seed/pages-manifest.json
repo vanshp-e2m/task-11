@@ -1,0 +1,389 @@
+{
+  "project": "mizuho-america",
+  "prefix": "m11",
+  "theme_dir": "module11",
+  "note": "SEED-ONLY step (html-theme-assembler, step 5). The theme itself is already ported and deployed at wp-content/themes/module11 (functions.php, header/footer via Elementor Theme Builder templates 61/62 + new Sales Hub pair, inc/*.php, acf-json/, templates/page-flexible.php, single-m11_product.php, template-parts/) -- this manifest documents WHAT the bridge deploys into that already-existing theme/site (field-group registration + page/CPT/options content), not a from-scratch scaffold.",
+  "field_group_files": [
+    "acf-json/group_m11_page_sections.json",
+    "acf-json/group_m11_product_fields.json",
+    "acf-json/group_m11_resource_fields.json",
+    "acf-json/group_m11_product_page_kicker.json"
+  ],
+  "shared": {
+    "files": [
+      "functions.php",
+      "inc/template-helpers.php",
+      "inc/catalogue.php",
+      "inc/sales-hub.php",
+      "inc/post-types.php",
+      "inc/acf.php",
+      "inc/enqueue.php",
+      "inc/global-settings.php",
+      "inc/setup.php",
+      "templates/page-flexible.php",
+      "single-m11_product.php"
+    ],
+    "partials": [
+      "template-parts/flex-blocks/hero-carousel.php",
+      "template-parts/flex-blocks/intro-statement.php",
+      "template-parts/flex-blocks/value-columns.php",
+      "template-parts/flex-blocks/procedure-band.php",
+      "template-parts/flex-blocks/testimonial-home.php",
+      "template-parts/flex-blocks/about-stats.php",
+      "template-parts/flex-blocks/products-intro.php",
+      "template-parts/flex-blocks/browse-by-procedure.php",
+      "template-parts/flex-blocks/browse-by-product.php",
+      "template-parts/flex-blocks/resources-intro.php",
+      "template-parts/flex-blocks/resources-testimonials.php",
+      "template-parts/flex-blocks/fast-facts.php",
+      "template-parts/flex-blocks/resources-brochures.php",
+      "template-parts/flex-blocks/bottom-links-band.php",
+      "template-parts/flex-blocks/sh-dashboard.php",
+      "template-parts/flex-blocks/sh-account.php",
+      "template-parts/flex-blocks/sh-login.php",
+      "template-parts/flex-blocks/sh-resource-library-intro.php",
+      "template-parts/flex-blocks/sh-resource-results.php"
+    ],
+    "menus": [
+      "Primary",
+      "Footer - Products",
+      "Footer - Clinical",
+      "Footer - Company",
+      "Footer - Support",
+      "Legal",
+      "Language",
+      "Sales Hub",
+      "Sales Hub - Legal"
+    ],
+    "menus_note": "Native WP menus (ids 2-10), already registered under Flow B (design-system/menus.json, project-config.json) -- no menus.json seed file in this step; build step B5 (Primary menu 'Products' item -> the new /products/ permalink) is a native menu edit, not ACF content.",
+    "options": true,
+    "taxonomies": [
+      "product_category",
+      "procedure",
+      "product_configuration",
+      "resource_type"
+    ],
+    "taxonomies_note": "Terms already exist per the task brief; this step only references them by slug on CPT entries, it does not create them."
+  },
+  "cpts": [
+    {
+      "post_type": "m11_product",
+      "slug": "m11_product",
+      "files": [
+        "single-m11_product.php",
+        "template-parts/product/overview.php",
+        "template-parts/product/size-guide.php",
+        "template-parts/product/instruments-included.php",
+        "template-parts/product/testimonial.php",
+        "template-parts/product/tile-grid.php",
+        "template-parts/tiles/product-tile.php"
+      ],
+      "field_groups": [
+        "group_m11_product_fields"
+      ],
+      "content": "seed/content/cpt-m11_product.json",
+      "count": 23,
+      "media": [
+        "seed/images/product-browse/tile-head-frame-accessories.jpg",
+        "seed/images/product-browse/tile-radiolucent-head-frame-spec-sheet.jpg",
+        "seed/images/product-browse/tile-smart-fix-head-holder-spec-sheet.jpg",
+        "seed/images/product-main/main-accessories-gel-head-rest.jpg",
+        "seed/images/product-main/main-accessories-mayfield-table-adapter.jpg",
+        "seed/images/product-main/main-accessories-mst-7300-surgical-table.jpg",
+        "seed/images/product-main/main-accessories-sugita-pin-set.jpg",
+        "seed/images/product-main/main-gallery.jpg",
+        "seed/images/product-main/main-related-products-mst-7300-neurosurgical-table.jpg",
+        "seed/images/product-main/main-related-products-sugita-multipurpose-head-frame-classic.jpg",
+        "seed/images/product-variation-a/a-accessories-instrument-tray-silicone-mat.jpg",
+        "seed/images/product-variation-a/a-accessories-replacement-brain-retractors.jpg",
+        "seed/images/product-variation-a/a-accessories-replacement-suction-tubes.jpg",
+        "seed/images/product-variation-a/a-accessories-transport-case.jpg",
+        "seed/images/product-variation-a/a-gallery.jpg",
+        "seed/images/product-variation-a/a-related-products-keyhole-instrumentation-set.jpg",
+        "seed/images/product-variation-a/a-related-products-lawtonelite-bypass.jpg",
+        "seed/images/product-variation-a/a-related-products-lawtonelite-malleable-suction-tubes.jpg",
+        "seed/images/product-variation-a/a-thumb-1.jpg",
+        "seed/images/product-variation-a/a-thumb-2.jpg",
+        "seed/images/product-variation-a/a-thumb-3.jpg",
+        "seed/images/product-variation-b/b-accessories-blade-disposal-container.jpg",
+        "seed/images/product-variation-b/b-accessories-blade-remover.jpg",
+        "seed/images/product-variation-b/b-accessories-size-3-scalpel-handle.jpg",
+        "seed/images/product-variation-b/b-accessories-size-4-scalpel-handle.jpg",
+        "seed/images/product-variation-b/b-gallery.jpg"
+      ]
+    },
+    {
+      "post_type": "m11_resource",
+      "slug": "m11_resource",
+      "files": [
+        "template-parts/cards/resource-video.php",
+        "template-parts/cards/brochure-card.php"
+      ],
+      "field_groups": [
+        "group_m11_resource_fields"
+      ],
+      "content": "seed/content/cpt-m11_resource.json",
+      "count": 47,
+      "media": [
+        "seed/images/resource-library/tile-head-frame-accessories.jpg",
+        "seed/images/resource-library/tile-radiolucent-head-frame-spec-sheet.jpg",
+        "seed/images/resource-library/tile-smart-fix-head-holder-spec-sheet.jpg",
+        "seed/images/resource-library/tile-sugita-ii-head-frame-product-brochure.jpg",
+        "seed/images/resources/brochure-cerebellar-pontine-tumor-instruments.jpg",
+        "seed/images/resources/brochure-day-bailes-tapered-locking-suction-tubes.jpg",
+        "seed/images/resources/brochure-dr-youssefs-cranial-nerve-dissection-set.jpg",
+        "seed/images/resources/brochure-e3-mithras-bipolar.jpg",
+        "seed/images/resources/brochure-endoscopic-workflow.jpg",
+        "seed/images/resources/brochure-evans-360-rotatables.jpg",
+        "seed/images/resources/brochure-evans-elite-endoscopic-instruments.jpg",
+        "seed/images/resources/brochure-feather-k-6420-micro-blade-angled-for-precision-incisions.jpg",
+        "seed/images/resources/brochure-feather-micro-surgery.jpg",
+        "seed/images/resources/brochure-feather-micro-surgical-blade-for-fine-incision.jpg",
+        "seed/images/resources/brochure-kelly-endonasal-instrument-set.jpg",
+        "seed/images/resources/brochure-kelly-endoscopic-endonasal-instrument-set.jpg",
+        "seed/images/resources/brochure-kelly-keyhole-instrument-set.jpg",
+        "seed/images/resources/brochure-lawton-elite-reposable-microscissors.jpg",
+        "seed/images/resources/brochure-lawton-elite-series.jpg",
+        "seed/images/resources/brochure-lawtonelite-micro-dissection-instruments.jpg",
+        "seed/images/resources/brochure-lawtonelite-microscissors.jpg",
+        "seed/images/resources/brochure-lawtonelite-neurovascular-bypass-instruments.jpg",
+        "seed/images/resources/brochure-malleable-instrument-set-for-neuroendoscopy.jpg",
+        "seed/images/resources/brochure-microscissors.jpg",
+        "seed/images/resources/brochure-mst-7300-series-mizuho-mobile-microsurgery-table.jpg",
+        "seed/images/resources/brochure-neurovascular-doppler-systems.jpg",
+        "seed/images/resources/brochure-radiolucent-head-frame.jpg",
+        "seed/images/resources/brochure-skull-base-instrumentation.jpg",
+        "seed/images/resources/brochure-skull-base-workflow.jpg",
+        "seed/images/resources/brochure-smart-fix-head-frame-and-holder.jpg",
+        "seed/images/resources/brochure-sugita-ii-multi-purpose.jpg",
+        "seed/images/resources/brochure-t-endo-clips.jpg",
+        "seed/images/resources/brochure-t2-clips-sugita-titanium-aneurysm-clips-and-appliers.jpg",
+        "seed/images/resources/brochure-vascular-management-solutions-from-mizuho.jpg",
+        "seed/images/resources/video-dr-youssefs-cranial-nerve-dissection-set.jpg",
+        "seed/images/resources/video-e3-evans-elite-endoscopic-instrument-set.jpg",
+        "seed/images/resources/video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.jpg",
+        "seed/images/resources/video-fact-feather-instruments-with.jpg",
+        "seed/images/resources/video-fact-sugita-ii-multi-purpose-headframe.jpg",
+        "seed/images/resources/video-keyhole-approach-brain-surgery-extended.jpg",
+        "seed/images/resources/video-keyhole-approach-brain-surgery.jpg",
+        "seed/images/resources/video-lawtonelite-microscissors.jpg",
+        "seed/images/resources/video-lawtonelite-series.jpg",
+        "seed/images/resources/video-mst-7300b-bx-table-for-microsurgery-1.jpg",
+        "seed/images/resources/video-mst-7300b-bx-table-for-microsurgery-2.jpg",
+        "seed/images/resources/video-mst-7300bx-table-for-microsurgery.jpg",
+        "seed/images/resources/video-sugita-ii-multi-purpose-headframe.jpg"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "slug": "mizuho-home",
+      "title": "Mizuho America | Neurosurgical Instruments, Tables & Head-Holding Systems",
+      "wp_page_id": 14,
+      "spec_slug": "home",
+      "template": "templates/page-flexible.php",
+      "is_front": false,
+      "sections": [
+        "hero_carousel",
+        "intro_statement",
+        "value_columns",
+        "procedure_band",
+        "testimonial_home",
+        "about_stats"
+      ],
+      "partials": [
+        "template-parts/flex-blocks/hero-carousel.php",
+        "template-parts/flex-blocks/intro-statement.php",
+        "template-parts/flex-blocks/value-columns.php",
+        "template-parts/flex-blocks/procedure-band.php",
+        "template-parts/flex-blocks/testimonial-home.php",
+        "template-parts/flex-blocks/about-stats.php"
+      ],
+      "field_groups": [
+        "group_m11_page_sections"
+      ],
+      "media": [
+        "seed/images/mizuho-home/hero-product-mst-7300-table-card-crop.png",
+        "seed/images/mizuho-home/hero-product-sugita-ii-head-frame-card-crop.png",
+        "seed/images/mizuho-home/procedure-icon-aneurysm-trim.png",
+        "seed/images/mizuho-home/procedure-icon-endoscopic-endonasal-trim.png",
+        "seed/images/mizuho-home/procedure-icon-tumor-removal-trim.png",
+        "seed/images/mizuho-home/testimonial-thumb-evans.jpg",
+        "seed/images/mizuho-home/testimonial-thumb-lawton.jpg",
+        "seed/images/mizuho-home/testimonial-thumb-youssef.jpg",
+        "seed/images/mizuho-home/value-icon-consistent-quality.png",
+        "seed/images/mizuho-home/value-icon-notable-names.png",
+        "seed/images/mizuho-home/value-icon-personal-partnership.png",
+        "seed/images/mizuho-home/value-icon-surgeon-centric.png"
+      ],
+      "content": "seed/content/home.json",
+      "requires_cpts": [],
+      "requires_options": false,
+      "forms": []
+    },
+    {
+      "slug": "products",
+      "title": "Products | Mizuho America",
+      "wp_page_id": 89,
+      "spec_slug": "products",
+      "template": "templates/page-flexible.php",
+      "is_front": false,
+      "sections": [
+        "products_intro",
+        "browse_by_procedure",
+        "browse_by_product"
+      ],
+      "partials": [
+        "template-parts/flex-blocks/products-intro.php",
+        "template-parts/flex-blocks/browse-by-procedure.php",
+        "template-parts/flex-blocks/browse-by-product.php"
+      ],
+      "field_groups": [
+        "group_m11_page_sections"
+      ],
+      "media": [
+        "seed/images/product-browse/procedure-icon-aneurysm.png",
+        "seed/images/product-browse/procedure-icon-endoscopic-endonasal.png",
+        "seed/images/product-browse/procedure-icon-tumor-removal.png"
+      ],
+      "content": "seed/content/products.json",
+      "requires_cpts": [
+        "m11_product"
+      ],
+      "requires_options": false,
+      "forms": [
+        "products .fl-form + .pb-search (decorative filter/search chrome, not a lead form -- see plan.forms.decorative_non_functional)"
+      ]
+    },
+    {
+      "slug": "resources",
+      "title": "Resources | Mizuho America",
+      "wp_page_id": 17,
+      "spec_slug": "resources",
+      "template": "templates/page-flexible.php",
+      "is_front": false,
+      "sections": [
+        "resources_intro",
+        "resources_testimonials",
+        "fast_facts",
+        "resources_brochures",
+        "bottom_links_band"
+      ],
+      "partials": [
+        "template-parts/flex-blocks/resources-intro.php",
+        "template-parts/flex-blocks/resources-testimonials.php",
+        "template-parts/flex-blocks/fast-facts.php",
+        "template-parts/flex-blocks/resources-brochures.php",
+        "template-parts/flex-blocks/bottom-links-band.php"
+      ],
+      "field_groups": [
+        "group_m11_page_sections"
+      ],
+      "media": [
+        "seed/images/resources/video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.jpg",
+        "seed/images/resources/video-fact-feather-instruments-with.jpg",
+        "seed/images/resources/video-fact-sugita-ii-multi-purpose-headframe.jpg",
+        "seed/images/resources/video-intro-lawton.jpg"
+      ],
+      "content": "seed/content/resources.json",
+      "requires_cpts": [
+        "m11_resource"
+      ],
+      "requires_options": false,
+      "forms": []
+    },
+    {
+      "slug": "sales-hub",
+      "title": "Log in | Sales Hub | Mizuho America",
+      "wp_page_id": 18,
+      "spec_slug": "sales-hub-login",
+      "template": "templates/page-flexible.php",
+      "is_front": false,
+      "sections": [
+        "sh_login"
+      ],
+      "partials": [
+        "template-parts/flex-blocks/sh-login.php"
+      ],
+      "field_groups": [
+        "group_m11_page_sections"
+      ],
+      "media": [],
+      "content": "seed/content/sales-hub-login.json",
+      "requires_cpts": [],
+      "requires_options": true,
+      "requires_options_note": "sh_login.logo is NOT an FC field (static_content) -- sourced from m11-site-settings site_logo, already covered by an earlier step, not reseeded here.",
+      "forms": [
+        "sales-hub-login .lg-form -- genuine auth form, wp_login_form(), never modeled as ACF fields (see plan.forms.genuine_forms)"
+      ]
+    },
+    {
+      "slug": "dashboard",
+      "title": "Dashboard | Sales Hub | Mizuho America",
+      "wp_page_id": 19,
+      "spec_slug": "sales-hub-dashboard",
+      "template": "templates/page-flexible.php",
+      "is_front": false,
+      "sections": [
+        "sh_dashboard",
+        "sh_account"
+      ],
+      "partials": [
+        "template-parts/flex-blocks/sh-dashboard.php",
+        "template-parts/flex-blocks/sh-account.php"
+      ],
+      "field_groups": [
+        "group_m11_page_sections"
+      ],
+      "media": [
+        "seed/images/sales-hub-dashboard/icon-tool-cross-reference-tool.png",
+        "seed/images/sales-hub-dashboard/icon-tool-resource-library.png",
+        "seed/images/sales-hub-dashboard/icon-tool-training-hub.png"
+      ],
+      "content": "seed/content/sales-hub-dashboard.json",
+      "requires_cpts": [
+        "m11_product",
+        "m11_resource"
+      ],
+      "requires_options": false,
+      "forms": []
+    },
+    {
+      "slug": "resource-library",
+      "title": "Resource Library | Sales Hub | Mizuho America",
+      "wp_page_id": 20,
+      "spec_slug": "sales-hub-resource-library",
+      "template": "templates/page-flexible.php",
+      "is_front": false,
+      "sections": [
+        "sh_resource_library_intro",
+        "sh_resource_results"
+      ],
+      "partials": [
+        "template-parts/flex-blocks/sh-resource-library-intro.php",
+        "template-parts/flex-blocks/sh-resource-results.php"
+      ],
+      "field_groups": [
+        "group_m11_page_sections"
+      ],
+      "media": [],
+      "content": "seed/content/sales-hub-resource-library.json",
+      "requires_cpts": [
+        "m11_resource"
+      ],
+      "requires_options": false,
+      "forms": [
+        "sales-hub-resource-library .fl-form + .rl-search/#rl-sort (decorative)"
+      ]
+    }
+  ],
+  "options_content": "seed/content/options.json",
+  "spec_only_pages_not_in_manifest": {
+    "note": "site-spec.json also has 3 product-DETAIL pages (product-feather-blades, product-lawtonelite-skull-base-set, product-sugita-ii-head-frame). Per acf-plan.json's CPT-test decision these are NOT page-flexible pages -- they are single-m11_product.php CPT posts, seeded via the m11_product cpt entry above (seed/content/cpt-m11_product.json), not this pages[] array. seed/content/{slug}.json mirrors also exist for each (see cpts entry note) purely so html-acf-coverage's stage=seed checker -- which walks every site-spec.json page slug -- finds the seeded content.",
+    "slugs": [
+      "product-feather-blades",
+      "product-lawtonelite-skull-base-set",
+      "product-sugita-ii-head-frame"
+    ]
+  }
+}

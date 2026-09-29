@@ -1,0 +1,3859 @@
+{
+    "key": "group_m11_page_sections",
+    "title": "Page Sections",
+    "fields": [
+        {
+            "key": "field_m11_sections",
+            "label": "Sections",
+            "name": "sections",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "Add and reorder the page's content sections.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_m11_hero_carousel": {
+                    "key": "layout_m11_hero_carousel",
+                    "name": "hero_carousel",
+                    "label": "Hero Carousel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_hc_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_hc_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_hc_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_hc_headline",
+                            "label": "Headline",
+                            "name": "headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Restricted HTML (em, span, strong, br) is preserved — used for the accent span in the headline.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_hc_browse_link_label",
+                            "label": "Browse link label",
+                            "name": "browse_link_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Anchor target: keep this pointing at the procedure_band layout's sec_id (default 'procedure-band').",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_hc_browse_link_url",
+                            "label": "Browse link URL",
+                            "name": "browse_link_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_hc_hero_cards",
+                            "label": "Hero cards",
+                            "name": "hero_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "2 cards is the correct content. The design shows a 3rd dot indicator that does not correspond to a real 3rd slide — max allows a 3rd card without forcing one.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 3,
+                            "layout": "block",
+                            "button_label": "Add Hero Card",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_hc_hero_cards_image",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Card image.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_hc_hero_cards"
+                                },
+                                {
+                                    "key": "field_m11_hc_hero_cards_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Card label.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_hc_hero_cards"
+                                },
+                                {
+                                    "key": "field_m11_hc_hero_cards_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Cross-links to the matching product once it exists; leave empty until then.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_hc_hero_cards"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_m11_hc_hero_ctas",
+                            "label": "Hero CTAs",
+                            "name": "hero_ctas",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per hero call-to-action button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 4,
+                            "layout": "table",
+                            "button_label": "Add CTA",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_hc_hero_ctas_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Button label.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_hc_hero_ctas"
+                                },
+                                {
+                                    "key": "field_m11_hc_hero_ctas_url",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Button destination.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_hc_hero_ctas"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_intro_statement": {
+                    "key": "layout_m11_intro_statement",
+                    "name": "intro_statement",
+                    "label": "Intro Statement",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_is_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_is_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_is_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_is_section_heading",
+                            "label": "Heading & body",
+                            "name": "section_heading",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Heading tag, heading and body copy for this intro band.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_m11_tcc_heading_tag",
+                                "field_m11_tcc_heading",
+                                "field_m11_tcc_content"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_is_cta_label",
+                            "label": "CTA label",
+                            "name": "cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Anchor target: this page's own testimonial_home layout's sec_id (default 'testimonials').",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_is_cta_url",
+                            "label": "CTA URL",
+                            "name": "cta_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_value_columns": {
+                    "key": "layout_m11_value_columns",
+                    "name": "value_columns",
+                    "label": "Value Columns",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_vc_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_vc_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_vc_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_vc_closing_cta_label",
+                            "label": "Closing CTA label",
+                            "name": "closing_cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Source href is broken (#downloadable-brochures); likely meant to point at the Resources page's resources_brochures layout sec_id once both exist — flagged for the developer, kept as a plain label.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_vc_closing_cta_url",
+                            "label": "Closing CTA URL",
+                            "name": "closing_cta_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_vc_value_cards",
+                            "label": "Value cards",
+                            "name": "value_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one card per value proposition.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Value Card",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_vc_value_cards_icon",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Card icon.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_vc_value_cards"
+                                },
+                                {
+                                    "key": "field_m11_vc_value_cards_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Card title.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_vc_value_cards"
+                                },
+                                {
+                                    "key": "field_m11_vc_value_cards_lead",
+                                    "label": "Lead",
+                                    "name": "lead",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Restricted HTML (em, span, strong, br) is preserved — used for a desktop-only line break.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_vc_value_cards"
+                                },
+                                {
+                                    "key": "field_m11_vc_value_cards_body",
+                                    "label": "Body",
+                                    "name": "body",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Card body copy.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_vc_value_cards"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_procedure_band": {
+                    "key": "layout_m11_procedure_band",
+                    "name": "procedure_band",
+                    "label": "Procedure Band",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_pb_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_pb_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_pb_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_pb_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_pb_closing_text",
+                            "label": "Closing text",
+                            "name": "closing_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Closing line.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_pb_closing_cta_label",
+                            "label": "Closing CTA label",
+                            "name": "closing_cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Source href is broken (#supported-procedures) — flagged for the developer, kept as a plain label.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_pb_closing_cta_url",
+                            "label": "Closing CTA URL",
+                            "name": "closing_cta_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_pb_procedure_items",
+                            "label": "Procedure items",
+                            "name": "procedure_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one item per featured procedure.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Procedure",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_pb_procedure_items_icon",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Item icon.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_pb_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_pb_procedure_items_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Procedure title.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_pb_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_pb_procedure_items_view_label",
+                                    "label": "View label",
+                                    "name": "view_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Source href is broken on Home (#tumor-products etc.); products.html's twin section has real cross-links to product pages — flagged for the developer to align Home's links once product permalinks exist.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_pb_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_pb_procedure_items_view_url",
+                                    "label": "View link URL",
+                                    "name": "view_url",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "https:\/\/…, \/page\/ or #section",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "default_value": "",
+                                    "parent_repeater": "field_m11_pb_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_pb_procedure_items_more_label",
+                                    "label": "More label",
+                                    "name": "more_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Item secondary label.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_pb_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_pb_procedure_items_more_url",
+                                    "label": "More link URL",
+                                    "name": "more_url",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "https:\/\/…, \/page\/ or #section",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "default_value": "",
+                                    "parent_repeater": "field_m11_pb_procedure_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_testimonial_home": {
+                    "key": "layout_m11_testimonial_home",
+                    "name": "testimonial_home",
+                    "label": "Testimonial (Home)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_th_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_th_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_th_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_th_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_th_intro",
+                            "label": "Intro",
+                            "name": "intro",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Intro copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_th_mobile_cta_label",
+                            "label": "Mobile CTA label",
+                            "name": "mobile_cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Mobile-only. Source href is broken (#clinical-experts) — flagged for the developer.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_th_mobile_cta_url",
+                            "label": "Mobile CTA URL",
+                            "name": "mobile_cta_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_th_featured_quote",
+                            "label": "Featured quote",
+                            "name": "featured_quote",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Rendered with nl2br; preserves the desktop-only line break in the source.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_th_featured_quote_attribution",
+                            "label": "Featured quote attribution",
+                            "name": "featured_quote_attribution",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "e.g. '– James Evans, MD'.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_th_more_link_label",
+                            "label": "More link label",
+                            "name": "more_link_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Source href is broken (#more-testimonials) — flagged for the developer.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_th_more_link_url",
+                            "label": "More testimonials URL",
+                            "name": "more_link_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_th_testimonial_cards",
+                            "label": "Testimonial cards",
+                            "name": "testimonial_cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one card per featured testimonial.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Testimonial",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_th_testimonial_cards_thumbnail",
+                                    "label": "Thumbnail",
+                                    "name": "thumbnail",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Speaker photo.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_th_testimonial_cards"
+                                },
+                                {
+                                    "key": "field_m11_th_testimonial_cards_name",
+                                    "label": "Name",
+                                    "name": "name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Speaker name.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_th_testimonial_cards"
+                                },
+                                {
+                                    "key": "field_m11_th_testimonial_cards_role",
+                                    "label": "Role",
+                                    "name": "role",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Speaker role.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_th_testimonial_cards"
+                                },
+                                {
+                                    "key": "field_m11_th_testimonial_cards_rest",
+                                    "label": "Rest of credentials",
+                                    "name": "rest",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Rendered with nl2br; the source has multiple line breaks here.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_th_testimonial_cards"
+                                },
+                                {
+                                    "key": "field_m11_th_testimonial_cards_watch_link_label",
+                                    "label": "Watch link label",
+                                    "name": "watch_link_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Source href is broken, no video modal target built this phase — flagged for the developer.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_th_testimonial_cards"
+                                },
+                                {
+                                    "key": "field_m11_th_testimonial_cards_watch_url",
+                                    "label": "Watch (video) URL",
+                                    "name": "watch_url",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "https:\/\/…, \/page\/ or #section",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "default_value": "",
+                                    "parent_repeater": "field_m11_th_testimonial_cards"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_about_stats": {
+                    "key": "layout_m11_about_stats",
+                    "name": "about_stats",
+                    "label": "About Stats",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_abs_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_abs_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_abs_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_abs_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_abs_body",
+                            "label": "Body",
+                            "name": "body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Body copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_abs_cta_label",
+                            "label": "CTA label",
+                            "name": "cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Links to \/about-us\/, the separately-built Elementor page — the URL is hardcoded in the template, this field is just the button label (About Us is not an ACF post in this build).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_abs_cta_url",
+                            "label": "CTA URL",
+                            "name": "cta_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_abs_stats",
+                            "label": "Stats",
+                            "name": "stats",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per statistic.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Stat",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_abs_stats_number",
+                                    "label": "Number",
+                                    "name": "number",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "e.g. '30+'.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_abs_stats"
+                                },
+                                {
+                                    "key": "field_m11_abs_stats_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Rendered with nl2br; one stat has an embedded line break.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_abs_stats"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_products_intro": {
+                    "key": "layout_m11_products_intro",
+                    "name": "products_intro",
+                    "label": "Products Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_pin_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_pin_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_pin_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_pin_page_title",
+                            "label": "Page title",
+                            "name": "page_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "e.g. 'Products'.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_pin_page_heading",
+                            "label": "Heading",
+                            "name": "page_heading",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Restricted HTML (em, span, strong, br) is preserved — used for an embedded line break.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_m11_tcc_heading_tag",
+                                "field_m11_tcc_heading"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_pin_subheading",
+                            "label": "Subheading",
+                            "name": "subheading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Subheading text.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_pin_body",
+                            "label": "Body",
+                            "name": "body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Body copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_pin_cta_label",
+                            "label": "CTA label",
+                            "name": "cta_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Anchor target: this page's own browse_by_product layout's sec_id (default 'browse-by-product').",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_pin_cta_url",
+                            "label": "CTA URL",
+                            "name": "cta_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_pin_background_image",
+                            "label": "Panel background image",
+                            "name": "background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Photo behind the intro panel (desktop, stretched to the 1250×625 panel). Decorative: the text sits on top.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "preview_size": "medium",
+                            "mime_types": "jpg,jpeg,png,webp",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0
+                        },
+                        {
+                            "key": "field_m11_pin_background_image_mobile",
+                            "label": "Panel background image (mobile)",
+                            "name": "background_image_mobile",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Optional mobile crop (390×700 panel). Falls back to the desktop image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "preview_size": "medium",
+                            "mime_types": "jpg,jpeg,png,webp",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_browse_by_procedure": {
+                    "key": "layout_m11_browse_by_procedure",
+                    "name": "browse_by_procedure",
+                    "label": "Browse by Procedure",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_bbp_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_bbp_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_bbp_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_bbp_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_bbp_lead",
+                            "label": "Lead",
+                            "name": "lead",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Lead copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_bbp_procedure_items",
+                            "label": "Procedure items",
+                            "name": "procedure_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one item per featured procedure.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Procedure",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_bbp_procedure_items_icon",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Item icon.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_bbp_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_bbp_procedure_items_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Procedure title.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_bbp_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_bbp_procedure_items_view_link",
+                                    "label": "View link",
+                                    "name": "view_link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Real, working cross-link to the matching product single post.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_bbp_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_bbp_procedure_items_more_label",
+                                    "label": "More label",
+                                    "name": "more_label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Generic self-target (#browse-by-product on every row in the source) — pass-through as plain text.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_bbp_procedure_items"
+                                },
+                                {
+                                    "key": "field_m11_bbp_procedure_items_more_url",
+                                    "label": "More link URL",
+                                    "name": "more_url",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "https:\/\/…, \/page\/ or #section",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "default_value": "",
+                                    "parent_repeater": "field_m11_bbp_procedure_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_browse_by_product": {
+                    "key": "layout_m11_browse_by_product",
+                    "name": "browse_by_product",
+                    "label": "Browse by Product",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_bbpr_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_bbpr_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_bbpr_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_bbpr_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_bbpr_lead",
+                            "label": "Lead",
+                            "name": "lead",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Lead copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_bbpr_filters_heading",
+                            "label": "Filters heading",
+                            "name": "filters_heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Heading above the filter panel.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_bbpr_filters_subheading",
+                            "label": "Filters subheading",
+                            "name": "filters_subheading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Subheading above the filter panel.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_resources_intro": {
+                    "key": "layout_m11_resources_intro",
+                    "name": "resources_intro",
+                    "label": "Resources Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_ri_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_ri_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_ri_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_ri_page_title",
+                            "label": "Page title",
+                            "name": "page_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "e.g. 'Resources'.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_ri_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_ri_body",
+                            "label": "Body",
+                            "name": "body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Body copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_ri_featured_video_thumbnail",
+                            "label": "Featured video thumbnail",
+                            "name": "featured_video_thumbnail",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Source link is a broken decorative video-modal placeholder — no modal built this phase.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_m11_ri_featured_video_url",
+                            "label": "Featured video URL",
+                            "name": "featured_video_url",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placeholder": "https:\/\/…, \/page\/ or #section",
+                            "maxlength": "",
+                            "prepend": "",
+                            "append": "",
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_m11_ri_featured_quote",
+                            "label": "Featured quote",
+                            "name": "featured_quote",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Featured quote copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_ri_featured_quote_attribution",
+                            "label": "Featured quote attribution",
+                            "name": "featured_quote_attribution",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Attribution line.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_ri_intro_ctas",
+                            "label": "Intro CTAs",
+                            "name": "intro_ctas",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per CTA button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 4,
+                            "layout": "table",
+                            "button_label": "Add CTA",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_ri_intro_ctas_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Button label.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_ri_intro_ctas"
+                                },
+                                {
+                                    "key": "field_m11_ri_intro_ctas_url",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Both CTAs are valid in-page anchors to this page's own resources_testimonials \/ resources_brochures layouts.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_ri_intro_ctas"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_resources_testimonials": {
+                    "key": "layout_m11_resources_testimonials",
+                    "name": "resources_testimonials",
+                    "label": "Resources Testimonials",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_rt_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_rt_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_rt_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_rt_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_rt_expert_entries",
+                            "label": "Expert entries",
+                            "name": "expert_entries",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one entry per featured clinical expert.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 12,
+                            "layout": "block",
+                            "button_label": "Add Expert Entry",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_rt_expert_entries_bio",
+                                    "label": "Bio",
+                                    "name": "bio",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Freeform 1-5 line block per expert; not split into name\/role\/institution sub-fields — line count varies in the source.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_rt_expert_entries"
+                                },
+                                {
+                                    "key": "field_m11_rt_expert_entries_videos",
+                                    "label": "Videos",
+                                    "name": "videos",
+                                    "aria-label": "",
+                                    "type": "relationship",
+                                    "instructions": "Videos shown for this expert, filtered to Resource Type = Video.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "m11_resource"
+                                    ],
+                                    "taxonomy": [],
+                                    "filters": [
+                                        "search",
+                                        "taxonomy"
+                                    ],
+                                    "elements": [],
+                                    "min": 0,
+                                    "max": 0,
+                                    "return_format": "id",
+                                    "bidirectional_target": [],
+                                    "parent_repeater": "field_m11_rt_expert_entries"
+                                },
+                                {
+                                    "key": "field_m11_rt_expert_entries_shared_caption",
+                                    "label": "Shared caption",
+                                    "name": "shared_caption",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Leave empty for the normal case (each video's own m11_resource title\/excerpt is the caption). Fill in only when this expert's videos share ONE caption instead of per-video captions.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_rt_expert_entries"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_fast_facts": {
+                    "key": "layout_m11_fast_facts",
+                    "name": "fast_facts",
+                    "label": "Fast Facts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_ff_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_ff_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_ff_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_ff_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_ff_fact_items",
+                            "label": "Fact items",
+                            "name": "fact_items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per fast fact.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Fact",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_ff_fact_items_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Restricted HTML (em, span, strong, br) is preserved — one item has an embedded line break.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_ff_fact_items"
+                                },
+                                {
+                                    "key": "field_m11_ff_fact_items_video_thumbnail",
+                                    "label": "Video thumbnail",
+                                    "name": "video_thumbnail",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Source link is a broken decorative video-modal placeholder.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_ff_fact_items"
+                                },
+                                {
+                                    "key": "field_m11_ff_fact_items_video_url",
+                                    "label": "Video URL",
+                                    "name": "video_url",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link target (URL or #anchor). Leave empty to use the template default. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "placeholder": "https:\/\/…, \/page\/ or #section",
+                                    "maxlength": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "default_value": "",
+                                    "parent_repeater": "field_m11_ff_fact_items"
+                                },
+                                {
+                                    "key": "field_m11_ff_fact_items_caption",
+                                    "label": "Caption",
+                                    "name": "caption",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Caption copy.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_ff_fact_items"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_resources_brochures": {
+                    "key": "layout_m11_resources_brochures",
+                    "name": "resources_brochures",
+                    "label": "Resources Brochures",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_rb_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_rb_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_rb_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_rb_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_rb_collaboration_groups",
+                            "label": "Collaboration groups",
+                            "name": "collaboration_groups",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one group per collaborator\/brochure cluster.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 15,
+                            "layout": "block",
+                            "button_label": "Add Collaboration Group",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_rb_collaboration_groups_collaborator_text",
+                                    "label": "Collaborator text",
+                                    "name": "collaborator_text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Optional — leave empty for groups with no collaborator copy in the source (e.g. group 9).",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_rb_collaboration_groups"
+                                },
+                                {
+                                    "key": "field_m11_rb_collaboration_groups_brochure_cards",
+                                    "label": "Brochure cards",
+                                    "name": "brochure_cards",
+                                    "aria-label": "",
+                                    "type": "relationship",
+                                    "instructions": "Brochure \/ spec-sheet resources shown in this group.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [
+                                        "m11_resource"
+                                    ],
+                                    "taxonomy": [],
+                                    "filters": [
+                                        "search",
+                                        "taxonomy"
+                                    ],
+                                    "elements": [],
+                                    "min": 0,
+                                    "max": 0,
+                                    "return_format": "id",
+                                    "bidirectional_target": [],
+                                    "parent_repeater": "field_m11_rb_collaboration_groups"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_bottom_links_band": {
+                    "key": "layout_m11_bottom_links_band",
+                    "name": "bottom_links_band",
+                    "label": "Bottom Links Band",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_blb_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_blb_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_blb_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_blb_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_blb_links",
+                            "label": "Links",
+                            "name": "links",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per link.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "table",
+                            "button_label": "Add Link",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_blb_links_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Link label.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_blb_links"
+                                },
+                                {
+                                    "key": "field_m11_blb_links_url",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Source hrefs are broken placeholders — pass-through, flagged for the developer.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_blb_links"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_sh_dashboard": {
+                    "key": "layout_m11_sh_dashboard",
+                    "name": "sh_dashboard",
+                    "label": "Sales Hub Dashboard",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_shd_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_shd_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_shd_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_shd_lead",
+                            "label": "Lead",
+                            "name": "lead",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Dashboard lead copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_m11_shd_stats",
+                            "label": "Stats",
+                            "name": "stats",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per dashboard stat. Row order must match the 3 fixed queries (product categories, brochures & spec sheets, training videos).",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "table",
+                            "button_label": "Add Stat",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_shd_stats_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "The number shown next to this label is computed live from a query (product-category \/ resource counts) — not editable here.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_shd_stats"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_m11_shd_tools",
+                            "label": "Tools",
+                            "name": "tools",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one card per dashboard tool.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "block",
+                            "button_label": "Add Tool",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_shd_tools_icon",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "Tool icon.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_m11_shd_tools"
+                                },
+                                {
+                                    "key": "field_m11_shd_tools_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Tool title.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_shd_tools"
+                                },
+                                {
+                                    "key": "field_m11_shd_tools_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Tool card destination.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_shd_tools"
+                                },
+                                {
+                                    "key": "field_m11_shd_tools_description",
+                                    "label": "Description",
+                                    "name": "description",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "Tool description.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "parent_repeater": "field_m11_shd_tools"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_sh_account": {
+                    "key": "layout_m11_sh_account",
+                    "name": "sh_account",
+                    "label": "Sales Hub Account",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_sha_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_sha_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_sha_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_sha_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Panel heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_sha_account_actions",
+                            "label": "Account actions",
+                            "name": "account_actions",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Add one row per account action link.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": 0,
+                            "max": 6,
+                            "layout": "table",
+                            "button_label": "Add Action",
+                            "collapsed": "",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_m11_sha_account_actions_label",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Followed as drawn from the source, including the 'Log in' label even though the header already shows a logged-in identity — flagged as a design defect (docs\/issues-log.md #49), not silently corrected.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_m11_sha_account_actions"
+                                },
+                                {
+                                    "key": "field_m11_sha_account_actions_url",
+                                    "label": "URL",
+                                    "name": "url",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Action destination.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_m11_sha_account_actions"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_sh_login": {
+                    "key": "layout_m11_sh_login",
+                    "name": "sh_login",
+                    "label": "Sales Hub Login",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_shl_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_shl_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_shl_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_shl_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Placeholder\/typo pass-through verbatim from the source ('Sales HUb - REP Portal') — correct the copy here once confirmed with the client.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_shl_forgot_password_label",
+                            "label": "Forgot-password link label",
+                            "name": "forgot_password_label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Label only; the URL is hardcoded in the template to wp-login.php?action=lostpassword.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_shl_note",
+                            "label": "Note",
+                            "name": "note",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Rendered with nl2br; the source has one line break.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_sh_resource_library_intro": {
+                    "key": "layout_m11_sh_resource_library_intro",
+                    "name": "sh_resource_library_intro",
+                    "label": "Sales Hub Resource Library Intro",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_srli_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_srli_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_srli_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_srli_heading",
+                            "label": "Heading",
+                            "name": "heading",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Section heading.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_m11_srli_body",
+                            "label": "Body",
+                            "name": "body",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Body copy.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "rows": 4,
+                            "new_lines": "",
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_m11_sh_resource_results": {
+                    "key": "layout_m11_sh_resource_results",
+                    "name": "sh_resource_results",
+                    "label": "Sales Hub Resource Results",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_m11_srr_tab_settings",
+                            "label": "Section Settings",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_m11_srr_common_settings",
+                            "label": "Common Settings",
+                            "name": "common_settings",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "Editor overrides for spacing, colours, visibility and the anchor id (sec_id). Leave every field empty to keep the transplanted design exactly as built.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_m11_common_section_options"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_m11_srr_tab_content",
+                            "label": "Section Content",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "top",
+                            "endpoint": 0,
+                            "selected": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Section",
+            "min": "",
+            "max": "",
+            "show_in_rest": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-flexible.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "The ONE shared flexible-content page builder field for every page_template == templates\/page-flexible.php page (mizuho-home, products, resources, sales-hub, sales-hub\/dashboard, sales-hub\/resource-library).",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1790673884
+}

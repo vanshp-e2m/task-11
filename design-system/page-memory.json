@@ -1,0 +1,14 @@
+{
+  "pages": [
+    {
+      "slug": "products",
+      "status": "maint-qa-passed",
+      "updated_at": "2026-09-28T14:18:40Z"
+    },
+    {
+      "slug": "product-buttons",
+      "status": "maint-qa-passed",
+      "updated_at": "2026-09-28T15:46:25Z"
+    }
+  ]
+}

@@ -1,0 +1,1523 @@
+{
+    "key": "group_m11_product_fields",
+    "title": "Product Fields",
+    "fields": [
+        {
+            "key": "field_m11_pf_tab_overview",
+            "label": "Overview",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_m11_pf_gallery_image",
+            "label": "Gallery image",
+            "name": "gallery_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Main product gallery image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_m11_pf_gallery_thumbnails",
+            "label": "Gallery thumbnails",
+            "name": "gallery_thumbnails",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "type=placeholder renders the template's fallback 'FPO IMAGE' label for slots that don't have a real image or video yet.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 6,
+            "layout": "block",
+            "button_label": "Add Thumbnail",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_gallery_thumbnails_type",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Choose what this thumbnail slot shows.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "image": "image",
+                        "video": "video",
+                        "placeholder": "placeholder"
+                    },
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "default_value": false,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "parent_repeater": "field_m11_pf_gallery_thumbnails"
+                },
+                {
+                    "key": "field_m11_pf_gallery_thumbnails_image",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Used when Type is Image.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_m11_pf_gallery_thumbnails_type",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_m11_pf_gallery_thumbnails"
+                },
+                {
+                    "key": "field_m11_pf_gallery_thumbnails_video_url",
+                    "label": "Video URL",
+                    "name": "video_url",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Used when Type is Video. Full URL (https:\/\/…), a site path (\/products\/) or an in-page anchor (#section-id).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "maxlength": "",
+                    "placeholder": "https:\/\/…, \/page\/ or #section",
+                    "prepend": "",
+                    "append": "",
+                    "default_value": "",
+                    "parent_repeater": "field_m11_pf_gallery_thumbnails"
+                }
+            ]
+        },
+        {
+            "key": "field_m11_pf_quick_facts",
+            "label": "Quick facts",
+            "name": "quick_facts",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. '35+ years in neurosurgery • Used in 40+ countries'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_family_pill",
+            "label": "Family pill",
+            "name": "family_pill",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional — leave empty for base-variant products (e.g. Sugita II has no pill). Plain free-text field, not derived from the product_configuration taxonomy term.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_model_line",
+            "label": "Model line",
+            "name": "model_line",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 'Part no.: FB-0480 • Available in 6 sizes'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_description",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Product description.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": "",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_m11_pf_spec_caption",
+            "label": "Spec table caption",
+            "name": "spec_caption",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Optional table caption. Leave empty to render no caption.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_spec_rows",
+            "label": "Spec rows",
+            "name": "spec_rows",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add one row per spec table line.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 10,
+            "layout": "table",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_spec_rows_label",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Spec row label.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_spec_rows"
+                },
+                {
+                    "key": "field_m11_pf_spec_rows_value",
+                    "label": "Value",
+                    "name": "value",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Spec row value.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_spec_rows"
+                }
+            ]
+        },
+        {
+            "key": "field_m11_pf_tab_configurator",
+            "label": "Configurator (optional)",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_m11_pf_has_size_guide",
+            "label": "Has size guide",
+            "name": "has_size_guide",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable to show the blade-size selector + size-guide table on this product.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "ui": 1,
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_m11_pf_size_selector_label",
+            "label": "Size selector label",
+            "name": "size_selector_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 'SELECT BLADE SIZE'.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_size_selector_part_no",
+            "label": "Size selector part no.",
+            "name": "size_selector_part_no",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Updates alongside the selected size.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_size_guide_heading",
+            "label": "Size guide heading",
+            "name": "size_guide_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 'SIZE GUIDE'.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_size_guide_badge",
+            "label": "Size guide badge",
+            "name": "size_guide_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. '6 sizes available'.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_size_col_1",
+            "label": "Size guide column 1 header",
+            "name": "size_col_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Blade Width'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_size_col_2",
+            "label": "Size guide column 2 header",
+            "name": "size_col_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Part number'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_size_col_3",
+            "label": "Size guide column 3 header",
+            "name": "size_col_3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Blade length'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_size_col_4",
+            "label": "Size guide column 4 header",
+            "name": "size_col_4",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Compatible handle'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_size_col_5",
+            "label": "Size guide column 5 header",
+            "name": "size_col_5",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Typical application'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_size_guide",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_size_rows",
+            "label": "Size rows",
+            "name": "size_rows",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "The size dropdown's options are derived from these rows' Width values at render time, not duplicated as a separate field.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 12,
+            "layout": "table",
+            "button_label": "Add Size Row",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_size_rows_width",
+                    "label": "Width",
+                    "name": "width",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "e.g. '2.0 mm'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_size_rows"
+                },
+                {
+                    "key": "field_m11_pf_size_rows_part_number",
+                    "label": "Part number",
+                    "name": "part_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "e.g. 'FB-020'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_size_rows"
+                },
+                {
+                    "key": "field_m11_pf_size_rows_length",
+                    "label": "Length",
+                    "name": "length",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "e.g. '25 mm'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_size_rows"
+                },
+                {
+                    "key": "field_m11_pf_size_rows_handle",
+                    "label": "Handle",
+                    "name": "handle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "e.g. 'Size 3'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_size_rows"
+                },
+                {
+                    "key": "field_m11_pf_size_rows_application",
+                    "label": "Application",
+                    "name": "application",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "e.g. 'Fine dural incision, tight corridors'.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_size_rows"
+                },
+                {
+                    "key": "field_m11_pf_size_rows_is_selected",
+                    "label": "Default selected",
+                    "name": "is_selected",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Marks which size row is the default-highlighted one.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "ui": 1,
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_m11_pf_size_rows"
+                }
+            ]
+        },
+        {
+            "key": "field_m11_pf_has_instruments_table",
+            "label": "Has instruments table",
+            "name": "has_instruments_table",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable to show the 'Instruments Included' parts-list table on this product.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "ui": 1,
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_heading",
+            "label": "Instruments heading",
+            "name": "instruments_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 'Instruments Included'.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_badge",
+            "label": "Instruments badge",
+            "name": "instruments_badge",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. '15 Instruments • 21 pieces'.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_download_label",
+            "label": "Instruments download label",
+            "name": "instruments_download_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "e.g. 'Download full parts list'.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_file",
+            "label": "Instruments parts-list file",
+            "name": "instruments_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "PDF behind the download link. Leave empty to hide nothing (link falls back to #download-parts-list).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
+        },
+        {
+            "key": "field_m11_pf_instruments_col_1",
+            "label": "Instruments column 1 header",
+            "name": "instruments_col_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. '#'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_col_2",
+            "label": "Instruments column 2 header",
+            "name": "instruments_col_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Instrument'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_col_3",
+            "label": "Instruments column 3 header",
+            "name": "instruments_col_3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Part number'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_col_4",
+            "label": "Instruments column 4 header",
+            "name": "instruments_col_4",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Qty'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_instruments_col_5",
+            "label": "Instruments column 5 header",
+            "name": "instruments_col_5",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Table header, e.g. 'Notes'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_m11_pf_has_instruments_table",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_instrument_rows",
+            "label": "Instrument rows",
+            "name": "instrument_rows",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add one row per included instrument.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 30,
+            "layout": "table",
+            "button_label": "Add Instrument",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_instrument_rows_number",
+                    "label": "No.",
+                    "name": "number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Row number.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_instrument_rows"
+                },
+                {
+                    "key": "field_m11_pf_instrument_rows_instrument",
+                    "label": "Instrument",
+                    "name": "instrument",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Instrument name.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_instrument_rows"
+                },
+                {
+                    "key": "field_m11_pf_instrument_rows_part_number",
+                    "label": "Part number",
+                    "name": "part_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Instrument part number.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_instrument_rows"
+                },
+                {
+                    "key": "field_m11_pf_instrument_rows_qty",
+                    "label": "Qty",
+                    "name": "qty",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Quantity included.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_instrument_rows"
+                },
+                {
+                    "key": "field_m11_pf_instrument_rows_notes_col",
+                    "label": "Notes",
+                    "name": "notes_col",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional — several rows are empty in the source, must render cleanly when blank.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_instrument_rows"
+                }
+            ]
+        },
+        {
+            "key": "field_m11_pf_tab_accessories",
+            "label": "Accessories & Related",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_m11_pf_accessories_heading",
+            "label": "Accessories heading",
+            "name": "accessories_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Section heading, e.g. 'ACCESSORIES'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_accessories",
+            "label": "Accessories",
+            "name": "accessories",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add one tile per accessory.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 8,
+            "layout": "block",
+            "button_label": "Add Accessory",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_accessories_product",
+                    "label": "Product",
+                    "name": "product",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "Most accessory targets don't resolve to a real product yet — leave empty until that product exists; no placeholder post is invented.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "m11_product"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_m11_pf_accessories"
+                },
+                {
+                    "key": "field_m11_pf_accessories_caption",
+                    "label": "Caption",
+                    "name": "caption",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional override for the tile subtext when it doesn't match the linked product's own model_line.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_accessories"
+                },
+                {
+                    "key": "field_m11_pf_accessories_image_override",
+                    "label": "Image override",
+                    "name": "image_override",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Optional — falls back to the linked product's gallery_image when empty.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_m11_pf_accessories"
+                }
+            ]
+        },
+        {
+            "key": "field_m11_pf_related_heading",
+            "label": "Related products heading",
+            "name": "related_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Section heading, e.g. 'RELATED PRODUCTS'. Empty = template default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "default_value": ""
+        },
+        {
+            "key": "field_m11_pf_related_products",
+            "label": "Related products",
+            "name": "related_products",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Add one tile per related product.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 0,
+            "max": 6,
+            "layout": "block",
+            "button_label": "Add Related Product",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_related_products_product",
+                    "label": "Product",
+                    "name": "product",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "Related product.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "m11_product"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_m11_pf_related_products"
+                },
+                {
+                    "key": "field_m11_pf_related_products_caption",
+                    "label": "Caption",
+                    "name": "caption",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional override.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_m11_pf_related_products"
+                }
+            ]
+        },
+        {
+            "key": "field_m11_pf_tab_testimonial",
+            "label": "Testimonial & CTAs",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_m11_pf_testimonial_quote",
+            "label": "Testimonial quote",
+            "name": "testimonial_quote",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Testimonial quote copy.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": "",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_m11_pf_testimonial_name",
+            "label": "Testimonial name",
+            "name": "testimonial_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Placeholder pass-through verbatim ('Prof Name Here, MD PhD') on the example products — highest-priority content to confirm with the client.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_testimonial_dept",
+            "label": "Testimonial department",
+            "name": "testimonial_dept",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Placeholder pass-through verbatim.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_m11_pf_buttons",
+            "label": "Buttons",
+            "name": "buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "CTA buttons shown under the spec table and in the testimonial band (first = solid, second = outline with the download arrow).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "min": 0,
+            "max": 2,
+            "button_label": "Add button",
+            "collapsed": "",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_m11_pf_buttons_cta",
+                    "label": "Button",
+                    "name": "cta",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Label + URL.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_m11_pf_buttons"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "m11_product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Plain field group for the m11_product CPT (single-product template, fixed section order) — no common_settings\/two-tab FC convention, per decision_record q9.",
+    "show_in_rest": 1,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1790673885
+}

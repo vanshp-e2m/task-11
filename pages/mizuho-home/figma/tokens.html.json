@@ -1,0 +1,241 @@
+{
+ "source": {
+  "file_key": "jSb9GvLZzl7AFll93svlAE",
+  "version": "2403008669101368304",
+  "desktop_frame": "1:9",
+  "mobile_frame": "1:400"
+ },
+ "colors": {
+  "primary": "#0065B3",
+  "sky": "#00B3F0",
+  "text": "#090909",
+  "black": "#000000",
+  "white": "#FFFFFF",
+  "light-sky": "#77DCFF",
+  "divider": "#D9D9D9",
+  "mobile-bg": "#FCFEFF",
+  "search-bg": "#00B3F033",
+  "navy": "#002842",
+  "on-primary": "#FFFFFF",
+  "surface": "#FFFFFF",
+  "border": "#00B3F0"
+ },
+ "fonts": [
+  {
+   "family": "Freeman",
+   "source": "google",
+   "weights": [
+    400
+   ]
+  },
+  {
+   "family": "Open Sans",
+   "source": "google",
+   "weights": [
+    300,
+    400,
+    600,
+    700
+   ]
+  },
+  {
+   "family": "Mukta",
+   "source": "google",
+   "weights": [
+    700
+   ]
+  },
+  {
+   "family": "Montserrat",
+   "source": "google",
+   "weights": [
+    300,
+    500,
+    700
+   ]
+  },
+  {
+   "family": "Fraunces",
+   "source": "google",
+   "weights": [
+    700
+   ]
+  }
+ ],
+ "gotham_styles": [
+  {
+   "figma": "Gotham 350 (PostScript Gotham-Medium) 13/15.6 #000000",
+   "where": "header EN/ESP + 'Find an Account Manager' (desktop and mobile)",
+   "montserrat": "500 13px/15.6px"
+  },
+  {
+   "figma": "Gotham 700 20/40 (20/30 when wrapping)",
+   "where": "procedure item title",
+   "montserrat": "700 20px/40px"
+  },
+  {
+   "figma": "Gotham 700 16/40",
+   "where": "procedure 'View product ->'",
+   "montserrat": "700 16px/40px"
+  },
+  {
+   "figma": "Gotham 700 16/26 #77DCFF",
+   "where": "procedure secondary link",
+   "montserrat": "700 16px/26px"
+  },
+  {
+   "figma": "Gotham 300 20/40 with a 700 run",
+   "where": "footer contact intro ('Contact Us.' bold)",
+   "montserrat": "300/700 20px/40px"
+  },
+  {
+   "figma": "Gotham 300 20/30",
+   "where": "footer hours",
+   "montserrat": "300 20px/30px"
+  },
+  {
+   "figma": "Gotham 300 25/40 and 700 25/40",
+   "where": "footer contact details",
+   "montserrat": "300/700 25px/40px"
+  },
+  {
+   "figma": "Gotham 700 25/50",
+   "where": "footer menu headings",
+   "montserrat": "700 25px/50px"
+  },
+  {
+   "figma": "Gotham 300 20/40",
+   "where": "footer menu links",
+   "montserrat": "300 20px/40px"
+  },
+  {
+   "figma": "Gotham 300 14/40",
+   "where": "footer copyright + legal links",
+   "montserrat": "300 14px/40px"
+  },
+  {
+   "figma": "Gotham 300 25/50 (whitespace-only runs / unused base style)",
+   "where": "line-separator runs in 1:67, 1:134-1:137, 1:144; base style of 1:27, 1:64-1:66, 1:151/1:154/1:157",
+   "montserrat": "n/a - invisible"
+  },
+  {
+   "figma": "mobile: 700 18/24, 700 14/40, 700 14/22 (band); 700 22/50, 300 16/40, 300+700 20/32, 300+700 18/40, 300 18/30, 300 12/14.4 (footer)",
+   "where": "mobile band + footer",
+   "montserrat": "same sizes"
+  }
+ ],
+ "type_scale_desktop": {
+  "display_h1": "Freeman 400 70/70 uppercase",
+  "h2_intro": "Freeman 400 45/55 uppercase",
+  "h2_section": "Freeman 400 34/50 (uppercase)",
+  "h3_column": "Freeman 400 24/31.92 uppercase",
+  "band_heading": "Mukta 700 34/50",
+  "band_closing": "Mukta 700 32/50",
+  "lead_large": "Open Sans 300 25/45",
+  "attribution": "Open Sans 300 24/45",
+  "intro": "Open Sans 400 20/40",
+  "body": "Open Sans 300 16/30",
+  "body_about": "Open Sans 400 16/36",
+  "bio_name": "Open Sans 700 18/30",
+  "bio": "Open Sans 300 14/22 (first line 14/30)",
+  "stat_number": "Open Sans 700 64/36",
+  "stat_label": "Open Sans 700 16/18",
+  "nav": "Open Sans 600 13/17.7",
+  "button_lg": "Freeman 400 18/23.94",
+  "button": "Freeman 400 16/40",
+  "pill": "Freeman 400 19/40 and 19/45"
+ },
+ "type_scale_mobile_430": {
+  "display_h1": "Freeman 48/55.2",
+  "h2_intro": "Freeman 36/41.4",
+  "h2_section": "Freeman 28/50 (testimonials) | 24/31.92 (about, quote)",
+  "h3_column": "Freeman 20/26.6",
+  "band_heading": "Mukta 28/46.54",
+  "lead_large": "Open Sans 300 18/24.51",
+  "body": "Open Sans 300 14/28",
+  "body_about": "Open Sans 400 14/28",
+  "bio_name": "Open Sans 700 16/28.61",
+  "bio": "Open Sans 300 13/21 (first 13/28.61)",
+  "attribution": "Open Sans 300 20/27.24",
+  "stat_number": "Open Sans 700 64/36 (unchanged)",
+  "button": "Freeman 16/21.28",
+  "pill": "Freeman 12/27.27"
+ },
+ "radii": {
+  "sm": "5px",
+  "md": "10px",
+  "lg": "20px"
+ },
+ "borders": {
+  "outline_button": "2px solid #00B3F0",
+  "hero_card": "3px solid #00B3F0 (right card only)",
+  "divider": "1px solid #00B3F0",
+  "footer_divider": "1px solid #FFFFFF"
+ },
+ "shadows": {
+  "stat_panel": "21px 0px 21px -23px #000000"
+ },
+ "spacing_desktop_exact_px": {
+  "section_gaps": {
+   "header>hero": 33,
+   "hero>intro": 68,
+   "intro button>divider": 70,
+   "divider>values": 103,
+   "values>band": 93,
+   "band inner top/bottom": "51/58",
+   "band>testimonials": 91,
+   "testimonials>about": 95,
+   "about>footer": 99
+  },
+  "button_height": 50,
+  "header_button_height": 29,
+  "hero_card_gap": 80,
+  "cta_gap": 34,
+  "value_column_divider_padding": 30,
+  "testimonial_column_gap": "27/29",
+  "stat_pitch": 370
+ },
+ "spacing_mobile_exact_px": {
+  "section_padding": "44 20",
+  "section_gap": 36,
+  "values_gap": 28,
+  "hero_cards_gap": 18,
+  "button": "390x50"
+ },
+ "breakpoints": {
+  "desktop": 1440,
+  "mobile": 430,
+  "tablet": "none in Figma (derive 768/1024)"
+ },
+ "containers": {
+  "left_edges_desktop_px": [
+   76,
+   78,
+   96,
+   104,
+   106,
+   107,
+   114
+  ],
+  "note": "No single container width - see design-quality flags in spec.md"
+ },
+ "spacing": {
+  "xs": "8px",
+  "sm": "16px",
+  "md": "24px",
+  "lg": "48px",
+  "xl": "96px"
+ },
+ "typography": {
+  "body": {
+   "fontFamily": "Open Sans"
+  },
+  "heading": {
+   "fontFamily": "Freeman"
+  }
+ },
+ "interaction": {
+  "hover-mix": "85%",
+  "focus-ring": "0 0 0 3px #00B3F059"
+ }
+}

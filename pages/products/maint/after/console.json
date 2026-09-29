@@ -1,0 +1,32 @@
+{
+ "products@1440": {
+  "status": 200,
+  "errors": [],
+  "http_errors": []
+ },
+ "products@768": {
+  "status": 200,
+  "errors": [],
+  "http_errors": []
+ },
+ "products@430": {
+  "status": 200,
+  "errors": [],
+  "http_errors": []
+ },
+ "mizuho-home@1440": {
+  "status": 200,
+  "errors": [],
+  "http_errors": []
+ },
+ "mizuho-home@768": {
+  "status": 200,
+  "errors": [],
+  "http_errors": []
+ },
+ "mizuho-home@430": {
+  "status": 200,
+  "errors": [],
+  "http_errors": []
+ }
+}

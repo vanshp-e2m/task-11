@@ -1,0 +1,38 @@
+{
+  "declared": [
+    {
+      "target": "page:89",
+      "field": "post_title",
+      "before": null,
+      "after": "Products",
+      "attribution": "declared in intent"
+    },
+    {
+      "target": "page:89",
+      "field": "post_name",
+      "before": null,
+      "after": "products",
+      "attribution": "declared in intent"
+    },
+    {
+      "target": "page:89",
+      "field": "post_status",
+      "before": null,
+      "after": "publish",
+      "attribution": "declared in intent"
+    },
+    {
+      "target": "page:89",
+      "field": "post_content",
+      "before": null,
+      "after": "",
+      "attribution": "declared in intent"
+    }
+  ],
+  "scope_violations": [],
+  "pre_existing": [],
+  "unattributable": [],
+  "verdict_input": {
+    "has_scope_violation": false
+  }
+}

@@ -1,0 +1,89 @@
+
+===== HP with Copy - Approved 1:9
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h= 1298 GROUP     Main Intro Section           Explore All Products | Request a Demo | Browse by Procedure | Sugita ll Multi-Purpose Head Frame
+  y= 1590 h=  582 GROUP     Why Mizuho Section           Check out our downloadable brochures | Surgeon-centric | Products designed exclusively for neurosurgeons  With
+  y= 2265 h=  555 GROUP     Browse by procedure          A robust portfolio of instruments, tables, head-holding syst | And beyond—review the full list of supported pr
+  y= 2911 h= 1052 GROUP     Case Study section - Buttons Michael T. Lawton, MD President and CEO, Barrow Neurological | James J. Evans, MD Professor, Neurological Surg
+  y= 4056 h=  602 GROUP     About Mizuho - Version 3     1000+ | hospitals served | 1,800+ | neurosurgical products
+  y= 4756 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== About Us with Copy - Approved 1:161
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h=  755 GROUP     Main Intro Section           About a decade ago I designed a clip and worked in conjuncti | Erol Veznedaroglu, MD, FACS, FAANS, FAHA Presid
+  y= 1000 h=  948 GROUP     About Mizuho - Version 1     1,000+ | hospitals served | ISO 13485 | for patient safety, regulatory compliance, traceability & do
+  y= 2035 h=  941 GROUP     Leadership Team Section      Dean Yamamura President and COO | Steve Kritt Regional Business Manager – Northeast | William Delaney Vice-Pre
+  y= 3063 h= 1343 GROUP     Milestone Map                100+ years of making a difference | Milestones that paved the way for Mizuho America today | Browse the many n
+  y= 4506 h= 1526 GROUP     Collaborations Section       No one knows the unique demands of neurosurgery better than  | Collaborations that have helped advance instrum
+  y= 6130 h= 1113 GROUP     Global Map                   We’re proud to be an agile, forward thinking company in a tr | 35+ | distributors in Asia-Pacific | 65+
+  y= 7330 h=  310 GROUP     Bottom Page Links Section    Discover our wide range of products | Watch video testimonials | Download product brochures | – Michael Lawton
+  y= 7740 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== Resources 1:2490
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h=  463 GROUP     Main Intro Section           Watch. Read. Discover. | Welcome to the Mizuho America library for neurosurgeons. Fro | “When you have the rig
+  y=  758 h= 2244 GROUP     Collaborations Section       FAST FACTS: MORE TO EXPLORE | See what makes this flexible, customizable device a valuable | Learn about this 
+  y= 3089 h= 5554 GROUP     Downloadable Brochures       Vascular Management Solutions from Mizuho  Read description | Skull Base Workflow  Read description | Feather®
+  y= 8731 h=  157 GROUP     Bottom Page Links Section    Discover our wide range of products | See all the procedures we support | Learn why we’re a global leader in n
+  y= 8988 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== Resource Library 1:2871
+  y=   51 h=   61 GROUP     Top Nav                      Sales Portal | Dashboard       Resources       Cross-Reference       Traini | John Q. Public | Account
+  y=  144 h=  105 RECTANGLE Rectangle 28                 
+  y=  169 h=   72 GROUP     Main Intro Section           RESOURCE LIBRARY | From downloadable brochures to testimonial and training vide
+  y=  259 h=  847 GROUP     Browse by product            Sort: A-Z | Brochures & spec sheets | Head Holding Systems | Clear all
+  y= 1205 h=  153 GROUP     Footer                       Sales Hub   •    © 2026 Mizuho America, Inc. All rights rese | Privacy Policy      Terms of Use
+
+===== Dashboard 1:3095
+  y=   51 h=   61 GROUP     Top Nav                      Sales Portal | Dashboard       Resources       Cross-Reference       Traini | John Q. Public | EN    ESP
+  y=  144 h=  540 GROUP     Main Intro Section           Hello, John Q. | Explore tools to keep Mizuho America top of mind with neuros | Product categories available |
+  y=  734 h=  119 GROUP     Bottom Page Links Section    Log in | Account details | Change password | ACCOUNT
+  y=  873 h=  150 GROUP     Footer                       Sales Hub  •  © 2026 Mizuho America, Inc. All rights reserve | Privacy Policy      Terms of Use
+
+===== Login Screen 1:3150
+  y=   10 h=   45 GROUP     Top Nav                      www.mizuho.com/sales-hub/login
+  y=   55 h=  818 RECTANGLE Rectangle 21                 
+  y=  230 h=  510 GROUP     Main Intro Section           Sales Hub access is for registered Mizuho America sales repr | Forgot your password? | Sales HUb - REP Portal 
+  y=  873 h=  153 GROUP     Footer                       Sales Hub   •    © 2026 Mizuho America, Inc. All rights rese | Privacy Policy      Terms of Use
+
+===== Product Browse 1:3176
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h=  708 GROUP     Main Intro Section           High-quality products for your high-stakes procedures | Take a product tour now | For more than 30 years, Mizu
+  y=  971 h=  435 GROUP     Browse by procedure          Tumor Removal View product →  See Malleable Instruments and  | Aneurysm View product →  See Sugita TII Aneurys
+  y= 1479 h= 1101 GROUP     Browse by product            4 products found | Head Holding Systems | Clear all | Sugita II Head Frame Model SGT-II : SGT-II-RL
+  y= 2703 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== Product Page Variation B 1:3332
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h=  778 GROUP     Main Intro Section           Download product brochures | Schedule a Demo | Instrumentation Set Quick Facts:   35+ years in neurosurgery | 
+  y=  972 h=   60 GROUP     Midsection Nav               Size Guide | Overview | Accessories
+  y= 1079 h=  403 GROUP     Included Instruments chart   6 sizes available | SIZE GUIDE | Clear | Blade Width                                                 
+  y= 1541 h=  474 GROUP     Accessories section          Size 3 Scalpel Handle For 2.0 & 3.0 mm blades | View product  | Size 4 Scalpel Handle For 4.0 – 8.0 mm blades 
+  y= 2103 h=  312 GROUP     Testimonial                  – Prof Name Here, MD PhD Department of Neurosurgery, Institu | “The precision of Mizuho feather blades is seco
+  y= 2490 h=  388 GROUP     Accessories section          Scalpel Handles Product Families • Sizes 3 & 4 | View product  | Microscissors Instrumentation Sets • Straight
+  y= 2978 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== Product Page Main 1:3504
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h=  643 GROUP     Main Intro Section           Download product brochures | Schedule a Demo | Quick Facts:   35+ years in neurosurgery   •  Used in 40+ co | 
+  y=  837 h=   60 GROUP     Midsection Nav               Accessories | Overview
+  y=  946 h=  474 GROUP     Accessories section          MST 7300 Surgical Table Recommended pairing | View product  | Craniotomy | Aneurysm
+  y= 1509 h=  312 GROUP     Testimonial                  – Prof Name Here, MD PhD Department of Neurosurgery, Institu | “The Sugita II has been my first choice for com
+  y= 1894 h=  388 GROUP     Accessories section          Sugita Multipurpose Head Frame Classic Head holding • Standa | View product  | Craniotomy | Aneurysm
+  y= 2382 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== Product Page Variation A 1:3721
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h=  643 GROUP     Main Intro Section           Download product brochures | Schedule a Demo | Instrumentation Set Quick Facts:   35+ years in neurosurgery | 
+  y=  836 h=   60 GROUP     Midsection Nav               Instruments Included | Overview | Accessories
+  y=  932 h=  704 GROUP     Included Instruments chart   15 Instruments • 21 pieces | Instruments Included | Download full parts list | Clear
+  y= 1696 h=  474 GROUP     Accessories section          Replacement Suction Tubes Malleable • 3Fr and 5Fr | View product  | Replacement Brain Retractors 10mm and 15mm
+  y= 2244 h=  312 GROUP     Testimonial                  – Prof Name Here, MD PhD Department of Neurosurgery, Institu | “The LawtonElite set has everything I need for 
+  y= 2619 h=  388 GROUP     Accessories section          LawtonElite Bypass Instrumentation Set Instrumentation Sets | View product  | LawtonElite Malleable Suction Tu
+  y= 3107 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 
+
+===== Contact Us 1:3891
+  y=   24 h=  137 GROUP     Top Nav                      Search... | Sales Portal | 800-699-2547 | Products       About Mizuho America       Clinical Resources
+  y=  194 h= 2707 GROUP     Main Intro Section           We’re here for you before, during and after the sale | Are your products available internationally? | How do I
+  y= 2988 h=  157 GROUP     Bottom Page Links Section    Discover our wide range of products | Access informative videos and brochures | Learn why we’re a global leade
+  y= 3245 h=  974 GROUP     Footer Section               Products By Procedure By Category Head Holding Systems Instr | Clinical Videos Clinical Case Studies Events | 

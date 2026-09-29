@@ -1,0 +1,96 @@
+{
+  "task_type": "content_update",
+  "summary": "Seed the CTA buttons (Schedule a Demo / Download product brochures) on the three drawn products. The first seed write left them empty because the field was a seamless clone whose inner repeater had the same name (conversion issue C14); the field is now a plain repeater `buttons` (cta link) and was written through dev/acf-read-write-values.",
+  "declared_targets": [
+    {
+      "kind": "post",
+      "id": 230,
+      "slug": "product-sugita-ii-head-frame"
+    },
+    {
+      "kind": "post",
+      "id": 231,
+      "slug": "product-lawtonelite-skull-base-set"
+    },
+    {
+      "kind": "post",
+      "id": 232,
+      "slug": "product-feather-blades"
+    }
+  ],
+  "declared_changes": [
+    {
+      "target": "post:230",
+      "field": "acf:buttons",
+      "before": [],
+      "after": [
+        {
+          "cta": {
+            "url": "http://task-11.local/contact-us/",
+            "title": "Schedule a Demo",
+            "target": ""
+          }
+        },
+        {
+          "cta": {
+            "url": "#download-brochure",
+            "title": "Download product brochures",
+            "target": ""
+          }
+        }
+      ]
+    },
+    {
+      "target": "post:231",
+      "field": "acf:buttons",
+      "before": [],
+      "after": [
+        {
+          "cta": {
+            "url": "http://task-11.local/contact-us/",
+            "title": "Schedule a Demo",
+            "target": ""
+          }
+        },
+        {
+          "cta": {
+            "url": "#download-brochure",
+            "title": "Download product brochures",
+            "target": ""
+          }
+        }
+      ]
+    },
+    {
+      "target": "post:232",
+      "field": "acf:buttons",
+      "before": [],
+      "after": [
+        {
+          "cta": {
+            "url": "http://task-11.local/contact-us/",
+            "title": "Schedule a Demo",
+            "target": ""
+          }
+        },
+        {
+          "cta": {
+            "url": "#download-brochure",
+            "title": "Download product brochures",
+            "target": ""
+          }
+        }
+      ]
+    }
+  ],
+  "reference": {
+    "kind": "html",
+    "path": "pages/product-main/html/index.html",
+    "note": "Buttons render twice per product: under the spec table (.pd-ctas) and in the testimonial band (.tq-ctas), as in the replicas pages/product-main|product-variation-a|product-variation-b/html/. Front end: http://task-11.local/products/<slug>/"
+  },
+  "blast_radius": [
+    "product-sugita-ii-head-frame",
+    "product-lawtonelite-skull-base-set",
+    "product-feather-blades"
+  ]
+}

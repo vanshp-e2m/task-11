@@ -1,0 +1,48 @@
+{
+  "section": "product-feather-blades",
+  "width": 992,
+  "largest_deltas": [
+    {
+      "source_id": "pd-ctas",
+      "property": "line_height",
+      "source": "normal",
+      "built": "24px"
+    },
+    {
+      "source_id": "pd-ctas-btn0",
+      "property": "line_height",
+      "source": "normal",
+      "built": "24px"
+    },
+    {
+      "source_id": "pd-ctas-btn1",
+      "property": "line_height",
+      "source": "normal",
+      "built": "24px"
+    },
+    {
+      "source_id": "tq-ctas",
+      "property": "line_height",
+      "source": "normal",
+      "built": "24px"
+    },
+    {
+      "source_id": "tq-ctas-btn0",
+      "property": "line_height",
+      "source": "normal",
+      "built": "24px"
+    },
+    {
+      "source_id": "tq-ctas-btn1",
+      "property": "line_height",
+      "source": "normal",
+      "built": "24px"
+    }
+  ],
+  "total_candidates": 6,
+  "returned": 6,
+  "cap": 50,
+  "missing_in_built": [],
+  "extra_in_built": [],
+  "warnings": []
+}

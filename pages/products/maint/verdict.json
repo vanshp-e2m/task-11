@@ -1,0 +1,106 @@
+{
+  "verdict": "PASS",
+  "reason": "all measured properties within tolerance; no undeclared changes",
+  "findings": [],
+  "counts": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "notes": [
+    "no pre-change baseline was available \u2014 undeclared changes cannot be separated from pre-existing site defects for this task",
+    "Site URL from MCP registration / domain lock (http://task-11.local); viewports from project-config qa_breakpoints.core (1440,768,430), discovery unavailable.",
+    "Typography: inherit mode; 0 suppressed (subject and peer measured identical).",
+    "Outside this intent: audit rows 282-316 show 18 dev/create-term writes (14:10:30-14:11:14; product_category/product_configuration/resource_type/procedure terms 11-28). They do not touch page 89 or mizuho-home and are NOT verified by this run; the caller's 'single write' description does not cover them - they need their own intent/verification.",
+    "Risk note, not a finding: page slug 'products' shares the m11_product rewrite slug 'products' (has_archive false, by design per inc/post-types.php). No m11_product posts exist yet, so /products/<slug>/ single resolution could not be tested; verify once products are created."
+  ],
+  "pass_number": 1,
+  "cap": 3,
+  "cap_reached": false,
+  "unverifiable": [],
+  "gate_coverage": [
+    {
+      "component": "phase0",
+      "phase": "0",
+      "status": "ran",
+      "state": "pass",
+      "note": "instructions empty (no write block); crash_flag not tripped; dry_run_default false; snapshots_retention 10; domain lock trusted on http://task-11.local"
+    },
+    {
+      "component": "validate_intent",
+      "phase": "1",
+      "status": "ran",
+      "state": "pass",
+      "note": "valid, 0 warnings; content_update has no unverifiable items"
+    },
+    {
+      "component": "baseline",
+      "phase": "2",
+      "status": "absent",
+      "state": "warn",
+      "note": "no pages/products/maint/baseline/ - page 89 did not exist before the write; mizuho-home baseline not captured either, its unchanged state is proven by post_modified 2026-09-25 + audit log instead"
+    },
+    {
+      "component": "verify_stored_integrity",
+      "phase": "2b",
+      "status": "ran",
+      "state": "pass",
+      "note": "intended '' vs stored raw post_content (WP-CLI get_post, dev/execute-php not exposed via MCP): byte-identical, 0 bytes"
+    },
+    {
+      "component": "measured",
+      "phase": "3",
+      "status": "ran (engine substituted)",
+      "state": "pass",
+      "note": "see measured.notes"
+    },
+    {
+      "component": "resolve_qa_widths",
+      "phase": "3",
+      "status": "degraded",
+      "state": "warn",
+      "note": "python playwright missing, discovery unavailable; tested declared qa_breakpoints.core 1440/768/430 only"
+    },
+    {
+      "component": "peer_conformance",
+      "phase": "3b",
+      "status": "ran",
+      "state": "pass",
+      "note": "run 1 (single peer mizuho-home) raised 1 high invented_class 'current-menu-item' - traced to the Elementor header nav: WP core wp_nav_menu class on the existing custom menu item /products/ (menu-item-27) which now matches the current URL; not in the content region. Rerun with 3 ACF peers (14 mizuho-home, 17 resources, 18 sales-hub; resources/sales-hub carry the same core class): 0 findings. Run 1 kept at after/peer-run1-single-peer.json"
+    },
+    {
+      "component": "pixel",
+      "phase": "4",
+      "status": "ran (direct pixelmatch CLI)",
+      "state": "pass",
+      "note": "visual_compare.py failed to spawn npx (Windows ENOENT); ran pixelmatch bin via node with same fail_at 500"
+    },
+    {
+      "component": "non_visual",
+      "phase": "5",
+      "status": "ran",
+      "state": "pass",
+      "note": "Technical group: HTTP 200, 0 console errors, 0 4xx/5xx subresources, no PHP notices in HTML, read-backs match intent. wp-admin editor not checked (out of this intent)"
+    },
+    {
+      "component": "attribution",
+      "phase": "6",
+      "status": "ran",
+      "state": "pass",
+      "note": "audit log row 280 dev/create-page post_id 89 at 14:10:18 is the only write touching page 89 or mizuho-home"
+    }
+  ],
+  "escaped_defects": [],
+  "report_offer": {
+    "available": true,
+    "slug": "products",
+    "cmd": "python3 scripts/build_qa_report.py --slug products --pass 1",
+    "reference_kind": "none",
+    "evidence": {
+      "screenshots": 24,
+      "pixel": true,
+      "measured": true,
+      "peer": true
+    }
+  }
+}

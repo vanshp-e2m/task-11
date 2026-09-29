@@ -1,0 +1,60 @@
+{
+    "key": "group_m11_common_section_options",
+    "title": "Common Section Options",
+    "fields": [
+        {
+            "key": "field_m11_cso_hide_section",
+            "label": "Hide section",
+            "name": "hide_section",
+            "type": "checkbox",
+            "instructions": "Hide this section on the front end without deleting its content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hidden": "Hide"
+            },
+            "return_format": "value",
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0
+        },
+        {
+            "key": "field_m11_cso_sec_id",
+            "label": "Section anchor id (sec_id)",
+            "name": "sec_id",
+            "type": "text",
+            "instructions": "Optional. Used as the section's HTML id so in-page links (#anchors) can target it. Leave empty for no id.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "acf-field-group"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "House clone-source library. Never attached directly; cloned as 'common_settings' into every FC layout.",
+    "show_in_rest": 0,
+    "modified": 1790604487
+}

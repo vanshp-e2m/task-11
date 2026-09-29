@@ -1,0 +1,187 @@
+[
+ {
+  "id": "407dca6",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "content_width": "full",
+   "flex_direction": "row",
+   "padding": {
+    "unit": "px",
+    "top": "45",
+    "right": "63",
+    "bottom": "47",
+    "left": "44",
+    "isLinked": false
+   },
+   "flex_gap": {
+    "column": "24",
+    "row": "22",
+    "unit": "px",
+    "isLinked": false
+   },
+   "flex_direction_mobile": "column",
+   "flex_justify_content": "space-between",
+   "flex_align_items": "center",
+   "padding_mobile": {
+    "unit": "px",
+    "top": "44",
+    "right": "20",
+    "bottom": "44",
+    "left": "20",
+    "isLinked": false
+   },
+   "background_background": "classic",
+   "__globals__": {
+    "background_color": "globals/colors?id=primary"
+   },
+   "css_classes": "m11-portal-footer"
+  },
+  "elements": [
+   {
+    "id": "ece15f4",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "full",
+     "flex_direction": "row",
+     "padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": false
+     },
+     "flex_gap": {
+      "column": "12",
+      "row": "22",
+      "unit": "px",
+      "isLinked": false
+     },
+     "flex_direction_mobile": "column-reverse",
+     "flex_align_items": "center",
+     "css_classes": ""
+    },
+    "elements": [
+     {
+      "id": "30f05cf",
+      "elType": "widget",
+      "widgetType": "image",
+      "settings": {
+       "image": {
+        "url": "",
+        "id": "",
+        "size": "full"
+       },
+       "image_size": "full",
+       "width": {
+        "unit": "px",
+        "size": 200
+       },
+       "align": "left",
+       "link_to": "custom",
+       "link": {
+        "url": "/",
+        "is_external": "",
+        "nofollow": ""
+       },
+       "__dynamic__": {
+        "image": "[elementor-tag id=\"6029355\" name=\"m11-setting-image\" settings=\"%7B%22field%22%3A%22m11_logo_reversed%22%7D\"]"
+       },
+       "width_mobile": {
+        "unit": "px",
+        "size": 200
+       },
+       "align_mobile": "center",
+       "_flex_size": "none"
+      },
+      "elements": []
+     },
+     {
+      "id": "11e546c",
+      "elType": "widget",
+      "widgetType": "heading",
+      "settings": {
+       "title": "",
+       "header_size": "p",
+       "align": "left",
+       "typography_typography": "custom",
+       "typography_font_family": "Montserrat",
+       "typography_font_weight": "300",
+       "typography_font_size": {
+        "unit": "rem",
+        "size": 0.875
+       },
+       "typography_line_height": {
+        "unit": "em",
+        "size": 2.86
+       },
+       "typography_font_size_mobile": {
+        "unit": "rem",
+        "size": 0.75
+       },
+       "typography_text_transform": "none",
+       "__globals__": {
+        "title_color": "globals/colors?id=white"
+       },
+       "__dynamic__": {
+        "title": "[elementor-tag id=\"340c7be\" name=\"current-date-time\" settings=\"%7B%22date_format%22%3A%22custom%22%2C%22time_format%22%3A%22%22%2C%22custom_format%22%3A%22Y%22%2C%22before%22%3A%22Sales%20Hub%20%20%5Cu2022%20%20%5Cu00a9%20%22%2C%22after%22%3A%22%20Mizuho%20America%2C%20Inc.%20All%20rights%20reserved.%22%7D\"]"
+       },
+       "align_mobile": "center"
+      },
+      "elements": []
+     }
+    ]
+   },
+   {
+    "id": "68308e2",
+    "elType": "widget",
+    "widgetType": "nav-menu",
+    "settings": {
+     "menu": "sales-hub-legal",
+     "layout": "horizontal",
+     "align_items": "right",
+     "pointer": "none",
+     "dropdown": "none",
+     "padding_horizontal_menu_item": {
+      "unit": "px",
+      "size": 0
+     },
+     "padding_vertical_menu_item": {
+      "unit": "px",
+      "size": 0
+     },
+     "menu_space_between": {
+      "unit": "px",
+      "size": 29
+     },
+     "menu_typography_typography": "custom",
+     "menu_typography_font_family": "Montserrat",
+     "menu_typography_font_weight": "300",
+     "menu_typography_font_size": {
+      "unit": "rem",
+      "size": 0.875
+     },
+     "menu_typography_line_height": {
+      "unit": "em",
+      "size": 2.86
+     },
+     "menu_typography_font_size_mobile": {
+      "unit": "rem",
+      "size": 0.75
+     },
+     "menu_typography_text_transform": "none",
+     "__globals__": {
+      "color_menu_item": "globals/colors?id=white",
+      "color_menu_item_hover": "globals/colors?id=secondary",
+      "color_menu_item_active": "globals/colors?id=white"
+     },
+     "align_items_mobile": "center",
+     "_flex_size": "none"
+    },
+    "elements": []
+   }
+  ]
+ }
+]

@@ -1,0 +1,39 @@
+// Design tokens.
+// Single source of truth = Elementor Site Settings (Kit). Elementor prints --e-global-* on every page
+// (verified on a non-Elementor page), so ACF templates follow the Kit. The hex values are fallbacks only.
+// Declared on body as well as :root: Elementor defines --e-global-* on body.elementor-kit-N, NOT on :root, so on :root alone
+// var(--e-global-color-primary, #0065b3) always resolved to the fallback and a Kit change never reached the theme (issues-log #66).
+:root,
+body {
+	--clr-primary: var(--e-global-color-primary, #0065b3);   // Mizuho Blue
+	--clr-sky: var(--e-global-color-secondary, #00b3f0);     // Sky Blue (accents, dividers)
+	--clr-text: var(--e-global-color-text, #090909);
+	--clr-navy: var(--e-global-color-accent, #002842);
+	--clr-light-sky: var(--e-global-color-lightsky, #77dcff);
+	--clr-white: var(--e-global-color-white, #ffffff);
+	--clr-dot: var(--e-global-color-dotgrey, #d9d9d9);
+	--clr-bg: var(--clr-white);
+	// Contact Us form / FAQ greys and the required-field red (Figma 1:1740); not brand colours, so not in the Kit.
+	--clr-required: #ff4346;
+	--clr-placeholder: #adadad;
+	--clr-field-border: #bebebe;
+	--clr-faq-bg: #eeeeee;
+	--clr-faq-open: #e6f8fe;
+
+	--ff-heading: var(--e-global-typography-primary-font-family, "Freeman"), "Arial Narrow", sans-serif;
+	--ff-band: var(--e-global-typography-secondary-font-family, "Mukta"), sans-serif;
+	--ff-body: var(--e-global-typography-text-font-family, "Open Sans"), system-ui, sans-serif;
+	--ff-utility: var(--e-global-typography-accent-font-family, "Montserrat"), system-ui, sans-serif;
+	--ff-serif: var(--e-global-typography-footerhead-font-family, "Fraunces"), Georgia, serif;
+
+	// One container for the whole site. Figma had 7 different left edges (76–114px); normalised to
+	// 100px at 1440 (decision recorded in docs/02-extraction-review.md).
+	--container: 1240px;
+	--gutter: 20px;
+	--radius-btn: 5px;
+}
+
+// Breakpoints: Figma has desktop 1440 and mobile 430 only; tablet is derived.
+$bp-mobile: 767px;
+$bp-tablet: 1024px;
+$bp-desktop: 1440px;

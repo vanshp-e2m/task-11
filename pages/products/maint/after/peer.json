@@ -1,0 +1,11 @@
+{
+  "findings": [],
+  "peer_count": 3,
+  "content_selector": "page-content",
+  "counts": {
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unverifiable": []
+}

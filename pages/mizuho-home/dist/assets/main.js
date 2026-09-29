@@ -1,0 +1,2 @@
+new Swiper('#hero-carousel .hero-carousel__swiper', { slidesPerView: 2, spaceBetween: 80, pagination: { el: '#hero-carousel .hero-carousel__pagination', clickable: true }, breakpoints: { 0: { slidesPerView: 1, spaceBetween: 18 }, 1024: { slidesPerView: 2, spaceBetween: 80 } } });
+document.querySelectorAll('#hero-carousel .hero-carousel__arrow').forEach(function (arrow, i) { arrow.closest('.hero-carousel__card').addEventListener('click', function (e) {}); });

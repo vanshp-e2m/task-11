@@ -1,0 +1,783 @@
+[
+ {
+  "id": "1a9b636",
+  "elType": "container",
+  "isInner": false,
+  "settings": {
+   "content_width": "full",
+   "css_classes": "m11-page-contact-us"
+  },
+  "elements": [
+   {
+    "id": "80d1ae1",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "full",
+     "css_classes": "rs cu",
+     "_element_id": "contact-intro",
+     "html_tag": "section"
+    },
+    "elements": [
+     {
+      "id": "0e82532",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "content_width": "full",
+       "css_classes": "fx"
+      },
+      "elements": [
+       {
+        "id": "5c8d499",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "Contact us",
+         "header_size": "h1",
+         "_css_classes": "cu-h1"
+        },
+        "elements": []
+       },
+       {
+        "id": "72622da",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "content_width": "full",
+         "css_classes": "cu-panel"
+        },
+        "elements": [
+         {
+          "id": "ecfa4dc",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "cu-copy"
+          },
+          "elements": [
+           {
+            "id": "fb3426c",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "We’re here for you before, during and after the sale",
+             "header_size": "h2",
+             "_css_classes": "cu-h2"
+            },
+            "elements": []
+           },
+           {
+            "id": "a82c442",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p class=\"cu-p\">At Mizuho America, we are committed to providing innovative tools designed to help neurosurgeons achieve the best outcomes. But our commitment extends even further. It includes unparalleled support every step of the way.</p><p class=\"cu-p\">Want a product demo? Just ask. Have questions? We have answers. Got ideas? We’re listening.</p><p class=\"cu-p\"><a class=\"cu-link\" href=\"#faq\"><strong>Get answers now to some of the most common questions</strong></a></p><p class=\"cu-p\">Since opening our doors in 1993, we’ve become a trusted partner for countless neurosurgeons across the country.<br>We hope to become the same for you.</p>",
+             "_css_classes": "cu-body"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "09de046",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "cu-card"
+          },
+          "elements": [
+           {
+            "id": "b623319",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Additional ways to contact us:",
+             "header_size": "h2",
+             "_css_classes": "cu-card-h"
+            },
+            "elements": []
+           },
+           {
+            "id": "d849eb6",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "content_width": "full",
+             "css_classes": "cu-card-block cu-card-reach"
+            },
+            "elements": [
+             {
+              "id": "f1693fb",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "content_width": "full",
+               "css_classes": "ln lh32 cu-line"
+              },
+              "elements": [
+               {
+                "id": "cd477e4",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                 "title": "Phone:",
+                 "header_size": "p",
+                 "_css_classes": "cu-line-label"
+                },
+                "elements": []
+               },
+               {
+                "id": "14b8894",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                 "title": "",
+                 "header_size": "p",
+                 "__dynamic__": {
+                  "title": "[elementor-tag id=\"4f5c2fc\" name=\"m11-setting-text\" settings=\"%7B%22field%22%3A%22m11_phone%22%2C%22before%22%3A%22%22%7D\"]",
+                  "link": "[elementor-tag id=\"0fb5780\" name=\"m11-setting-link\" settings=\"%7B%22field%22%3A%22m11_phone%22%7D\"]"
+                 },
+                 "_css_classes": "cu-line-value cu-link"
+                },
+                "elements": []
+               }
+              ]
+             },
+             {
+              "id": "c807057",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "content_width": "full",
+               "css_classes": "ln lh32 cu-line"
+              },
+              "elements": [
+               {
+                "id": "c0be1b5",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                 "title": "Fax:",
+                 "header_size": "p",
+                 "_css_classes": "cu-line-label"
+                },
+                "elements": []
+               },
+               {
+                "id": "7c6d088",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                 "title": "",
+                 "header_size": "p",
+                 "__dynamic__": {
+                  "title": "[elementor-tag id=\"119e498\" name=\"m11-setting-text\" settings=\"%7B%22field%22%3A%22m11_fax%22%2C%22before%22%3A%22%22%7D\"]",
+                  "link": "[elementor-tag id=\"75ca9f5\" name=\"m11-setting-link\" settings=\"%7B%22field%22%3A%22m11_fax%22%7D\"]"
+                 },
+                 "_css_classes": "cu-line-value cu-link"
+                },
+                "elements": []
+               }
+              ]
+             },
+             {
+              "id": "b1e6cbb",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+               "content_width": "full",
+               "css_classes": "ln lh32 cu-line"
+              },
+              "elements": [
+               {
+                "id": "c1792c1",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                 "title": "Email:",
+                 "header_size": "p",
+                 "_css_classes": "cu-line-label"
+                },
+                "elements": []
+               },
+               {
+                "id": "6ef432d",
+                "elType": "widget",
+                "widgetType": "heading",
+                "settings": {
+                 "title": "",
+                 "header_size": "p",
+                 "__dynamic__": {
+                  "title": "[elementor-tag id=\"c1346bb\" name=\"m11-setting-text\" settings=\"%7B%22field%22%3A%22m11_email%22%2C%22before%22%3A%22%22%7D\"]",
+                  "link": "[elementor-tag id=\"39b6331\" name=\"m11-setting-link\" settings=\"%7B%22field%22%3A%22m11_email%22%7D\"]"
+                 },
+                 "_css_classes": "cu-line-value cu-link"
+                },
+                "elements": []
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "id": "13a8993",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "content_width": "full",
+             "css_classes": "cu-card-block cu-card-hours"
+            },
+            "elements": [
+             {
+              "id": "b63021c",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+               "title": "",
+               "header_size": "p",
+               "__dynamic__": {
+                "title": "[elementor-tag id=\"6927fbe\" name=\"m11-setting-text\" settings=\"%7B%22field%22%3A%22m11_hours%22%2C%22before%22%3A%22Hours%3A%20%22%7D\"]"
+               },
+               "_css_classes": "ln lh-hours"
+              },
+              "elements": []
+             }
+            ]
+           },
+           {
+            "id": "d102876",
+            "elType": "container",
+            "isInner": false,
+            "settings": {
+             "content_width": "full",
+             "css_classes": "cu-card-block cu-card-addr"
+            },
+            "elements": [
+             {
+              "id": "65a27ca",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+               "title": "",
+               "header_size": "p",
+               "__dynamic__": {
+                "title": "[elementor-tag id=\"2045b0a\" name=\"m11-setting-text\" settings=\"%7B%22field%22%3A%22m11_address%22%2C%22before%22%3A%22Address%3A%20%22%7D\"]"
+               },
+               "_css_classes": "ln lh-addr"
+              },
+              "elements": []
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "id": "79963b1",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "content_width": "full",
+         "css_classes": "cu-form",
+         "_element_id": "contact-form"
+        },
+        "elements": [
+         {
+          "id": "d211529",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "cu-form-head"
+          },
+          "elements": [
+           {
+            "id": "8205c31",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "Ready to meet us? Just complete the fast form below.",
+             "header_size": "p",
+             "_css_classes": "cu-form-intro"
+            },
+            "elements": []
+           },
+           {
+            "id": "8175339",
+            "elType": "widget",
+            "widgetType": "heading",
+            "settings": {
+             "title": "<span class=\"req\">*</span> Indicates required field",
+             "header_size": "p",
+             "_css_classes": "cu-note"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "7bedcba",
+          "elType": "widget",
+          "widgetType": "form",
+          "settings": {
+           "form_name": "Contact Us",
+           "form_fields": [
+            {
+             "_id": "37bb02a",
+             "custom_id": "first_name",
+             "field_type": "text",
+             "field_label": "First Name",
+             "width": "100",
+             "required": "true",
+             "css_classes": "fld fld--text",
+             "placeholder": " "
+            },
+            {
+             "_id": "c5116cd",
+             "custom_id": "last_name",
+             "field_type": "text",
+             "field_label": "Last Name",
+             "width": "100",
+             "required": "true",
+             "css_classes": "fld fld--text",
+             "placeholder": " "
+            },
+            {
+             "_id": "b79602b",
+             "custom_id": "institution",
+             "field_type": "text",
+             "field_label": "Institution",
+             "width": "100",
+             "required": "",
+             "css_classes": "fld fld--text",
+             "placeholder": " "
+            },
+            {
+             "_id": "be4a710",
+             "custom_id": "state",
+             "field_type": "select",
+             "field_label": "State",
+             "width": "100",
+             "required": "",
+             "css_classes": "fld fld--select",
+             "field_options": "State|\nAlabama\nAlaska\nArizona\nArkansas\nCalifornia\nColorado\nConnecticut\nDelaware\nFlorida\nGeorgia\nHawaii\nIdaho\nIllinois\nIndiana\nIowa\nKansas\nKentucky\nLouisiana\nMaine\nMaryland\nMassachusetts\nMichigan\nMinnesota\nMississippi\nMissouri\nMontana\nNebraska\nNevada\nNew Hampshire\nNew Jersey\nNew Mexico\nNew York\nNorth Carolina\nNorth Dakota\nOhio\nOklahoma\nOregon\nPennsylvania\nRhode Island\nSouth Carolina\nSouth Dakota\nTennessee\nTexas\nUtah\nVermont\nVirginia\nWashington\nWest Virginia\nWisconsin\nWyoming"
+            },
+            {
+             "_id": "4042086",
+             "custom_id": "zip",
+             "field_type": "text",
+             "field_label": "ZIP",
+             "width": "100",
+             "required": "",
+             "css_classes": "fld fld--text",
+             "placeholder": " "
+            },
+            {
+             "_id": "dafa3f0",
+             "custom_id": "country",
+             "field_type": "select",
+             "field_label": "Country",
+             "width": "100",
+             "required": "",
+             "css_classes": "fld fld--select",
+             "field_options": "Country|\nUnited States\nCanada\nMexico\nOther"
+            },
+            {
+             "_id": "5df9d7c",
+             "custom_id": "email",
+             "field_type": "email",
+             "field_label": "Email",
+             "width": "100",
+             "required": "true",
+             "css_classes": "fld fld--email",
+             "placeholder": " "
+            },
+            {
+             "_id": "dfc72bb",
+             "custom_id": "phone",
+             "field_type": "tel",
+             "field_label": "Phone",
+             "width": "100",
+             "required": "true",
+             "css_classes": "fld fld--tel",
+             "placeholder": " "
+            },
+            {
+             "_id": "7d69857",
+             "custom_id": "area_of_interest",
+             "field_type": "text",
+             "field_label": "Area of interest",
+             "width": "100",
+             "required": "",
+             "css_classes": "fld fld--text",
+             "placeholder": " "
+            },
+            {
+             "_id": "5d01b9d",
+             "custom_id": "uses_products",
+             "field_type": "radio",
+             "width": "100",
+             "field_label": "Do you currently use any Mizuho America products?",
+             "field_options": "Yes\nNo",
+             "inline_list": "elementor-subgroup-inline",
+             "css_classes": "cu-radio"
+            }
+           ],
+           "show_labels": "true",
+           "mark_required": "true",
+           "input_size": "sm",
+           "column_gap": {
+            "unit": "px",
+            "size": 0
+           },
+           "row_gap": {
+            "unit": "px",
+            "size": 0
+           },
+           "button_text": "Submit form",
+           "button_size": "sm",
+           "button_width": "",
+           "button_align": "start",
+           "submit_actions": [
+            "email",
+            "save-to-database"
+           ],
+           "email_subject": "Contact Us form — task-11.local",
+           "custom_messages": "yes",
+           "success_message": "Thank you — we’ll be in touch shortly.",
+           "__dynamic__": {
+            "email_to": "[elementor-tag id=\"e97f72e\" name=\"m11-setting-text\" settings=\"%7B%22field%22%3A%22m11_email%22%7D\"]"
+           },
+           "_css_classes": "cu-fields"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ec22116",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "full",
+     "css_classes": "rs faqs",
+     "_element_id": "faq",
+     "html_tag": "section"
+    },
+    "elements": [
+     {
+      "id": "095c631",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "content_width": "full",
+       "css_classes": "fx"
+      },
+      "elements": [
+       {
+        "id": "19ecf24",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "While you’re here, get answers to Frequently Asked Questions:",
+         "header_size": "h2",
+         "_css_classes": "faq-h2"
+        },
+        "elements": []
+       },
+       {
+        "id": "5eaa04e",
+        "elType": "widget",
+        "widgetType": "nested-accordion",
+        "settings": {
+         "items": [
+          {
+           "_id": "8145112",
+           "item_title": "Are your products available internationally?"
+          },
+          {
+           "_id": "988a1d4",
+           "item_title": "How do I obtain service or technical support?"
+          },
+          {
+           "_id": "a6a6a50",
+           "item_title": "Where can I find product documentation?"
+          },
+          {
+           "_id": "afd1234",
+           "item_title": "Is my clip MRI compatible?"
+          },
+          {
+           "_id": "4a2b09a",
+           "item_title": "How do I place an order or request a quote?"
+          },
+          {
+           "_id": "577cc9d",
+           "item_title": "Can I try out instruments before buying?"
+          },
+          {
+           "_id": "97b6e61",
+           "item_title": "Where are these instruments made?"
+          },
+          {
+           "_id": "a5b028f",
+           "item_title": "What are these instruments used for?"
+          },
+          {
+           "_id": "af62915",
+           "item_title": "Where is Mizuho America based?"
+          }
+         ],
+         "default_state": "all_collapsed",
+         "max_items_expended": "one",
+         "title_tag": "h3",
+         "faq_schema": "yes",
+         "accordion_item_title_icon": {
+          "value": "",
+          "library": ""
+         },
+         "accordion_item_title_icon_active": {
+          "value": "",
+          "library": ""
+         },
+         "_attributes": "data-m11-open|2",
+         "_css_classes": "faq-list"
+        },
+        "elements": [
+         {
+          "id": "d0809a3",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "7dc93f2",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a"
+          },
+          "elements": [
+           {
+            "id": "48efac1",
+            "elType": "widget",
+            "widgetType": "text-editor",
+            "settings": {
+             "editor": "<p>Contact our customer service or technical support team at <a class=\"cu-link\" href=\"mailto:customerservice@mizuho.com\">customerservice@mizuho.com</a> or call <a class=\"cu-link\" href=\"tel:8886992547\">888-699-2547</a> with the product name, model, and a description of the issue. We will help determine the appropriate next steps.</p>",
+             "_css_classes": "faq-a-text"
+            },
+            "elements": []
+           }
+          ]
+         },
+         {
+          "id": "a4fcc34",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "7031a7d",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "fbbd2af",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "d9a6589",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "b0a648c",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "789b92e",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         },
+         {
+          "id": "67140ad",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+           "content_width": "full",
+           "css_classes": "faq-a faq-a--empty"
+          },
+          "elements": []
+         }
+        ]
+       },
+       {
+        "id": "ea16b1b",
+        "elType": "widget",
+        "widgetType": "button",
+        "settings": {
+         "text": "Complete our contact form",
+         "link": {
+          "url": "#contact-form",
+          "is_external": "",
+          "nofollow": ""
+         },
+         "size": "sm",
+         "_css_classes": "faq-btn d-only"
+        },
+        "elements": []
+       },
+       {
+        "id": "dd2b58f",
+        "elType": "widget",
+        "widgetType": "divider",
+        "settings": {
+         "_css_classes": "faq-rule"
+        },
+        "elements": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "129940b",
+    "elType": "container",
+    "isInner": false,
+    "settings": {
+     "content_width": "full",
+     "css_classes": "rs bl",
+     "_element_id": "before-you-go",
+     "html_tag": "section"
+    },
+    "elements": [
+     {
+      "id": "5a4ac2c",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+       "content_width": "full",
+       "css_classes": "fx"
+      },
+      "elements": [
+       {
+        "id": "0b5c10e",
+        "elType": "widget",
+        "widgetType": "heading",
+        "settings": {
+         "title": "BEFORE YOU GO...",
+         "header_size": "h2",
+         "_css_classes": "bl-h2"
+        },
+        "elements": []
+       },
+       {
+        "id": "9cc603a",
+        "elType": "container",
+        "isInner": false,
+        "settings": {
+         "content_width": "full",
+         "css_classes": "bl-btns"
+        },
+        "elements": [
+         {
+          "id": "d17a192",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Discover our wide range of products",
+           "link": {
+            "url": "/products/",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "size": "sm",
+           "_css_classes": "bl-btn bl-btn--1"
+          },
+          "elements": []
+         },
+         {
+          "id": "e500747",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Access informative videos and brochures",
+           "link": {
+            "url": "/resources/",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "size": "sm",
+           "_css_classes": "bl-btn bl-btn--2"
+          },
+          "elements": []
+         },
+         {
+          "id": "9ccace8",
+          "elType": "widget",
+          "widgetType": "button",
+          "settings": {
+           "text": "Learn why we’re a global leader in neurosurgical tools",
+           "link": {
+            "url": "/about-us/",
+            "is_external": "",
+            "nofollow": ""
+           },
+           "size": "sm",
+           "_css_classes": "bl-btn bl-btn--3"
+          },
+          "elements": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ }
+]

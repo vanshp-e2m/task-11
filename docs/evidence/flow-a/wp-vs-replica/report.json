@@ -1,0 +1,66 @@
+{
+ "resources@1440": {
+  "wp_width": 1440,
+  "url": "http://task-11.local/resources/",
+  "sections": [
+   {
+    "id": "resources-intro",
+    "dh": 0,
+    "diff": 0.83
+   },
+   {
+    "id": "testimonials",
+    "dh": 3,
+    "diff": 2.06
+   },
+   {
+    "id": "fast-facts",
+    "dh": 0,
+    "diff": 0.0
+   },
+   {
+    "id": "brochures",
+    "dh": 0,
+    "diff": 0.05
+   },
+   {
+    "id": "continue-your-visit",
+    "dh": 0,
+    "diff": 1.47
+   }
+  ],
+  "missing_in_wp": []
+ },
+ "resources@430": {
+  "wp_width": 430,
+  "url": "http://task-11.local/resources/",
+  "sections": [
+   {
+    "id": "resources-intro",
+    "dh": 0,
+    "diff": 0.64
+   },
+   {
+    "id": "testimonials",
+    "dh": -18,
+    "diff": 16.15
+   },
+   {
+    "id": "fast-facts",
+    "dh": 0,
+    "diff": 0.94
+   },
+   {
+    "id": "brochures",
+    "dh": 22,
+    "diff": 9.26
+   },
+   {
+    "id": "continue-your-visit",
+    "dh": -8,
+    "diff": 16.66
+   }
+  ],
+  "missing_in_wp": []
+ }
+}

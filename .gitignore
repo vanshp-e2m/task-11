@@ -1,0 +1,29 @@
+# Whitelist repo: WordPress core, uploads and third-party plugins are NOT tracked.
+/*
+!/.gitignore
+!/CLAUDE.md
+!/project-config.json
+!/tools/
+!/docs/
+!/pages/
+!/design-system/
+# DevCommand HTML->ACF pipeline artifacts (spec, approved plan, untouched conversion output = evidence), session log, theme zip.
+!/spec/
+!/output/
+!/session.md
+!/dist/
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/module11/
+/wp-content/themes/module11/node_modules/
+
+# DB snapshots stay local; the final deliverable export is copied to docs/ deliberately.
+/backups/
+# Secrets never committed.
+/.secrets/
+*.env
+
+# DB export is a submission attachment, not repo content (user emails + password / application-password hashes).
+/docs/db-export/

@@ -1,0 +1,299 @@
+{
+  "page": "mizuho-home",
+  "meta": {
+    "title": "Mizuho America | Neurosurgical Instruments, Tables & Head-Holding Systems",
+    "description": "Mizuho America delivers a robust portfolio of neurosurgical instruments, tables, head-holding systems and vascular management devices, built with surgeons in mind."
+  },
+  "css_workflow": "scss",
+  "css_framework": "none",
+  "slider_library": "swiper",
+  "font_source": "google",
+  "fonts": ["Freeman", "Open Sans", "Montserrat", "Mukta", "Fraunces"],
+  "notes_for_developer": [
+    "This is the Flow A intermediate static-HTML deliverable for mizuho-home. builder stays 'acf' in project-config.json; this file only feeds figma-html-builder's compile step, not the final ACF page.",
+    "Header and footer sections below are PLACEHOLDER ONLY (out_of_scope: true) - they exist so the static HTML has visual context matching the Figma frame. The real header/footer are already built as Elementor Theme Builder templates (project-config global_settings) and are NOT re-converted here.",
+    "CORRECTION (2026-09-25, post-developer-review): my original claim here that figma/data.json was 0 bytes was WRONG - it was a stale/incomplete read on my part, not a real extractor gap. data.json is populated (430KB) and pages/_figma/file.json (4MB) is the full cached source. All literal copy in content_source has been re-sourced directly from data.json's TEXT node `characters` fields (frames 1:9 desktop groups 1:81/1:31/1:145/1:57/1:10 and 1:400 mobile groups 1:411/1:439/1:445/1:471/1:487/1:518/1:524), not from screenshots. The original screenshot-transcription pass introduced 11 real content drifts (case changes on 'Surgeon-centric' etc., 'Sugita ll' typo silently corrected to 'Sugita II', curly apostrophes/quotes straightened, an ellipsis character substituted for three literal periods) across 22 affected TEXT node instances (desktop+mobile) - all fixed; see each section's own notes for the specific corrections and docs/issues-log.md for the incident writeup. A self-check script re-verified all 85 visible TEXT node strings in those 12 groups now match blueprint.json verbatim (allowing only the pre-approved arrow-icon / &amp;-entity / <br>-for-\\n substitutions): 0 mismatches remain.",
+    "Container/gutter, line-height, centering and font-substitution deviations follow the 9 accepted design decisions in docs/02-extraction-review.md verbatim; procedure_band's 3-item pitch (Figma: 481px/378px, uneven) is additionally normalized to an even 3-col grid here as a judgement call consistent with decision #1's container rationale - flagged separately below, not one of the original 9.",
+    "No tablet Figma frame exists. Tablet (768px) relies on each recipe's built-in --grid-cols-tablet default (2) / generic collapse; escape-hatch sections (hero_carousel, procedure_band, about_stats) get an authored 768px step by linear interpolation between the 1440 and 430 values, documented inline in each section's extra_css."
+  ],
+  "sections": [
+    {
+      "id": "site-header-placeholder",
+      "recipe": "nav-header",
+      "landmark": "header",
+      "out_of_scope": true,
+      "note": "PLACEHOLDER for visual context only - real header is Elementor Theme Builder (kit_id 6, theme_templates.header 61). Not part of this Flow A conversion; do not treat this section's recipe match/mobile-nav choice as a real deliverable.",
+      "content_source": {
+        "logo": "figma/images/logo-mizuho-header-srgb.png",
+        "nav_items": ["Products", "Clinical Resources", "About Us", "Contact Us"],
+        "cta_label": "Sales Portal"
+      },
+      "style_overrides": {
+        "--nav-logo-size": "61px"
+      }
+    },
+    {
+      "id": "hero-carousel",
+      "recipe": null,
+      "escape_hatch": true,
+      "heading_level": 1,
+      "content_source": {
+        "id": "hero-carousel",
+        "heading_main": "Neurological success is your mindset.",
+        "heading_accent": "ours, too.",
+        "slides": [
+          {
+            "image": "figma/images/hero-product-sugita-ii-head-frame-card-crop.png",
+            "alt": "Sugita II Multi-Purpose Head Frame mounted on a surgical table",
+            "label": "Sugita ll Multi-Purpose Head Frame",
+            "link": "#"
+          },
+          {
+            "image": "figma/images/hero-product-mst-7300-table-card-crop.png",
+            "alt": "MST 7300 Series Microneurosurgery Tables",
+            "label": "MST 7300 Series Microneurosurgery Tables",
+            "link": "#"
+          }
+        ],
+        "cta_primary": {"label": "Explore All Products", "url": "#"},
+        "cta_secondary": {"label": "Request a Demo", "url": "#"},
+        "browse_link": {"label": "Browse by Procedure", "url": "#procedure-band"}
+      },
+      "notes": [
+        "Re-sourced from figma/data.json (raw TEXT node characters) after the developer flagged screenshot-transcription drift, 2026-09-25: heading_accent corrected to lowercase 'ours, too.' (node 1:111 - textCase UPPER does the visual capitalising; CSS already applies text-transform:uppercase on .hero-carousel__heading so no visual change) and slide 1's visible label corrected to 'Sugita ll Multi-Purpose Head Frame' (node 1:98/1:419 - two lowercase L's, not the Roman numeral II) per accepted decision #8 (typos entered as designed). The <img> alt text intentionally KEEPS 'Sugita II' (Roman numeral) for screen readers - a deliberate a11y divergence from the visible typo, not an unfixed mismatch.",
+        "No recipe fits: this section fuses a page-H1 (Freeman 70/70, 2-line, colour-span second sentence) + a real 2-slide Swiper carousel with dots generated from the actual slide count (Figma shows 3 dots for 2 slides - accepted decision #3, NOT reproduced) + a CTA button pair + a same-row anchor link. media-slider (bare carousel) and hero-two-column/hero-centered (single static media) each cover only part of this; forcing either would drop content. Built as a one-off escape hatch that hand-rolls Swiper (project.slider_library) scoped to its own id per the media-slider id-scoping convention, so it behaves identically to a real media-slider instance without claiming that recipe.",
+        "Card border (3px #00B3F0 r48) is visible on the RIGHT card only per Figma (1:95 hidden on the left) - reproduced as-is, not symmetrised.",
+        "Stray 1px black stroke on node 1:113 (renders as a black square around the right card's arrow) is a designer leftover - intentionally NOT reproduced, per accepted decision #6.",
+        "Mobile order change: cards stack, then 'Browse by Procedure' + dots, THEN the two CTA buttons (full width, stacked) - opposite order to desktop. Encoded in the CSS via flex `order`, not by re-ordering markup, so the DOM keeps CTAs adjacent to the heading for accessibility/SEO while the visual order changes.",
+        "768px tablet step (no Figma frame): heading 56px, cards side-by-side at reduced 460px width, CTA row order unchanged from desktop (only mobile flips it) - linear interpolation, not measured."
+      ],
+      "html": "<section class=\"hero-carousel\" id=\"hero-carousel\">\n  <div class=\"hero-carousel__inner\">\n    <h1 class=\"hero-carousel__heading\">{{heading_main}} <span class=\"hero-carousel__heading-accent\">{{heading_accent}}</span></h1>\n    <div class=\"hero-carousel__swiper swiper\">\n      <div class=\"swiper-wrapper\">\n        {{#each slides}}\n        <div class=\"swiper-slide hero-carousel__slide\">\n          <a class=\"hero-carousel__card\" href=\"{{link}}\">\n            <img class=\"hero-carousel__card-image\" src=\"{{image}}\" alt=\"{{alt}}\" width=\"572\" height=\"592\" {{#unless @first}}loading=\"lazy\"{{/unless}}>\n            <span class=\"hero-carousel__label\">{{label}}</span>\n            <span class=\"hero-carousel__arrow\" aria-hidden=\"true\"><img src=\"figma/images/icon-arrow-circle-right.svg\" alt=\"\" width=\"55\" height=\"55\"></span>\n          </a>\n        </div>\n        {{/each}}\n      </div>\n    </div>\n    <div class=\"hero-carousel__meta-row\">\n      <a class=\"hero-carousel__browse-link\" href=\"{{browse_link.url}}\"><img src=\"figma/images/icon-arrow-down.svg\" alt=\"\" width=\"14\" height=\"14\">{{browse_link.label}}</a>\n      <div class=\"hero-carousel__pagination swiper-pagination\"></div>\n    </div>\n    <div class=\"hero-carousel__cta-row\">\n      <a class=\"hero-carousel__cta hero-carousel__cta--primary\" href=\"{{cta_primary.url}}\">{{cta_primary.label}}</a>\n      <a class=\"hero-carousel__cta hero-carousel__cta--secondary\" href=\"{{cta_secondary.url}}\">{{cta_secondary.label}}</a>\n    </div>\n  </div>\n</section>",
+      "css": ".hero-carousel { background: var(--clr-white); padding: 33px 112px 0 104px; }\n.hero-carousel__inner { display: flex; flex-direction: column; }\n.hero-carousel__heading { font-family: 'Freeman', sans-serif; font-weight: 400; font-size: 4.375rem; line-height: 1; text-transform: uppercase; color: var(--clr-primary); max-width: 1247px; margin: 0 0 38px -8px; }\n.hero-carousel__heading-accent { color: var(--clr-sky); }\n.hero-carousel__swiper { overflow: hidden; width: 100%; }\n.hero-carousel__swiper .swiper-wrapper { display: flex; }\n.hero-carousel__slide { width: 572px; }\n.hero-carousel__card { position: relative; display: block; width: 572px; height: 592px; border-radius: 51px; overflow: hidden; }\n.hero-carousel__card-image { width: 100%; height: 100%; object-fit: cover; }\n.hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__card { border-radius: 50px; border: 3px solid var(--clr-sky); box-sizing: border-box; }\n.hero-carousel__label { position: absolute; top: 31px; left: 50%; transform: translateX(-50%); min-width: 308px; height: 45px; background: var(--clr-primary); color: var(--clr-white); font-family: 'Freeman', sans-serif; font-size: 1.1875rem; line-height: 40px; text-align: center; white-space: nowrap; border-radius: 13px; padding: 0 16px; }\n.hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__label { top: 28px; min-width: 372px; line-height: 45px; }\n.hero-carousel__arrow { position: absolute; right: 36px; bottom: 39px; width: 55px; height: 55px; }\n.hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__arrow { right: 34px; }\n.hero-carousel__meta-row { display: flex; align-items: center; justify-content: space-between; margin-top: 43px; order: 2; }\n.hero-carousel__browse-link { display: flex; align-items: center; gap: 32px; margin-left: 46px; font-family: 'Freeman', sans-serif; font-size: 1.125rem; color: var(--clr-primary); text-decoration: none; }\n.hero-carousel__pagination.swiper-pagination { position: static !important; width: auto !important; display: flex; gap: 8px; }\n.hero-carousel__pagination .swiper-pagination-bullet { width: 24px; height: 24px; border-radius: 50%; background: var(--clr-dot); opacity: 1; }\n.hero-carousel__pagination .swiper-pagination-bullet-active { background: var(--clr-primary); }\n.hero-carousel__cta-row { display: flex; gap: 34px; order: 1; }\n.hero-carousel__cta { display: inline-flex; align-items: center; justify-content: center; height: 50px; border-radius: 5px; font-family: 'Freeman', sans-serif; font-size: 1.125rem; text-decoration: none; }\n.hero-carousel__cta--primary { background: var(--clr-primary); color: var(--clr-white); width: 216px; padding: 0 35px; }\n.hero-carousel__cta--secondary { background: transparent; color: var(--clr-sky); border: 2px solid var(--clr-sky); width: 288px; padding: 0 88px 0 84px; }\n@media (max-width: 1024px) { .hero-carousel { padding: 40px 40px 0; } .hero-carousel__heading { font-size: 3.5rem; } .hero-carousel__slide, .hero-carousel__card { width: 460px; height: 475px; } }\n@media (max-width: 768px) { .hero-carousel__swiper .swiper-wrapper { flex-direction: column; } .hero-carousel__slide, .hero-carousel__card { width: 100%; height: auto; aspect-ratio: 572/592; } }\n@media (max-width: 430px) { .hero-carousel { background: #FCFEFF; padding: 44px 20px; } .hero-carousel__heading { font-size: 3rem; line-height: 1.15; } .hero-carousel__swiper .swiper-wrapper { flex-direction: column; gap: 18px; } .hero-carousel__slide, .hero-carousel__card { width: 100%; height: auto; aspect-ratio: 390/403.6; border-radius: 34.77px; } .hero-carousel__swiper .swiper-slide:nth-child(2) .hero-carousel__card { border: none; } .hero-carousel__label { font-size: 0.75rem; line-height: 27.27px; height: 30.7px; border-radius: 8.86px; } .hero-carousel__arrow { width: 38px; height: 38px; right: 22px; bottom: 19.6px; } .hero-carousel__meta-row { order: 1; margin-top: 36px; } .hero-carousel__cta-row { order: 2; flex-direction: column; gap: 18px; margin-top: 18px; } .hero-carousel__cta--primary, .hero-carousel__cta--secondary { width: 100%; } }",
+      "js": "new Swiper('#hero-carousel .hero-carousel__swiper', { slidesPerView: 2, spaceBetween: 80, pagination: { el: '#hero-carousel .hero-carousel__pagination', clickable: true }, breakpoints: { 0: { slidesPerView: 1, spaceBetween: 18 }, 1024: { slidesPerView: 2, spaceBetween: 80 } } });\ndocument.querySelectorAll('#hero-carousel .hero-carousel__arrow').forEach(function (arrow, i) { arrow.closest('.hero-carousel__card').addEventListener('click', function (e) {}); });"
+    },
+    {
+      "id": "intro-statement",
+      "recipe": "hero-centered",
+      "heading_level": 2,
+      "content_source": {
+        "heading": "We are Mizuho AMERICA: delivering world-class collective expertise with a personalized approach",
+        "body": "Singularly focused on neurosurgery, Mizuho America is dedicated to delivering an exceptional experience to help you achieve your surgical goals across a broad range of procedures and patients.",
+        "cta": {"label": "Watch what clinical experts say about us", "url": "#testimonials"}
+      },
+      "style_overrides": {
+        "--hero-title-size": "2.8125rem",
+        "--hero-title-line-height": "1.222",
+        "--hero-desc-size": "1.5625rem",
+        "--hero-content-width": "1216px"
+      },
+      "responsive_style_overrides": {
+        "430": {
+          "--hero-title-size": "2.25rem",
+          "--hero-title-line-height": "1.15",
+          "--hero-desc-size": "1.125rem"
+        }
+      },
+      "extra_css": ".hero-centered.hero-centered--intro-statement { text-align: left; padding: 68px 117px 0 107px; } .hero-centered.hero-centered--intro-statement .hero-centered__title, .hero-centered.hero-centered--intro-statement .hero-centered__desc { text-align: left; margin-left: 0; } .hero-centered.hero-centered--intro-statement .hero-centered__title { color: var(--clr-primary); text-transform: uppercase; } .hero-centered.hero-centered--intro-statement .hero-centered__desc { font-family: 'Open Sans', sans-serif; font-weight: 300; color: var(--clr-text); text-transform: none; } .hero-centered.hero-centered--intro-statement .hero-centered__cta { background: var(--clr-primary); color: var(--clr-white); font-family: 'Freeman', sans-serif; min-width: 303px; height: 50px; line-height: 50px; white-space: nowrap; display: inline-flex; align-items: center; border-radius: 5px; padding: 0 20px; } .hero-centered--intro-statement::after { content: ''; display: block; width: 1262px; max-width: 100%; height: 1px; background: var(--clr-sky); margin: 70px auto 0 -23px; } @media (max-width: 430px) { .hero-centered.hero-centered--intro-statement { padding: 44px 20px; background: #FCFEFF; } .hero-centered.hero-centered--intro-statement .hero-centered__cta { width: 100%; justify-content: center; text-align: center; } .hero-centered--intro-statement::after { width: 390px; margin: 44px auto 0; } }",
+      "notes": [
+        "Re-sourced from figma/data.json 2026-09-25: heading corrected to 'We are Mizuho AMERICA…' (node 1:108/1:440 - 'AMERICA' is typed in caps by the designer as part of the raw characters, ahead of the layer's own textCase:UPPER transform; the rest of the sentence is raw sentence-case). Also fixed my own CSS bug found during the same audit: text-transform:uppercase had incorrectly been applied to both the title AND the body paragraph - only the title carries textCase:UPPER in Figma (body textTransform is 'none' per section-specs.json), so the body rule now explicitly sets text-transform:none.",
+        "hero-centered is normally centred; overridden to left-align via extra_css because Figma shows this block left-aligned, full width, no media - only heading + body + single CTA + trailing divider.",
+        "The divider (1px #00B3F0, 1262px) belongs to the BOTTOM of this Figma group (separates intro from value_columns), not between hero and intro - confirmed against y-coordinates in docs/02-extraction-review.md; kept here as this section's trailing rule rather than value_columns' leading rule."
+      ]
+    },
+    {
+      "id": "value-columns",
+      "recipe": "card-grid-3col",
+      "content_source": {
+        "cards": [
+          {
+            "title": "Surgeon-centric",
+            "icon": "figma/images/value-icon-surgeon-centric.png",
+            "lead": "Products designed exclusively for neurosurgeons",
+            "body": "With an expansive portfolio of instruments available individually and in convenient, timesaving sets and kits, we are committed to helping you optimize precision, efficiency, and workflow in the OR"
+          },
+          {
+            "title": "Consistent quality",
+            "icon": "figma/images/value-icon-consistent-quality.png",
+            "lead": "Handcrafted tools for exceptional quality, performance and longevity",
+            "body": "Our tools are produced with the utmost care and integrity, adhering to stringent manufacturing protocols, so you can confidently rely on them for your delicate, high-stakes procedures"
+          },
+          {
+            "title": "Notable names",
+            "icon": "figma/images/value-icon-notable-names.png",
+            "lead": "Longstanding collaborations with renowned neurosurgeons",
+            "body": "We’ve become a global leader in the field of neurosurgical tools through our ongoing work with clinical experts to help identify and fill unmet needs in the OR"
+          },
+          {
+            "title": "Personal partnership",
+            "icon": "figma/images/value-icon-personal-partnership.png",
+            "lead": "Supporting you before, during, and after the sale",
+            "body": "We not only stand behind our high-quality products; we stand with you to ensure your questions are answered, your needs are met, and your input and insights are heard"
+          }
+        ],
+        "button": {"label": "Check out our downloadable brochures", "url": "#"}
+      },
+      "style_overrides": {
+        "--grid-cols": "4",
+        "--grid-gap": "30px",
+        "--grid-cols-tablet": "2",
+        "--grid-cols-mobile": "1",
+        "--card-title-size": "1.5rem"
+      },
+      "responsive_style_overrides": {
+        "430": {
+          "--card-title-size": "1.25rem",
+          "--grid-gap": "28px"
+        }
+      },
+      "extra_css": ".card-grid-3col--value-columns { padding: 103px 94px 93px 107px; } .card-grid-3col--value-columns .card-grid-3col__card { position: relative; } .card-grid-3col--value-columns .card-grid-3col__card:not(:first-child) { border-left: 1px solid var(--clr-sky); padding-left: 30px; } .card-grid-3col--value-columns .card-grid-3col__title { font-family: 'Freeman', sans-serif; text-transform: uppercase; color: var(--clr-sky); } .card-grid-3col--value-columns .card-grid-3col__icon { width: 100px; height: 98px; object-fit: contain; margin-bottom: 25px; } .card-grid-3col--value-columns .card-grid-3col__lead { font-family: 'Open Sans', sans-serif; font-weight: 600; font-style: italic; font-size: 1rem; line-height: 1.875rem; color: var(--clr-text); } .card-grid-3col--value-columns .card-grid-3col__body { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 1rem; line-height: 1.875rem; color: var(--clr-text); margin-top: 30px; } .card-grid-3col--value-columns .card-grid-3col__button { display: inline-flex; align-items: center; background: var(--clr-primary); color: var(--clr-white); font-family: 'Freeman', sans-serif; width: 293px; height: 50px; border-radius: 5px; padding-left: 20px; margin-top: 61px; box-sizing: border-box; } @media (max-width: 430px) { .card-grid-3col--value-columns { padding: 44px 20px; background: #FCFEFF; } .card-grid-3col--value-columns .card-grid-3col__card:not(:first-child) { border-left: none; border-top: 1px solid var(--clr-sky); padding-left: 0; padding-top: 28px; } .card-grid-3col--value-columns .card-grid-3col__button { width: 100%; text-align: center; margin-top: 0; } }",
+      "notes": [
+        "Re-sourced from figma/data.json 2026-09-25: all 4 titles corrected from Title Case to Figma's actual raw characters (sentence case: 'Surgeon-centric', 'Consistent quality', 'Notable names', 'Personal partnership') - each carries textCase:UPPER as a style, already reproduced via .card-grid-3col__title{text-transform:uppercase}, so no visual change, only the stored source string. Column 3's body also corrected to a curly apostrophe ('We’ve', not \"We've\") to match the raw character.",
+        "Icon box fixed at 98px height per section-specs note (Figma varies 98/90/84/72 with compensating gaps 25/33/39/51 so every lead line lands at the same +173px offset) - normalized to one fixed icon box + fixed gap rather than reproducing 4 different gap values.",
+        "Value icons are ~56-60px source rasters shown at ~100px (~1.8x upscaled, visibly soft) - used as supplied per accepted decision; flagged to the lead for replacement originals."
+      ]
+    },
+    {
+      "id": "procedure-band",
+      "recipe": null,
+      "escape_hatch": true,
+      "content_source": {
+        "heading": "A robust portfolio of instruments, tables, head-holding systems, and vascular management devices for your diverse neurosurgical procedures",
+        "procedures": [
+          {
+            "icon": "figma/images/procedure-icon-tumor-removal.png",
+            "title": "Tumor Removal",
+            "link_primary": {"label": "View product", "url": "#"},
+            "link_secondary": {"label": "See Malleable Instruments and more", "url": "#"}
+          },
+          {
+            "icon": "figma/images/procedure-icon-aneurysm.png",
+            "title": "Aneurysm",
+            "link_primary": {"label": "View product", "url": "#"},
+            "link_secondary": {"label": "See Sugita TII Aneurysm Clips and more", "url": "#"}
+          },
+          {
+            "icon": "figma/images/procedure-icon-endoscopic-endonasal.png",
+            "title": "Endoscopic Endonasal Approach",
+            "link_primary": {"label": "View product", "url": "#"},
+            "link_secondary": {"label": "See E3 Evans Elite Endoscopic Instrument Set and more", "url": "#"}
+          }
+        ],
+        "closing_text": "And beyond—review the full list of supported procedures here",
+        "button": {"label": "Supported Procedures", "url": "#"}
+      },
+      "notes": [
+        "No recipe fits cleanly: this is a full-bleed coloured band with 3 icon+title+TWO-link items (not the single title+lead+body shape card-grid-3col's cards carry) PLUS a closing headline and a bordered CTA button (label+icon, space-between) after the grid - more than a plain card grid's usual button slot supports without guessing at extra fields. Escape-hatched to keep both links per item honest rather than collapsing them into one body field.",
+        "Item pitch is uneven in Figma (x=85/566/944, pitch 481px then 378px) - normalized here to an even 3-col CSS grid with a 97px gap, consistent with the project's general spacing-rationalization approach (decision #1). APPROVED by the developer 2026-09-25 as an accepted deviation (in addition to the original 9 in docs/02-extraction-review.md) - recorded here as the decision's canonical location.",
+        "Endoscopic icon source is 4096x4096/595KB (oversized) - used as-is for this static build; flagged for resize before any real upload.",
+        "This section keeps its #0065B3 background on mobile (unlike every other section, which switches to #FCFEFF) - confirmed directly in section-specs.json responsive.430.section.backgroundColor."
+      ],
+      "html": "<section class=\"procedure-band\" id=\"procedure-band\">\n  <div class=\"procedure-band__inner\">\n    <h2 class=\"procedure-band__heading\">{{heading}}</h2>\n    <div class=\"procedure-band__grid\">\n      {{#each procedures}}\n      <div class=\"procedure-band__item\">\n        <img class=\"procedure-band__icon\" src=\"{{icon}}\" alt=\"\" loading=\"lazy\">\n        <div class=\"procedure-band__text\">\n          <h3 class=\"procedure-band__title\">{{title}}</h3>\n          <a class=\"procedure-band__link procedure-band__link--primary\" href=\"{{link_primary.url}}\">{{link_primary.label}} →</a>\n          <a class=\"procedure-band__link procedure-band__link--secondary\" href=\"{{link_secondary.url}}\">{{link_secondary.label}} →</a>\n        </div>\n      </div>\n      {{/each}}\n    </div>\n    <div class=\"procedure-band__closing\">\n      <p class=\"procedure-band__closing-text\">{{closing_text}}</p>\n      <a class=\"procedure-band__button\" href=\"{{button.url}}\">{{button.label}} <img src=\"figma/images/icon-arrow-down.svg\" alt=\"\" width=\"14\" height=\"14\"></a>\n    </div>\n  </div>\n</section>",
+      "css": ".procedure-band { background: var(--clr-primary); padding: 51px 62px 58px 76px; }\n.procedure-band__heading { font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 2.125rem; line-height: 3.125rem; color: var(--clr-white); max-width: 1137px; margin: 0 0 58px; }\n.procedure-band__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 97px; }\n.procedure-band__item { display: flex; flex-direction: column; align-items: flex-start; }\n.procedure-band__icon { width: 146px; height: 146px; object-fit: contain; margin-bottom: 10px; }\n.procedure-band__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 2.5rem; color: var(--clr-white); margin: 0; }\n.procedure-band__link { display: block; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1rem; line-height: 2.5rem; text-decoration: none; }\n.procedure-band__link--primary { color: var(--clr-white); }\n.procedure-band__link--secondary { color: var(--clr-light-sky); margin-top: 26px; line-height: 1.625rem; }\n.procedure-band__closing { display: flex; align-items: center; justify-content: space-between; margin-top: 56px; }\n.procedure-band__closing-text { font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 2rem; line-height: 3.125rem; color: var(--clr-white); margin: 0; }\n.procedure-band__button { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 391px; height: 50px; padding: 0 24px 0 19px; background: var(--clr-white); color: var(--clr-primary); border: 2px solid var(--clr-sky); border-radius: 5px; font-family: 'Freeman', sans-serif; font-size: 1.125rem; text-decoration: none; }\n@media (max-width: 1024px) { .procedure-band__grid { gap: 48px; } .procedure-band__closing { flex-direction: column; align-items: flex-start; gap: 24px; } }\n@media (max-width: 768px) { .procedure-band__grid { grid-template-columns: 1fr; gap: 36px; } .procedure-band__item { flex-direction: row; align-items: flex-start; gap: 24px; } }\n@media (max-width: 430px) { .procedure-band { padding: 44px 20px; } .procedure-band__heading { font-size: 1.75rem; line-height: 2.909rem; margin-bottom: 36px; } .procedure-band__item { gap: 0; } .procedure-band__icon { width: 119px; height: 119px; margin-right: 20px; } .procedure-band__text { padding-left: 0; } .procedure-band__title { font-size: 1.125rem; line-height: 1.5rem; } .procedure-band__link--primary { font-size: 0.875rem; } .procedure-band__link--secondary { font-size: 0.875rem; line-height: 1.375rem; margin-top: 22px; } .procedure-band__closing-text { font-size: 1.75rem; line-height: 2.909rem; } .procedure-band__button { width: 100%; border: none; font-size: 1rem; } }"
+    },
+    {
+      "id": "testimonials",
+      "recipe": "testimonial-grid",
+      "content_source": {
+        "eyebrow": "TESTIMONIALS",
+        "intro": "Leaders in the field of neurosurgery discuss Mizuho America’s pivotal role in expanding the neurosurgical armamentarium.",
+        "cards": [
+          {
+            "thumbnail": "figma/images/testimonial-thumb-lawton.jpg",
+            "alt": "Michael T. Lawton, MD video testimonial",
+            "video_url": "#",
+            "name": "Michael T. Lawton, MD",
+            "role_html": "President and CEO,<br>Barrow Neurological Institute<br>Professor and Chair, Neurosurgery<br>Chief, Neurovascular Surgery",
+            "cta_label": "Watch now"
+          },
+          {
+            "thumbnail": "figma/images/testimonial-thumb-evans.jpg",
+            "alt": "James J. Evans, MD video testimonial",
+            "video_url": "#",
+            "name": "James J. Evans, MD",
+            "role_html": "Professor, Neurological Surgery &amp; Otolaryngology<br>Division Chief, Brain Tumor and Stereotactic Radiosurgery Division<br>Director, Cranial Base and Pituitary Surgery<br>Director, Cranial Base and Endoscopic Surgery Fellowship",
+            "cta_label": "Watch now"
+          },
+          {
+            "thumbnail": "figma/images/testimonial-thumb-youssef.jpg",
+            "alt": "A. Samy Youssef, MD, PhD video testimonial",
+            "video_url": "#",
+            "name": "A. Samy Youssef, MD, PhD",
+            "role_html": "Professor &amp; Vice Chairman of Education<br>Departments of Neurosurgery &amp; Otolaryngology<br>Director of Skull Base Surgery<br>University of Colorado School of Medicine",
+            "cta_label": "Watch now"
+          }
+        ],
+        "featured_quote": {
+          "quote": "“I Have found the mizuho america team to be... forward-thinking, and have a genuine interest in the advancement of surgical instrumentation.”",
+          "attribution": "– James Evans, MD"
+        },
+        "more_cta": {"label": "See more testimonials", "url": "#"}
+      },
+      "style_overrides": {
+        "--grid-cols": "3",
+        "--grid-gap": "28px",
+        "--testimonial-min-width": "409px",
+        "--testimonial-quote-size": "2.125rem"
+      },
+      "responsive_style_overrides": {
+        "430": {
+          "--testimonial-quote-size": "1.5rem",
+          "--grid-cols-mobile": "1"
+        }
+      },
+      "extra_css": ".testimonial-grid--testimonials { padding: 91px 82px 0 76px; } .testimonial-grid--testimonials .testimonial-grid__eyebrow { font-family: 'Freeman', sans-serif; text-transform: uppercase; color: var(--clr-primary); } .testimonial-grid--testimonials .testimonial-grid__intro { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 1.25rem; color: var(--clr-text); max-width: 1177px; } .testimonial-grid--testimonials .testimonial-grid__thumb { position: relative; aspect-ratio: 409/272; object-fit: cover; } .testimonial-grid--testimonials .testimonial-grid__play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 53px; height: 53px; } .testimonial-grid--testimonials .testimonial-grid__name { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1.125rem; color: var(--clr-primary); } .testimonial-grid--testimonials .testimonial-grid__role { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 0.875rem; line-height: 1.375rem; color: var(--clr-text); } .testimonial-grid--testimonials .testimonial-grid__cta { display: inline-block; margin-top: 17px; background: var(--clr-primary); color: var(--clr-white); font-family: 'Freeman', sans-serif; font-size: 0.875rem; width: 93px; height: 40px; line-height: 40px; text-align: center; border-radius: 5px; text-decoration: none; } .testimonial-grid--testimonials .testimonial-grid__featured-quote { border-top: 1px solid var(--clr-sky); margin-top: 82px; padding-top: 57px; text-align: center; } .testimonial-grid--testimonials .testimonial-grid__featured-quote blockquote { font-family: 'Freeman', sans-serif; text-transform: uppercase; color: var(--clr-primary); max-width: 998px; margin: 0 auto; } .testimonial-grid--testimonials .testimonial-grid__featured-quote cite { display: block; font-style: normal; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 1.5rem; color: var(--clr-text); margin: 8px 0 44px; } .testimonial-grid--testimonials .testimonial-grid__more-cta-row { display: flex; align-items: center; gap: 32px; } .testimonial-grid--testimonials .testimonial-grid__more-cta-row::before, .testimonial-grid--testimonials .testimonial-grid__more-cta-row::after { content: ''; flex: 1; height: 1px; background: var(--clr-sky); max-width: 513px; } .testimonial-grid--testimonials .testimonial-grid__more-cta { display: inline-block; box-sizing: border-box; flex-shrink: 0; background: var(--clr-primary); color: var(--clr-white); font-family: 'Freeman', sans-serif; width: 179px; height: 50px; line-height: 40px; padding-left: 17px; border-radius: 5px; text-decoration: none; } @media (max-width: 430px) { .testimonial-grid--testimonials { padding: 44px 20px; background: #FCFEFF; } .testimonial-grid--testimonials .testimonial-grid__intro { font-weight: 300; font-size: 1.125rem; } .testimonial-grid--testimonials .testimonial-grid__cta { width: 140px; height: 50px; font-size: 1rem; } .testimonial-grid--testimonials .testimonial-grid__more-cta-row::before, .testimonial-grid--testimonials .testimonial-grid__more-cta-row::after { display: none; } .testimonial-grid--testimonials .testimonial-grid__featured-quote { border-top: 1px solid var(--clr-sky); border-bottom: 1px solid var(--clr-sky); padding-bottom: 36px; } .testimonial-grid--testimonials .testimonial-grid__more-cta { width: 100%; text-align: center; padding-left: 0; } }",
+      "notes": [
+        "Re-sourced from figma/data.json 2026-09-25: eyebrow corrected to 'TESTIMONIALS' (node 1:67/1:489 - this word is literally typed in capitals in the raw characters, not just a textCase transform; kept the existing text-transform:uppercase rule anyway since it's harmless/redundant on already-capitalised text). The featured pull-quote corrected in three places to match node 1:69/1:519's raw characters exactly: 'I have' -> 'I Have' (a genuine mid-sentence capitalisation quirk in the design, reproduced per decision #8), 'Mizuho America' -> 'mizuho america' (raw is lower-case; textCase:UPPER on that layer - already reproduced via .testimonial-grid__featured-quote blockquote{text-transform:uppercase} - does the visual capitalising), and the single '…' ellipsis character -> three literal periods '...' (that's what's actually typed). The desktop node has an internal '\\n' between 'to be...' and 'forward-thinking,' that the mobile node (1:519) does NOT have (continuous single line there) - kept as one continuous string rather than forcing a hard break, since the centred 998px-max-width block wraps naturally near the same point and the mobile source confirms no break is required.",
+        "Assumes testimonial-grid's per-card slot accepts a photo+name+role+optional-link shape; role lines and the 'Watch now' link are mapped onto that slot rather than a plain 'quote' field, since these are video testimonials, not text quotes. If the compiled recipe's card template only supports a single quote string (no secondary link/button), this card's cta_label/video_url need a small template patch at compile time - flagged as an open question for figma-html-builder.",
+        "Assumes testimonial-grid supports an optional 'featured quote' block above/below the card grid (eyebrow+intro heading pattern here, or a centred pull-quote+attribution+CTA below) - if the recipe has no such slot, the featured_quote content needs to move to its own escape-hatch sub-block appended after this section.",
+        "Mobile adds a second, full-width 'Watch what clinical experts say about us' CTA after the 3 cards (desktop only shows it once, in intro_statement) - mapped as an extra literal button after `cards` in the mobile CSS/markup, not duplicated in content_source (same URL as intro_statement's cta).",
+        "Testimonial thumbnails have burned-in name/title lower-thirds baked into the JPEG pixels (not live text) - used as supplied, safe to export per the extractor's note.",
+        "'Watch now' in Figma is a text run positioned over a separate rectangle, not a component - rebuilt here as a real <a> per accepted decision #7."
+      ]
+    },
+    {
+      "id": "about-stats",
+      "recipe": null,
+      "escape_hatch": true,
+      "content_source": {
+        "heading": "ABOUT MIZUHO AMERICA",
+        "body": "Established in Boston, Massachusetts in 1993, Mizuho America is part of Mizuho Corporation, a global medical products company with more than a century of commitment to providing surgeons with meticulously crafted equipment for their OR needs. With deep expertise in neurosurgical products, Mizuho America has built a legacy of quality, reliability, and trusted partnership with healthcare professionals. From problem-solving instrument sets developed with clinical experts, to ongoing support of neurosurgeons every day, Mizuho America remains committed to solutions that can help facilitate greater control, precision, and efficiency during the procedure with the goal of better outcomes after.",
+        "stats": [
+          {"number": "30+", "label": "years serving the neurosurgery community", "variant": "primary"},
+          {"number": "1,800+", "label": "neurosurgical products", "variant": "sky"},
+          {"number": "1000+", "label": "hospitals served", "variant": "primary"}
+        ],
+        "button": {"label": "Explore our story", "url": "#"}
+      },
+      "notes": [
+        "Re-sourced from figma/data.json 2026-09-25: heading corrected to literal 'ABOUT MIZUHO AMERICA' (node 1:28 on desktop has textCase:null - i.e. it's hard-typed in capitals, not a CSS transform, exactly matching spec.md's own note 'Typed in capitals (no textCase)'; the mobile node 1:526 redundantly also sets textCase:UPPER on the same already-capitalised text). Added text-transform:uppercase to .about-stats__heading anyway for robustness/parity with the mobile style intent - harmless since the stored text is already capitals.",
+        "No recipe fits: this is a unique 'stat counter' shape (not in the hero/nav/card-grid/testimonial/faq/gallery-carousel/cta/footer list) - each 'stat' is a composite of a white shadow-offset panel drawn UNDER a colour-alternating card (box-shadow: 21px 0 21px -23px #000, panel drawn on top of the card's left 15px), not a plain title+icon+body card. Forcing card-grid-3col here would mean rebuilding this composite via extra_css anyway, so it's escape-hatched directly and honestly rather than pretending to reuse a recipe.",
+        "Accepted decision #4: stat row centred (Figma has it 76px left / 204px right, off-centre) - implemented with a centred flex row + margin:auto, not the Figma absolute x positions.",
+        "Accepted decision #2: stat-number line-height corrected from Figma's 36px (font-size 64px, i.e. ratio 0.5625) to ~1.1 (70.4px) here.",
+        "Copy check: this page's third stat reads '1000+' (no thousands separator) vs the second stat's '1,800+' (comma) - the inconsistency spec.md flags is reproduced verbatim per accepted decision #8 (typos/inconsistencies entered as designed, flagged to the lead separately)."
+      ],
+      "html": "<section class=\"about-stats\" id=\"about-stats\">\n  <div class=\"about-stats__inner\">\n    <h2 class=\"about-stats__heading\">{{heading}}</h2>\n    <p class=\"about-stats__body\">{{body}}</p>\n    <div class=\"about-stats__row\">\n      {{#each stats}}\n      <div class=\"about-stats__stat about-stats__stat--{{variant}}\">\n        <div class=\"about-stats__panel\"></div>\n        <div class=\"about-stats__card\">\n          <span class=\"about-stats__number\">{{number}}</span>\n          <span class=\"about-stats__label\">{{label}}</span>\n        </div>\n      </div>\n      {{/each}}\n    </div>\n    <a class=\"about-stats__button\" href=\"{{button.url}}\">{{button.label}}</a>\n  </div>\n</section>",
+      "css": ".about-stats { background: var(--clr-white); padding: 95px 76px 99px; text-align: center; }\n.about-stats__heading { font-family: 'Freeman', sans-serif; font-weight: 400; font-size: 2.125rem; line-height: 3.125rem; color: var(--clr-primary); text-transform: uppercase; margin: 0 0 21px; }\n.about-stats__body { font-family: 'Open Sans', sans-serif; font-size: 1rem; line-height: 2.25rem; color: var(--clr-text); max-width: 1090px; margin: 0 auto 26px; }\n.about-stats__row { display: flex; justify-content: center; gap: 79px; margin-top: 44px; }\n.about-stats__stat { position: relative; width: 421px; height: 250px; }\n.about-stats__panel { position: absolute; left: 0; top: 0; width: 146px; height: 250px; background: var(--clr-white); border-radius: 10px; box-shadow: 21px 0 21px -23px #000000; }\n.about-stats__card { position: absolute; left: 131px; top: 44px; width: 290px; height: 162px; border-radius: 20px; background: var(--clr-primary); padding-left: 50px; padding-top: 37px; box-sizing: border-box; display: flex; flex-direction: column; align-items: flex-start; }\n.about-stats__stat--sky .about-stats__card { background: var(--clr-sky); }\n.about-stats__number { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 4rem; line-height: 1.1; color: var(--clr-white); }\n.about-stats__label { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 1rem; line-height: 1.125rem; color: var(--clr-white); margin-top: 21px; }\n.about-stats__button { display: inline-block; margin-top: 20px; background: var(--clr-primary); color: var(--clr-white); font-family: 'Freeman', sans-serif; width: 150px; height: 50px; line-height: 50px; border-radius: 5px; text-decoration: none; }\n@media (max-width: 1024px) { .about-stats__row { gap: 32px; } .about-stats__stat { width: 340px; } }\n@media (max-width: 768px) { .about-stats__row { flex-direction: column; align-items: center; gap: 32px; } }\n@media (max-width: 430px) { .about-stats { padding: 44px 20px; background: #FCFEFF; } .about-stats__heading { font-size: 1.5rem; line-height: 1.995rem; text-transform: uppercase; margin-bottom: 22px; } .about-stats__body { font-size: 0.875rem; line-height: 1.75rem; } .about-stats__row { margin-top: 36px; } .about-stats__stat { width: 350px; height: 250px; } .about-stats__panel { width: 75px; } .about-stats__card { left: 60px; top: 43.2px; } .about-stats__button { width: 100%; } }"
+    },
+    {
+      "id": "site-footer-placeholder",
+      "recipe": "footer-four-column",
+      "landmark": "footer",
+      "out_of_scope": true,
+      "note": "PLACEHOLDER for visual context only - real footer is Elementor Theme Builder (theme_templates.footer 62); business data from ACF Site Settings (m11-site-settings). Not part of this Flow A conversion.",
+      "content_source": {
+        "logo": "figma/images/logo-mizuho-footer-reversed.png",
+        "columns": [
+          {"heading": "Products", "links": ["#"]},
+          {"heading": "Clinical", "links": ["#"]},
+          {"heading": "Company", "links": ["#"]},
+          {"heading": "Support", "links": ["#"]}
+        ],
+        "copyright": "© 2026 Mizuho America"
+      },
+      "style_overrides": {
+        "--grid-cols": "4",
+        "--footer-heading-size": "1.5625rem"
+      }
+    }
+  ]
+}

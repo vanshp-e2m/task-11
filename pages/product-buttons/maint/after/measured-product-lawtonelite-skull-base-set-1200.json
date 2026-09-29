@@ -1,0 +1,70 @@
+{
+  "findings": [
+    {
+      "severity": "high",
+      "kind": "measured_property",
+      "source_id": "pd-ctas",
+      "property": "line_height",
+      "expected": "normal",
+      "actual": "24px",
+      "delta": null,
+      "rule": "exact_px"
+    },
+    {
+      "severity": "high",
+      "kind": "measured_property",
+      "source_id": "pd-ctas-btn0",
+      "property": "line_height",
+      "expected": "normal",
+      "actual": "20px",
+      "delta": null,
+      "rule": "exact_px"
+    },
+    {
+      "severity": "high",
+      "kind": "measured_property",
+      "source_id": "pd-ctas-btn1",
+      "property": "line_height",
+      "expected": "normal",
+      "actual": "20px",
+      "delta": null,
+      "rule": "exact_px"
+    },
+    {
+      "severity": "high",
+      "kind": "measured_property",
+      "source_id": "tq-ctas",
+      "property": "line_height",
+      "expected": "normal",
+      "actual": "24px",
+      "delta": null,
+      "rule": "exact_px"
+    },
+    {
+      "severity": "high",
+      "kind": "measured_property",
+      "source_id": "tq-ctas-btn0",
+      "property": "line_height",
+      "expected": "normal",
+      "actual": "20px",
+      "delta": null,
+      "rule": "exact_px"
+    },
+    {
+      "severity": "high",
+      "kind": "measured_property",
+      "source_id": "tq-ctas-btn1",
+      "property": "line_height",
+      "expected": "normal",
+      "actual": "20px",
+      "delta": null,
+      "rule": "exact_px"
+    }
+  ],
+  "counts": {
+    "high": 6,
+    "medium": 0,
+    "low": 0
+  },
+  "clean": false
+}

@@ -1,0 +1,43 @@
+// Entry point. One partial per Flexible Content layout lives in layouts/.
+@use "abstracts/tokens";
+@use "base/base";
+@use "components/chrome";
+@use "pages/about";
+@use "pages/contact-us";
+// @use "layouts/<layout-name>";
+// >>> replica partials (tools/figma_html/split_replica_css.py)
+@use "base/replica-fonts";
+@use "layouts/about-stats";
+@use "layouts/bottom-links-band";
+@use "layouts/browse-by-procedure";
+@use "layouts/browse-by-product";
+@use "layouts/fast-facts";
+@use "layouts/hero-carousel";
+@use "layouts/intro-statement";
+@use "pages/dashboard";
+@use "pages/mizuho-home";
+@use "pages/product-a";
+@use "pages/product-b";
+@use "pages/product-main";
+@use "pages/products";
+@use "pages/resource-library";
+@use "pages/resources";
+@use "pages/sales-hub";
+@use "layouts/procedure-band";
+@use "layouts/products-intro";
+@use "layouts/resources-brochures";
+@use "layouts/resources-intro";
+@use "layouts/resources-testimonials";
+@use "layouts/sh-dashboard";
+@use "layouts/sh-login";
+@use "layouts/sh-resource-library-intro";
+@use "layouts/sh-resource-results";
+@use "layouts/single-product-a";
+@use "layouts/single-product-b";
+@use "layouts/single-product-main";
+@use "layouts/testimonial-home";
+@use "layouts/value-columns";
+// <<< replica partials
+// Hand-written guards for the generated layout partials (outside the generated block on purpose).
+@use "base/robustness-guards";
+@use "base/flow-desktop";

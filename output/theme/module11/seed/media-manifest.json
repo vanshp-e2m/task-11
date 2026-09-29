@@ -1,0 +1,649 @@
+[
+  {
+    "file": "seed/images/mizuho-home/hero-product-sugita-ii-head-frame-card-crop.png",
+    "alt": "Sugita ll Multi-Purpose Head Frame",
+    "slots": [
+      "home:hero_carousel.hero_cards[0].image"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/hero-product-mst-7300-table-card-crop.png",
+    "alt": "MST 7300 Series Microneurosurgery Tables",
+    "slots": [
+      "home:hero_carousel.hero_cards[1].image"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/value-icon-surgeon-centric.png",
+    "alt": "",
+    "slots": [
+      "home:value_columns.value_cards[0].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/value-icon-consistent-quality.png",
+    "alt": "",
+    "slots": [
+      "home:value_columns.value_cards[1].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/value-icon-notable-names.png",
+    "alt": "",
+    "slots": [
+      "home:value_columns.value_cards[2].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/value-icon-personal-partnership.png",
+    "alt": "",
+    "slots": [
+      "home:value_columns.value_cards[3].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/procedure-icon-tumor-removal-trim.png",
+    "alt": "",
+    "slots": [
+      "home:procedure_band.procedure_items[0].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/procedure-icon-aneurysm-trim.png",
+    "alt": "",
+    "slots": [
+      "home:procedure_band.procedure_items[1].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/procedure-icon-endoscopic-endonasal-trim.png",
+    "alt": "",
+    "slots": [
+      "home:procedure_band.procedure_items[2].icon"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/testimonial-thumb-lawton.jpg",
+    "alt": "Michael T. Lawton, MD",
+    "slots": [
+      "home:testimonial_home.testimonial_cards[0].thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/testimonial-thumb-evans.jpg",
+    "alt": "James J. Evans, MD",
+    "slots": [
+      "home:testimonial_home.testimonial_cards[1].thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/mizuho-home/testimonial-thumb-youssef.jpg",
+    "alt": "A. Samy Youssef, MD, PhD",
+    "slots": [
+      "home:testimonial_home.testimonial_cards[2].thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/product-browse/procedure-icon-tumor-removal.png",
+    "alt": "",
+    "slots": [
+      "products:browse_by_procedure.procedure_items[0].icon"
+    ]
+  },
+  {
+    "file": "seed/images/product-browse/procedure-icon-aneurysm.png",
+    "alt": "",
+    "slots": [
+      "products:browse_by_procedure.procedure_items[1].icon"
+    ]
+  },
+  {
+    "file": "seed/images/product-browse/procedure-icon-endoscopic-endonasal.png",
+    "alt": "",
+    "slots": [
+      "products:browse_by_procedure.procedure_items[2].icon"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-lawtonelite-series.jpg",
+    "alt": "LawtonElite Series",
+    "slots": [
+      "cpt-m11_resource:video-lawtonelite-series.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-lawtonelite-microscissors.jpg",
+    "alt": "LawtonElite Microscissors",
+    "slots": [
+      "cpt-m11_resource:video-lawtonelite-microscissors.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-e3-evans-elite-endoscopic-instrument-set.jpg",
+    "alt": "E3 Evans Elite Endoscopic Instrument Set",
+    "slots": [
+      "cpt-m11_resource:video-e3-evans-elite-endoscopic-instrument-set.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-dr-youssefs-cranial-nerve-dissection-set.jpg",
+    "alt": "Dr. Youssef’s Cranial Nerve Dissection Set",
+    "slots": [
+      "cpt-m11_resource:video-dr-youssefs-cranial-nerve-dissection-set.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-sugita-ii-multi-purpose-headframe.jpg",
+    "alt": "Sugita II Multi-Purpose Headframe",
+    "slots": [
+      "cpt-m11_resource:video-sugita-ii-multi-purpose-headframe.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-mst-7300b-bx-table-for-microsurgery-1.jpg",
+    "alt": "MST-7300B&BX Table for Microsurgery",
+    "slots": [
+      "cpt-m11_resource:video-mst-7300b-bx-table-for-microsurgery-1.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-mst-7300b-bx-table-for-microsurgery-2.jpg",
+    "alt": "MST-7300B&BX Table for Microsurgery",
+    "slots": [
+      "cpt-m11_resource:video-mst-7300b-bx-table-for-microsurgery-2.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-mst-7300bx-table-for-microsurgery.jpg",
+    "alt": "MST 7300BX Table for Microsurgery",
+    "slots": [
+      "cpt-m11_resource:video-mst-7300bx-table-for-microsurgery.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-keyhole-approach-brain-surgery.jpg",
+    "alt": "Keyhole Approach Brain Surgery ",
+    "slots": [
+      "cpt-m11_resource:video-keyhole-approach-brain-surgery.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-keyhole-approach-brain-surgery-extended.jpg",
+    "alt": "Keyhole Approach Brain Surgery  extended",
+    "slots": [
+      "cpt-m11_resource:video-keyhole-approach-brain-surgery-extended.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-fact-sugita-ii-multi-purpose-headframe.jpg",
+    "alt": "Sugita II Multi-Purpose Headframe",
+    "slots": [
+      "cpt-m11_resource:video-fact-sugita-ii-multi-purpose-headframe.cover_image",
+      "resources:fast_facts.fact_items[0].video_thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-fact-feather-instruments-with.jpg",
+    "alt": "Feather Instruments With\nInterchangeable Blades",
+    "slots": [
+      "cpt-m11_resource:video-fact-feather-instruments-with.cover_image",
+      "resources:fast_facts.fact_items[1].video_thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.jpg",
+    "alt": "Discover the MST 7300 BX Table With the 5S Innovation Concept",
+    "slots": [
+      "cpt-m11_resource:video-fact-discover-the-mst-7300-bx-table-with-the-5s-innovation-concep.cover_image",
+      "resources:fast_facts.fact_items[2].video_thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-lawton-elite-series.jpg",
+    "alt": "Lawton Elite Series brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-lawton-elite-series.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-lawtonelite-neurovascular-bypass-instruments.jpg",
+    "alt": "LawtonElite Neurovascular Bypass Instruments brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-lawtonelite-neurovascular-bypass-instruments.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-lawtonelite-micro-dissection-instruments.jpg",
+    "alt": "LawtonElite Micro Dissection Instruments brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-lawtonelite-micro-dissection-instruments.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-lawtonelite-microscissors.jpg",
+    "alt": "LawtonElite Microscissors brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-lawtonelite-microscissors.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-lawton-elite-reposable-microscissors.jpg",
+    "alt": "Lawton Elite Reposable Microscissors brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-lawton-elite-reposable-microscissors.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-evans-elite-endoscopic-instruments.jpg",
+    "alt": "Evans Elite Endoscopic Instruments brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-evans-elite-endoscopic-instruments.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-evans-360-rotatables.jpg",
+    "alt": "Evans 360° Rotatables brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-evans-360-rotatables.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-e3-mithras-bipolar.jpg",
+    "alt": "E3 Mithras Bipolar brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-e3-mithras-bipolar.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-kelly-endoscopic-endonasal-instrument-set.jpg",
+    "alt": "Kelly Endoscopic Endonasal Instrument Set brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-kelly-endoscopic-endonasal-instrument-set.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-kelly-endonasal-instrument-set.jpg",
+    "alt": "Kelly Endonasal Instrument Set brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-kelly-endonasal-instrument-set.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-kelly-keyhole-instrument-set.jpg",
+    "alt": "Kelly Keyhole Instrument Set brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-kelly-keyhole-instrument-set.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-day-bailes-tapered-locking-suction-tubes.jpg",
+    "alt": "Day-Bailes Tapered Locking Suction Tubes brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-day-bailes-tapered-locking-suction-tubes.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-dr-youssefs-cranial-nerve-dissection-set.jpg",
+    "alt": "Dr. Youssef’s Cranial Nerve Dissection Set brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-dr-youssefs-cranial-nerve-dissection-set.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-feather-k-6420-micro-blade-angled-for-precision-incisions.jpg",
+    "alt": "Feather® K-6420 Micro Blade Angled for Precision Incisions brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-feather-k-6420-micro-blade-angled-for-precision-incisions.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-t-endo-clips.jpg",
+    "alt": "T Endo-Clips brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-t-endo-clips.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-cerebellar-pontine-tumor-instruments.jpg",
+    "alt": "Cerebellar Pontine Tumor Instruments brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-cerebellar-pontine-tumor-instruments.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-skull-base-instrumentation.jpg",
+    "alt": "Skull Base Instrumentation brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-skull-base-instrumentation.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-mst-7300-series-mizuho-mobile-microsurgery-table.jpg",
+    "alt": "MST-7300 Series Mizuho Mobile Microsurgery Table brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-mst-7300-series-mizuho-mobile-microsurgery-table.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-sugita-ii-multi-purpose.jpg",
+    "alt": "Sugita II Multi-Purpose brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-sugita-ii-multi-purpose.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-radiolucent-head-frame.jpg",
+    "alt": "Radiolucent Head Frame brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-radiolucent-head-frame.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-smart-fix-head-frame-and-holder.jpg",
+    "alt": "Smart Fix Head Frame and Holder brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-smart-fix-head-frame-and-holder.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-t2-clips-sugita-titanium-aneurysm-clips-and-appliers.jpg",
+    "alt": "T2 Clips: Sugita Titanium Aneurysm Clips and Appliers brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-t2-clips-sugita-titanium-aneurysm-clips-and-appliers.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-feather-micro-surgical-blade-for-fine-incision.jpg",
+    "alt": "Feather®  Micro Surgical Blade for Fine Incision brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-feather-micro-surgical-blade-for-fine-incision.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-vascular-management-solutions-from-mizuho.jpg",
+    "alt": "Vascular Management Solutions from Mizuho brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-vascular-management-solutions-from-mizuho.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-feather-micro-surgery.jpg",
+    "alt": "Feather® Micro Surgery brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-feather-micro-surgery.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-microscissors.jpg",
+    "alt": "Microscissors brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-microscissors.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-malleable-instrument-set-for-neuroendoscopy.jpg",
+    "alt": "Malleable Instrument Set for Neuroendoscopy brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-malleable-instrument-set-for-neuroendoscopy.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-endoscopic-workflow.jpg",
+    "alt": "Endoscopic Workflow brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-endoscopic-workflow.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-skull-base-workflow.jpg",
+    "alt": "Skull Base Workflow brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-skull-base-workflow.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/brochure-neurovascular-doppler-systems.jpg",
+    "alt": "Neurovascular Doppler Systems brochure cover",
+    "slots": [
+      "cpt-m11_resource:brochure-neurovascular-doppler-systems.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resource-library/tile-sugita-ii-head-frame-product-brochure.jpg",
+    "alt": "Sugita II Head Frame – Product Brochure",
+    "slots": [
+      "cpt-m11_resource:sugita-ii-head-frame-product-brochure.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resource-library/tile-radiolucent-head-frame-spec-sheet.jpg",
+    "alt": "Radiolucent Head Frame – Spec Sheet",
+    "slots": [
+      "cpt-m11_resource:radiolucent-head-frame-spec-sheet.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resource-library/tile-smart-fix-head-holder-spec-sheet.jpg",
+    "alt": "Smart Fix Head Holder – Spec Sheet",
+    "slots": [
+      "cpt-m11_resource:smart-fix-head-holder-spec-sheet.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resource-library/tile-head-frame-accessories.jpg",
+    "alt": "Head Frame Accessories",
+    "slots": [
+      "cpt-m11_resource:head-frame-accessories-resource.cover_image"
+    ]
+  },
+  {
+    "file": "seed/images/resources/video-intro-lawton.jpg",
+    "alt": "Michael T. Lawton, MD",
+    "slots": [
+      "resources:resources_intro.featured_video_thumbnail"
+    ]
+  },
+  {
+    "file": "seed/images/sales-hub-dashboard/icon-tool-resource-library.png",
+    "alt": "",
+    "slots": [
+      "sales-hub-dashboard:sh_dashboard.tools[0].icon"
+    ]
+  },
+  {
+    "file": "seed/images/sales-hub-dashboard/icon-tool-cross-reference-tool.png",
+    "alt": "",
+    "slots": [
+      "sales-hub-dashboard:sh_dashboard.tools[1].icon"
+    ]
+  },
+  {
+    "file": "seed/images/sales-hub-dashboard/icon-tool-training-hub.png",
+    "alt": "",
+    "slots": [
+      "sales-hub-dashboard:sh_dashboard.tools[2].icon"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-gallery.jpg",
+    "alt": "Sugita II Head Frame",
+    "slots": [
+      "cpt-m11_product:product-sugita-ii-head-frame.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-gallery.jpg",
+    "alt": "LawtonElite Skull Base Instrumentation Set",
+    "slots": [
+      "cpt-m11_product:product-lawtonelite-skull-base-set.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-thumb-1.jpg",
+    "alt": "",
+    "slots": [
+      "cpt-m11_product:product-lawtonelite-skull-base-set.gallery_thumbnails[0].image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-thumb-2.jpg",
+    "alt": "",
+    "slots": [
+      "cpt-m11_product:product-lawtonelite-skull-base-set.gallery_thumbnails[1].image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-thumb-3.jpg",
+    "alt": "",
+    "slots": [
+      "cpt-m11_product:product-lawtonelite-skull-base-set.gallery_thumbnails[2].image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-b/b-gallery.jpg",
+    "alt": "Feather Blades",
+    "slots": [
+      "cpt-m11_product:product-feather-blades.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-browse/tile-radiolucent-head-frame-spec-sheet.jpg",
+    "alt": "Radiolucent Head Frame",
+    "slots": [
+      "cpt-m11_product:radiolucent-head-frame.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-browse/tile-smart-fix-head-holder-spec-sheet.jpg",
+    "alt": "Smart Fix Head Holder",
+    "slots": [
+      "cpt-m11_product:smart-fix-head-holder.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-browse/tile-head-frame-accessories.jpg",
+    "alt": "Head Frame Accessories",
+    "slots": [
+      "cpt-m11_product:head-frame-accessories.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-accessories-mst-7300-surgical-table.jpg",
+    "alt": "MST 7300 Surgical Table",
+    "slots": [
+      "cpt-m11_product:mst-7300-surgical-table.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-accessories-sugita-pin-set.jpg",
+    "alt": "Sugita Pin Set",
+    "slots": [
+      "cpt-m11_product:sugita-pin-set.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-accessories-mayfield-table-adapter.jpg",
+    "alt": "Mayfield Table Adapter",
+    "slots": [
+      "cpt-m11_product:mayfield-table-adapter.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-accessories-gel-head-rest.jpg",
+    "alt": "Gel Head Rest",
+    "slots": [
+      "cpt-m11_product:gel-head-rest.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-related-products-sugita-multipurpose-head-frame-classic.jpg",
+    "alt": "Sugita Multipurpose Head Frame Classic",
+    "slots": [
+      "cpt-m11_product:sugita-multipurpose-head-frame-classic.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-main/main-related-products-mst-7300-neurosurgical-table.jpg",
+    "alt": "MST 7300 Neurosurgical Table",
+    "slots": [
+      "cpt-m11_product:mst-7300-neurosurgical-table.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-accessories-replacement-suction-tubes.jpg",
+    "alt": "Replacement Suction Tubes",
+    "slots": [
+      "cpt-m11_product:replacement-suction-tubes.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-accessories-replacement-brain-retractors.jpg",
+    "alt": "Replacement Brain Retractors",
+    "slots": [
+      "cpt-m11_product:replacement-brain-retractors.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-accessories-instrument-tray-silicone-mat.jpg",
+    "alt": "Instrument Tray Silicone Mat",
+    "slots": [
+      "cpt-m11_product:instrument-tray-silicone-mat.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-accessories-transport-case.jpg",
+    "alt": "Transport Case",
+    "slots": [
+      "cpt-m11_product:transport-case.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-related-products-lawtonelite-bypass.jpg",
+    "alt": "LawtonElite Bypass",
+    "slots": [
+      "cpt-m11_product:lawtonelite-bypass.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-related-products-lawtonelite-malleable-suction-tubes.jpg",
+    "alt": "LawtonElite Malleable Suction Tubes",
+    "slots": [
+      "cpt-m11_product:lawtonelite-malleable-suction-tubes.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-a/a-related-products-keyhole-instrumentation-set.jpg",
+    "alt": "Keyhole Instrumentation Set",
+    "slots": [
+      "cpt-m11_product:keyhole-instrumentation-set.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-b/b-accessories-size-3-scalpel-handle.jpg",
+    "alt": "Size 3 Scalpel Handle",
+    "slots": [
+      "cpt-m11_product:size-3-scalpel-handle.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-b/b-accessories-size-4-scalpel-handle.jpg",
+    "alt": "Size 4 Scalpel Handle",
+    "slots": [
+      "cpt-m11_product:size-4-scalpel-handle.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-b/b-accessories-blade-remover.jpg",
+    "alt": "Blade Remover",
+    "slots": [
+      "cpt-m11_product:blade-remover.gallery_image"
+    ]
+  },
+  {
+    "file": "seed/images/product-variation-b/b-accessories-blade-disposal-container.jpg",
+    "alt": "Blade Disposal Container",
+    "slots": [
+      "cpt-m11_product:blade-disposal-container.gallery_image"
+    ]
+  }
+]

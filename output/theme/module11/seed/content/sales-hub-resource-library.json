@@ -1,0 +1,18 @@
+[
+  {
+    "acf_fc_layout": "sh_resource_library_intro",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "resource-library-intro"
+    },
+    "heading": "RESOURCE LIBRARY",
+    "body": "From downloadable brochures to testimonial and training videos: materials to help you gain and retain customers"
+  },
+  {
+    "acf_fc_layout": "sh_resource_results",
+    "common_settings": {
+      "hide_section": "",
+      "sec_id": "resource-results"
+    }
+  }
+]
