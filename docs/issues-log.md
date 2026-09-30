@@ -23,16 +23,24 @@ Contact Us now uses Elementor's own Form widget (it really submits and saves ent
 and address are linked to Site Settings, so they come from one place. Every text and image is now editable in the Elementor editor.
 
 ### The ACF conversion merged and lost sections
-**What happened.** The Resources page has 9 sections. DevCommand's converter joined two of them into one and dropped four completely,
-so the WordPress page would have been built with content missing.
+**What happened.** Before building the ACF fields, DevCommand cuts every page into sections (one section = one ACF layout).
+On **Resources** (5 sections) it **merged Testimonials and Brochures** into one small unnamed block (`02-pos-02`, 2 KB instead of
+14 KB + 37 KB), so the Brochures section disappeared. On the **product pages** it **dropped four sections**: Accessories and
+Related products on all three products, plus Instruments included (Variation A) and Size guide (Variation B). Those layouts would
+never have been created.
 
-**How I found it.** I compared the number of sections in the conversion output (5) with the real page (9).
+**How I found it.** I listed the sections I expected from reading every page myself and compared them with what the converter
+produced: Resources came out as intro, one unnamed block, fast facts, continue-your-visit; the Sugita product came out with only
+overview and testimonial.
 
-**Why it happened.** The step that cuts the HTML into sections has a rule for guessing where a section ends. On this page the guess
-was wrong, so it "closed" sections too early and swallowed the ones in between.
+**Why it happened.** The splitter has a rule that closes an open list item (`<li>`) as soon as another block starts inside it.
+Browsers only do that for paragraphs. Our cards are list items with blocks inside, so the splitter thought the section had ended
+early and swallowed the next one.
 
-**How I fixed it.** I found the faulty rule in DevCommand's section splitter, fixed it in a copy of that script, and re-ran the
-conversion. All 9 sections came through. The before/after is kept in `docs/evidence/flow-a/conversion/slicer-bug/`.
+**How I fixed it.** I ran a copy of DevCommand's splitter with that rule limited to paragraphs (the plugin file itself is untouched,
+so the bug can be reproduced and reported) and re-ran the conversion. Every section came through: 33 sections across the pages,
+each one an exact piece of its page. Proof: the broken output in `docs/evidence/flow-a/conversion/slicer-bug/`, the correct output
+in `spec/fragments/`.
 
 ### Pixel-perfect, but it broke when the text changed
 **What happened.** The desktop layouts matched the design exactly, but they were built by pinning every item to a fixed position,

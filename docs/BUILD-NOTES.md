@@ -101,7 +101,7 @@ This is the readable summary. The detailed log (every command and check) is in `
 | 51 | Resources replica image broken since built (name cut at 60 chars) | DevCommand asset resolver | Name fixed; all replicas scanned, 0 missing | ✅ Fixed |
 | 52 | Extractor found only one shared header/footer cluster (public + Sales Hub are different) | Reading shared-regions output | Two chromes built as separate Theme Builder templates | ⚠️ Worked around |
 | 53 | Token parser swapped primary/secondary, breakpoints [1024, 1023] | Comparing tokens to the Kit | Kit + Site Settings stay the source; tokens not imported | ⚠️ Worked around |
-| 54 | Section slicer **merged two Resources sections and dropped four** | Section count 5 vs 9 in the spec | Patched slicer copy (IMPLIED_CLOSE), re-sliced, evidence kept | ✅ Fixed |
+| 54 | Section slicer **merged Resources Testimonials + Brochures and dropped four product sections** | Compared with the expected section list | Patched slicer copy (IMPLIED_CLOSE), re-sliced, evidence kept | ✅ Fixed |
 | 55 | Two dead links in my replicas (#products, #overview) | Parser anchor map | Real targets | ✅ Fixed |
 | 56 | Coverage checker: CPT field groups reported as missing FC layouts | Checker HIGH ×2 | False positive explained (CPT groups aren't FC) | ⚠️ Explained |
 | 57 | DevCommand deployer can't read the assembler's seed (crash, 0 writes, no CPT phase) | Dry run | `tools/seed_acf.py` pushes the same seed via DevConnect, every write verified | ✅ Worked around |

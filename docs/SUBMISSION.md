@@ -82,8 +82,9 @@ agreed as Figma → generated HTML → ACF so the conversion step itself could b
 
 ### 3. Where the AI tooling was wrong, and how I caught it (details: `issues-log.md`; the numbered #1–#69 log is in the repo history)
 
-- **The conversion merged and dropped sections** — DevCommand's slicer turned 9 Resources sections into 5 (#54). Caught by counting
-  sections against the spec; patched the slicer's implied-close rule; evidence kept.
+- **The conversion merged and dropped sections** — DevCommand's slicer merged Resources' Testimonials + Brochures
+  and dropped four product sections (Accessories, Related products, Instruments included, Size guide) (#54). Caught by comparing
+  its sections with the expected list; patched the slicer's implied-close rule; evidence kept.
 - **DevConnect's HTML→Elementor conversion** produced HTML widgets only (About: 7, Contact: 1 for the whole page with its form) (#30, #61).
   Caught by counting widget types; rebuilt natively.
 - **The deployer couldn't read the assembler's own seed** (#57) → wrote `tools/seed_acf.py`; **seed values that never stored**

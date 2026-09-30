@@ -34,7 +34,7 @@ Sales Hub Login / Dashboard / Resource Library).
 | **Every place the conversion was wrong + what I did** | [docs/devconnect-conversion-issues.md](docs/devconnect-conversion-issues.md) (C1–C14 ACF, D1–D7 About, E1–E10 Contact) and [docs/issues-log.md](docs/issues-log.md) |
 
 Where the conversion was wrong (main points):
-- **Sections merged and dropped:** the slicer turned 9 Resources sections into 5 → caught by counting, slicer rule patched, re-run ([evidence](docs/evidence/flow-a/conversion/slicer-bug)).
+- **Sections merged and dropped:** on Resources the slicer merged Testimonials + Brochures into one block, and on the product pages it dropped Accessories, Related products, Instruments included and Size guide → caught by comparing against the expected sections, slicer rule patched, re-run ([evidence](docs/evidence/flow-a/conversion/slicer-bug)).
 - **Wrong field types:** 16 link fields created as ACF URL fields holding `#anchors`, so wp-admin refused to save → changed to text fields, same keys.
 - **Missing fields:** the Products hero photo was a CSS background with no field → background image fields added.
 - **Name clash:** a clone and its inner repeater both named `buttons`, so product buttons never saved → plain repeater.
